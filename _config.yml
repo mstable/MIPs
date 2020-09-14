@@ -40,7 +40,7 @@ defaults:
   - scope:
       path: "MIPS"
     values:
-      layout: "sip"
+      layout: "mip"
   - scope:
       path: "MCCP"
     values:
