@@ -17,7 +17,7 @@ description: >-
   mStable Improvement Proposals (MIPs) describe standards for the mStable
   platform, including core protocol specifications, client APIs, and contract
   standards.
-url: "https://sips.mstable.org"
+url: "https://mips.mstable.org"
 repository: mstable/MIPs
 twitter_username: mstable
 github_username: mstable
