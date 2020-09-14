@@ -4,7 +4,7 @@ language: ruby
 
 before_install:
   - gem install bundler -v '< 2'
-     
+
 cache:
   # Cache Ruby bundles
   - bundler
@@ -28,7 +28,7 @@ matrix:
     - rvm: 2.2.5
       env: TASK='htmlproofer-external'
     - rvm: 2.2.5
-      env: TASK='sip-validator'
+      env: TASK='mip-validator'
     - python: 3.3
       env: TASK='codespell'
       before_script: "sudo pip install urllib3[secure] && sudo pip install codespell"

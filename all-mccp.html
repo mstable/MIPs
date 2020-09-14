@@ -1,0 +1,7 @@
+---
+layout: page
+title: All MCCPs
+---
+
+{% assign mccp=site.pages|where_exp:"page","page.mccp > 0" %} {% include
+mccptable.html mccp=mccp %}

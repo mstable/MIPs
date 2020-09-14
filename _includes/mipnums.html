@@ -1,0 +1,8 @@
+{% assign mips=include.mips|split:"," %}
+{% for mipnum in mips %}
+  {% if mipnum contains 'MCCP' %}
+  <a href="../MCCP/{{mipnum|strip|downcase}}">{{mipnum|strip}}</a>{% if forloop.last == false %}, {% endif %}
+  {% else %}
+  <a href="{{mipnum|strip|downcase}}">{{mipnum|strip}}</a>{% if forloop.last == false %}, {% endif %}
+  {% endif %}
+{% endfor %}

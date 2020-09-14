@@ -14,19 +14,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 description: >-
-  Synthetix Improvement Proposals (SIPs) describe standards for the Synthetix
+  mStable Improvement Proposals (MIPs) describe standards for the mStable
   platform, including core protocol specifications, client APIs, and contract
   standards.
-url: "https://sips.synthetix.io"
-repository: Synthetixio/SIPs
-twitter_username: synthetix_io
-github_username: synthetixio
+url: "https://sips.mstable.org"
+repository: mstable/MIPs
+twitter_username: mstable
+github_username: mstable
 header_pages:
-  - all-sip.html
-  - all-sccp.html
+  - all-mip.html
+  - all-mccp.html
 twitter:
   card: summary
-  username: synthetix_io
+  username: mstable
 
 # Build settings
 markdown: kramdown
@@ -38,13 +38,13 @@ permalink: /:slug
 
 defaults:
   - scope:
-      path: "SIPS"
+      path: "MIPS"
     values:
       layout: "sip"
   - scope:
-      path: "SCCP"
+      path: "MCCP"
     values:
-      layout: "sccp"
+      layout: "mccp"
 
 exclude:
   - Gemfile
@@ -54,5 +54,5 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - sccp-x.md
-  - sip-X.md
+  - mccp-x.md
+  - mip-X.md
