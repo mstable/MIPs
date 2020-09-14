@@ -34,8 +34,3 @@ It is possible to run the MIP validator locally:
 gem install mip_validator
 mip_validator <INPUT_FILES>
 ```
-
-
-# Automerger
-
-The MIP repository contains an "auto merge" feature to ease the workload for MIP editors.  If a change is made via a PR to a draft MIP, then the authors of the MIP can Github approve the change to have it auto-merged by the [mip-automerger](https://github.com/bakaoh/mip_automerger) bot.
