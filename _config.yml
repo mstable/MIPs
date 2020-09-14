@@ -19,14 +19,14 @@ description: >-
   standards.
 url: "https://mips.mstable.org"
 repository: mstable/MIPs
-twitter_username: mstable_
+twitter_username: "mstable_"
 github_username: mstable
 header_pages:
   - all-mip.html
   - all-mccp.html
 twitter:
   card: summary
-  username: mstable_
+  username: "mstable_"
 
 # Build settings
 markdown: kramdown
