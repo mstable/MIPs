@@ -2,7 +2,7 @@
 mccp: 1
 title: MCCP Purpose and Guidelines
 status: Implemented
-author: Tom Nash <@tomnashflex>
+author: Tom Nash <@morelazers>
 discussions-to: https://discord.gg/y2r3jXm
 created: 2020-09-12
 ---

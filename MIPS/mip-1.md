@@ -2,7 +2,7 @@
 mip: 1
 title: MIP Purpose and Guidelines
 status: Implemented
-author: Tom Nash (@tomnashflex)
+author: Tom Nash (@morelazers)
 discussions-to: https://forums.mstable.org/
 created: 2020-09-12
 updated: N/A
