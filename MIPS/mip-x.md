@@ -109,7 +109,7 @@ The second step is for the Integration contract to call `collect()` on the liqui
 The following psueudo code is a proposal for how `collect()` function should distribute bought tokens to the Integration contract when called. 
 
 ```
-contractBal = buyAsset.balanceOf(address(this) 
+contractBal = buyAsset.balanceOf(address(this)) 
 spotPrice = exchange.getSpotPriceFor(buyAsset)
 value = contactBal * spotPrice
 // If the value is less than 1000 transfer everything
