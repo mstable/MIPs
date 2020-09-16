@@ -3,7 +3,7 @@ mip: <to be assigned>
 title: Add a liquidator to sell reward tokens
 status: WIP
 author: George Ornbo <george@mstable.org>
-discussions-to: <Create a new thread on https://forum.mstable.org and drop the link here>
+discussions-to: https://forum.mstable.org/t/add-liquidator-proposal-to-liquidate-comp-rewards/81
 created: 2020-09-16 
 ---
 
