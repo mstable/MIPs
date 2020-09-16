@@ -100,13 +100,24 @@ contract will grant the `Liquidator.sol` contract infinite approval on the
 $COMP that it holds. The Liquidator will begin selling the $COMP at a drip rate
 and will return $cDAI to the `CompoundIntegrator.sol` contract. 
 
-To prevent people gaming Liquidations and depositing large amounts around a liquidation to benefit from the returns liquidations will be smoothed over time and separated into two steps.
+To prevent people gaming Liquidations and depositing large amounts around a
+liquidation to benefit from the returns liquidations will be smoothed over time
+and separated into two steps.
 
-The first is for the Liquidator to sell a proportion of the amount it holds when the `triggerLiquidation` function is called. Based on the spot price for the asset the function will compute a value between $1000 and $3000 and trigger a sale for this amount. After the token has been swapped the token remains on the Liquidator contract.
+The first is for the Liquidator to sell a proportion of the amount it holds
+when the `triggerLiquidation` function is called. The `triggerLiquidation` is a
+public function and may be called by anyone, but may only be called once in a
+24 hour period. Based on the spot price for the asset the function will compute
+a value between $1000 and $3000 and trigger a sale for this amount. After the
+token has been swapped the token remains on the Liquidator contract.
 
-The second step is for the Integration contract to call `collect()` on the liquidator. This function will transfer a proportion of the tokens from the Liquidator contract to the Integration contract. At this point the token is on the Integration contract and earning Supply APY.
+The second step is for the Integration contract to call `collect()` on the
+liquidator. This function will transfer a proportion of the tokens from the
+Liquidator contract to the Integration contract. At this point the token is on
+the Integration contract and earning Supply APY.
 
-The following psueudo code is a proposal for how `collect()` function should distribute bought tokens to the Integration contract when called. 
+The following psueudo code is a proposal for how `collect()` function should
+distribute bought tokens to the Integration contract when called. 
 
 ```
 contractBal = buyAsset.balanceOf(address(this)) 
@@ -121,7 +132,8 @@ else
   buyAsset.transfer(amountToSend, integration)
 ```
 
-It is proposed that the `collect()` function may only be called at a specific block interval. The initial proposal 24 hours. 
+It is proposed that the `collect()` function is called at a specific time
+interval. The initial proposal is one hour. 
   
 
 **Interface**
