@@ -86,7 +86,7 @@ Related work includes yearn.finance selling $CRV tokens on the open market.
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces mStable currently exposes or the creations of new ones.-->
 
 A `Liquidator.sol` contract will be created that will sell `Token A` for `Token
-B` on a DEX. Initially Balancer will be supported but 1inch, UniSwap and
+B` on a DEX. Initially Uniswap will be supported but Balancer, 1inch, UniSwap and
 other integrations may be added. In the short term the contract will be
 upgradable with a view to it becoming immutable. 
 
@@ -120,18 +120,26 @@ The following psueudo code is a proposal for how `collect()` function should
 distribute bought tokens to the Integration contract when called. 
 
 ```
-contractBal = buyAsset.balanceOf(address(this)) 
-spotPrice = exchange.getSpotPriceFor(buyAsset)
-value = contactBal * spotPrice
-// If the value is less than 1000 transfer everything
-if value < 1000
-  buyAsset.transfer(contractBal, integration)
-// If the value is gt 1000 transfer a percentage of the tokens as set by governance
+// Add randomness to collection schedule
+randomMulipler = random(1..3)
+if timeSinceLastCollection > 1 hour * randomMulipler 
+    contractBal = buyAsset.balanceOf(address(this)) 
+    spotPrice = exchange.getSpotPriceFor(buyAsset)
+    value = contactBal * spotPrice
+    // If the value is less than 1000 transfer everything
+    // The 1000 value is configurable by Governance
+    if value < 1000
+      buyAsset.transfer(contractBal, integration)
+    else
+      // randomize the amount to send
+      percentToSend = rand(1..collectPercentage)
+      amountToSend = contractBal * percentToSend
+      buyAsset.transfer(amountToSend, integration)
+      timeSinceLastCollection = now
 else
-  amountToSend = contractBal * collectPercentage
-  buyAsset.transfer(amountToSend, integration)
-```
+    return error 'claimed too soon'
 
+```
 It is proposed that the `collect()` function is called at a specific time
 interval. The initial proposal is one hour. 
   
