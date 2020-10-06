@@ -1,0 +1,7 @@
+---
+layout: page
+title: All MIPs
+---
+
+{% assign mips=site.pages|where_exp:"page","page.mip > 0" %} {% include
+miptable.html mips=mips %}

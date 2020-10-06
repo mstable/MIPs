@@ -1,0 +1,35 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mStable MIPs Last Call Review</title>
+    <description>All mips which are in the two-week "last call" status, please help review these and provide your feedback!</description>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/last-call.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>{{ site.time }}</lastBuildDate>
+    {% assign mips = site.pages | sort: 'mip' %}
+    {% for mip in mips %}
+      {% if mip.status == "Last Call" %}
+      {% capture description %}
+        <p><strong>mip #{{ mip.mip }} - {{mip.title }}</strong> is in Last Call status. It is authored by {{ mip.author }} and was originally created {{ mip.created }}. It is in the {{ mip.category }} category of type {{ mip.type }}. Please review and note any changes that should block acceptance.</p>
+        {% if mip.discussions-to %}
+          <p>The author has requested that discussions happen at the following URL: {{ mip.discussions-to }}</p>
+        {% else %}
+          <p>Please visit the [mstable/mips issues to comment](https://github.com/mstable/mips/issues/{{mip.mip}}).</p>
+        {% endif %}
+        <hr />
+        {{ mip.content }}
+      {% endcapture %}
+      <item>
+        <title>{{ mip.title | xml_escape }}</title>
+        <description>{{ description | xml_escape }}</description>
+        <pubDate>{{ mip.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <link>{{ site.url }}/{{ mip.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}/{{ mip.url }}</guid>
+      </item>
+      {% endif %}
+    {% endfor %}
+  </channel>
+</rss>
