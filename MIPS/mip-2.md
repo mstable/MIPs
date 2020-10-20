@@ -2,52 +2,60 @@
 mip: 2
 title: Add a liquidator to sell reward tokens
 status: Approved
-author: George Ornbo <george@mstable.org>
+author: Alex Scott <alex@mstable.org>, George Ornbo <george@mstable.org>
 discussions-to: https://forum.mstable.org/t/add-liquidator-proposal-to-liquidate-comp-rewards/81
-created: 2020-09-16 
+created: 2020-09-16
+resolution: https://github.com/mstable/mStable-contracts/pull/113
 ---
 
 <!--You can leave these HTML comments in your merged MIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new MIPs. Note that an MIP number will be assigned by an editor. When opening a pull request to submit your MIP, please use an abbreviated title in the filename, `mip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
 
 ## Simple Summary
+
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
-This MIP proposes a liquidation mechanism for assets owned by the protocol.
+
+This MIP proposes a liquidation mechanism for reward tokens ($COMP, $LEND) accrued in the protocol.
 Through the liquidator mechanism tokens may be liquidated and the value of
-these tokens may be realised by the protocol. 
+these tokens realised by SAVE.
 
 ## Abstract
+
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the MIP is implemented, not *why* it should be done or *how* it will be done. If the MIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-Create a `Liquidator` contract that may be called from other mStable protocol
-contracts. This will allow accrued rewards tokens to be sold on DEXs and the
+
+Create a `Liquidator` contract that sells the reward tokens approved in both
+Compound and Aave integrations. This will allow accrued rewards tokens to be sold on DEXs and the
 value returned to SAVE. This will bolster the SAVE APY and realised the value of
-accrued rewards.  
+accrued rewards.
 
 The protocol earns rewards from different platforms for lending stablecoins.
-To dat, the protocol has earned ~470 $COMP tokens for lending DAI and USDC
+To dat, the protocol has earned ~470 \$COMP tokens for lending DAI and USDC
 and it is expected that the protocol will earn tokens from other platforms.
 This MIP offers an automated generic way to liquidate accrued tokens and to
 return this value to the protocol. This will bolster the SAVE APY.
 
 ## Motivation
+
 <!--This is the problem statement. This is the *why* of the MIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the MIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the MIP will address the issue!-->
+
 The mStable protocol lends stablecoins to lending platforms and derives a
 return for depositors based on the Supply APY of the Platform. In addition to
 Supply APY rates many lending platforms offer liquidity providers rewards in
 the form of tokens. These tokens are tradable on DEXs and have value and
-provide an additional yield for liquidity provision. 
+provide an additional yield for liquidity provision.
 
 The mStable protocol deposits DAI and USDC to Compound and has been accruing
-$COMP tokens as a result. These tokens are valuable but the current protocol
+`$COMP` tokens as a result. These tokens are valuable but the current protocol
 has no way to realise the value from accrued rewards. As such these tokens
-remain on a contract and the value cannot be liquidated.  
+remain on a contract and the value cannot be liquidated.
 
 For lending DAI and USDC to Compound the protocol has accrued $COMP tokens as
 rewards. The $COMP that has been accrued on the `CompoundIntegration` with a
-[balance of ~470 $COMP][1] equivalent to $72k at the time of writing.  This
+[balance of ~470 \$COMP][1] equivalent to \$72k at the time of writing. This
 value should be liquidated and distrubted to SAVE. The protocol should automate
 this selling to support the push towards decentralisation.
 
 ## Specification
+
 <!--The specification should describe the syntax and semantics of any new feature, there are five sections
 1. Overview
 2. Rationale
@@ -57,198 +65,127 @@ this selling to support the push towards decentralisation.
 -->
 
 ### Overview
+
 <!--This is a high level overview of *how* the MIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
-This MIP creates a generic liquidiator that allows accrued rewards tokens to be
-swapped on a DEX. The first use case for the liquidator will be to automate the
-selling of $COMP on the open market to bolster the SAVE APY. The $COMP tokens
-will be exchanged for cDAI and returned to the `CompoundIntegration.sol`
-contract. 
+
+This MIP creates a generic liquidiator that allows accrued rewards tokens to be retrieved
+from a given `integration` (e.g. CompoundIntegration), and sold for mUSD which is then
+sent to the SavingsManager.
+
+Liquidations are triggered once by week by any community member through an external function.
+
+**Flow**
+
+1. Liquidator sells `$COMP` for `USDC` (or other) on Uniswap once per week (up to trancheAmount).
+1. Sell `USDC` for `mUSD` on Curve and send to SavingsManager
+1. SavingsManager **streams** mUSD to SAVE, second by second over the course of a week
 
 ### Rationale
+
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
-The rational for a liquidator is:
 
-1. **Realise value**: The value of accrued rewards tokens should be liquidated and returned to SAVE to bolster APY.
-2. **Automate Liquidation**: Rewards tokens should be liquidated in an automated manner. This is to support the transition to decentralisation and remove the requirement for any human intervention.  
-3. **Feed liquidations back into the protocol** Luquidations should go back into the mStable protocol to help further improve APY through Swap Fees. 
+There final architecture choice increases very little gas in the system -
+only causing 1600 gas (2x SLOAD) to a SAVE deposit. No gas costs are seen for
+general mint/swap/redemption. Any gas cost is incurred once a week when the liquidation
+is triggered.
 
-Some thought was given to implementing more exotic Yield Farming strategies to
-increase the APY further. Depositing to CREAM was considered as was depositing
-to Balancer Pools or to Sake Pools. This was felt to be too risky and to
-require active Fund Management to ensure good returns. 
+The streaming of the mUSD to SAVE also achieves a gradual
+release of the realised mUSD over the course of a full week to SAVE, avoiding the scenario
+in which malicious actors could trigger the liquidation and jump into the SAVE contract
+to immediately benefit.
 
-As such an automated, predictable return is favoured by selling `Token A` for
-`Token B` on the open market. 
- 
-Related work includes yearn.finance selling $CRV tokens on the open market. 
+Capitalising on the new Curve 3Pool, it is now optimal to sell COMP for a given bAsset on
+Uniswap (e.g. DAI or USDC), then immediately sell that bAsset on Curve for mUSD.
+
+There were a number of previous architecture ideas that turned out to be sub optimal, including
+intermittent collection from the Liquidator, and intermittent airdropping.
 
 ### Technical Specification
+
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces mStable currently exposes or the creations of new ones.-->
 
-A `Liquidator.sol` contract will be created that will sell `Token A` for `Token
-B` on a DEX. Initially Uniswap will be supported but Balancer, 1inch, UniSwap and
+A `Liquidator.sol` contract will be created that will sell `Token A` for `Token B` on a DEX.
+Initially Uniswap and Curve will be supported but Balancer, 1inch, UniSwap and
 other integrations may be added. In the short term the contract will be
-upgradable with a view to it becoming immutable. 
+upgradable with a view to it becoming immutable.
 
 Protocol contracts that hold reward tokens will give the Liquidator infinite
 approval to spend the rewards tokens. The Liquidator will then begin selling
-`Token A` and will return `Token B` to originating contract.
+`Token A` once per week, for `Token B`, and then turning this `Token B` into mUSD.
 
-An initial use case is to sell the $COMP available on the
-`CompoundIntegration.sol` contract for $cDAI. The `CompoundIntegrator.sol`
-contract will grant the `Liquidator.sol` contract infinite approval on the
-$COMP that it holds. The Liquidator will begin selling the $COMP at a drip rate
-and will return $cDAI to the `CompoundIntegrator.sol` contract. 
+#### Contract changes
 
-To prevent people gaming Liquidations and depositing large amounts around a
-liquidation to benefit from the returns liquidations will be smoothed over time
-and separated into two steps.
+**Liquidator.sol (NEW)**
 
-The first is for the Liquidator to sell a proportion of the amount it holds
-when the `triggerLiquidation` function is called. The `triggerLiquidation` is a
-public function and may be called by anyone, but may only be called once in a
-24 hour period. Based on the spot price for the asset the function will compute
-a value between $1000 and $3000 and trigger a sale for this amount. After the
-token has been swapped the token remains on the Liquidator contract.
-
-The second step is for the Integration contract to call `collect()` on the
-liquidator. This function will transfer a proportion of the tokens from the
-Liquidator contract to the Integration contract. At this point the token is on
-the Integration contract and earning Supply APY.
-
-The following psueudo code is a proposal for how `collect()` function should
-distribute bought tokens to the Integration contract when called. 
+Key functions:
 
 ```
-// Add randomness to collection schedule
-randomMulipler = random(1..3)
-if timeSinceLastCollection > 1 hour * randomMulipler 
-    contractBal = buyAsset.balanceOf(address(this)) 
-    spotPrice = exchange.getSpotPriceFor(buyAsset)
-    value = contactBal * spotPrice
-    // If the value is less than 1000 transfer everything
-    // The 1000 value is configurable by Governance
-    if value < 1000
-      buyAsset.transfer(contractBal, integration)
-    else
-      // randomize the amount to send
-      percentToSend = rand(1..collectPercentage)
-      amountToSend = contractBal * percentToSend
-      buyAsset.transfer(amountToSend, integration)
-      timeSinceLastCollection = now
-else
-    return error 'claimed too soon'
+    /**
+    * @dev Create a liquidation
+    * @param _integration The integration contract address from which to receive sellToken
+    * @param _sellToken Token harvested from the integration contract
+    * @param _bAsset The asset to buy on Uniswap
+    * @param _curvePosition Position of the bAsset in Curves MetaPool
+    * @param _uniswapPath The Uniswap path as an array of addresses e.g. [COMP, WETH, DAI]
+    * @param _trancheAmount The amount of bAsset units to buy in each weekly tranche
+    */
+    function createLiquidation(
+        address _integration,
+        address _sellToken,
+        address _bAsset,
+        int128 _curvePosition,
+        address[] calldata _uniswapPath,
+        uint256 _trancheAmount
+    )
+
+    /**
+    * @dev Triggers a liquidation, flow (once per week):
+    *    - Sells $COMP for $USDC (or other) on Uniswap (up to trancheAmount)
+    *    - Sell USDC for mUSD on Curve
+    *    - Send to SavingsManager
+    * @param _integration Integration for which to trigger liquidation
+    */
+    function triggerLiquidation(address _integration)
+        external
+```
+
+**CompoundIntegration (PROXY UPGRADE)**
 
 ```
-It is proposed that the `collect()` function is called at a specific time
-interval. The initial proposal is one hour. 
-  
+    /**
+     * @dev Approves Liquidator to spend COMP (0xc00e94Cb662C3520282E6f5717214004A7f26888)
+     */
+    function approveRewardToken()
+        external
+        onlyGovernor
+```
 
-**Interface**
+**SavingsManager (MODULE UPGRADE)**
+
+Deposited mUSD from the Liquidator is streamed to the SAVE contract over the course of a full week.
+This means that as deposits to SAVE happen, they realise some of the value.
 
 ```
-pragma solidity 0.5.16;
-
-interface ILiquidations {
-    struct Liquidation {
-        address basset;
-        address integration;
-        address rewardToken;
-        uint    amount;
-        uint    collectDrip;
-        bool    paused;
-    }
-
-    // Views
-    function getLiquidation(address _bAsset) external view returns (Liquidation memory l);
-
-    // Restricted to the `integrationContract` given in addLiquidation
-    function collect() external;
-
-    // Callable by anyone to trigger a selling event 
-    function triggerLiquidation(address _bAsset) public;
-
-    // Governor only
-    function addLiquidation(address _bAsset, address _integration, uint _amount ) external;
-    function removeLiquidation(address _bAsset) external;
-    function pauseLiquidation(address _bAsset) external;
-    function setCollectDrip(address _bAsset) external;
-}
+    /**
+     * @dev Allows the liquidator to deposit proceeds from iquidated gov tokens.
+     * Transfers proceeds on a second by second basis to the Savings Contract over 1 week.
+     * @param _mAsset The mAsset to transfer and distribute
+     * @param _liquidated Units of mAsset to distribute
+     */
+    function depositLiquidation(address _mAsset, uint256 _liquidated)
+        external
+        onlyLiquidator
 ```
-**Events**
-
-* event LiquidationAdded(address indexed bAsset);
-* event LiquidationRemoved(address indexed bAsset);
-* event LiquidationPaused(address indexed bAsset);
-* event LiquidationTriggered(address indexed bAsset);
-* event LiquidationCollected(address indexed bAsset);
-
-### Compound Integration Contract
----
-The `CompoundIntegration.sol` will be amend the `deposit` and `withdrawal` function to call `collect(_bAsset)` on the Liquidator contract. No interface changes are needed. 
-
-### Test Cases
-<!--Test cases for an implementation are mandatory for MIPs but can be included with the implementation..-->
-
-Given the following preconditions:
-
-- A bAsset exists and is earning a reward token on an integration contract
-- A governor issues a transaction to give the Liquidator infinite approval on the reward token.
-
-***
-
-When
-
-- A liquidition is created
-
-Then
-
-- ✅ It successfully adds a liquidation
-- ✅ It transfers the Reward Token from the Integration contract to the Liquidation contract.
-
-***
-
-Given the following preconditions:
-
-- The Liquidator contract holds some rewards tokens for a bAsset
-
-***
-
-When
-
-- The `triggerLiquidation()` function is called 
-
-Then
-
-- ✅ It successfully sells an amount of the sell token
-- ✅ It receives the buy token
-
-***
-
-When
-
-- The `collect()` function is called by the Integration contract
-
-Then
-
-- ✅ It transfers some buy tokens from the Liquidator to the Integration contract
-
-***
-
-When
-
-- The `collect()` function is called by a contract other than the Integration contract.
-
-Then
-
-- ❌ it fails and reverts because the caller is not the Integration contract
 
 ### Configurable Values (Via MCCP)
+
 <!--Please list all values configurable via MCCP under this implementation.-->
-None
+
+- TrancheAmount (max units of mUSD to purchase per week - useful for starting period)
+- BuyAsset (must be some bAsset of USDC, USDT or DAI since that is the Curve 3 pool)
 
 ## Copyright
+
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 [1]: https://etherscan.io/tokenholdings?a=0xd55684f4369040c12262949ff78299f2bc9db735
-[2]: https://1inch.exchange
