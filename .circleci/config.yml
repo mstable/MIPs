@@ -1,6 +1,6 @@
 defaults: &defaults
   working_directory: ~/repo
-version: 2
+version: 2.1
 
 executors:
   gcp:
