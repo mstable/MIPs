@@ -22,6 +22,7 @@ jobs:
             - rubygems-v1-{{ checksum "Gemfile.lock" }}
             - rubygems-v1-fallback
       - init:
+          name: Install Bundler
           command: gem install bundler
       - run:
           name: Bundle Install
