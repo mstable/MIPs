@@ -40,9 +40,10 @@ jobs:
               --check-html \
               --disable-external
       - persist_to_workspace:
-          root: ./
+          root: ~/
           paths:
-            - _site
+            - project/_site
+            - project/*
   deploy:
     executor: gcp
     steps:
