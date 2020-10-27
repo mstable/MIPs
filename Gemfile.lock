@@ -213,6 +213,9 @@ GEM
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     minitest (5.11.3)
+    mip_validator (0.1.0)
+      activemodel
+      front_matter_parser (~> 0.1.1)
     multipart-post (2.0.0)
     net-dns (0.8.0)
     nokogiri (1.8.2)
@@ -240,9 +243,6 @@ GEM
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
-    mip_validator (0.1.0)
-      activemodel
-      front_matter_parser (~> 0.1.1)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
@@ -266,4 +266,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
