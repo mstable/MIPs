@@ -3,7 +3,7 @@ runtime: nodejs12
 service: mips
 
 handlers:
-  - url: /(.*\.(gif|png|svg|ttf|jpeg|jpg|css|css.map|js|js.map|pdf|scss|ico|json|json.map|mp4|webm))$
+  - url: /(.*\.(gif|png|svg|ttf|jpeg|jpg|css|css.map|js|js.map|pdf|scss|ico|json|json.map|mp4|webm|xml))$
     static_files: site/\1
     secure: always
     upload: site/(.*)

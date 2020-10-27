@@ -22,8 +22,8 @@ repository: mstable/MIPs
 twitter_username: "mstable_"
 github_username: mstable
 header_pages:
-  - all-mip.html
-  - all-mccp.html
+  - all-mip
+  - all-mccp
 twitter:
   card: summary
   username: "mstable_"

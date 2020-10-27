@@ -3,7 +3,7 @@ mip: 1
 title: MIP Purpose and Guidelines
 status: Implemented
 author: Tom Nash (@morelazers)
-discussions-to: https://forums.mstable.org/
+discussions-to: https://forum.mstable.org/
 created: 2020-09-12
 updated: N/A
 ---
@@ -167,7 +167,7 @@ The MIP document was derived heavily from the EIP Ethereum Improvement Proposal 
 June 10, 2019: MIP 1 has been drafted and submitted as a PR.
 
 
-See [the revision history for further details](https://github.com/mstable/), which is also available by clicking on the History button in the top right of the MIP.
+See [the revision history for further details](https://github.com/mstable/MIPs), which is also available by clicking on the History button in the top right of the MIP.
 
 ### Bibliography
 
