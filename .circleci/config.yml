@@ -56,8 +56,8 @@ jobs:
           name: "Deploy"
           command: |
             echo "Deploy to target GAE instance with project ID $GCP_PROJECT_ID"
-            echo $GCP_KEY > /tmp/$CI_PIPELINE_ID.json
-            gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
+            echo $GCP_KEY > /tmp/gcp_key.json
+            gcloud auth activate-service-account --key-file /tmp/gcp_key.json
             gcloud config set project $GCP_PROJECT_ID
             gcloud --quiet app deploy app.yml
 
@@ -68,8 +68,7 @@ workflows:
       - build
       - deploy:
           context:
-            - mstable-shared
-            - mstable-mainnet
+            - mstable-app
           requires:
             - build
           filters:
