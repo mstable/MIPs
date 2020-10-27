@@ -1,0 +1,77 @@
+defaults: &defaults
+  working_directory: ~/repo
+version: 2.1
+
+executors:
+  gcp:
+    docker:
+      - image: alsco77/node-gcp-dockerfile:njs12
+    resource_class: large
+  ruby:
+    docker:
+      - image: circleci/ruby:2.5
+
+jobs:
+  build:
+    <<: *defaults
+    executor: ruby
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - rubygems-v1-{{ checksum "Gemfile.lock" }}
+            - rubygems-v1-fallback
+      - run:
+          name: Install Bundler
+          command: gem install bundler
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      - save_cache:
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Jekyll build
+          command: bundle exec jekyll build
+      - run:
+          name: HTMLProofer tests
+          command: |
+            bundle exec htmlproofer ./_site \
+              --allow-hash-href \
+              --check-favicon  \
+              --check-html \
+              --disable-external
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - _site
+  deploy:
+    <<: *defaults
+    executor: gcp
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Deploy"
+          command: |
+            echo "Deploy to target GAE instance with project ID $GCP_PROJECT_ID"
+            echo $GCP_KEY > /tmp/$CI_PIPELINE_ID.json
+            gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
+            gcloud config set project $GCP_PROJECT_ID
+            gcloud --quiet app deploy app.yml
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - build
+      - deploy:
+          context:
+            - mstable-shared
+            - mstable-mainnet
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

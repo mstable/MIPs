@@ -157,7 +157,7 @@ The MCCP document was derived heavily from the EIP Ethereum  Improvement Proposa
 June 10, 2019: MCCP-1 has been drafted and submitted as a PR.
 
 
-See [the revision history for further details](https://github.com/mstable/**), which is also available by clicking on the History button in the top right of the MCCP.
+See [the revision history for further details](https://github.com/mstable/MIPs), which is also available by clicking on the History button in the top right of the MCCP.
 
 ### Bibliography
 
