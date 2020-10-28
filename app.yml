@@ -9,9 +9,9 @@ handlers:
     upload: _site/(.*)
     http_headers:
       X-Frame-Options: deny
-  - url: /(.*)
-    static_files: _site/index.html
+  - url: /(.*)$
+    static_files: _site/\1
     secure: always
-    upload: _site/index.html
+    upload: _site/\1
     http_headers:
       X-Frame-Options: deny
