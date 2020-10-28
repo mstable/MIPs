@@ -16,7 +16,7 @@ handlers:
     http_headers:
       X-Frame-Options: deny
   - url: /(.*)$
-    static_files: _site/\1
+    static_files: _site/\1.html
     secure: always
     upload: _site/(.*)
     http_headers:
