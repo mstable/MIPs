@@ -38,7 +38,8 @@ jobs:
               --allow-hash-href \
               --check-favicon  \
               --check-html \
-              --disable-external
+              --disable-external \
+              --assume_extension
       - persist_to_workspace:
           root: ~/
           paths:
