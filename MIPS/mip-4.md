@@ -1,6 +1,6 @@
 ---
 mip: 4
-title: Reduce SAVE gas cost through infrequent lending market yield collection
+title: Batch yield collection to reduce SAVE gas costs
 status: Proposed
 author: Alex Scott <alex@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-4-batch-yield-collection-to-reduce-save-gas-costs/230
