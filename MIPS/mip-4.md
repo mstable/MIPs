@@ -3,7 +3,7 @@ mip: 4
 title: Reduce SAVE gas cost through infrequent lending market yield collection
 status: Proposed
 author: Alex Scott <alex@mstable.org>
-discussions-to: https://forum.mstable.org/t/...
+discussions-to: https://forum.mstable.org/t/mip-4-batch-yield-collection-to-reduce-save-gas-costs/230
 created: 2020-10-30
 ---
 
@@ -37,8 +37,9 @@ to SAVE to the benefit of the existing savers. The flow goes something like `Sav
 `BasketManager` > eachBasset[`PlatformIntegration`].
 
 Example of a deposit transaction:
-https://dashboard.tenderly.co/tx/main/0xf730ff62dfe989fda27c18c858e897db31402dff3ab811105fcf20c55829db8f/gas-usage
-Total gas cost: 390,739
+[tenderly.co/tx/main/0xf73...](https://dashboard.tenderly.co/tx/main/0xf730ff62dfe989fda27c18c858e897db31402dff3ab811105fcf20c55829db8f/gas-usage)
+
+Current gas cost: ~390,739
 
 The part of the transaction, from `BasketManager` onwards, is proposed to be omitted. In this function,
 for each basset a `IPlatformIntegration(integrations[i]).checkBalance(b.addr);` call is made - this is expensive due to the way
@@ -64,18 +65,18 @@ If we were to continue without this change, the gas costs would increase by ~30k
 
 This MIP will solve the problem by making the following changes:
 
-1. Change the way SWAP fees are recorded in `Masset.sol`
+**1 - Change the way SWAP fees are recorded in `Masset.sol`**
 
 Currently the SWAP fees are implicitly recorded as deltas in each bAssets `vaultBalance` property by subtracting
 the full amount (including fee) during a SWAP. When the interest is collected in `BasketManager`, the gain is
 calculated as `delta = balance.sub(oldVaultBalance);`. Instead of recording fees implicitly like this, we will instead
 track fees natively in the `Masset.sol` at the cost of an extra SSTORE to each SWAP/REDEEM.
 
-2. Change the default behaviour of the `collectInterest` function in `Masset.sol`
+**2 - Change the default behaviour of the `collectInterest` function in `Masset.sol`**
 
 Simply remove the call `basketManager.collectInterest();` and mint mAsset to the amount of fees that have been collected.
 
-3. Change the method of lending market interest collection & distribution (`SavingsManager.sol` && `Masset.sol`)
+**3 - Change the method of lending market interest collection & distribution (`SavingsManager.sol` && `Masset.sol`)**
 
 As opposed to collecting lending market interest each deposit, we will add a new function to `Masset.sol` that specifically collects
 the interest from the lending markets and deposits it to the SavingsManager. Following the mechanism in [mip-2](./mip-2) in which
@@ -85,9 +86,10 @@ This introduces an extra 1600 gas for each deposit (2x SLOAD).
 ### Rationale
 
 The ideal solution:
-a) Lowers gas costs for SAVE deposit
-b) Does not present unfair opportunities for participants to time SAVE deposits and "steal" yield
-c) Does not increase gas costs substantially (1 SSTORE is fine) for mint/swap/redeem
+
+- a) Lowers gas costs for SAVE deposit
+- b) Does not present unfair opportunities for participants to time SAVE deposits and "steal" yield
+- c) Does not increase gas costs substantially (1 SSTORE is fine) for mint/swap/redeem
 
 The above properties were taken into account and used as benchmarks on the following decisions:
 
