@@ -3,15 +3,21 @@ runtime: nodejs12
 service: mips
 
 handlers:
-  - url: /(.*\.(gif|png|svg|ttf|jpeg|jpg|css|css.map|js|js.map|pdf|scss|ico|json|json.map|mp4|webm|xml))$
-    static_files: site/\1
+  - url: /(.*\.(gif|png|svg|ttf|jpeg|jpg|css|css.map|js|js.map|pdf|scss|ico|json|json.map|mp4|webm|xml|html))$
+    static_files: _site/\1
     secure: always
-    upload: site/(.*)
+    upload: _site/(.*)
     http_headers:
       X-Frame-Options: deny
-  - url: /(.*)
-    static_files: site/index.html
+  - url: /
+    static_files: _site/index.html
     secure: always
-    upload: site/index.html
+    upload: _site/index.html
+    http_headers:
+      X-Frame-Options: deny
+  - url: /(.*)$
+    static_files: _site/\1.html
+    secure: always
+    upload: _site/(.*)
     http_headers:
       X-Frame-Options: deny
