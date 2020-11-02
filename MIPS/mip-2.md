@@ -1,7 +1,7 @@
 ---
 mip: 2
 title: Add a liquidator to sell reward tokens
-status: Approved
+status: Implemented
 author: Alex Scott <alex@mstable.org>, George Ornbo <george@mstable.org>
 discussions-to: https://forum.mstable.org/t/add-liquidator-proposal-to-liquidate-comp-rewards/81
 created: 2020-09-16
