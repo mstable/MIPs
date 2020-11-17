@@ -1,7 +1,7 @@
 ---
 mip: 4
 title: Batch yield collection to reduce SAVE gas costs
-status: Proposed
+status: Approved
 author: Alex Scott <alex@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-4-batch-yield-collection-to-reduce-save-gas-costs/230
 created: 2020-10-30
@@ -81,7 +81,6 @@ Simply remove the call `basketManager.collectInterest();` and mint mAsset to the
 As opposed to collecting lending market interest each deposit, we will add a new function to `Masset.sol` that specifically collects
 the interest from the lending markets and deposits it to the SavingsManager. Following the mechanism in [mip-2](./mip-2) in which
 a publicly accessible function is called intermittently, we will then **stream the collected yield over the course of a DAY** to SAVE.
-This introduces an extra 1600 gas for each deposit (2x SLOAD).
 
 ### Rationale
 
@@ -120,7 +119,7 @@ update a global param is not much of a problem. Instead of setting the variable 
 
 **Masset.sol (UPGRADE)**
 
-New property: `feesAccrued`
+New property: `surplus`
 Tracks the units of fees that have been accrued since last collection (in mAsset terms)
 
 Modify function: `collectInterest` -> `collectFees`
@@ -132,8 +131,8 @@ be streamed over the course of a week
 
 **SavingsManager.sol (UPGRADE)**
 
-New function: `depositYield`
-Deposits the yield and streams over the course of a week.
+New function: `streamInterest`
+Deposits the lending market yield and streams over the course of a week.
 
 ### Configurable Values (Via MCCP)
 

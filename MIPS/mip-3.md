@@ -1,7 +1,7 @@
 ---
 mip: 3
 title: Add a cache to reduce gas costs
-status: Proposed
+status: Approved
 author: Alex Scott <alex@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-3-add-cache-to-reduce-gas-costs/227
 created: 2020-10-27
@@ -12,16 +12,17 @@ created: 2020-10-27
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
 Depositing and withdrawing from lending markets (Compound, Aave) constitutes
-70-90% of the gas cost of a given transaction. This MIP proposes to implement a
+60-90% of the gas cost of a given transaction. This MIP proposes to implement a
 cache to reduce frequency of interactions with the lending pools, thus reducing gas
-costs in MINT, SWAP and REDEEM by 70-90% for the majority of users.
+costs in MINT, SWAP and REDEEM by 60-90% for the majority of users.
 
 ## Abstract
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the MIP is implemented, not *why* it should be done or *how* it will be done. If the MIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
 We propose upgrading the `Masset.sol` contract, allowing it to track and retain a percentage of
-all collateral in it's "cache". Only if necessary will the `Masset` then deposit or withdraw from
+each collateral in a "cache". This cache will reside in the pre-existing `PlatformIntegration` for
+gas optimisation purposes. Only if necessary will the `Masset` then deposit or withdraw from
 the lending markets. When a deposit or withdrawal happens, the cache will reset to the ideal target
 weight, determined by a governance parameter. Subsequently, the `BasketManager.sol` will be upgraded
 to use the cache data during normal interest collection.
@@ -52,12 +53,12 @@ In our case, memory = liquidity pool && high speed = low gas.
 
 <!--This is a high level overview of *how* the MIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
-At the high level, there will now be a % of bAsset liquidity retained in `Masset.sol` (a.k.a. _"the Cache"_).
+At the high level, there will now be a % of bAsset liquidity retained in the corresponding `PlatformIntegration` (a.k.a. _"the Cache"_).
 Deposits and withdrawals of a given bAsset will primarily interact with this Cache, unless a withdrawal will
-push the cache past 0 units, or a deposit will push the cache past `X%` of total supply. At which point, an amount will be
+push the cache past 0 units, or a deposit will push the cache past `X%` of total mAsset supply. At this point, an amount will be
 deposited/withdrawn from the lending market to reset the cache to `X/2%` of total supply.
 
-The solution will comprise of two parts:
+The solution will comprise of three parts:
 
 **1 - Upgrade to `Masset.sol`**
 
@@ -111,11 +112,26 @@ if(withdrawal > bAssetBalance){
 
 ```
 
-**2 - Upgrade to `BasketManager.sol`**
+**2 - Upgrade to each `PlatformIntegration`**
+
+New function: `withdrawRaw` allows the `Masset` or `BasketManager` to withdraw bAssets
+directly from the contract.
+
+New function: `withdraw` that accepts an `amount` and a `totalAmount`. The `totalAmount` is withdrawn
+from the lending protocol before sending the `amount` back to the recipient, keeping `totalAmount`-`amount` in
+the cache.
+
+Move of responsibility for accounting during a given deposit to the `Masset.sol`. Previously
+when calling `deposit`, the call would fail if there was insufficient liquidity - now that there is
+a large amount of bAsset held in the cache, it's unlikely to fail under the same circumstances (i.e.
+not having just received sufficient funds). The `Masset.sol` now has checks to ensure it is sending
+sufficient capital.
+
+**3 - Upgrade to `BasketManager.sol`**
 
 Currently the interest collection mechanism reads balances from Aave/Compound for each bAsset,
 before minting a corresponding amount of mUSD based on the accrued interest. The BasketManager
-must be upgraded now to read both `bAsset.balanceOf(mAsset)` as well as the balance from lending
+must be upgraded now to read both `bAsset.balanceOf(integration)` as well as the balance from lending
 market. This is a trivial change.
 
 ### Rationale
