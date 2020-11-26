@@ -127,12 +127,12 @@ Turns accrued SWAP fees into mAsset and sends to SavingsManager
 
 New function: `collectInterest`
 Collects the lending market interest and sends to the SavingsManager to
-be streamed over the course of a week
+be streamed over the course of a day
 
 **SavingsManager.sol (UPGRADE)**
 
 New function: `streamInterest`
-Deposits the lending market yield and streams over the course of a week.
+Deposits the lending market yield and streams over the course of a day, bundling with existing stream.
 
 ### Configurable Values (Via MCCP)
 
