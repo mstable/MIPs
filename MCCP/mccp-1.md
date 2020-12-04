@@ -21,7 +21,7 @@ An MCCP must meet certain minimum criteria. It must be a clear and complete desc
 
 ## MCCP Work Flow
 
-Parties involved in the process are the *author*, the [*MIP editors*](#mip-editors), and the [mStable Engineering Team].
+Parties involved in the process are the _author_, the [_MIP editors_](#mip-editors), and the [mStable Engineering Team].
 
 :warning: Before you begin, vet your idea, this will save you time. Ask the mStable community first if the proposed change is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will have the intend effect. The appropriate public forum to gauge interest around your MCCP is [the mStable Discord].
 
@@ -33,13 +33,13 @@ Your role as the champion is to write the MCCP using the style and format descri
 
 Each status change is requested by the MCCP author and reviewed by the MIP editors. Use a pull request to update the status. Please include a link to where people should continue discussing your MCCP. The MIP editors will process these requests as per the conditions below.
 
-* **Work in progress (WIP)** -- Once the champion has asked the mStable community whether an idea has any chance of support, they will write a draft MCCP as a [pull request].
+- **Work in progress (WIP)** -- Once the champion has asked the mStable community whether an idea has any chance of support, they will write a draft MCCP as a [pull request].
 
-* **Proposed** If agreeable, MIP editor will assign the MCCP a number (generally the issue or PR number related to the MCCP) and merge your pull request. The MIP editor will not unreasonably deny an MCCP. Proposed MCCPs will be discussed on governance calls and in Discord. If there is a reasonable level of consensus around the change on the governance call the change will be moved to approved. If the change is contentious a vote of token holders may be held to resolve the issue or approval may be delayed until consensus is reached.
+- **Proposed** If agreeable, MIP editor will assign the MCCP a number (generally the issue or PR number related to the MCCP) and merge your pull request. The MIP editor will not unreasonably deny an MCCP. Proposed MCCPs will be discussed on governance calls and in Discord. If there is a reasonable level of consensus around the change on the governance call the change will be moved to approved. If the change is contentious a vote of token holders may be held to resolve the issue or approval may be delayed until consensus is reached.
 
-* **Approved** -- This MCCP has passed community governance and is now being prioritised.
+- **Approved** -- This MCCP has passed community governance and is now being prioritised.
 
-* **Implemented** -- This MCCP has been implemented and the variable changed on mainnet.
+- **Implemented** -- This MCCP has been implemented and the variable changed on mainnet.
 
 ## What belongs in a successful MCCP?
 
@@ -48,7 +48,7 @@ Each MCCP should have the following parts:
 - Preamble - RFC 822 style headers containing metadata about the MCCP, including the MCCP number, a short descriptive title (limited to a maximum of 44 characters), and the author details.
 - Simple Summary - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the MCCP.
 - Abstract - a short (~200 word) description of the variable change proposed.
-- Motivation (*optional) - The motivation is critical for MCCPs that want to update variables within mStable. It should clearly explain why the existing variable is not incentive aligned. MCCP submissions without sufficient motivation may be rejected outright.
+- Motivation (\*optional) - The motivation is critical for MCCPs that want to update variables within mStable. It should clearly explain why the existing variable is not incentive aligned. MCCP submissions without sufficient motivation may be rejected outright.
 - Copyright Waiver - All MCCPs must be in the public domain. See the bottom of this MCCP for an example copyright waiver.
 
 ## MCCP Formats and Templates
@@ -58,7 +58,7 @@ Image files should be included in a subdirectory of the `assets` folder for that
 
 ## MCCP Header Preamble
 
-Each MCCP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style header preamble, preceded and followed by three hyphens (`---`). This header is also termed ["front matter" by Jekyll](https://jekyllrb.com/docs/front-matter/). The headers must appear in the following order. Headers marked with "*" are optional and are described below. All other headers are required.
+Each MCCP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style header preamble, preceded and followed by three hyphens (`---`). This header is also termed ["front matter" by Jekyll](https://jekyllrb.com/docs/front-matter/). The headers must appear in the following order. Headers marked with "\*" are optional and are described below. All other headers are required.
 
 ` mip:` <MCCP number> (this is determined by the MIP editor)
 
@@ -122,8 +122,6 @@ The current MIP editors are
 
 ` * Alex Scott (@alsco77)`
 
-` * George Ornbo (@shapeshed)`
-
 ` * James Lefrère (@JamesLefrere)`
 
 ## MIP Editor Responsibilities
@@ -150,23 +148,22 @@ The editors don't pass judgment on MCCPs. We merely do the administrative & edit
 
 ## History
 
-The MCCP document was derived heavily from the EIP Ethereum  Improvement Proposal document in many places text was simply copied and modified. Any comments about the MCCP document should be directed to the MIP editors. The history of the EIP is quoted below from the EIP document  for context:
+The MCCP document was derived heavily from the EIP Ethereum Improvement Proposal document in many places text was simply copied and modified. Any comments about the MCCP document should be directed to the MIP editors. The history of the EIP is quoted below from the EIP document for context:
 
-* *"This document (EIP) was derived heavily from [Bitcoin's BIP-0001] written by Amir Taaki which in turn was derived from [Python's PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."* *
+- _"This document (EIP) was derived heavily from [Bitcoin's BIP-0001] written by Amir Taaki which in turn was derived from [Python's PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."_ \*
 
 June 10, 2019: MCCP-1 has been drafted and submitted as a PR.
-
 
 See [the revision history for further details](https://github.com/mstable/MIPs), which is also available by clicking on the History button in the top right of the MCCP.
 
 ### Bibliography
 
-[the mStable Discord]: https://discord.gg/y2r3jXm
+[the mstable discord]: https://discord.gg/y2r3jXm
 [pull request]: https://github.com/mstable/MIPs/pulls
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-[Bitcoin's BIP-0001]: https://github.com/bitcoin/bips
-[Python's PEP-0001]: https://www.python.org/dev/peps/
-[mStable Engineering Team]: https://github.com/orgs/mstable/people
+[bitcoin's bip-0001]: https://github.com/bitcoin/bips
+[python's pep-0001]: https://www.python.org/dev/peps/
+[mstable engineering team]: https://github.com/orgs/mstable/people
 
 ## Copyright
 
