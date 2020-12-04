@@ -132,8 +132,6 @@ The current MIP editors are
 
 ` * Alex Scott (@alsco77)`
 
-` * George Ornbo (@shapeshed)`
-
 ` * James Lefrère (@JamesLefrere)`
 
 ## MIP Editor Responsibilities
