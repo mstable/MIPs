@@ -1,10 +1,10 @@
 ---
 mip: 6
 title: Bitcoin mAsset (mBTC) and new AMM-based design
-status: PROPOSED
+status: Proposed
 author: Onur Solmaz <onur@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-6-bitcoin-masset-mbtc-and-new-amm-based-design/277
-created: 2020-12-01
+created: 2020-12-07
 ---
 
 ## Simple Summary
@@ -20,7 +20,7 @@ We propose a new mAsset, mBTC. Similar to mUSD, mBTC will be a derivative of BTC
 ## Motivation
 <!--This is the problem statement. This is the *why* of the MIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the MIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the MIP will address the issue!-->
 
-The AMM design used for mUSD, the first mAsset, is called the Constant Sum Market Maker, with the invariant $\sum_i x_i = k$. With the CSMM, bAssets can be minted, redeemed and swapped 1:1. However, this design introduces a number shortcomings, namely:
+The AMM design used for mUSD, the first mAsset, is called the Constant Sum Market Maker, with the invariant \\(\sum_i x_i = k\\). With the CSMM, bAssets can be minted, redeemed and swapped 1:1. However, this design introduces a number shortcomings, namely:
 
 - **Drained bAssets:** Expensive bAssets are fully drained from the basket and cheaper bAssets fill it up as much as they can.
 - **Restricted liquidity:** Not being able to swap with all bAssets limits the swap opportunities.
@@ -45,44 +45,44 @@ We designed the ICSMM to deal with the shortcomings of CSMM. By introducing ince
 
 As mentioned before, the CSMM invariant is simply the sum of all bAsset reserves:
 
-$$
+\\[
 \sum_i x_i = k
-$$
+\\]
 
 To obtain the ICSMM invariant, we multiply each reserve value with a "penalty term"
 
-$$
+\\[
 \sum_i x_i \left(1 - \pi_i\left(\frac{x_i}{\sum_j x_j}\right)\right) = k
-$$
+\\]
 
-where $\pi_i$ are the *penalty functions* for each bAsset $i$. These are functions of weight, and we will construct these to suit our needs from the AMM. Our main design criterion: they should yield 0 in the "target weight range", defined by soft minimum (`soft_min`) and maximum values (`soft_max`), but should otherwise increase with increased distance from `soft_min` or `soft_max`. When every weight is in `[soft_min, soft_max]`, our invariant becomes equal to the CSMM. This is the 1:1 region we mentioned in the abstract.
+where \\(\pi_i\\) are the *penalty functions* for each bAsset \\(i\\). These are functions of weight, and we will construct these to suit our needs from the AMM. Our main design criterion: they should yield 0 in the "target weight range", defined by soft minimum (`soft_min`) and maximum values (`soft_max`), but should otherwise increase with increased distance from `soft_min` or `soft_max`. When every weight is in `[soft_min, soft_max]`, our invariant becomes equal to the CSMM. This is the 1:1 region we mentioned in the abstract.
 
 The weights are allowed to move in a "wiggle room" below `soft_min` and above `soft_max`, capped by `hard_min` and `hard_max` values respectively. In other words, weights are not allowed to go below `hard_min` or above `hard_max`. The lower the weight of a bAsset, the higher its price in the AMM relative to others. The higher the weight of of a bAsset, the lower its price in the AMM relative to others.
 
 In AMM formulation, prices are obtained by taking the derivative of of the invariant function
 
-$$
+\\[
 \frac{\partial f}{\partial x_i} = 1  -
 \pi_i(w_i)-
 w_i(1-w_i) \pi_i'(w_i) +
 \sum_{j\neq i}w_j^2\pi_j'(w_j)
 =: p_i(w)
-$$
+\\]
 
-where $f(x)$ is the left-hand side of the invariant and weights are defined as $w_i=x_i/\sum_j x$. Note the price expression is independent of total bAsset reserves. Since they are only functions of weights $w = (w_1, \dots, w_n)$, we denote them as $p_i(w)$. We also note that our invariant is *liquidity insensitive*, that is, it yields the same prices at the same weights, regardless of the total amount of liquidity in the AMM. We think that this property is important for a basket of stablecoins.
+where \\(f(x)\\) is the left-hand side of the invariant and weights are defined as \\(w_i=x_i/\sum_j x\\). Note the price expression is independent of total bAsset reserves. Since they are only functions of weights \\(w = (w_1, \dots, w_n)\\), we denote them as \\(p_i(w)\\). We also note that our invariant is *liquidity insensitive*, that is, it yields the same prices at the same weights, regardless of the total amount of liquidity in the AMM. We think that this property is important for a basket of stablecoins.
 
-We want the penalty functions to be easy to compute on chain. To this end, we define them for each bAsset $i$ as
+We want the penalty functions to be easy to compute on chain. To this end, we define them for each bAsset \\(i\\) as
 
-$$
+\\[
 \pi_i(w) =
 \begin{cases}
-\pi_{\min,i} \left(\dfrac{w - s_{\min,i}}{h_{\min,i} - s_{\min,i}}\right)^{a_{\min,i}} & h_{\min,i} < w < s_{\min,i} \\
-0 & s_{\min,i} \leq w \leq s_{\max,i} \\
+\pi_{\min,i} \left(\dfrac{w - s_{\min,i}}{h_{\min,i} - s_{\min,i}}\right)^{a_{\min,i}} & h_{\min,i} < w < s_{\min,i} \\\\\\
+0 & s_{\min,i} \leq w \leq s_{\max,i} \\\\\\
 \pi_{\max,i} \left(\dfrac{w - s_{\max,i}}{h_{\max,i} - s_{\max,i}}\right)^{a_{\max,i}} & s_{\max,i} < w < h_{\max,i}
 \end{cases}
-$$
+\\]
 
-where $h_{\min,i}$ is the hard minimum, $s_{\min,i}$ is the soft minimum, $\pi_{\min,i}$ is the value of the function at the hard minimum, $a_{\min,i}\in \mathbb{Z}_{>0}$ is the convexity parameter of the weight floor, $h_{\max,i}$ is the hard maximum, $s_{\max,i}$ is the soft maximum, $\pi_{\max,i}$ is the value of the function at the hard maximum, and $a_{\max,i} \in \mathbb{Z}_{>0}$ is the convexity parameter of the weight ceiling.
+where \\(h_{\min,i}\\) is the hard minimum, \\(s_{\min,i}\\) is the soft minimum, \\(\pi_{\min,i}\\) is the value of the function at the hard minimum, \\( a_{\min,i} \in \mathbb{Z}\_{>0} \\) is the convexity parameter of the weight floor, \\(h_{\max,i}\\) is the hard maximum, \\(s_{\max,i}\\) is the soft maximum, \\(\pi_{\max,i}\\) is the value of the function at the hard maximum, and \\(a_{\max,i} \in \mathbb{Z}\_{>0}\\) is the convexity parameter of the weight ceiling.
 
 
 ### Rationale
@@ -97,12 +97,12 @@ There were various design goals we wanted to achieve while we tackle the problem
 
 We came to the conclusion that the most logical solution to our problems was to introduce an invariant-based model to mAssets, effectively turning them into AMMs that work within the bounds defined by hard limits.
 
-### Technical Specification
+## Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces mStable currently exposes or the creations of new ones.-->
 
 In this section, we outline the algorithms used in computing output amounts in Python 3-like pseudocode. The variable `FULL_SCALE` is a big number, e.g. 1e18, that we use to set the precision of integer operations. For more information, check out the [existing math implementation in mStable repositories](https://github.com/mstable/mStable-contracts/blob/db20930cc2553e6854c9d39d219538d55cbd034d/contracts/shared/StableMath.sol).
 
-#### Computing the penalty function and its derivative
+### Computing the penalty function and its derivative
 
 The penalty function is computed as
 
@@ -154,7 +154,7 @@ def dpidw(w: int):
     return result
 ```
 
-#### Computing the invariant and its derivative
+### Computing the invariant and its derivative
 
 The invariant is computed as
 
@@ -203,9 +203,9 @@ def invariant_deriv(x: List[int], i: int):
     return eval_deriv_weights(w, i)
 ```
 
-#### Solving the invariant equation
+### Solving the invariant equation
 
-We use [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method) to solve for a reserve value, given a mAsset supply (right-hand side of the invariant equation, $k$)
+We use [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method) to solve for a reserve value, given a mAsset supply (right-hand side of the invariant equation, \\(k\\))
 
 ```python
 def solve_invariant(x: List[int], rhs: int, i: int, max_iter=25):
@@ -224,7 +224,7 @@ def solve_invariant(x: List[int], rhs: int, i: int, max_iter=25):
     raise Exception("Solution did not converge in %d iterations"%max_iter)
 ```
 
-#### Checking whether the reserve change is allowed
+### Checking whether the reserve change is allowed
 
 User actions will modify reserves in a certain way, and we need to check after each action whether the final values are within the allowed range.
 
@@ -238,7 +238,7 @@ def in_bounds(x: List[int]):
     return True
 ```
 
-#### Computing mint output
+### Computing mint output
 
 The amount of mAsset received for minting with a certain amount of bAsset is computed as
 
@@ -259,7 +259,7 @@ def compute_mint(i: int, quantity: int):
     return total_minted
 ```
 
-#### Compute redeem output
+### Compute redeem output
 
 The amount of bAsset received for redeeming a certain amount of mAsset is computed as
 
@@ -284,7 +284,7 @@ def compute_redeem(i: int, quantity: int):
     return total_received
 ```
 
-#### Compute swap output
+### Compute swap output
 
 The output of swapping a certain amount of a bAsset to another one is computed as
 
