@@ -1,17 +1,16 @@
 ---
 mip: 6
-title: Bitcoin mAsset (mBTC)
-status: WIP
+title: Bitcoin mAsset (mBTC) and new AMM-based design
+status: PROPOSED
 author: Onur Solmaz <onur@mstable.org>
-discussions-to: <Create a new thread on https://forum.mstable.org and drop the link here>
-
+discussions-to: https://forum.mstable.org/t/mip-6-bitcoin-masset-mbtc-and-new-amm-based-design/277
 created: 2020-12-01
 ---
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-A new mAsset, mBTC, is created, which unites various Bitcoin-backed ERC20 tokens.  Mints, redeems and swaps with bAssets are not 1:1, and instead determined by a new [AMM](https://arxiv.org/abs/2003.10001) design.
+A new mAsset, mBTC, is created, which unites various Bitcoin-backed ERC20 tokens.  Mints, redeems and swaps with bAssets are not 1:1, and instead determined by a new [AMM](https://arxiv.org/abs/2003.10001)-based design.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the MIP is implemented, not *why* it should be done or *how* it will be done. If the MIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
@@ -21,13 +20,13 @@ We propose a new mAsset, mBTC. Similar to mUSD, mBTC will be a derivative of BTC
 ## Motivation
 <!--This is the problem statement. This is the *why* of the MIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the MIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the MIP will address the issue!-->
 
-The AMM design used for mUSD, the first mAsset, is called the Constant Sum Market Maker, with the invariant $\sum_i x_i = k$. With the CSMM, bAssets can be minted, redeemed and swapped 1:1. However, this design introduces a lot of shortcomings, namely:
+The AMM design used for mUSD, the first mAsset, is called the Constant Sum Market Maker, with the invariant $\sum_i x_i = k$. With the CSMM, bAssets can be minted, redeemed and swapped 1:1. However, this design introduces a number shortcomings, namely:
 
-- **Drained bAssets:** Expensive bAssets are fully drained from the basket and cheaper bAssets fill it up completely.
-- **Restricted liquidity:** Since expensive bAssets are fully drained, users can only swap between the cheapest bAssets.
-- **Reduced composability:** Not being able to swap with every bAsset hurts the usability of SWAP, and more importantly, its composability with other DeFi projects.
+- **Drained bAssets:** Expensive bAssets are fully drained from the basket and cheaper bAssets fill it up as much as they can.
+- **Restricted liquidity:** Not being able to swap with all bAssets limits the swap opportunities.
+- **Reduced composability:** Not being able to mint or redeem with every bAsset hinders composability with other DeFi projects.
 
-These problems were apparent even before the launch of mUSD v1. To mitigate them, mUSD was launched with maximum weight limits of 55% for each bAsset, in order to prevent them from filling the basket 100%.
+These problems were apparent even before the launch of mUSD v1. Because the system caps risk on individual assets, mUSD was launched with maximum with maximum weight limits of 55%.
 
 We designed the ICSMM to deal with the shortcomings of CSMM. By introducing incentives, we not only solve all of the aforementioned problems, but also turn mAssets into fully functional AMMs, on par with other projects such as [Curve Finance](https://curve.fi) or [Shell Protocol](https://shellprotocol.io/).
 
@@ -311,14 +310,12 @@ def compute_swap(input_idx: int, output_idx: int, quantity: int):
 
     return total_received
 ```
-
+<!--
 ### Test Cases
-<!--Test cases for an implementation are mandatory for MIPs but can be included with the implementation..-->
-
-TBD.
 
 - Optimal parameters.
 - Plot and rendering of an example bonding curve (2d) and surface (3d).
+-->
 
 ### Configurable Values (Via MCCP)
 <!--Please list all values configurable via MCCP under this implementation.-->
@@ -336,6 +333,3 @@ Each bAsset has the following configurable values:
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
-
-
