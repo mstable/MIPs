@@ -30,10 +30,10 @@ potential integration across the DeFi ecosystem.
 
 This proposal comes in 3 main parts:
 
-1. Tokenising the "Savings Credit", creating a `ymUSD` token that represents the yield accruing `mUSD` and can be transferred and used as collateral in DeFi
+1. Tokenising the "Savings Credit", creating a `imUSD` token that represents the yield accruing `mUSD` and can be transferred and used as collateral in DeFi
    - Core behaviour will be optimised in terms of gas usage
 2. Enhancing capital efficiency by depositing `X%` of SAVE deposits elsewhere in the DeFi ecosystem (initially yEarn `mUSD` vault)
-3. Providing a `ymUSD` deposit box, a place where long term savers can store their `ymUSD` and earn `MTA`
+3. Providing a `imUSD` deposit box, a place where long term savers can store their `imUSD` and earn `MTA`
    - This is aimed at supporting the migration of funds, and ensuring that recipients of system yield have a say in how it is distributed
    - To ensure long term alignment, earnings will be heavily boosted for `MTA` stakers, and lockups will apply
 
@@ -74,11 +74,11 @@ The upgraded savings contract will allow for a certain % of funds to be invested
 yield for savers. This will come at no additional gas cost to depositors, as it will involve using a `poke` function to deposit, withdraw and accrue interest
 from the third party platform based on some internal rules. Initially, the funds will be deposited into a [yEarn][1] mUSD yVault. This management will be outsourced to a separate contract for accounting and upgradability-minimisation purposes.
 
-**3 - ymUSD deposit box, with boost for stakers**
+**3 - imUSD deposit box, with boost for stakers**
 
 Taking inspiration from [Curve-Dao][2], the deposit box will be an upgraded `StakingRewards` contract, with baked in incentives providing a 'boost' for
 participants who are also actively staking in [mStable-Staking][3]. Actors who are not staking will receive a base layer rewards, with up to 5x boost
-for those who are actively staking at the upper end of the threshold. The specific vMTA requirements will vary depending on the total amount of ymUSD and vMTA
+for those who are actively staking at the upper end of the threshold. The specific vMTA requirements will vary depending on the total amount of imUSD and vMTA
 staked. A lockup will be implemented, forcing users to wait up to 6 months after calling the `claim` function, before their rewards are unlocked and transferred to them.
 
 ### Rationale
@@ -94,17 +94,17 @@ The token creation is fairly straight forward, although there are a number of op
 Choices between managing the capital and utilising a third party capital manager (i.e. yEarn). Having a proven and efficient third party to operate this
 section of the contract was a clear optimisation vs having to deal with the additional complexity with, for example, a Curve pool that provides incentives in CRV.
 
-In terms of making this interaction generic internally, there were two choices as to where this could take place - either in the ymUSD contract, or in a specified manager contract. Having a single replaceable manager contract with a generic interface will allow for migration of funds from one 'strategy' to the next when the time comes, and reduces the urgency for making upgrades to the core ymUSD contract.
+In terms of making this interaction generic internally, there were two choices as to where this could take place - either in the imUSD contract, or in a specified manager contract. Having a single replaceable manager contract with a generic interface will allow for migration of funds from one 'strategy' to the next when the time comes, and reduces the urgency for making upgrades to the core imUSD contract.
 
 **Deposit box**
 
-There was a large decision in either having MTA rewards accrue to ymUSD holders, or having a seperate deposit box from which to earn the yield. In order to keep the `transfer` function cost of the ymUSD token to a minimum, and to facilitate the boosted and locked up rewards, it was a major optimisation to move this to a seperate contract.
+There was a large decision in either having MTA rewards accrue to imUSD holders, or having a seperate deposit box from which to earn the yield. In order to keep the `transfer` function cost of the imUSD token to a minimum, and to facilitate the boosted and locked up rewards, it was a major optimisation to move this to a seperate contract.
 
 ### Technical Specification
 
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces mStable currently exposes or the creations of new ones.-->
 
-#### ymUSD
+#### imUSD
 
 **Ensures backwards compatibility** by maintaining all functions from the [previous SAVE interface][4].
 
@@ -134,13 +134,13 @@ function claimRewards(address[] calldata _ids) external;
 
 Funds in SAVE will require a migration from v1 to v2 in order to continue to accrue interest.
 This will be primarily supported on the [mStable-app][5] but also incentivised with a higher APY
-and the free option of storing the ymUSD up in the deposit box and earning MTA.
+and the free option of storing the imUSD up in the deposit box and earning MTA.
 
 ### Configurable Values (Via MCCP)
 
 <!--Please list all values configurable via MCCP under this implementation.-->
 
-#### ymUSD
+#### imUSD
 
 - Percentage of funds deposited into the third party platform
 - Destination of deposited funds, i.e. choice of third party platform
