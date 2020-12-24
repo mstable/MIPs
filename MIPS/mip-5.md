@@ -1,7 +1,7 @@
 ---
 mip: 5
 title: Tokenise mUSD SAVE, enhance capital efficiency and add deposit box
-status: Proposed
+status: Approved
 author: Alex Scott <alex@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-5-tokenise-musd-save-enhance-capital-efficiency-and-add-deposit-box/275
 created: 2020-12-04

@@ -1,7 +1,7 @@
 ---
 mip: 4
 title: Batch yield collection to reduce SAVE gas costs
-status: Approved
+status: Implemented
 author: Alex Scott <alex@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-4-batch-yield-collection-to-reduce-save-gas-costs/230
 created: 2020-10-30

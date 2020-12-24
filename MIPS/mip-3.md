@@ -1,7 +1,7 @@
 ---
 mip: 3
 title: Add a cache to reduce gas costs
-status: Approved
+status: Implemented
 author: Alex Scott <alex@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-3-add-cache-to-reduce-gas-costs/227
 created: 2020-10-27
