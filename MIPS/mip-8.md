@@ -1,5 +1,5 @@
 ---
-mip: 7
+mip: 8
 title: Buyback & Make
 status: Proposed
 author: Alex Scott <alex@mstable.org>
