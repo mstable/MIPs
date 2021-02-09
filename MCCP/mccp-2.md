@@ -1,7 +1,7 @@
 ---
 mccp: 2
 title: Reduce cache size to 2%
-status: Proposed
+status: Implemented
 author: Alex Scott <@alsco77>
 discussions-to: https://forum.mstable.org/t/mccp-2-reduce-cache-size-to-2/333
 created: 2021-01-26
