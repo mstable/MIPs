@@ -1,7 +1,7 @@
 ---
 mip: 6
 title: Bitcoin mAsset (mBTC) and new AMM-based design
-status: Proposed
+status: Rejected
 author: Onur Solmaz <onur@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-6-bitcoin-masset-mbtc-and-new-amm-based-design/277
 created: 2020-12-07
