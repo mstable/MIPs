@@ -1,7 +1,7 @@
 ---
 mip: 6
 title: Bitcoin mAsset (mBTC) and new AMM-based design
-status: Approved
+status: Rejected
 author: Onur Solmaz <onur@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-6-bitcoin-masset-mbtc-and-new-amm-based-design/277
 created: 2020-12-07
@@ -59,7 +59,7 @@ To obtain the ICSMM invariant, we multiply each reserve value with a "penalty te
 \sum_i x_i \left(1 - \pi_i\left(\frac{x_i}{\sum_j x_j}\right)\right) = k
 \\]
 
-where \\(\pi_i\\) are the _penalty functions_ for each bAsset \\(i\\). These are functions of weight, and we will construct these to suit our needs from the AMM. Our main design criterion: they should yield 0 in the "target weight range", defined by soft minimum (`soft_min`) and maximum values (`soft_max`), but should otherwise increase with increased distance from `soft_min` or `soft_max`. When every weight is in `[soft_min, soft_max]`, our invariant becomes equal to the CSMM. This is the 1:1 region we mentioned in the abstract.
+where \\(\pi*i\\) are the \_penalty functions* for each bAsset \\(i\\). These are functions of weight, and we will construct these to suit our needs from the AMM. Our main design criterion: they should yield 0 in the "target weight range", defined by soft minimum (`soft_min`) and maximum values (`soft_max`), but should otherwise increase with increased distance from `soft_min` or `soft_max`. When every weight is in `[soft_min, soft_max]`, our invariant becomes equal to the CSMM. This is the 1:1 region we mentioned in the abstract.
 
 The weights are allowed to move in a "wiggle room" below `soft_min` and above `soft_max`, capped by `hard_min` and `hard_max` values respectively. In other words, weights are not allowed to go below `hard_min` or above `hard_max`. The lower the weight of a bAsset, the higher its price in the AMM relative to others. The higher the weight of of a bAsset, the lower its price in the AMM relative to others.
 
@@ -73,7 +73,7 @@ w_i(1-w_i) \pi_i'(w_i) +
 =: p_i(w)
 \\]
 
-where \\(f(x)\\) is the left-hand side of the invariant and weights are defined as \\(w_i=x_i/\sum_j x\\). Note the price expression is independent of total bAsset reserves. Since they are only functions of weights \\(w = (w_1, \dots, w_n)\\), we denote them as \\(p_i(w)\\). We also note that our invariant is _liquidity insensitive_, that is, it yields the same prices at the same weights, regardless of the total amount of liquidity in the AMM. We think that this property is important for a basket of stablecoins.
+where \\(f(x)\\) is the left-hand side of the invariant and weights are defined as \\(w*i=x_i/\sum_j x\\). Note the price expression is independent of total bAsset reserves. Since they are only functions of weights \\(w = (w_1, \dots, w_n)\\), we denote them as \\(p_i(w)\\). We also note that our invariant is \_liquidity insensitive*, that is, it yields the same prices at the same weights, regardless of the total amount of liquidity in the AMM. We think that this property is important for a basket of stablecoins.
 
 We want the penalty functions to be easy to compute on chain. To this end, we define them for each bAsset \\(i\\) as
 
