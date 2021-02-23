@@ -3,15 +3,15 @@ mip: 8
 title: Buyback & Make
 status: Proposed
 author: Alex Scott (@alsco77)
-discussions-to: https://forum.mstable.org/
-created: 2021-02-15
+discussions-to: https://forum.mstable.org/xxx
+created: 2021-02-23
 ---
 
 ## Simple Summary
 
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-Members of the mStable protocolDAO propose that [MTA][3]'s long term utility and tokenomics can be improved by implementing a buyback-and-make strategy driven by an MTA/ETH/mAsset liquidity pool on [Balancer Finance][4] v1. In future, this pool could also be used in mStable's re-collateralisation mechanism (in the event of an asset de-pegging) or as an incentivisation tool.
+It is proposed that [MTA][3]'s long term utility and tokenomics can be improved by implementing a buyback-and-make strategy driven by an MTA/ETH/mAsset liquidity pool on [Balancer Finance][4] v1. In future, this pool could also be used in mStable's re-collateralisation mechanism (in the event of an asset de-pegging) or as an incentivisation tool.
 
 ## Abstract
 
@@ -23,11 +23,11 @@ The Protocol DAO proposes that the pool have the following specifications:
 
 - Private Balancer pool, with the protocol as the only valid liquidity provider. Its utility will be voted on in future governance polls.
 - MTA/ETH/mUSD/mBTC, initially at a 50/10/20/20 and sliding to 78/20/1/1 over time as the pool matures. Feedback is sought on the ideal ratio to maintain longer term.
-- Fees generated from mStable's platform will be deposited directly to the pool.
+- A percentage of revenue generated **across all mAssets** on the mStable protocol will be deposited directly to the pool.
 - Pool swap fee - 5%, sliding to 2% as the pool matures
 - As mAssets build up in the pool, it will effectively buy MTA to return it back to the correct MTA/ETH composition.
 
-This pool is proposed, created and would be maintained by by the mStable protocolDAO and its signers. Consequently, the mStable Genesis team will not have control over how this buyback-and-make strategy is implemented or improved upon over time. Any significant changes here could be proposed and voted on by Meta Governors and ratified by the mStable protocolDAO.
+This pool would be created and maintained by by the mStable protocolDAO and its signers. Consequently, the mStable Genesis team will not have control over how this buyback-and-make strategy is implemented or improved upon over time. Any significant changes here could be proposed and voted on by Meta Governors and ratified by the mStable protocolDAO.
 
 ## Motivation
 
