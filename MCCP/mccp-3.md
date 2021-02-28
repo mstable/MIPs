@@ -1,7 +1,7 @@
 ---
 mccp: 3
 title: Increase Save liquidator's weekly USD contribution
-status: Proposed
+status: WIP
 author: James Eddington <@jameseddington>
 discussions-to: Forum post pending
 created: 2021-03-01
