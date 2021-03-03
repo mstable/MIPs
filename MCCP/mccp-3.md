@@ -3,7 +3,7 @@ mccp: 3
 title: Increase Save liquidator's weekly USD contribution
 status: WIP
 author: James Eddington <@jameseddington>
-discussions-to: https://forum.mstable.org/xxx
+discussions-to: https://forum.mstable.org/t/pdp16-increase-save-liquidators-weekly-usd-contribution-mccp-3/370
 created: 2021-03-01
 ---
 
