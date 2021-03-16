@@ -42,9 +42,27 @@ Goals:
 - Increase net fees going in to mAsset SAVE
 - Leverage utilisation rate for mAsset SAVE
 
+<!-- ALEX - add numbers about vs Curve & Balancer etc -->
+<!-- Comparison with other emissions? -->
+
+![Comparative emissions](../assets/MCCP-4/emissions.png)
+
+Taken from [Aave's forum](https://governance.aave.com/t/proposal-introduce-liquidity-incentives-for-aave-v2/2340), this image shows comparative emission rates. All 4 of these projects rewarded liquidity to their own pools, rather than external platforms. This is much more powerful. In addition, it is worth noting that our
+
 ## Specification
 
 <!--Technical rationale and specifics of the change-->
+
+<!-- WEEK 1 numbers -->
+<!-- Numbers for new mAssets (mETH, mEUR) -->
+<!-- Total emission  -->
+
+<!-- Start: 133k
+ Peak: 6 months 288k
+ Finish: 5 years after at 0k then inflation
+ 40k Needs to go to staking each week
+ Of the remainder: all to mAssets, mainly mUSD and mBTC
+ Internal mAsset: 80% to feeders and 20% to vault (ballpark) -->
 
 <!--
 
@@ -87,12 +105,6 @@ Levers:
 ### Rationale
 
 <!-- @Onur Insert epic formulas etc here -->
-
-<!-- Comparison with other emissions? -->
-
-![Comparative emissions](../assets/MCCP-4/emissions.png)
-
-Taken from [Aave's forum](https://governance.aave.com/t/proposal-introduce-liquidity-incentives-for-aave-v2/2340), this image shows comparative emission rates. All 4 of these projects rewarded liquidity to their own pools, rather than external platforms. This is much more powerful. In addition, it is worth noting that our
 
 ## Copyright
 
