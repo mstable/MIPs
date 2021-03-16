@@ -49,13 +49,14 @@ Feeder baskets could be used as a primitive to secure mAssets in the event of on
 
 ### Overview
 
-For feeder pools, we introduce a new invariant for 2-asset stablecoin AMMs that shows similar properties as Stableswap, but can be solved with less number of operations.
+For feeder pools, we introduce a new invariant for 2-asset stablecoin AMMs that shows similar properties as Stableswap, but can be solved with less number of operations. The implicit invariant equation follows as
 
 \\[
-\frac{Ak}{x + y} + \frac{k^2}{4xy} - A - 1 = 0
+\frac{Ak}{x + y} + \frac{k^2}{4xy} - A - 1 = 0\,.
 \\]
 
-Namely, the equation is quadratic in terms of \\(k\\), making it easier to compute the invariant value.
+Here, \\(x\\) and \\(y\\) are asset reserves, \\(k\\) is the invariant and \\(A\\) is an amplification coefficient similar to Stableswap.
+The equation is quadratic in terms of \\(k\\), making it easier to compute the invariant value.
 
 <!-- Alex description -->
 
@@ -82,11 +83,19 @@ k(x, y) = 2 \left(\sqrt{c_1^2 + (A+1)xy} - c_1\right)
 
 where \\(c_1 = Axy/(x+y)\\).
 
-<!-- Onur Invariant derivation adn spec -->
+Below is a pseudocode for computing \\(k\\):
+
+```python
+def compute_k(x: int, y: int, A: int):
+    c0 = x * y
+    c1 = A * c0 // (x + y)
+    result = 2 * (sqrt(c1**2 + (A + 1) * c0) - c1)
+    return result
+```
 
 ### Computing a reserve given other reserve and invariant
 
-Reserve value \\(y\\) is computed similarly
+Reserve value \\(y\\) is computed similarly, by solving the invariant equation for \\(y\\):
 
 \\[
 y(x, k) = \frac{1}{2}\left(\sqrt{c_3^2+c_2} + c_3\right)
@@ -95,6 +104,17 @@ y(x, k) = \frac{1}{2}\left(\sqrt{c_3^2+c_2} + c_3\right)
 where
 
 \\[c_2=\frac{k^2}{A+1} \quad\text{and}\quad c_3=\frac{c_2}{4x} + \frac{Ak}{A+1} - x.\\]
+
+Below is a pseudocode for computing \\(y\\):
+
+```python
+def compute_y(x, k, A):
+    c0 = A + 1
+    c2 = k**2 // c0
+    c3 = c2 // (4 * x) + k * A // c0 - x
+    result = (sqrt(c3**2 + c2) + c3) // 2
+    return result
+```
 
 ### Checking whether the reserve change is allowed
 
