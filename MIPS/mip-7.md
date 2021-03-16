@@ -1,6 +1,6 @@
 ---
 mip: 7
-title: mAsset AMM with feeders
+title: mAsset AMM Upgrade
 status: Implemented
 author: Onur Solmaz <onur@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-7-masset-amm-with-feeders/344
