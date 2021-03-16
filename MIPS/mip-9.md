@@ -2,7 +2,7 @@
 mip: 9
 title: Feeder Pools
 status: Proposed
-author: Alex Scott (@alsco77),  Onur Solmaz <onur@mstable.org>
+author: Alex Scott (@alsco77), Onur Solmaz <onur@mstable.org>
 discussions-to: https://forum.mstable.org/t/
 created: 2021-03-15
 ---
@@ -35,7 +35,7 @@ There are a number of core differences between fPools and mAsset pools
 1. fPools are always composed of 50/50 fAsset/mAsset, and use an invariant derived specifically for 2 assets
 1. fPools are not protected by MTA in the event of an underlying asset losing it's peg
 
-Incentivising liquidity on these pools will provide on/off ramps, generate swap volume and leverage mAssets SAVE utilisation rate - thus making them ideal options for MTA rewards.
+Incentivising liquidity on these pools will provide on/off ramps, generate swap volume and leverage mAssets SAVE utilisation rate - thus making them ideal options for MTA rewards. Additionally, it provides another place for projects to incentivise their own asset liquidity and benefit from MTA token emission.
 
 ## Motivation
 

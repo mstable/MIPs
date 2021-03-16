@@ -23,7 +23,7 @@ It has long been proposed that major optimisations can be made to the MTA emissi
 
 The MCCP proposes that mStable:
 
-- **a)** stop incentivising mAsset liq on third party protocols and focus entirely on Feeder Pools (e.g. tBTC/mBTC feeder pool, which has an effect of leveraging **&** giving more fees to mAsset save)
+- **a)** stop incentivising **mAsset** liquidity on third party protocols and focus entirely on Feeder Pools (e.g. tBTC/mBTC feeder pool, which has an effect of leveraging **&** giving more fees to mAsset save)
 - **b)** change the rewards contracts so that X% of MTA is unlocked immediately and Y% is vested over Z months (like the current imUSD vault), with a boost for being an MTA staker
 - **c)** alter total emission
 
