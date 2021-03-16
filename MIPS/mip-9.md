@@ -49,7 +49,13 @@ Feeder baskets could be used as a primitive to secure mAssets in the event of on
 
 ### Overview
 
-<!-- Onur Invariant -->
+For feeder pools, we introduce a new invariant for 2-asset stablecoin AMMs that shows similar properties as Stableswap, but can be solved with less number of operations.
+
+\\[
+\frac{Ak}{x + y} + \frac{k^2}{4xy} - A - 1 = 0
+\\]
+
+Namely, the equation is quadratic in terms of \\(k\\), making it easier to compute the invariant value.
 
 <!-- Alex description -->
 
@@ -66,15 +72,29 @@ MTA rewards from locking the LP token into the insurance pool (see above) -->
 
 ## Technical Specification
 
+### Computing the invariant for given reserve values
+
+The invariant equation is quadratic in terms of \\(k\\), and is solved as
+
+\\[
+k(x, y) = 2 \left(\sqrt{c_1^2 + (A+1)xy} - c_1\right)
+\\]
+
+where \\(c_1 = Axy/(x+y)\\).
+
 <!-- Onur Invariant derivation adn spec -->
 
-### Computing mAsset supply for given reserve values
+### Computing a reserve given other reserve and invariant
 
-<!-- Onur Invariant derivation adn spec -->
+Reserve value \\(y\\) is computed similarly
 
-### Computing a reserve value given other reserve values and mAsset supply
+\\[
+y(x, k) = \frac{1}{2}\left(\sqrt{c_3^2+c_2} + c_3\right)
+\\]
 
-<!-- Onur Invariant derivation adn spec -->
+where
+
+\\[c_2=\frac{k^2}{A+1} \quad\text{and}\quad c_3=\frac{c_2}{4x} + \frac{Ak}{A+1} - x.\\]
 
 ### Checking whether the reserve change is allowed
 
