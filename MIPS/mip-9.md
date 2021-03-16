@@ -56,7 +56,11 @@ For feeder pools, we introduce a new invariant for 2-asset stablecoin AMMs that 
 \\]
 
 Here, \\(x\\) and \\(y\\) are asset reserves, \\(k\\) is the invariant and \\(A\\) is an amplification coefficient similar to Stableswap.
-The equation is quadratic in terms of \\(k\\), making it easier to compute the invariant value.
+The equation is quadratic in terms of \\(k\\), making it easier to compute the invariant value. This invariant results in a bonding curve that is very similar to Stableswap, when the amplification coefficient is 4 times that of Stableswap's.
+
+![](/assets/MIP-9/feeder_pool_invariant1.svg)
+
+Note that the `A` parameter used in Curve's contracts actually corresponds to \\(An^{n-1}\\), we consider the original \\(A\\) from the Stableswap invariant.
 
 <!-- Alex description -->
 
@@ -93,6 +97,8 @@ def compute_k(x: int, y: int, A: int):
     return result
 ```
 
+where `sqrt()` is an optimized integer square root function.
+
 ### Computing a reserve given other reserve and invariant
 
 Reserve value \\(y\\) is computed similarly, by solving the invariant equation for \\(y\\):
@@ -108,7 +114,7 @@ where
 Below is a pseudocode for computing \\(y\\):
 
 ```python
-def compute_y(x, k, A):
+def compute_y(x: int, k: int, A: int):
     c0 = A + 1
     c2 = k**2 // c0
     c3 = c2 // (4 * x) + k * A // c0 - x
@@ -118,19 +124,106 @@ def compute_y(x, k, A):
 
 ### Checking whether the reserve change is allowed
 
-<!-- Same as MIP7 -->
+User actions will modify reserves in a certain way, and we need to check after each action whether the final values are within the allowed range.
+
+```python
+def in_bounds(x: List[int]):
+    sum_ = sum(x)
+    for i in range(n_basset):
+        w = FULL_SCALE * x[i] // sum_
+        if not (penalty[i].hard_min <= w and w <= penalty[i].hard_max):
+            return False
+    return True
+```
 
 ### Computing mint output
 
-<!-- Same as MIP7 -->
+The amount of LP tokens received for adding a certain amount of pool asset is computed as
+
+```python
+def compute_mint(i: int, quantity: int):
+    """Compute the amount LP token received for minting
+    with `quantity` amount of asset index `i`."""
+
+    x = get_current_reserves()
+    lp_supply = get_supply() # LP token supply
+    A = get_A()
+    k_init = compute_k(x[0], x[1], A)
+    x[i] += quantity
+    k_final = compute_k(x[0], x[1], A)
+
+    if lp_supply == 0:
+        total_minted = k_final - k_init
+    else:
+        total_minted = lp_supply * (k_final - k_init) // k_init
+
+    if not in_bounds(x):
+        raise Exception("Mint not allowed")
+
+    return total_minted
+```
 
 ### Compute redeem output
 
-<!-- Same as MIP7 -->
+The amount of assets received for redeeming a certain amount of LP tokens is computed as
+
+```python
+def compute_redeem(i: int, quantity: int):
+    """Compute the amount of asset index `i` received for
+    redeeming `quantity` amount of LP token."""
+
+    if i == 0:
+        j = 1
+    elif i == 1:
+        j = 0
+
+    redemption_fee = quantity * swap_fee_rate // FULL_SCALE
+    deducted_quantity = quantity - redemption_fee
+
+    x = get_current_reserves()
+    lp_supply = get_supply() # LP token supply
+    A = get_A()
+    k_init = compute_k(x[0], x[1], A)
+    k_final = k_init * (lp_supply - deducted_quantity) // lp_supply
+    new_reserve = compute_y(x[j], k_final, A)
+    total_received = x[i] - new_reserve
+    x[i] = new_reserve
+
+    if not in_bounds(x):
+        raise Exception("Redeem not allowed")
+
+    return total_received, redemption_fee
+```
 
 ### Compute swap output
 
-<!-- Same as MIP7 -->
+The output of swapping a certain amount of an asset for another one is computed as
+
+```python
+def compute_swap(input_idx: int, output_idx: int, quantity: int):
+    """Compute the amount of asset received for swapping
+    `quantity` amount of index `input_idx` to index `output_idx`."""
+
+    x = get_current_reserves()
+    lp_supply = get_supply() # LP token supply
+    A = get_A()
+    k1 = compute_k(x[0], x[1], A)
+    x[input_idx] += quantity
+    k2 = compute_k(x[0], x[1], A)
+    total_minted = k2 - k1
+    swap_fee = total_minted * swap_fee_rate // FULL_SCALE
+    deducted_quantity = total_minted - swap_fee
+    swap_fee = swap_fee * lp_supply // k1
+    k3 = k2 - deducted_quantity
+    new_reserve = compute_y(x[input_idx], k3, A)
+    total_received = x[output_idx] - new_reserve
+    x[output_idx] = new_reserve
+
+    if not in_bounds(x):
+        raise Exception("Swap not allowed")
+
+    return total_received, swap_fee
+```
 
 ### Configurable Values (Via MCCP)
 
