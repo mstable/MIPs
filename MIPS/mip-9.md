@@ -3,7 +3,7 @@ mip: 9
 title: Feeder Pools
 status: WIP
 author: Alex Scott (@alsco77), Onur Solmaz <onur@mstable.org>
-discussions-to: https://forum.mstable.org/t/
+discussions-to: https://forum.mstable.org/
 created: 2021-03-15
 ---
 
@@ -37,14 +37,6 @@ There are a number of core differences between fPools and mAsset pools
 
 Incentivising liquidity on these pools will provide on/off ramps, generate swap volume and leverage mAssets SAVE utilisation rate - thus making them ideal options for MTA rewards. Additionally, it provides another place for projects to incentivise their own asset liquidity and benefit from MTA token emission.
 
-## Motivation
-
-<!-- Alex -->
-
-<!-- Feeder baskets as mAsset internal insurance primitive:
-
-Feeder baskets could be used as a primitive to secure mAssets in the event of one of the stablecoins in the mAsset basket failing. This is because in the event of one of the mAsset basket’s bAsset’s failing, the value of that mAsset would logically fall. Traders would then trade out of the mAsset and into the opposing pegged asset in each feeder basket, effectively filling up each feeder basket with that mAsset. -->
-
 ## Specification
 
 ### Overview
@@ -55,25 +47,47 @@ For feeder pools, we introduce a new invariant for 2-asset stablecoin AMMs that 
 \frac{Ak}{x + y} + \frac{k^2}{4xy} - A - 1 = 0\,.
 \\]
 
-Here, \\(x\\) and \\(y\\) are asset reserves, \\(k\\) is the invariant and \\(A\\) is an amplification coefficient similar to Stableswap.
+Here, \\(x\\) and \\(y\\) are asset reserves, \\(k\\) is the invariant and \\(A\\) is an amplification coefficient.
 The equation is quadratic in terms of \\(k\\), making it easier to compute the invariant value. This invariant results in a bonding curve that is very similar to Stableswap, when the amplification coefficient is 4 times that of Stableswap's.
 
-![](/assets/MIP-9/feeder_pool_invariant1.svg)
+![Price curve](/assets/MIP-9/feeder_pool_invariant1.svg)
 
-Note that the `A` parameter used in Curve's contracts actually corresponds to \\(An^{n-1}\\), we consider the original \\(A\\) from the Stableswap invariant.
+Note that the `A` parameter used in existing Stableswap contracts actually corresponds to \\(An^{n-1}\\), we consider the original \\(A\\) from the Stableswap invariant.
 
-<!-- Alex description -->
+By contributing liquidity to a Feeder Pool, the user will receive:
 
-<!-- By contributing liquidity to a feeder basket, the user will receive:
-
-Swap fees into the bAsset specific to that feeder basket
-Interest from lending out Feeder basket bAssets, including the mAsset trading pair
-Possible liquidity rewards from project’s that wish to incentivise their stablecoin on mStable
-MTA rewards from locking the LP token into the insurance pool (see above) -->
+- Swap fees into the bAsset specific to that feeder basket
+- Interest from lending out Feeder basket bAssets, including the mAsset trading pair
+- Possible liquidity rewards from project’s that wish to incentivise their stablecoin on mStable
+- MTA rewards
 
 ### Rationale
 
-<!-- Alex -->
+> fPools are not protected by MTA in the event of an underlying asset losing it's peg
+
+Feeder pools "feed" value into mAssets and the wider mStable system, thus they should not receive protection from MTA.
+In fact, in the future it may be proposed that all feeder pools can be converted into insurance pools, from which mAssets can be protected.
+This would involve using the feeder pool assets as a backup of last resort in the event of catastrophic failure in the mAsset pool.
+
+> Value accruing LP token vs inflation
+
+In order to reduce the steps needed to become an active LP, it is decided that the feeder pools will use the standard value accruing LP
+token.
+
+> Router for cross pool swaps vs localised
+
+Swapping from the fPool to the mAsset pool (e.g. fAsset -> mpAsset) requires 2 steps. The complexity increases massively for multiMint and multiRedeem,
+and so it was decided that mint/swap/redeem would be able to communicate cross pool, and a seperate `FeederRouter` would be developed in order to
+facilitate more complex trade paths (e.g. mintMulti and cross-feeder pool swaps).
+
+> Swaps into mAsset do not apply a fee
+
+In order to maximise utility for mAssets, it is decided that trades from fAsset to mAsset will have 0 fee. This trade path can be presented to the end
+user as `minting` an mAsset.
+
+> fPools are always composed of 50/50 fAsset/mAsset, and use an invariant derived specifically for 2 assets
+
+It makes sense to optimise the invariant for 2 dimensions rather than use an iterative solution for an `n` dimensional surface.
 
 ## Technical Specification
 
@@ -232,6 +246,10 @@ Each bAsset has the following configurable values:
 - `hard_min`
 - `hard_max`
 - `A`
+- `governance fee`
+- `swap fee`
+- `redemption fee`
+- `cache size`
 
 ## Copyright
 

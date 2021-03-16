@@ -3,7 +3,7 @@ mccp: 4
 title: Optimise MTA emission to maximise circular effects
 status: WIP
 author: Alex Scott <@alsco77>, Onur Solmaz <@osolmaz>
-discussions-to: https://forum.mstable.org/t/...
+discussions-to: https://forum.mstable.org/
 created: 2021-03-16
 ---
 
@@ -15,7 +15,7 @@ created: 2021-03-16
 
 _Note: This MCCP assumes a positive resolution to [MIP-9](../MIPS/mip-9)._
 
-It has long been proposed that major optimisations can be made to the MTA emission. This MCCP proposes proposes a major revamp; bringing all the incentives "in-house" to create better circular effects, reduce MTA sell pressure and maximise TVL.
+It has long been proposed that major optimisations can be made to the MTA emission. This MCCP proposes a major revamp; bringing all the incentives "in-house" to create better circular effects, reduce MTA sell pressure and maximise TVL.
 
 ## Abstract
 
@@ -25,7 +25,7 @@ The MCCP proposes that mStable:
 
 - **a)** stop incentivising **mAsset** liquidity on third party protocols and focus entirely on Feeder Pools (e.g. tBTC/mBTC feeder pool, which has an effect of leveraging **&** giving more fees to mAsset save)
 - **b)** change the rewards contracts so that X% of MTA is unlocked immediately and Y% is vested over Z months (like the current imUSD vault), with a boost for being an MTA staker
-- **c)** alter total emission
+- **c)** plan and project an emission curve to reduce vote count
 
 This MCCP interacts positively with [MIP-8](../MIPS/mip-8) and has the power to set the tokenomics on a different course: increasing mStable TVL, increasing fees to mAsset SAVE, increasing revenue to buy & make, reducing sell pressure for MTA and causing people to be MTA bulls due to the lockup and the rewards gained from being a staker.
 
