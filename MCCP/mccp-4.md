@@ -127,13 +127,13 @@ We also assume that liquidity pool volume
 - scales down linearly, when the pool is shrinking below current supply,
 - and stays constant, when the pool is growing above current supply.
 
-![](/assets/MCCP-4/volume_supply1.svg)
+![supply1](/assets/MCCP-4/volume_supply1.svg)
 
 This is a conservative approach to estimating the demand in the market. It assumes that at a given point, the market is already saturated for a given liquidity pool, and increasing the liquidity will not necessarily increase volume. However, when the volume does increase at a future date, we take it into account by updating the values and rerunning the model.
 
 However, if the demand curve for a given asset pair were already known, we could set a target volume and use the bonding curve to compute the target size of the pool. Then we could use those values in the model, instead of current volume and supply.
 
-![](/assets/MCCP-4/volume_supply2.svg)
+![supply2](/assets/MCCP-4/volume_supply2.svg)
 
 Our variables for the optimization problem are:
 
@@ -148,7 +148,7 @@ The following are external parameters for the problem:
 - \\(A_i\\): minimum APY for pool \\(i\\) (i.e. the equilibrium APY which the pool has at maximum size)
 - \\(P\\): price of the governance token
 - \\(P_i\\): price of the LP token of pool \\(i\\) (1 in the case of USD based pools)
-- \\(e_\max\\): maximum total weekly emission
+- \\(e\_\max\\): maximum total weekly emission
 - \\(F\\): swap fee percentage, e.g. 0.0004
 
 ### Objective function
@@ -299,7 +299,7 @@ for i in range(n):
 
 In this example, we have 6 liquidity pools with minimum APY of 10% each. Current pool sizes are 28m, 10m, 3m, 3m, 3m, 3m and current volumes are 15m, 1m, 0.5, 0.5, 0.5, 0.5 respectively. We don't need to input information regarding previous emissions, because that is considered implicitly with current volume `Vi` and current supply `Si`.
 
-Governance token price is $3, maximum emission is 150,000 tokens and swap fee is 4 bps in all pools. The result of optimization is as follows:
+Governance token price is \$3, maximum emission is 150,000 tokens and swap fee is 4 bps in all pools. The result of optimization is as follows:
 
 ```
 Resulting TVL: 237.74m
