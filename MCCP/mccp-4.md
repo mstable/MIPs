@@ -1,7 +1,7 @@
 ---
 mccp: 4
 title: Optimise MTA emission to maximise circular effects
-status: Proposed
+status: WIP
 author: Alex Scott <@alsco77>, Onur Solmaz <@osolmaz>
 discussions-to: https://forum.mstable.org/t/...
 created: 2021-03-16
