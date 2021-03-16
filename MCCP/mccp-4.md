@@ -204,16 +204,16 @@ from scipy.optimize import linprog
 P = 3.00
 
 # Minimum APY
-Ai = [0.10, 0.10, 0.10]
+Ai = [0.10, 0.10, 0.10, 0.10, 0.10, 0.10]
 
 # Current pool sizes
-Si = [75e6, 70e6, 41e6]
+Si = [28e6, 10e6, 3e6, 3e6, 3e6, 3e6]
 
 # Current weekly demanded volume
-Vi = [50_000_000, 40_000_000, 20_000_000]
+Vi = [15e6, 1e6, 0.5e6, 0.5e6, 0.5e6, 0.5e6]
 
 # Maximum total emission
-e_max = 100_000
+e_max = 150_000
 
 # Swap fee percentage
 F = 0.0004
@@ -285,6 +285,7 @@ apy_i = [52*(F*v_+P*e_)/s_ for v_,e_,s_ in zip(vi, ei, si)]
 if sln.status != 0:
     raise Exception("Solution was not successful")
 
+print()
 print("Resulting TVL: %.2fm"%(sum(si)/1e6))
 for i in range(n):
     print("Pool %d emission: %.2f MTA - size: %.2fm - vol: %.2fm - APY: %.2f%%"%(
@@ -296,18 +297,21 @@ for i in range(n):
     ))
 ```
 
-In this example, we have 3 liquidity pools with minimum APY of 10% each. Current volumes are 50m, 40m and 20m respectively. Current supplies are also high, due to an existing liquidity mining program. We don't need to input information regarding previous emissions, because that is considered implicitly with current volume `Vi` and current supply `Si`.
+In this example, we have 6 liquidity pools with minimum APY of 10% each. Current pool sizes are 28m, 10m, 3m, 3m, 3m, 3m and current volumes are 15m, 1m, 0.5, 0.5, 0.5, 0.5 respectively. We don't need to input information regarding previous emissions, because that is considered implicitly with current volume `Vi` and current supply `Si`.
 
-Governance token price is $3, maximum emission is 100,000 tokens and swap fee is 4 bps in all pools. The result of optimization is as follows:
+Governance token price is $3, maximum emission is 150,000 tokens and swap fee is 4 bps in all pools. The result of optimization is as follows:
 
 ```
-Resulting TVL: 178.08m
-Pool 0 emission: 41410.26 MTA - size: 75.00m - vol: 50.00m - APY: 10.00%
-Pool 1 emission: 39538.46 MTA - size: 70.00m - vol: 40.00m - APY: 10.00%
-Pool 2 emission: 19051.28 MTA - size: 33.08m - vol: 16.13m - APY: 10.00%
+Resulting TVL: 237.74m
+Pool 0 emission: 21110.62 MTA - size: 36.05m - vol: 15.00m - APY: 10.00%
+Pool 1 emission: 54329.26 MTA - size: 84.96m - vol: 1.00m - APY: 10.00%
+Pool 2 emission: 18640.03 MTA - size: 29.18m - vol: 0.50m - APY: 10.00%
+Pool 3 emission: 18640.03 MTA - size: 29.18m - vol: 0.50m - APY: 10.00%
+Pool 4 emission: 18640.03 MTA - size: 29.18m - vol: 0.50m - APY: 10.00%
+Pool 5 emission: 18640.03 MTA - size: 29.18m - vol: 0.50m - APY: 10.00%
 ```
 
-According to these results, TVL is maximized when emissions to pools are 41.4k, 39.5k and 19.1k respectively. This reduces the volume of pool 2 below the current level, but overall maximizes the TVL of all pools collectively.
+The maximum TVL obtained with the current emission rates is around 237m.
 
 <!-- @Onur Insert epic formulas etc here -->
 
