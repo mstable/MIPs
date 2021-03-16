@@ -68,7 +68,7 @@ Taken from [Aave's forum](https://governance.aave.com/t/proposal-introduce-liqui
 
 Either include text based Levers, or use the stuff form the Hackmd etc
 
-Levers:
+Levers (should probably address each of these in the specification):
 
 - MTA emission (40m tokens roughly)
   - quantity
