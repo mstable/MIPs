@@ -90,9 +90,9 @@ Levers:
 
 <!-- Comparison with other emissions? -->
 
-![Comparitive emissions](../assets/MCCP-4/emissions.png)
+![Comparative emissions](../assets/MCCP-4/emissions.png)
 
-Taken from [Aave's forum](https://governance.aave.com/t/proposal-introduce-liquidity-incentives-for-aave-v2/2340), this image shows comparitive emission rates. All 4 of these projects rewarded liquidity to their own pools, rather than external platforms. This is much more powerful. In addition, it is worth noting that our
+Taken from [Aave's forum](https://governance.aave.com/t/proposal-introduce-liquidity-incentives-for-aave-v2/2340), this image shows comparative emission rates. All 4 of these projects rewarded liquidity to their own pools, rather than external platforms. This is much more powerful. In addition, it is worth noting that our
 
 ## Copyright
 
