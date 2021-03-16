@@ -1,6 +1,6 @@
 ---
 mip: 7
-title: mAsset AMM with feeders
+title: mAsset AMM Upgrade
 status: Implemented
 author: Onur Solmaz <onur@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-7-masset-amm-with-feeders/344
@@ -145,7 +145,7 @@ x_i^2 + \underbrace{\left(\sum_{j\neq i}x_j-k+\frac{k}{An^n}\right)}_{b} x_i =
 This is a quadratic equation \\(x_i^2 + bx_i = c\\) with constant terms \\(b\\) and \\(c\\). Differently than Curve, we do not solve this equation iteratively in `compute_reserve`, but utilize an optimized integer square root function.
 
 \\[
-x_i = \frac{\sqrt{b^2 - 4c} - b}{2}
+x_i = \frac{\sqrt{b^2 + 4c} - b}{2}
 \\]
 
 This has shown to save roughly 5k gas, compared to the iterative solution for large basket sizes.
