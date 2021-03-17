@@ -15,7 +15,7 @@ created: 2021-03-16
 
 _Note: This MCCP assumes a positive resolution to [MIP-9](../MIPS/mip-9)._
 
-It has long been proposed that major optimisations can be made to the MTA emission. This MCCP proposes a major revamp; bringing all the incentives "in-house" to create better circular effects, reduce MTA sell pressure and maximise TVL.
+It has long been proposed that major optimisations can be made to the MTA emission. This MCCP proposes a major revamp; bringing all the incentives "in-house" to create better circular effects, reduce MTA sell pressure and maximise TVL. This proposal also outlines a prospective emission schedule over the next few years, and a set of rules to follow in order to calculate weekly distributions.
 
 ## Abstract
 
@@ -23,86 +23,108 @@ It has long been proposed that major optimisations can be made to the MTA emissi
 
 The MCCP proposes that mStable:
 
-- **a)** stop incentivising **mAsset** liquidity on third party protocols and focus entirely on Feeder Pools (e.g. tBTC/mBTC feeder pool, which has an effect of leveraging **&** giving more fees to mAsset save)
-- **b)** change the rewards contracts so that X% of MTA is unlocked immediately and Y% is vested over Z months (like the current imUSD vault), with a boost for being an MTA staker
-- **c)** plan and project an emission curve to reduce vote count
+**a)** stop incentivising **mAsset** liquidity on third party protocols and focus entirely on Feeder Pools (e.g. tBTC/mBTC feeder pool, which has an effect of leveraging **&** giving more fees to mAsset SAVE)
+
+**b)** change the rewards contracts so that X% of MTA is unlocked immediately and Y% is vested over Z months (like the current imUSD vault), with a boost for being an MTA staker, thus incentivising LPs over a longer time period
+
+**c)** stick to the outlined emission schedule and ruleset defined here in order to calculate weekly pool distributions
 
 This MCCP interacts positively with [MIP-8](../MIPS/mip-8) and has the power to set the tokenomics on a different course: increasing mStable TVL, increasing fees to mAsset SAVE, increasing revenue to buy & make, reducing sell pressure for MTA and causing people to be MTA bulls due to the lockup and the rewards gained from being a staker.
+
+![curve](/assets/MCCP-4/curve.png)
 
 ## Motivation
 
 <!--The motivation is critical for MCCPs that want to update variables within mStable. It should clearly explain why the existing variable is not incentive aligned. MCCP submissions without sufficient motivation may be rejected outright.-->
 
-Goals:
+The current incentives structure is inefficient and does not promote long term project alignment. LP's are rewarded for providing mAsset liquidity on to third party platforms, which, while providing some utility for mAssets, does not induce circular effects in mStable, and benefits the third parties moreso. In addition, LP's are only incentivised over a very short time period as the rewards unlock immediately, thus incentivising 'flash' liquidity provision and short term outlook on MTA. Thirdly, the calculation of quantities and determination of which sources should receive MTA emission is inefficient and could be optimised with a ruleset.
+
+Goals of MCCP-4:
 
 - Utilise MTA to generate circular effects for mStable
+  - Increase net fees going in to mAsset SAVE
+  - Leverage utilisation rate for mAsset SAVE
+  - Increase revenue allocated to Buy&Make
 - Maximise mAsset TVL
 - Maximise demand for MTA
   - Reduce sell pressure for MTA
-- Increase net fees going in to mAsset SAVE
-- Leverage utilisation rate for mAsset SAVE
 
-<!-- ALEX - add numbers about vs Curve & Balancer etc -->
-<!-- Comparison with other emissions? -->
+It is worth reflecting upon emissions from comparative projects - see fig below taken from [Aave's forum](https://governance.aave.com/t/proposal-introduce-liquidity-incentives-for-aave-v2/2340). All 4 of these projects rewarded liquidity to their own pools, rather than external platforms.
 
 ![Comparative emissions](../assets/MCCP-4/emissions.png)
 
-Taken from [Aave's forum](https://governance.aave.com/t/proposal-introduce-liquidity-incentives-for-aave-v2/2340), this image shows comparative emission rates. All 4 of these projects rewarded liquidity to their own pools, rather than external platforms. This is much more powerful. In addition, it is worth noting that our
-
 ## Specification
 
-<!--Technical rationale and specifics of the change-->
+### Top line emission
 
-<!-- WEEK 1 numbers -->
-<!-- Numbers for new mAssets (mETH, mEUR) -->
-<!-- Total emission  -->
+There are ~43m MTA remaining in the rewards pool for distribution. The emission curve proposed here would see this being emitted over 6 years, finishing in April 2027. It is assumed that MTA's value would increase over time as reward units drop. It is proposed that there be an alternative source following completion, for example a tail emission.
 
-<!-- Start: 133k
- Peak: 6 months 288k
- Finish: 5 years after at 0k then inflation
- 40k Needs to go to staking each week
- Of the remainder: all to mAssets, mainly mUSD and mBTC
- Internal mAsset: 80% to feeders and 20% to vault (ballpark) -->
+The monthly emission would ramp up over 3 months, from the current emission up to the peak monthly emission of 1.228m MTA per month. It would then ramp down until finishing in 2027.
 
-<!--
+![bars](/assets/MCCP-4/bars.png)
 
-Either include text based Levers, or use the stuff form the Hackmd etc
+### Ruleset for pool distribution
 
-Levers (should probably address each of these in the specification):
+The ruleset below outlines the method by which pools will be chosen and which incentives they will receive.
 
-- MTA emission (40m tokens roughly)
-  - quantity
-  - destination (feeder pool rewards contracts or imAsset vaults probably)
-- buy and make revenue (main pool)
-  - percentage
-- governance fee (feeder pools)
-  - percentage
-  - destination
-- rewards contract config
-  - lockup + boost (like the imUSD vault at the min)
-    - boost magnitude (**5x rewards for staking to leverage rwds -** this could create major demand for MTA) (e.g. 18-80% shown on the dashboard as 1-5x)
-    - boost MTA required
-    - % of rewards locked up (benchmark is 33%)
-    - length of reward lockup (benchmark is 6 months)
-  - rewards token (MTA ... or 80/20 MTA/ETH Balancer pool token)
-    - When the airdrop happens, provide single sided liquidity to balancer for the 80/20 BPT
-    - Rewards accrue in BPT
-    - When user withdraws the reward, it simply withdraws into MTA tokens -->
+The following pools are proposed to be eligible for receiving rewards, in addition to MTA staking:
+
+- imAsset vaults
+- Feeder Pools
+
+The amount for each pool will be calculated as follows:
+
+- 30% of the weekly emission will be distributed evenly across all whitelisted pools
+- 70% will be distributed based on the optimisation formula described in Appendix 1 below
+
+Example week 1 numbers, based on emission above of 767,857 MTA per month (177334 per week).
+Assuming 2 imAsset vaults, 4 fPools, \$2.3 MTA price, 20% Daily LUR on each pool and ~40k going to MTA sources.
+
+<!-- TODO: Put accurate numbers in based on formula: maybe need to assume pool sizes too -->
+<!-- TODO: Example addition of new mAsset & fPool -->
 
 | Pool allocations   | Current | Proposed (Week 1) |
 | ------------------ | ------- | ----------------- |
-| imBTC Vault        | 0       | XXX               |
-| mBTC/ETH Sushiswap | 15000   | XXX               |
-| imUSD Vault        | 12000   | XXX               |
-| mUSD Curve         | 13750   | XXX               |
-| mUSD/WETH Balancer | 23750   | XXX               |
-| **TOT mAssets**    | 64500   | XXX               |
-| MTA/WETH Uniswap   | 28750   | XXX               |
-| Staking            | 40000   | XXX               |
-| **TOT MTA**        | 68750   | XXX               |
-| **TOT**            | 133250  | XXX               |
+| imBTC Vault        | 0       | 22889             |
+| mBTC/ETH Sushiswap | 15000   | 0                 |
+| imUSD Vault        | 12000   | 22889             |
+| mUSD Curve         | 13750   | 0                 |
+| mUSD/WETH Balancer | 23750   | 0                 |
+| fPool 1            | 0       | 22889             |
+| fPool 2            | 0       | 22889             |
+| fPool 3            | 0       | 22889             |
+| fPool 4            | 0       | 22889             |
+| **TOT mAssets**    | 64500   | 137334            |
+| MTA/WETH Uniswap   | 28750   | ---               |
+| Staking            | 40000   | ---               |
+| **TOT MTA**        | 68750   | 40000             |
+| **TOT**            | 133250  | 177334            |
 
-## Rationale
+_Projected TVL: >164m giving each pool >=10% APY from only MTA rewards_
+
+### Rewards contract specification
+
+Each rewards pool will have the following traits:
+
+- 33% of rewards will unlock immediately
+- 67% of rewards will be locked for 6 months
+- MTA Stakers will receive a boost of up to 4x
+
+Boost calculated with the following formula:
+
+`boost = min(1 + c * vMTA_balance / (s*p)^(7/8), 4)`
+
+Variables:
+
+- \\(c\\): Coefficient
+- \\(s\\): LP tokens staked
+- \\(p\\): Price coefficient
+
+### Buy & Make + Governance Fees
+
+As pools mature, it is proposed that the % of system revenue streamed to Buy and Make be increased via a following MCCP. Additionally, the governance fee in each Feeder Pool should be activated with the funds being directed towards the active Buy & Make pool.
+
+## Appendix 1: Emission Ruleset
 
 We want to have a mathematical way of reasoning when we set emissions to certain parts of the protocol. To this end, we set forth to create a comprehensive model with a level of detail sufficient to capture the token economics and market dynamics of each pool. The overarching purpose of the model is to maximize the TVL of the whole protocol by finding the optimal emission rates.
 
@@ -110,7 +132,7 @@ As mStable is currently in the process of rapid restructuring and launching new 
 
 To this end, we consider \\(n\\) undifferentiated liquidity pools whose asset prices are stable in the long term, e.g. stablecoins.
 
-### Assumptions
+**Assumptions**
 
 We assume that liquidity providers are drawn to pools with high annual percentage yield (APY), which is defined as in the following relation:
 
@@ -151,7 +173,7 @@ The following are external parameters for the problem:
 - \\(e\_\max\\): maximum total weekly emission
 - \\(F\\): swap fee percentage, e.g. 0.0004
 
-### Objective function
+**Objective function**
 
 We are trying to maximize the TVL, which is simply the sum of the values of the LP tokens of all pools:
 
@@ -160,7 +182,7 @@ We are trying to maximize the TVL, which is simply the sum of the values of the 
 \sum_i P_is_i
 \\]
 
-### Constraints
+**Constraints**
 
 **Constraint 1:** Total emission is less than or equal to maximum allowed emission.
 
@@ -192,7 +214,7 @@ v_i \leq \frac{V_i}{S_i} s_i
 
 Constraints 3 and 4 together create an envelope which enforce the assumption about volume's relationship with supply.
 
-### Implementation
+**Implementation**
 
 This is a standard [linear optimization](https://en.wikipedia.org/wiki/Linear_programming) problem and we use a common solver from the SciPy package for the implementation. We assume that all LP tokens have the price 1, that is, \\(P_i =1\\) for all \\(i\\).
 
@@ -312,8 +334,6 @@ Pool 5 emission: 18640.03 MTA - size: 29.18m - vol: 0.50m - APY: 10.00%
 ```
 
 The maximum TVL obtained with the current emission rates is around 237m.
-
-<!-- @Onur Insert epic formulas etc here -->
 
 ## Copyright
 
