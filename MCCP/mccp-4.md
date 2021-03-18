@@ -14,6 +14,7 @@ created: 2021-03-16
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the MCCP.-->
 
 _Note: This MCCP assumes a positive resolution to [MIP-9](../MIPS/mip-9)._
+_Note: This MCCP does not propose changes to the MTA assigned to Staking rewards_
 
 It has long been proposed that major optimisations can be made to the MTA emission. This MCCP proposes a major revamp; bringing all the incentives "in-house" to create better circular effects, reduce MTA sell pressure and maximise TVL. This proposal also outlines a prospective emission schedule over the next few years, and a set of rules to follow in order to calculate weekly distributions.
 
@@ -136,10 +137,6 @@ Assuming 3 imAsset vaults, 8 fPools, 20% Daily LUR on each pool and ~40k going t
 | fPool 7            | 0       | 0                 | 24351.6            |
 | fPool 8            | 0       | 0                 | 24351.6            |
 | **TOT mAssets**    | 64500   | 101758            | 243516             |
-| MTA/WETH Uniswap   | 28750   | ---               | ---                |
-| Staking            | 40000   | ---               | ---                |
-| **TOT MTA**        | 68750   | 40000             | 40000              |
-| **TOT**            | 133250  | 141758            | 283516             |
 
 Assuming \$2.3 MTA:  
 _Projected TVL Week 1: >121m giving each pool >=10% APY from only MTA rewards_
