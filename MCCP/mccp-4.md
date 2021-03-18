@@ -13,7 +13,7 @@ created: 2021-03-16
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the MCCP.-->
 
-_Note: This MCCP assumes a positive resolution to [MIP-9](../MIPS/mip-9)._
+_Note: This MCCP assumes a positive resolution to [MIP-9](../MIPS/mip-9)._  
 _Note: This MCCP does not propose changes to the MTA assigned to Staking rewards_
 
 It has long been proposed that major optimisations can be made to the MTA emission. This MCCP proposes a major revamp; bringing all the incentives "in-house" to create better circular effects, reduce MTA sell pressure and maximise TVL. This proposal also outlines a prospective emission schedule over the next few years, and a set of rules to follow in order to calculate weekly distributions.
