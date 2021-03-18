@@ -1,7 +1,7 @@
 ---
 mccp: 4
 title: Optimise MTA emission to maximise circular effects
-status: WIP
+status: Proposed
 author: Alex Scott <@alsco77>, Onur Solmaz <@osolmaz>
 discussions-to: https://forum.mstable.org/
 created: 2021-03-16
@@ -27,17 +27,15 @@ The MCCP proposes that mStable:
 
 **b)** change the rewards contracts so that X% of MTA is unlocked immediately and Y% is vested over Z months (like the current imUSD vault), with a boost for being an MTA staker, thus incentivising LPs over a longer time period
 
-**c)** stick to the outlined emission schedule and ruleset defined here in order to calculate weekly pool distributions
-
-This MCCP interacts positively with [MIP-8](../MIPS/mip-8) and has the power to set the tokenomics on a different course: increasing mStable TVL, increasing fees to mAsset SAVE, increasing revenue to buy & make, reducing sell pressure for MTA and causing people to be MTA bulls due to the lockup and the rewards gained from being a staker.
-
-![curve](/assets/MCCP-4/curve.png)
+**c)** stick to the outlined emission schedule (over the next 16 weeks) and ruleset defined here in order to calculate weekly pool distributions
 
 ## Motivation
 
 <!--The motivation is critical for MCCPs that want to update variables within mStable. It should clearly explain why the existing variable is not incentive aligned. MCCP submissions without sufficient motivation may be rejected outright.-->
 
 The current incentives structure is inefficient and does not promote long term project alignment. LP's are rewarded for providing mAsset liquidity on to third party platforms, which, while providing some utility for mAssets, does not induce circular effects in mStable, and benefits the third parties moreso. In addition, LP's are only incentivised over a very short time period as the rewards unlock immediately, thus incentivising 'flash' liquidity provision and short term outlook on MTA. Thirdly, the calculation of quantities and determination of which sources should receive MTA emission is inefficient and could be optimised with a ruleset.
+
+This MCCP interacts positively with [MIP-8](../MIPS/mip-8) and has the power to set the tokenomics on a different course: increasing mStable TVL, increasing fees to mAsset SAVE, increasing revenue to buy & make, reducing sell pressure for MTA and causing people to be MTA bulls due to the lockup and the rewards gained from being a staker.
 
 Goals of MCCP-4:
 
@@ -55,52 +53,101 @@ It is worth reflecting upon emissions from comparative projects - see fig below 
 
 ## Specification
 
-### Top line emission
+### 16 week emission
 
-There are ~43m MTA remaining in the rewards pool for distribution. The emission curve proposed here would see this being emitted over 6 years, finishing in April 2027. It is assumed that MTA's value would increase over time as reward units drop. It is proposed that there be an alternative source following completion, for example a tail emission.
+There are ~43m MTA remaining in the rewards pool for distribution. The idea is that this emission would be front loaded and last for ~5-6 years, finishing in April 2027. It is assumed that MTA's value would increase over time as reward units drop. The monthly emission would ramp up over 3 months, from the current emission up to the peak monthly emission of 1.228m MTA per month. It would then ramp down until finishing in 2027.
 
-The monthly emission would ramp up over 3 months, from the current emission up to the peak monthly emission of 1.228m MTA per month. It would then ramp down until finishing in 2027.
+Proposal: Put this emission into effect for the following 16 weeks, in line with the top line emission schedule, to stimulate growth of mAssets and Feeder Pools, as shown below:
 
 ![bars](/assets/MCCP-4/bars.png)
 
+_This equates to an average yearly emission of (52/16)\*3685714 = 12m_
+
 ### Ruleset for pool distribution
 
-The ruleset below outlines the method by which pools will be chosen and which incentives they will receive.
+We define a simple heuristic which will be used to allocate emissions to feeder pools. The allocations for each imAsset vaults and feeder pools are derived from a total MTA emission amount. We denote the rewards received by the imAsset vaults and related feeder pools with `total_emission`. A fixed percentage of `total_emission` denoted by `feeder_emission_pct` goes to the feeder pools, and the rest is rewarded to the imAsset vaults.
 
-The following pools are proposed to be eligible for receiving rewards, in addition to MTA staking:
+```python
+feeder_emission = total_emission * feeder_emission_pct
+vault_emission = total_emission * (1 - feeder_emission_pct)
+```
 
-- imAsset vaults
-- Feeder Pools
+The emission internally between pools are distributed according to their performance in the previous week. However, before we look into performance, a fixed percentage `base_emission_pct` of emission to feeder pools is distributed equally to the mAsset's feeder pools. In other words, each feeder pools receive a base reward of
 
-The amount for each pool will be calculated as follows:
+```python
+feeder_base_emission = feeder_emission * base_feeder_emission_pct / n # MTA
+vault_base_emission = vault_emission * base_vault_emission_pct / m # MTA
+```
 
-- 30% of the weekly emission will be distributed evenly across all whitelisted pools
-- 70% will be distributed based on the optimisation formula described in Appendix 1 below
+where `n` is the number of feeder pools and `m` is number of mAsset vaults.
 
-Example week 1 numbers, based on emission above of 767,857 MTA per month (177334 per week).
-Assuming 2 imAsset vaults, 4 fPools, \$2.3 MTA price, 20% Daily LUR on each pool and ~40k going to MTA sources.
+On top of base rewards, each pool receives bonus rewards based on their performance from the previous week. We derive a simple performance metric from the volume and liquidity of the pool, according to
 
-<!-- TODO: Put accurate numbers in based on formula: maybe need to assume pool sizes too -->
-<!-- TODO: Example addition of new mAsset & fPool -->
+```python
+# For each feeder pool i
+bonus_feeder_factor[i] = volume[i] / liquidity[i]**(1/4)
+bonus_vault_factor[i] = volume[i] / liquidity[i]**(1/4)
+```
 
-| Pool allocations   | Current | Proposed (Week 1) |
-| ------------------ | ------- | ----------------- |
-| imBTC Vault        | 0       | 22889             |
-| mBTC/ETH Sushiswap | 15000   | 0                 |
-| imUSD Vault        | 12000   | 22889             |
-| mUSD Curve         | 13750   | 0                 |
-| mUSD/WETH Balancer | 23750   | 0                 |
-| fPool 1            | 0       | 22889             |
-| fPool 2            | 0       | 22889             |
-| fPool 3            | 0       | 22889             |
-| fPool 4            | 0       | 22889             |
-| **TOT mAssets**    | 64500   | 137334            |
-| MTA/WETH Uniswap   | 28750   | ---               |
-| Staking            | 40000   | ---               |
-| **TOT MTA**        | 68750   | 40000             |
-| **TOT**            | 133250  | 177334            |
+where `volume` is the value of the sum of all trades that were executed by the pool in the past week, and `liquidity` is the value of the time weighted average of total liquidity in the feeder pool in the past week.
 
-_Projected TVL: >164m giving each pool >=10% APY from only MTA rewards_
+Pools receive rest of the rewards proportional to their bonus factors:
+
+```python
+bonus_feeder_emission[i] = feeder_emission * (1 - base_feeder_emission_pct) \
+        * bonus_feeder_factor[i] / sum(bonus_feeder_factor)
+bonus_vault_emission[i] = vault_emission * (1 - base_vault_emission_pct) \
+        * bonus_vault_factor[i] / sum(bonus_vault_factor)
+```
+
+Finally, the total emission a feeder pool receives is computed as the sum of the base emission and bonus emission
+
+```python
+total_feeder_emission[i] = feeder_base_emission + bonus_feeder_emission[i]
+total_vault_emission[i] = vault_base_emission + bonus_vault_emission[i]
+```
+
+It is proposed that:
+
+- `feeder_emission_pct` = 0.8
+- `base_feeder_emission_pct` = 0.2
+- `base_vault_emission_pct` = 0.5
+
+Example week 1 numbers, based on emission above of 141758 per week.
+Assuming 2 imAsset vaults, 4 fPools, 20% Daily LUR on each pool and ~40k going to MTA sources.
+
+Example week 14 numbers, based on emission above of 283516 per week.
+Assuming 3 imAsset vaults, 8 fPools, 20% Daily LUR on each pool and ~40k going to MTA sources.
+
+| Pool allocations   | Current | Proposed (Week 1) | Proposed (Week 14) |
+| ------------------ | ------- | ----------------- | ------------------ |
+| mBTC/ETH Sushiswap | 15000   | 0                 | 0                  |
+| mUSD/WETH Balancer | 23750   | 0                 | 0                  |
+| mUSD Curve         | 13750   | 0                 | 0                  |
+| imBTC Vault        | 0       | 10175.8           | 16234.4            |
+| imUSD Vault        | 12000   | 10175.8           | 16234.4            |
+| imXXX Vault        | 12000   | 0                 | 16234.4            |
+| fPool 1            | 0       | 20351.6           | 24351.6            |
+| fPool 2            | 0       | 20351.6           | 24351.6            |
+| fPool 3            | 0       | 20351.6           | 24351.6            |
+| fPool 4            | 0       | 20351.6           | 24351.6            |
+| fPool 5            | 0       | 0                 | 24351.6            |
+| fPool 6            | 0       | 0                 | 24351.6            |
+| fPool 7            | 0       | 0                 | 24351.6            |
+| fPool 8            | 0       | 0                 | 24351.6            |
+| **TOT mAssets**    | 64500   | 101758            | 243516             |
+| MTA/WETH Uniswap   | 28750   | ---               | ---                |
+| Staking            | 40000   | ---               | ---                |
+| **TOT MTA**        | 68750   | 40000             | 40000              |
+| **TOT**            | 133250  | 141758            | 283516             |
+
+Assuming \$2.3 MTA:  
+_Projected TVL Week 1: >121m giving each pool >=10% APY from only MTA rewards_
+_Projected TVL Week 14: >291m giving each pool >=10% APY from only MTA rewards_
+
+Assuming \$5 MTA:  
+_Projected TVL Week 1: >263m giving each pool >=10% APY from only MTA rewards_
+_Projected TVL Week 14: >632m giving each pool >=10% APY from only MTA rewards_
 
 ### Rewards contract specification
 
@@ -123,217 +170,6 @@ Variables:
 ### Buy & Make + Governance Fees
 
 As pools mature, it is proposed that the % of system revenue streamed to Buy and Make be increased via a following MCCP. Additionally, the governance fee in each Feeder Pool should be activated with the funds being directed towards the active Buy & Make pool.
-
-## Appendix 1: Emission Ruleset
-
-We want to have a mathematical way of reasoning when we set emissions to certain parts of the protocol. To this end, we set forth to create a comprehensive model with a level of detail sufficient to capture the token economics and market dynamics of each pool. The overarching purpose of the model is to maximize the TVL of the whole protocol by finding the optimal emission rates.
-
-As mStable is currently in the process of rapid restructuring and launching new pools, any comprehensive model we provide would risk being outdated short thereafter. Instead, we chose to use this MCCP to provide a simplified model as an example of the overall approach, which we intend to take in the longer term. We intend for such models to provide useful information, even after the governance of emission rates gets automated.
-
-To this end, we consider \\(n\\) undifferentiated liquidity pools whose asset prices are stable in the long term, e.g. stablecoins.
-
-**Assumptions**
-
-We assume that liquidity providers are drawn to pools with high annual percentage yield (APY), which is defined as in the following relation:
-
-```
-         yearly return on investment in USD
-APY = ----------------------------------------
-       initial value of the investment in USD
-```
-
-This value is computed from the combination of trading fees and liquidity mining rewards in each pool. Here, we assume that there is an equilibrium APY for each liquidity pool, tied to the corresponding market, below which the pool stops being attractive to liquidity providers. With this assumption, we imply that the APY does not fall below this minimum value.
-
-We also assume that liquidity pool volume
-
-- scales down linearly, when the pool is shrinking below current supply,
-- and stays constant, when the pool is growing above current supply.
-
-![supply1](/assets/MCCP-4/volume_supply1.svg)
-
-This is a conservative approach to estimating the demand in the market. It assumes that at a given point, the market is already saturated for a given liquidity pool, and increasing the liquidity will not necessarily increase volume. However, when the volume does increase at a future date, we take it into account by updating the values and rerunning the model.
-
-However, if the demand curve for a given asset pair were already known, we could set a target volume and use the bonding curve to compute the target size of the pool. Then we could use those values in the model, instead of current volume and supply.
-
-![supply2](/assets/MCCP-4/volume_supply2.svg)
-
-Our variables for the optimization problem are:
-
-- \\(e_i\\): weekly emission to pool \\(i\\)
-- \\(s_i\\): LP token supply (size) of pool \\(i\\)
-- \\(v_i\\): total volume of pool \\(i\\)
-
-The following are external parameters for the problem:
-
-- \\(V_i\\): current weekly volume demanded from pool \\(i\\)
-- \\(S_i\\): current LP token supply (size) of pool \\(i\\)
-- \\(A_i\\): minimum APY for pool \\(i\\) (i.e. the equilibrium APY which the pool has at maximum size)
-- \\(P\\): price of the governance token
-- \\(P_i\\): price of the LP token of pool \\(i\\) (1 in the case of USD based pools)
-- \\(e\_\max\\): maximum total weekly emission
-- \\(F\\): swap fee percentage, e.g. 0.0004
-
-**Objective function**
-
-We are trying to maximize the TVL, which is simply the sum of the values of the LP tokens of all pools:
-
-\\[
-\text{maximize }
-\sum_i P_is_i
-\\]
-
-**Constraints**
-
-**Constraint 1:** Total emission is less than or equal to maximum allowed emission.
-
-\\[
-\sum_i e_i \leq e_\max
-\\]
-
-**Constraint 2:** Pool APY should be greater than the designated minimum. The smaller the APY, the bigger the size of the pool.
-
-\\[
-52\left(\frac{FP_iv_i + Pe_i}{P_is_i}\right)
-\geq A_i
-\quad \text{for each } i
-\\]
-
-**Constraint 3:** Volume cannot be greater than current volume for each pool. This comes from the assumption we introduced above.
-
-\\[
-v_i \leq V_i
-\quad \text{for each } i
-\\]
-
-**Constraint 4:** Volume scales down linearly when a pool shrinks below its current size.
-
-\\[
-v_i \leq \frac{V_i}{S_i} s_i
-\quad \text{for each } i
-\\]
-
-Constraints 3 and 4 together create an envelope which enforce the assumption about volume's relationship with supply.
-
-**Implementation**
-
-This is a standard [linear optimization](https://en.wikipedia.org/wiki/Linear_programming) problem and we use a common solver from the SciPy package for the implementation. We assume that all LP tokens have the price 1, that is, \\(P_i =1\\) for all \\(i\\).
-
-```python
-import numpy as np
-from scipy.optimize import linprog
-
-# Governance token price
-P = 3.00
-
-# Minimum APY
-Ai = [0.10, 0.10, 0.10, 0.10, 0.10, 0.10]
-
-# Current pool sizes
-Si = [28e6, 10e6, 3e6, 3e6, 3e6, 3e6]
-
-# Current weekly demanded volume
-Vi = [15e6, 1e6, 0.5e6, 0.5e6, 0.5e6, 0.5e6]
-
-# Maximum total emission
-e_max = 150_000
-
-# Swap fee percentage
-F = 0.0004
-
-# Solution
-n = len(Ai) # Number of feeder pools
-assert len(Ai) == len(Vi)
-
-# Variables are:
-# [s_1, ..., s_n, e_1, ..., e_n, v_1, ..., v_n]
-c_vec = [1. for i in range(n)] \
-    + [0. for i in range(2*n)]
-
-c_vec = -1 * np.array(c_vec)
-
-A_ub = []
-b_ub = []
-
-A_eq = []
-b_eq = []
-
-bounds = [(0, None) for i in range(3 * n)]
-
-# Constraint: e + sum e_i <= e_max
-lhs = [0. for i in range(n)] + [1. for i in range(n)] + [0. for i in range(n)]
-rhs = e_max
-A_ub.append(lhs)
-b_ub.append(rhs)
-
-# Constraints: (Ai)*Si - (52*P)*ei <= 52*F*Vi
-for i in range(n):
-    lhs = [0. for i in range(3*n)]
-    lhs[i] = Ai[i]
-    lhs[i+n] = -52 * P
-    lhs[i+2*n] = -52 * F
-    rhs = 0 #52*Vi[i]*F
-    A_ub.append(lhs)
-    b_ub.append(rhs)
-
-# Constraint: v_i <= V_i
-for i in range(n):
-    lhs = [0. for i in range(3*n)]
-    lhs[i+2*n] = 1
-    rhs = Vi[i]
-    A_ub.append(lhs)
-    b_ub.append(rhs)
-
-# Constraint: v_i <= s_i * (V_i / S_i)
-for i in range(n):
-    lhs = [0. for i in range(3*n)]
-    lhs[i] = - Vi[i] / Si[i]
-    lhs[i+2*n] = 1
-    rhs = 0
-    A_ub.append(lhs)
-    b_ub.append(rhs)
-
-A_ub = np.array(A_ub)
-b_ub = np.array([b_ub])
-
-sln = linprog(c_vec, A_ub=A_ub, b_ub=b_ub, bounds=bounds)
-print(sln)
-
-si = sln.x[:n]
-ei = sln.x[n:2*n]
-vi = sln.x[2*n:]
-
-apy_i = [52*(F*v_+P*e_)/s_ for v_,e_,s_ in zip(vi, ei, si)]
-
-if sln.status != 0:
-    raise Exception("Solution was not successful")
-
-print()
-print("Resulting TVL: %.2fm"%(sum(si)/1e6))
-for i in range(n):
-    print("Pool %d emission: %.2f MTA - size: %.2fm - vol: %.2fm - APY: %.2f%%"%(
-        i,
-        ei[i],
-        si[i]/1e6,
-        vi[i]/1e6,
-        100 * apy_i[i],
-    ))
-```
-
-In this example, we have 6 liquidity pools with minimum APY of 10% each. Current pool sizes are 28m, 10m, 3m, 3m, 3m, 3m and current volumes are 15m, 1m, 0.5, 0.5, 0.5, 0.5 respectively. We don't need to input information regarding previous emissions, because that is considered implicitly with current volume `Vi` and current supply `Si`.
-
-Governance token price is \$3, maximum emission is 150,000 tokens and swap fee is 4 bps in all pools. The result of optimization is as follows:
-
-```
-Resulting TVL: 237.74m
-Pool 0 emission: 21110.62 MTA - size: 36.05m - vol: 15.00m - APY: 10.00%
-Pool 1 emission: 54329.26 MTA - size: 84.96m - vol: 1.00m - APY: 10.00%
-Pool 2 emission: 18640.03 MTA - size: 29.18m - vol: 0.50m - APY: 10.00%
-Pool 3 emission: 18640.03 MTA - size: 29.18m - vol: 0.50m - APY: 10.00%
-Pool 4 emission: 18640.03 MTA - size: 29.18m - vol: 0.50m - APY: 10.00%
-Pool 5 emission: 18640.03 MTA - size: 29.18m - vol: 0.50m - APY: 10.00%
-```
-
-The maximum TVL obtained with the current emission rates is around 237m.
 
 ## Copyright
 

@@ -1,7 +1,7 @@
 ---
 mip: 9
 title: Feeder Pools
-status: WIP
+status: Proposed
 author: Alex Scott (@alsco77), Onur Solmaz <onur@mstable.org>
 discussions-to: https://forum.mstable.org/
 created: 2021-03-15
