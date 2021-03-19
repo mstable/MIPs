@@ -3,7 +3,7 @@ mccp: 4
 title: Optimise MTA emission to maximise circular effects
 status: Proposed
 author: Alex Scott <@alsco77>, Onur Solmaz <@osolmaz>
-discussions-to: https://forum.mstable.org/
+discussions-to: https://forum.mstable.org/t/mccp-4-mta-reward-emission-overhaul/411
 created: 2021-03-16
 ---
 
@@ -14,7 +14,7 @@ created: 2021-03-16
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the MCCP.-->
 
 _Note: This MCCP assumes a positive resolution to [MIP-9](../MIPS/mip-9)._  
-_Note: This MCCP does not propose changes to the MTA assigned to Staking rewards_
+_Note: This MCCP does not propose changes to the MTA assigned to Staking rewards or MTA/ETH pool_
 
 It has long been proposed that major optimisations can be made to the MTA emission. This MCCP proposes a major revamp; bringing all the incentives "in-house" to create better circular effects, reduce MTA sell pressure and maximise TVL. This proposal also outlines a prospective emission schedule over the next few years, and a set of rules to follow in order to calculate weekly distributions.
 
@@ -139,11 +139,11 @@ Assuming 3 imAsset vaults, 8 fPools, 20% Daily LUR on each pool and ~40k going t
 | **TOT mAssets**    | 64500   | 101758            | 243516             |
 
 Assuming \$2.3 MTA:  
-_Projected TVL Week 1: >121m giving each pool >=10% APY from only MTA rewards_
+_Projected TVL Week 1: >121m giving each pool >=10% APY from only MTA rewards_  
 _Projected TVL Week 14: >291m giving each pool >=10% APY from only MTA rewards_
 
 Assuming \$5 MTA:  
-_Projected TVL Week 1: >263m giving each pool >=10% APY from only MTA rewards_
+_Projected TVL Week 1: >263m giving each pool >=10% APY from only MTA rewards_  
 _Projected TVL Week 14: >632m giving each pool >=10% APY from only MTA rewards_
 
 ### Rewards contract specification
