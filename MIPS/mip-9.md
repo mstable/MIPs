@@ -52,7 +52,7 @@ The equation is quadratic in terms of \\(k\\), making it easier to compute the i
 
 ![Price curve](/assets/MIP-9/feeder_pool_invariant1.svg)
 
-Note that the `A` parameter used in existing Stableswap contracts actually corresponds to \\(An^{n-1}\\), we consider the original \\(A\\) from the Stableswap invariant.
+Note that the `A` parameter used in existing Stableswap contracts actually corresponds to \\(An^{n-1}\\) ---we consider the original definition of \\(A\\) from the Stableswap invariant.
 
 By contributing liquidity to a Feeder Pool, the user will receive:
 
