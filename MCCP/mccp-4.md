@@ -13,7 +13,7 @@ created: 2021-03-16
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the MCCP.-->
 
-_Note: This MCCP assumes a positive resolution to [MIP-9](../MIPS/mip-9)._
+_Note: This MCCP assumes a positive resolution to [MIP-9](../MIPS/mip-9)._<br>
 _Note: This MCCP does not propose changes to the MTA assigned to Staking rewards or MTA/ETH pool_
 
 It has long been proposed that major optimisations can be made to the MTA emission. This MCCP proposes a major revamp; bringing all the incentives "in-house" to create better circular effects, reduce MTA sell pressure and maximise TVL. This proposal also outlines a prospective emission schedule over the next few years, and a set of rules to follow in order to calculate weekly distributions.
@@ -115,10 +115,10 @@ It is proposed that:
 - `base_feeder_emission_pct` = 0.2
 - `base_vault_emission_pct` = 0.5
 
-Example week 1 numbers, based on emission above of 141758 per week.
+Example week 1 numbers, based on emission above of 141758 per week.<br>
 Assuming 2 imAsset vaults, 4 fPools, 20% Daily LUR on each pool and ~40k going to MTA sources.
 
-Example week 14 numbers, based on emission above of 283516 per week.
+Example week 14 numbers, based on emission above of 283516 per week.<br>
 Assuming 3 imAsset vaults, 8 fPools, 20% Daily LUR on each pool and ~40k going to MTA sources.
 
 | Pool allocations   | Current | Proposed (Week 1) | Proposed (Week 14) |
@@ -139,12 +139,12 @@ Assuming 3 imAsset vaults, 8 fPools, 20% Daily LUR on each pool and ~40k going t
 | fPool 8            | 0       | 0                 | 24351.6            |
 | **TOT mAssets**    | 64500   | 101758            | 243516             |
 
-Assuming \$2.3 MTA:
-_Projected TVL Week 1: >121m giving each pool >=10% APY from only MTA rewards_
+Assuming \$2.3 MTA:<br>
+_Projected TVL Week 1: >121m giving each pool >=10% APY from only MTA rewards_<br>
 _Projected TVL Week 14: >291m giving each pool >=10% APY from only MTA rewards_
 
-Assuming \$5 MTA:
-_Projected TVL Week 1: >263m giving each pool >=10% APY from only MTA rewards_
+Assuming \$5 MTA:<br>
+_Projected TVL Week 1: >263m giving each pool >=10% APY from only MTA rewards_<br>
 _Projected TVL Week 14: >632m giving each pool >=10% APY from only MTA rewards_
 
 ### Rewards contract specification
