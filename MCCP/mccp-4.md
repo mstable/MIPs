@@ -157,13 +157,24 @@ Each rewards pool will have the following traits:
 
 Boost calculated with the following formula:
 
-`boost = min(1 + c * vMTA_balance / (s*p)^(7/8), 4)`
+```python
+boost = min(max(FLOOR + BOOST_COEFF * min(vMTA_balance, VMTA_CAP) \
+    / (deposit * PRICE_COEFF)**EXPONENT, MIN_BOOST), MAX_BOOST)
+```
 
 Variables:
+- `deposit`: LP tokens staked
+- `vMTA_balance`: vMTA balance
 
-- \\(c\\): Coefficient
-- \\(s\\): LP tokens staked
-- \\(p\\): Price coefficient
+Parameters:
+
+- `MIN_BOOST`: Minimum boost, `1`.
+- `MAX_BOOST`: Maximum boost, `3`.
+- `BOOST_COEFF`: Boost coefficient, `4.8`.
+- `PRICE_COEFF`: Price coefficient, depends on the mAsset.
+- `VMTA_CAP`: Maximum vMTA to be considered for the boost, `400_000`.
+- `EXPONENT`: Exponent for the deposit, `7/8`.
+- `FLOOR`: Cutoff value for small boosts, `0.95`.
 
 ### Buy & Make + Governance Fees
 
