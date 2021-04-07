@@ -44,7 +44,7 @@ Incentivising liquidity on these pools will provide on/off ramps, generate swap 
 For feeder pools, we introduce a new invariant for 2-asset stablecoin AMMs that shows similar properties as Stableswap, but can be solved with less number of operations. The implicit invariant equation follows as
 
 \\[
-\frac{Ak}{x + y} + \frac{k^2}{4xy} - A - 1 = 0\,.
+\frac{Ak}{x + y} + \frac{k^2}{4xy} = A + 1\,.
 \\]
 
 Here, \\(x\\) and \\(y\\) are asset reserves, \\(k\\) is the invariant and \\(A\\) is an amplification coefficient.
@@ -52,7 +52,7 @@ The equation is quadratic in terms of \\(k\\), making it easier to compute the i
 
 ![Price curve](/assets/MIP-9/feeder_pool_invariant1.svg)
 
-Note that the `A` parameter used in existing Stableswap contracts actually corresponds to \\(An^{n-1}\\), we consider the original \\(A\\) from the Stableswap invariant.
+Note that the `A` parameter used in existing Stableswap contracts actually corresponds to \\(An^{n-1}\\) ---we consider the original definition of \\(A\\) from the Stableswap invariant.
 
 By contributing liquidity to a Feeder Pool, the user will receive:
 
@@ -105,9 +105,9 @@ Below is a pseudocode for computing \\(k\\):
 
 ```python
 def compute_k(x: int, y: int, A: int):
-    c0 = x * y
-    c1 = A * c0 // (x + y)
-    result = 2 * (sqrt(c1**2 + (A + 1) * c0) - c1)
+    prod = x * y
+    c1 = A * prod // (x + y)
+    result = 2 * (sqrt(c1**2 + (A + 1) * prod) - c1)
     return result
 ```
 
@@ -129,10 +129,15 @@ Below is a pseudocode for computing \\(y\\):
 
 ```python
 def compute_y(x: int, k: int, A: int):
-    c0 = A + 1
-    c2 = k**2 // c0
-    c3 = c2 // (4 * x) + k * A // c0 - x
-    result = (sqrt(c3**2 + c2) + c3) // 2
+    Aplus1 = A + 1
+    c2 = k**2 // Aplus1
+    # Account for negative c_3
+    dummy1 = c2 // (4 * x) + k * A // Aplus1
+    if dummy1 >= x:
+        dummy2 = dummy1 - x
+    else:
+        dummy2 = x - dummy1
+    result = (sqrt(dummy2**2 + c2) + dummy1 - x) // 2
     return result
 ```
 
