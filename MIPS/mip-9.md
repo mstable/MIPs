@@ -1,7 +1,7 @@
 ---
 mip: 9
 title: Feeder Pools
-status: Proposed
+status: Implemented
 author: Alex Scott (@alsco77), Onur Solmaz <onur@mstable.org>
 discussions-to: https://forum.mstable.org/t/mip-9-feeder-pools/410
 created: 2021-03-15

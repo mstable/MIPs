@@ -1,7 +1,7 @@
 ---
 mccp: 4
 title: Optimise MTA emission to maximise circular effects
-status: Proposed
+status: Implemented
 author: Alex Scott <@alsco77>, Onur Solmaz <@osolmaz>
 discussions-to: https://forum.mstable.org/t/mccp-4-mta-reward-emission-overhaul/411
 created: 2021-03-16

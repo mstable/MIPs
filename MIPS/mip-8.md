@@ -1,7 +1,7 @@
 ---
 mip: 8
 title: Buyback & Make
-status: Approved
+status: Implemented
 author: Alex Scott (@alsco77)
 discussions-to: https://forum.mstable.org/t/pdp15-buyback-make-pool-creation-mip-8/363
 created: 2021-02-23
