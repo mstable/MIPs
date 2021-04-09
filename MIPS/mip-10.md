@@ -7,6 +7,7 @@ discussions-to:
 created: 2021-04-09
 ---
 
+
 ## Simple Summary
 
 It is proposed to redirect a percentage of the system fees from the "Feeder Pools" to the Buyback&Make pool with the initial magnitude of 10%. 
@@ -15,14 +16,18 @@ The system revenue redirection has been enabled with [MIP-8](./mip-8) and [PDP-1
 
 Revenues from fPools is composed of swap fees into fAssets, fpToken redemption fees, and yield generated from third party lending platforms.
 
+
 ## Abstract
+
 This proposal would set the configurable value "govFee" as specified in [MIP-9](./mip-9) to 10%. 
 
 In addition a new smart contract will be deployed that will collect the fees in fPool LP tokens (a.k.a fpTokens), and exchange these to mAssets (mUSD and mBTC). This will then be sent to the SavingsManager where it will be collected alongside the rest of the mAsset revenue going to buyback-and-make. This smart contract function is called manually will be executed by the signers.
 
 All collected fees will be deposited into the Balancer MTA/ETH/mUSD/mBTC pool. The pool parameters are maintained by the mStable protocolDAO with the collateral owned by the system & vMTA holders.
 
+
 ## Motivation
+
 The system fees have been enabled for other parts of the mStable ecosystem. With the addition of the Feeder Pools the extension of the system fees to these pools is a rational step in order include all parts of mStable into the generation of revenue.
 
 In addition the ProtocolDAO identified these benefits:
@@ -30,6 +35,8 @@ In addition the ProtocolDAO identified these benefits:
 - Great reflexivity effect on the MTA token value which boosts APY % (which in turn boosts liquidity and swap fees).
 - Feeder Pools directly drive system revenue in the mStable ecosystem through deeper liquidity and higher swap volume.
 - Impact on return to liquidity providers is minimal while direct system revenue increases the MTA token value.
+
+
 ## Specification
 
 Most of the components for this MIP already exist - namely the ability for Feeder Pools to collect a percentage of their revenue using the configurable parameter "govFee". With this in mind, the MIP describes the method by which the fpTokens will be collected and converted into the aforementioned mBPT token:
