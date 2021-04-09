@@ -2,7 +2,7 @@
 mip: 10
 title: Extend buyback and make to Feeder Pools
 status: WIP
-author: Alex Scott (@alsco77),derc (@helloderc), Dimitri Golecko (@dimsomedim)
+author: Alex Scott (@alsco77), derc (@helloderc), Dimitri Golecko (@dimsomedim)
 discussions-to: 
 created: 2021-04-09
 ---
