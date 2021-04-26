@@ -1,9 +1,9 @@
 ---
 mip: 10
 title: Extend buyback and make to Feeder Pools
-status: WIP
+status: Implemented
 author: Alex Scott (@alsco77), derc (@helloderc), Dimitri Golecko (@dimsomedim)
-discussions-to: 
+discussions-to: https://forum.mstable.org/t/pdp-20-extend-buyback-and-make-to-feeder-pools/451
 created: 2021-04-09
 ---
 
