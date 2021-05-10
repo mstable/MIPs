@@ -1,9 +1,9 @@
 ---
 mccp: 5
 title: Migrate DAI and WBTC to Aave v2
-status: WIP
+status: APPROVED
 author: Dimitri Golecko <@dimsomedim>
-discussions-to:
+discussions-to: https://forum.mstable.org/t/pdp-20-extend-buyback-and-make-to-feeder-pools/451/5
 created: 2020-04-26
 ---
 
