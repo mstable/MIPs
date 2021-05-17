@@ -49,8 +49,8 @@ This MCCP would use the existing functionality that is available in the currentl
 
 The following two transactions would be made by the mStable ProtocolDAO multisig wallet:
 
-1. For mBTC: Call `setFees` on address `0x69AD1387dA6b2Ab2eA4bF2BEE68246bc042B587f` with the parameter `_swapFee` set to `0.0002*1e18`
-2. For mUSD: Call `setSwapFee` on address `0xE0d0D052d5B1082E52C6b8422Acd23415c3DF1c4` with the parameter `_swapFee` set to `0.0002*1e18`
+1. For mBTC: Call `setFees` on address `0x945facb997494cc2570096c74b5f66a3507330a1` with the parameter `_swapFee` set to `0.0002*1e18`
+2. For mUSD: Call `setFees` on address `0xe2f2a5C287993345a840Db3B0845fbC70f5935a5` with the parameter `_swapFee` set to `0.0002*1e18`
 
 
 ## Copyright
