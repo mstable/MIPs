@@ -15,7 +15,7 @@ This proposal aims to increase the capital efficiency of mUSD in the Feeder Pool
 
 ## Abstract
 
-Feeder Pools have been introduced with [MIP-9](https://mips.mstable.org/MIPS/mip-9.html). This proposal seeks to increase the utilization of these Pools by depositing the available amount in the Iron Bank. The available amount that can be deposited into the Iron Bank is the total amount of deposited mUSD minus the `cache size`(as outlined in [MIP-9](https://mips.mstable.org/MIPS/mip-9.html) Section: Configurable Values). This allows enough mUSD to remain available for offering gas efficient swaps. At the time of writing, the `cache size` is set to 10%, but can be further adjusted with future MCCPs.
+Feeder Pools have been introduced with [MIP-9](./mip-9). This proposal seeks to increase the utilization of these Pools by depositing the available amount in the Iron Bank. The available amount that can be deposited into the Iron Bank is the total amount of deposited mUSD minus the `cache size`(as outlined in [MIP-9](./mip-9) Section: Configurable Values). This allows enough mUSD to remain available for offering gas efficient swaps. At the time of writing, the `cache size` is set to 10%, but can be further adjusted with future MCCPs.
 
 
 ## Motivation
