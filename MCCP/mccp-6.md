@@ -19,6 +19,7 @@ As outlined in [MIP-7](../MIPS/mip-7), the new AMM enables greater scalability a
 
 “Success” of this proposal would be defined as increasing mStable Protocol volume while maintaining the same or greater levels of daily average fee revenue after a 3-month trial period as compared to pre-proposal levels. If after this period, this condition is not met, then this proposal should be re-evaluated.
 
+
 ## Motivation
 
 User acquisition cost is a key component of the modern network-driven economy. The common pathway many successful DeFi platforms have followed is:
