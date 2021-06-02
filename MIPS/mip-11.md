@@ -1,9 +1,9 @@
 ---
 mip: 11
 title: Deposit mUSD from Feeder Pools into the Iron Bank
-status: WIP
+status: Implemented
 author: Max1
-discussions-to: https://forum.mstable.org/t/deposit-idle-musd-in-the-mstable-savings-contract-eth-mainnet-to-the-iron-bank/461
+discussions-to: https://forum.mstable.org/t/pdp-23-deposit-musd-from-feeder-pools-into-the-iron-bank/479
 created: 2021-05-17
 ---
 
