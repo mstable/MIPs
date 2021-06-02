@@ -1,9 +1,9 @@
 ---
 mccp: 6
 title: Reduce Swap Fees to Bootstrap Users
-status: WIP
+status: Implemented
 author: Cold Summer
-discussions-to: 
+discussions-to: https://forum.mstable.org/t/pdp-22-reduce-swap-fees-to-bootstrap-users/478
 created: 2021-05-17
 ---
 
