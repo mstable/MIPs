@@ -1,21 +1,21 @@
 ---
 mccp: 7
 title: MTA rewards distribution on Polygon
-status: WIP
+status: Proposed
 author: derc
-discussions-to: 
+discussions-to: https://forum.mstable.org/t/pdp-24-mta-rewards-distribution-on-polygon/503
 created: 2021-06-04
 ---
 
 
 ## Simple Summary
 
-It is proposed to amend [MCCP-4](../MCCPs/mccp-4) to carve out ***XX%(To be Voted on)*** of base emissions ***(i.e. XXK MTA per week(To be Voted on))*** for liquidity mining on Polygon, with incentives going to the Save Vault and Feeder Pools. Incentives could be used for joint-liquidity mining programs with partners.
+It is proposed to amend [MCCP-4](../MCCP/mccp-4) to carve out ***XX%(To be Voted on)*** of base emissions ***(i.e. XXK MTA per week(To be Voted on))*** for liquidity mining on Polygon, with incentives going to the Save Vault and Feeder Pools. Incentives could be used for joint-liquidity mining programs with partners.
 
 
 ## Abstract
 
-[MCCP-4](../MCCPs/mccp-4) proposed a prospective emission schedule over the next few years and a set of rules to follow in order to calculate weekly distributions.
+[MCCP-4](../MCCP/mccp-4) proposed a prospective emission schedule over the next few years and a set of rules to follow in order to calculate weekly distributions.
 
 The current emissions schedule on MTA is approximately ~250K MTA per week on Ethereum Mainnet, distributed across 4 Feeder Pools, 2 Savings Vault, MTA/WETH Uniswap LP and MTA Staking. 
 
@@ -38,7 +38,7 @@ This proposal suggests split up the `total_emission` into two new variables:
 1. `total_emission_ethereum = total_emission * 0.75` 
 2. `total_emission_polygon = total_emission * 0.25` 
 
-[MCCP-4](../MCCPs/mccp-4) will remain intact with all the specified calculations and only the `total_emission` in that proposal will be replaced by `total_emission_ethereum`.
+[MCCP-4](../MCCP/mccp-4) will remain intact with all the specified calculations and only the `total_emission` in that proposal will be replaced by `total_emission_ethereum`.
 
 The total rewards received by imAsset vaults and feeder pools on Polygon is denoted as `total_emission_polygon`. A fixed percentage of `total_emission_polygon` denoted as `feeder_emission_pct` goes to the feeder pools.
 
