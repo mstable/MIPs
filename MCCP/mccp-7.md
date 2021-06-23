@@ -1,7 +1,7 @@
 ---
 mccp: 7
 title: MTA rewards distribution on Polygon
-status: Proposed
+status: Approved
 author: derc
 discussions-to: https://forum.mstable.org/t/pdp-24-mta-rewards-distribution-on-polygon/503
 created: 2021-06-04
