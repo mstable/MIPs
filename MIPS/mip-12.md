@@ -1,8 +1,8 @@
 ---
 MIP: 12
 title: Add Alchemix alUSD/mUSD Feeder Pool
-status: WIP
-author: shubidoobi, Dimitri Golecko (@dimsomedim), Nick Addison (@naddison36)
+status: Proposed
+author: shubidoobi, Dimitri Golecko (@dimsome), Nick Addison (@naddison36)
 discussions-to: https://forum.mstable.org/t/discussion-alchemix-alusd-musd-fpool/497
 created: 2021-06-1
 ---
@@ -49,6 +49,8 @@ A new instance of the `BoostedSavingsVault` contract will be deployed with the f
 
 - Name: v-mUSD/alUSD fPool Vault
 - Symbol: v-fPmUSD/alUSD
+
+This MIP grants the ProtocolDAO permission to adjust the Amplitude coefficient (A) when deemed necessary and to integrate the Iron Bank as specified in [MIP 11](./mip-11).
 
 ## Copyright
 
