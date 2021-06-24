@@ -36,6 +36,8 @@ A new instance of the `FeederPool` contract will be deployed with the following 
 - Name: mUSD/alUSD Feeder Pool
 - Symbol: fPmUSD/alUSD
 - Amplitude coefficient (A): 100
+- Swap fee: 0.04% (4 basis points)
+- Redemption fee: 0.04% (4 basis points)
 - Min bAsset weight limit: 3%
 - Max bAsset weight limit: 97%
 - alUSD integration: none as alUSD is not currently supported by Aave or Compound
