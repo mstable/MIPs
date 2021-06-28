@@ -1,5 +1,5 @@
 ---
-MIP: 12
+mip: 12
 title: Add Alchemix alUSD/mUSD Feeder Pool
 status: Proposed
 author: shubidoobi, Dimitri Golecko (@dimsome), Nick Addison (@naddison36)
