@@ -1,5 +1,5 @@
 ---
-MIP: 13
+mip: 13
 title: Add Frax/mUSD Feeder Pool on Polygon
 status: WIP
 author: Dimitri Golecko (@dimsome)

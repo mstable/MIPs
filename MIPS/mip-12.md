@@ -1,5 +1,5 @@
 ---
-MIP: 12
+mip: 12
 title: Add Alchemix alUSD/mUSD Feeder Pool
 status: Proposed
 author: shubidoobi, Dimitri Golecko (@dimsome), Nick Addison (@naddison36)
@@ -23,7 +23,7 @@ The mUSD from this proposed Feeder Pool will be handled according to [MIP 11](./
 
 This proposal seeks to overall increase mStable's composability with the ecosystem as well as to increase yield for liquidity providers and savers alike.
 
-Alchemix, since its inception, has grown to a TVL at the time of writing of [$1.48 Billion](https://defillama.com/protocol/alchemix), while [401 Million](https://etherscan.io/token/0xBC6DA0FE9aD5f3b0d58160288917AA56653660E9) alUSD are in circulation. Additionally, alUSD has already generated a fair share of swap volume on other protocols (~$20 to 60 Million daily trading volume on [alUSD/TriPool](https://curve.fi/alusd)). This shows that there is already a healthy demand for swaps and that alUSD is well integrated and circulated in other DeFi products.
+Alchemix, since its inception, has grown to a TVL at the time of writing of [\$1.48 Billion](https://defillama.com/protocol/alchemix), while [401 Million](https://etherscan.io/token/0xBC6DA0FE9aD5f3b0d58160288917AA56653660E9) alUSD are in circulation. Additionally, alUSD has already generated a fair share of swap volume on other protocols (~\$20 to 60 Million daily trading volume on [alUSD/TriPool](https://curve.fi/alusd)). This shows that there is already a healthy demand for swaps and that alUSD is well integrated and circulated in other DeFi products.
 
 The unique feature of Alchemix alUSD is that there is no risk of liquidations, as the loan pays off itself. This reduces the risk of a depegging of this asset during volatile market swings substantially. Additionally, since alUSD is backed by DAI, the risk of alUSD losing value is relatively low.
 
