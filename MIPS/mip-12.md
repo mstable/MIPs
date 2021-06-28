@@ -3,7 +3,7 @@ mip: 12
 title: Add Alchemix alUSD/mUSD Feeder Pool
 status: Proposed
 author: shubidoobi, Dimitri Golecko (@dimsome), Nick Addison (@naddison36)
-discussions-to: https://forum.mstable.org/t/discussion-alchemix-alusd-musd-fpool/497
+discussions-to: https://forum.mstable.org/t/pdp-25-add-alchemix-alusd-musd-feeder-pool/521
 created: 2021-06-1
 ---
 
