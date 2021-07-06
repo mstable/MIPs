@@ -1,5 +1,5 @@
 ---
-MIP: 14
+mip: 14
 title: Add MAI(miMatic)/mUSD Feeder Pool on Polygon
 status: WIP
 author: Dimitri Golecko (@dimsome)
