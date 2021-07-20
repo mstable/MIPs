@@ -1,7 +1,7 @@
 ---
 mip: 14
 title: Add MAI(miMatic)/mUSD Feeder Pool on Polygon
-status: WIP
+status: Rejected
 author: Dimitri Golecko (@dimsome)
 discussions-to:
 created: 2021-07-06
