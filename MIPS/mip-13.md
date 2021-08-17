@@ -1,7 +1,7 @@
 ---
 mip: 13
 title: Add Frax/mUSD Feeder Pool on Polygon
-status: Approved
+status: Implemented
 author: Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/pdp-26-add-frax-musd-feeder-pool-on-polygon/524
 created: 2021-06-21
