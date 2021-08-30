@@ -89,29 +89,33 @@ Before the user commits to staking, the option to delegate their voting power is
 
 ### Staking, raw balance, and scaled balance
 
-The staking and locking of MTA are at the very core of this proposal. It opens up the voting and allows a staker to benefit from reward emissions. Upon staking, the user receives either stkMTA (staked MTA or raw staked balance) or staked Balancer Pool tokens. Like in staking v1, this is a non-transferable token and rewards accrue via the same contract. Unlike the staking iteration v1, this staked token does not decay over time and the rewards are not vested for a period of time. The staked amount in MTA becomes the raw balance that can be further increased with multipliers to receive scaled balance $b_{scaled}$. Hence voting power and earning power is based on the scaled balance after each multiplier is factored in.
+The staking and locking of MTA are at the very core of this proposal. It opens up the voting and allows a staker to benefit from reward emissions. Upon staking, the user receives either stkMTA (staked MTA or raw staked balance) or staked Balancer Pool tokens. Like in staking v1, this is a non-transferable token and rewards accrue via the same contract. Unlike the staking iteration v1, this staked token does not decay over time and the rewards are not vested for a period of time. The staked amount in MTA becomes the raw balance that can be further increased with multipliers to receive scaled balance \\(b\_{scaled}\\). Hence voting power and earning power is based on the scaled balance after each multiplier is factored in.
 
-The scaled balance $b_{scaled}$ is calculated as:
+The scaled balance \\(b_{scaled}\\) is calculated as:
 
-$$b_{scaled} = b_{raw} * m_{quest} * m_{time}$$
+\\[
+b_{scaled} = b_{raw} * m_{quest} * m_{time}
+\\]
 
-with $b_{raw}$ being the raw staked MTA amount, $m_{time}$ the time multiplier based on the length of staked duration (see table below), and $m_{quest}$ the multiplier for quests.
+with \\(b_{raw}\\) being the raw staked MTA amount, \\(m_{time}\\) the time multiplier based on the length of staked duration (see table below), and \\(m_{quest}\\) the multiplier for quests.
 
 ### Gamified Governance and Quests
 
-Governance should be fun to participate in, interactive and not be limited to proposals or voting alone. Therefore, to incentivise participation and engagement, a quest mechanism is included in this release. The stakers scaled balance is increased with the fulfilment of quests. The multiplier $m_{quest}$ increases a staker's scaled balance $b_{scaled}$ as shown in the equation above.
+Governance should be fun to participate in, interactive and not be limited to proposals or voting alone. Therefore, to incentivise participation and engagement, a quest mechanism is included in this release. The stakers scaled balance is increased with the fulfilment of quests. The multiplier \\(m*{quest}\\) increases a staker's scaled balance \\(b*{scaled}\\) as shown in the equation above.
 
-The multipliers for the quests themselves are summed up and divided into 2 different types; $m_{season}$ for multipliers that are only valid for a limited length of time the so-called season and $m_{perm}$ for multipliers that are added permanently and that don't expire. The length of a season is set to 9 months and the set `questMaster` can start a new season and set the quests from the previous seasons to expire. The `questMaster` is the set address that has permission to add new quests and can control the state of the existing ones. This mechanism would allow the staker to earn a multiplier for a predetermined amount of time with a dampening factor in the form of a new season to allow everyone to start fresh on an equal level at the beginning of a new season.
+The multipliers for the quests themselves are summed up and divided into 2 different types; \\(m_{season}\\) for multipliers that are only valid for a limited length of time the so-called season and \\(m_{perm}\\) for multipliers that are added permanently and that don't expire. The length of a season is set to 9 months and the set `questMaster` can start a new season and set the quests from the previous seasons to expire. The `questMaster` is the set address that has permission to add new quests and can control the state of the existing ones. This mechanism would allow the staker to earn a multiplier for a predetermined amount of time with a dampening factor in the form of a new season to allow everyone to start fresh on an equal level at the beginning of a new season.
 
-The overall multiplier for the quests $m_{quest}$ can be calculated as:
+The overall multiplier for the quests \\(m_{quest}\\) can be calculated as:
 
-$$m_{quest} = \sum{m_{season}}+\sum{m_{perm}}$$
+\\[
+m_{quest} = \sum{m_{season}}+\sum{m_{perm}}
+\\]
 
-The range for multipliers, either $m_{season}$ or $m_{perm}$ can only bet set between $1 < m ≤ 1.5$. The values are to be chosen conservatively, since they can increase the vote and earning power, especially for permanent multipliers. A quest duration cannot be set lower than 1 day but can be set for an extended amount of time.
+The range for multipliers, either \\(m_{season}\\) or \\(m_{perm}\\) can only bet set between \\(1 < m ≤ 1.5\\). The values are to be chosen conservatively, since they can increase the vote and earning power, especially for permanent multipliers. A quest duration cannot be set lower than 1 day but can be set for an extended amount of time.
 
 ### Time multiplier
 
-To incentivise long-term staking, a time multiplier $m_{time}$ is applied. This multiplier is dependent on the length of weeks the MTA remains staked:
+To incentivise long-term staking, a time multiplier \\(m_{time}\\) is applied. This multiplier is dependent on the length of weeks the MTA remains staked:
 
 | Staking length        | Multiplier |
 | --------------------- | :--------: |
@@ -130,18 +134,18 @@ Redeemers must signal their request for a given amount to withdraw by entering a
 
 ### Early withdrawal fee
 
-To avoid users withdrawing early and potentially exploiting the governance process with e.g. purchasing MTA for a short-term only, swaying a vote and thus consequently unstaking, an early withdrawal $fee$ is charged based on the following equation:
+To avoid users withdrawing early and potentially exploiting the governance process with e.g. purchasing MTA for a short-term only, swaying a vote and thus consequently unstaking, an early withdrawal \\(fee\\) is charged based on the following equation:
 
-$$
+\\[
 fee =
 \begin{cases}
 10 & 0 \leq x\leq 2\\
 \sqrt{ \frac{300}{x} }-2.5 , & 2 <x< 48 \\
-0 &   x\leq48
+0 & x\leq48
 \end{cases}
-$$
+\\]
 
-With $x$ as the weeks since the user has staked. For $x$ the `weightedTimestamp` is used, which would affect the staked duration if the staked amount increases. After week 48 the fees would be 0% for all withdrawals. The maximum fee is 10% for staking shorter or equal to 2 weeks. The graph below shows the gradual decay of the fee until it crosses 0% after 48 weeks.
+With \\(x\\) as the weeks since the user has staked. For \\(x\\) the `weightedTimestamp` is used, which would affect the staked duration if the staked amount increases. After week 48 the fees would be 0% for all withdrawals. The maximum fee is 10% for staking shorter or equal to 2 weeks. The graph below shows the gradual decay of the fee until it crosses 0% after 48 weeks.
 
 ![Withdraw Fee Decay](../assets/MIP-15/fee_decay.png)
 
