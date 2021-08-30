@@ -97,13 +97,13 @@ The scaled balance \\(b\_{scaled}\\) is calculated as:
 b_{scaled} = b_{raw} * m_{quest} * m_{time}
 \\]
 
-with \\(b*{raw}\\) being the raw staked MTA amount, \\(m*{time}\\) the time multiplier based on the length of staked duration (see table below), and \\(m\_{quest}\\) the multiplier for quests.
+with \\(b\_{raw}\\) being the raw staked MTA amount, \\(m\_{time}\\) the time multiplier based on the length of staked duration (see table below), and \\(m\_{quest}\\) the multiplier for quests.
 
 ### Gamified Governance and Quests
 
-Governance should be fun to participate in, interactive and not be limited to proposals or voting alone. Therefore, to incentivise participation and engagement, a quest mechanism is included in this release. The stakers scaled balance is increased with the fulfilment of quests. The multiplier \\(m*{quest}\\) increases a staker's scaled balance \\(b*{scaled}\\) as shown in the equation above.
+Governance should be fun to participate in, interactive and not be limited to proposals or voting alone. Therefore, to incentivise participation and engagement, a quest mechanism is included in this release. The stakers scaled balance is increased with the fulfilment of quests. The multiplier \\(m*{quest}\\) increases a staker's scaled balance \\(b\_{scaled}\\) as shown in the equation above.
 
-The multipliers for the quests themselves are summed up and divided into 2 different types; \\(m*{season}\\) for multipliers that are only valid for a limited length of time the so-called season and \\(m*{perm}\\) for multipliers that are added permanently and that don't expire. The length of a season is set to 9 months and the set `questMaster` can start a new season and set the quests from the previous seasons to expire. The `questMaster` is the set address that has permission to add new quests and can control the state of the existing ones. This mechanism would allow the staker to earn a multiplier for a predetermined amount of time with a dampening factor in the form of a new season to allow everyone to start fresh on an equal level at the beginning of a new season.
+The multipliers for the quests themselves are summed up and divided into 2 different types; \\(m\_{season}\\) for multipliers that are only valid for a limited length of time the so-called season and \\(m\_{perm}\\) for multipliers that are added permanently and that don't expire. The length of a season is set to 9 months and the set `questMaster` can start a new season and set the quests from the previous seasons to expire. The `questMaster` is the set address that has permission to add new quests and can control the state of the existing ones. This mechanism would allow the staker to earn a multiplier for a predetermined amount of time with a dampening factor in the form of a new season to allow everyone to start fresh on an equal level at the beginning of a new season.
 
 The overall multiplier for the quests \\(m\_{quest}\\) can be calculated as:
 
@@ -111,7 +111,7 @@ The overall multiplier for the quests \\(m\_{quest}\\) can be calculated as:
 m_{quest} = \sum{m_{season}}+\sum{m_{perm}}
 \\]
 
-The range for multipliers, either \\(m*{season}\\) or \\(m*{perm}\\) can only bet set between \\(1 < m ≤ 1.5\\). The values are to be chosen conservatively, since they can increase the vote and earning power, especially for permanent multipliers. A quest duration cannot be set lower than 1 day but can be set for an extended amount of time.
+The range for multipliers, either \\(m\_{season}\\) or \\(m\_{perm}\\) can only bet set between \\(1 < m ≤ 1.5\\). The values are to be chosen conservatively, since they can increase the vote and earning power, especially for permanent multipliers. A quest duration cannot be set lower than 1 day but can be set for an extended amount of time.
 
 ### Time multiplier
 
@@ -140,8 +140,8 @@ To avoid users withdrawing early and potentially exploiting the governance proce
 \begin{align}
 fee =
 \begin{cases}
-10 & 0 \leq x\leq 2\\
-\sqrt{ \frac{300}{x} }-2.5 , & 2 <x< 48\\
+10 & 0 \leq x\leq 2 \\
+\sqrt{ \frac{300}{x} }-2.5 & 2 <x< 48 \\
 0 & x\leq48
 \end{cases}
 \end{align}
