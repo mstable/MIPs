@@ -137,14 +137,14 @@ Redeemers must signal their request for a given amount to withdraw by entering a
 To avoid users withdrawing early and potentially exploiting the governance process with e.g. purchasing MTA for a short-term only, swaying a vote and thus consequently unstaking, an early withdrawal \\(fee\\) is charged based on the following equation:
 
 \\[
-\displaylines{
+\begin{align}
 fee =
 \begin{cases}
 10 & 0 \leq x\leq 2\\
 \sqrt{ \frac{300}{x} }-2.5 , & 2 <x< 48\\
 0 & x\leq48
 \end{cases}
-}
+\end{align}
 \\]
 
 With \\(x\\) as the weeks since the user has staked. For \\(x\\) the `weightedTimestamp` is used, which would affect the staked duration if the staked amount increases. After week 48 the fees would be 0% for all withdrawals. The maximum fee is 10% for staking shorter or equal to 2 weeks. The graph below shows the gradual decay of the fee until it crosses 0% after 48 weeks.
