@@ -101,7 +101,7 @@ with \\(b\_{raw}\\) being the raw staked MTA amount, \\(m\_{time}\\) the time mu
 
 ### Gamified Governance and Quests
 
-Governance should be fun to participate in, interactive and not be limited to proposals or voting alone. Therefore, to incentivise participation and engagement, a quest mechanism is included in this release. The stakers scaled balance is increased with the fulfilment of quests. The multiplier \\(m*{quest}\\) increases a staker's scaled balance \\(b\_{scaled}\\) as shown in the equation above.
+Governance should be fun to participate in, interactive and not be limited to proposals or voting alone. Therefore, to incentivise participation and engagement, a quest mechanism is included in this release. The stakers scaled balance is increased with the fulfilment of quests. The multiplier \\(m\*{quest}\\) increases a staker's scaled balance \\(b\_{scaled}\\) as shown in the equation above.
 
 The multipliers for the quests themselves are summed up and divided into 2 different types; \\(m\_{season}\\) for multipliers that are only valid for a limited length of time the so-called season and \\(m\_{perm}\\) for multipliers that are added permanently and that don't expire. The length of a season is set to 9 months and the set `questMaster` can start a new season and set the quests from the previous seasons to expire. The `questMaster` is the set address that has permission to add new quests and can control the state of the existing ones. This mechanism would allow the staker to earn a multiplier for a predetermined amount of time with a dampening factor in the form of a new season to allow everyone to start fresh on an equal level at the beginning of a new season.
 
@@ -140,8 +140,8 @@ To avoid users withdrawing early and potentially exploiting the governance proce
 \begin{align}
 fee =
 \begin{cases}
-10 & 0 \leq x\leq 2 \\
-\sqrt{ \frac{300}{x} }-2.5 & 2 <x< 48 \\
+10 & 0 \leq x\leq 2 \newline
+\sqrt{ \frac{300}{x} }-2.5 & 2 <x< 48 \newline
 0 & x\leq48
 \end{cases}
 \end{align}
