@@ -1,7 +1,7 @@
 ---
 mccp: 9
 title: Reward distribution for weeks 35-41
-status: WIP
+status: Implemented
 author: Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/mta-rewards-post-mccp-4/534/14
 created: 2021-08-16
