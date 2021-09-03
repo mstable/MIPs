@@ -3,7 +3,7 @@ mip: 15
 title: Staking V2
 status: WIP
 author: Dimitri Golecko (@dimsome), Alex Scott (@alsco77)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/pdp-29-staking-v2/594/3
 created: 2021-07-30
 ---
 
