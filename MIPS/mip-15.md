@@ -142,7 +142,7 @@ fee =
 \begin{cases}
 7.5 & 0 \leq x\leq 3 \newline
 \sqrt{ \frac{300}{x} }-2.5 & 3 <x< 48 \newline
-0 & x\leq48
+0 & 48 \leq 4
 \end{cases}
 \end{align}
 \\]
