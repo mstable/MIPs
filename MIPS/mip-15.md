@@ -3,7 +3,7 @@ mip: 15
 title: Staking V2
 status: WIP
 author: Dimitri Golecko (@dimsome), Alex Scott (@alsco77)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/pdp-29-staking-v2/594/3
 created: 2021-07-30
 ---
 
@@ -140,14 +140,14 @@ To avoid users withdrawing early and potentially exploiting the governance proce
 \begin{align}
 fee =
 \begin{cases}
-10 & 0 \leq x\leq 2 \newline
-\sqrt{ \frac{300}{x} }-2.5 & 2 <x< 48 \newline
-0 & x\leq48
+7.5 & 0 \leq x\leq 3 \newline
+\sqrt{ \frac{300}{x} }-2.5 & 3 <x< 48 \newline
+0 & 48 \leq 4
 \end{cases}
 \end{align}
 \\]
 
-With \\(x\\) as the weeks since the user has staked. For \\(x\\) the `weightedTimestamp` is used, which would affect the staked duration if the staked amount increases. After week 48 the fees would be 0% for all withdrawals. The maximum fee is 10% for staking shorter or equal to 2 weeks. The graph below shows the gradual decay of the fee until it crosses 0% after 48 weeks.
+With \\(x\\) as the weeks since the user has staked. For \\(x\\) the `weightedTimestamp` is used, which would affect the staked duration if the staked amount increases. After week 48 the fees would be 0% for all withdrawals. The maximum fee is 7.5% for staking shorter or equal to 3 weeks. The graph below shows the gradual decay of the fee until it crosses 0% after 48 weeks.
 
 ![Withdraw Fee Decay](../assets/MIP-15/fee_decay.png)
 
@@ -163,7 +163,7 @@ Only whitelisted contracts can call specific functions within this contract, in 
 
 ### General Overview
 
-At the heart of this new staking module is the contract `StakedToken.sol`. This contract handles staking, unstaking and has the functionality to disable staking before recollateralisation. `StakedTokenBPT.sol` extends this contract for Balancer Pool specific functions, while `StakedTokenMTA.sol` extends the contract with MTA specific functionality.
+At the heart of this new staking module is the contract `StakedToken.sol`. This contract handles staking, unstaking and has the functionality to disable staking before recollateralisation. `StakedTokenBPT.sol` extends this contract for Balancer Pool specific functions, while `StakedTokenMTA.sol` extends the contract with MTA specific functionality. A variable specific to `StakedTokenBPT.sol` called priceCoefficient, is used to accomodate the value of of MTA and the Balancer Pool tokens. Upon user action (mint, claim, withdraw, etc), the most recent priceCoefficient is taken and applied to the users balances.
 
 `GamifiedVotingToken.sol` is a checkpointed Voting Token derived from OpenZeppelin [ERC20VotesUpgradable](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/f9cdbd7d82d45a614ee98a5dc8c08fb4347d0fea/contracts/token/ERC20/extensions/ERC20VotesUpgradeable.sol). It extends a ERC20 token to add the functionality to keep track of delegation and vote delegation via writing checkpoints. These checkpoints get written whenever the delegation changes from the `StakedToken.sol` contract, e.g. when MTA is staked and an address for delegation is specified via `function delegate()` .
 
@@ -252,7 +252,9 @@ A key aspect of the new staking contract are quests and the following functional
 
 ### QuestManager
 
-This contract is the center point for quest management and their completion status. Due to the option of different tokens staked, this
+This contract is the center point for quest management and their completion status.
+
+The `questMaster` will be set initially to the ProtocolDAO multisig address: `0xF6FF1F7FCEB2cE6d26687EaaB5988b445d0b94a2`.
 
 **Modifiers:**
 
@@ -283,14 +285,12 @@ For the rewards accrual and calculations, the contract `HeadlessStakingRewards.s
 
 - Whitelisting/Blacklisting of contracts via the `function whitelistWrapper ()` and `function blackListWrapper()` respectively.
 - Change `slashingPercentage` via the `function changeSlashingPercentage()` (initially 0)
-- Set a new `questMaster` (initially Questing Committee multisig) via `function setQuestMaster()`
-- Set a new `questSigner` (initially Questing Committee multisig) via `function setQuestSigner()`
+- Set a new `questMaster` (initially ProtocolDAO multisig) via `function setQuestMaster()`
+- Set a new `questSigner` (initially ProtocolDAO controlled address) via `function setQuestSigner()`
 
 ## Permissions
 
 As outlined with this proposal, there are many configurations and possibilities when it comes to the quest mechanics. Quests are a key part of this new gamified governance release. However, it is not regarded as a critical part of the protocol and is not prone to abuse. To avoid lengthy governance processes and voting for each quest, this proposal further allows the set `questMaster` to add quests, to set quests status to `EXPIRED`, and to start a new season.
-
-Quests will be developed by the Questing Committee and the `questMaster` will be set to the Questing Committee multisig address: `TBD`
 
 Additionally, the set `questSigner` address, which is managed by the ProtocolDAO, gains the permission to collect and aggregate signatures in the front-end for the completion of quests on stakers behalf, thus saving gas for the users.
 
