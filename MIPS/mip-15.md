@@ -108,10 +108,10 @@ The multipliers for the quests themselves are summed up and divided into 2 diffe
 The overall multiplier for the quests \\(m\_{quest}\\) can be calculated as:
 
 \\[
-m_{quest} = \sum{m_{season}}+\sum{m_{perm}}
+m_{quest} = 1+\sum{m_{season}}+\sum{m_{perm}}
 \\]
 
-The range for multipliers, either \\(m\_{season}\\) or \\(m\_{perm}\\) can only bet set between \\(1 < m ≤ 1.5\\). The values are to be chosen conservatively, since they can increase the vote and earning power, especially for permanent multipliers. A quest duration cannot be set lower than 1 day but can be set for an extended amount of time.
+The range for multipliers, either \\(m\_{season}\\) or \\(m\_{perm}\\) can only bet set between \\(0 < m ≤ 0.5\\). The values are to be chosen conservatively, since they can increase the vote and earning power, especially for permanent multipliers. A quest duration cannot be set lower than 1 day but can be set for an extended amount of time.
 
 ### Time multiplier
 
