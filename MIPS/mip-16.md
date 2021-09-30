@@ -1,7 +1,7 @@
 ---
 mip: 16
 title: Add mBTC/tBTC v2 Feeder Pool
-status: Implemented
+status: WIP
 author: Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/pdp-25-add-alchemix-alusd-musd-feeder-pool/521
 created: 2021-09-30
