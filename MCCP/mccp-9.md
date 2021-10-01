@@ -9,13 +9,13 @@ created: 2021-08-16
 
 ## Simple Summary
 
-It is motioned to continue the reward distribution as specified in [MCCP 4](./mccp-4) with the amendment [MCCP 7](./mccp-7) for the weeks 35 to 41, starting from 30th August 2021 until the last distribution under this MCCP on the 11th Octorber 2021. This reward distribution consists of 6 weekly emissions of [TBD Amount], a reduction from the previous distribution as specified in [MCCP 8](./mccp-8).
+It is motioned to continue the reward distribution as specified in [MCCP 4](./mccp-4) with the amendment [MCCP 7](./mccp-7) for the weeks 35 to 41, starting from 30th August 2021 until the last distribution under this MCCP on the 11th Octorber 2021. This reward distribution consists of 6 weekly emissions of 207,692, a reduction from the previous distribution as specified in [MCCP 8](./mccp-8).
 
 ## Abstract
 
 [MCCP 4](./mccp-4) proposed a prospective emission schedule over the next few years and a set of rules to follow in order to calculate weekly distributions. [MCCP 7](./mccp-7) later amended it and carved out a portion to distribute on Polygon. The proposal [MCCP 8](./mccp-8) extended that emission to 6 more weeks and reduced the emission to 242,308 MTA weekly.
 
-This MCCP motions to continue the reward emission window for 6 weeks, starting from 30th August 2021 until the last distribution on the 11th October 2021 with reduced weekly emissions of [TBD Amount].
+This MCCP motions to continue the reward emission window for 6 weeks, starting from 30th August 2021 until the last distribution on the 11th October 2021 with reduced weekly emissions of 207,692.
 
 ![weekly-emissions](/assets/MCCP-9/weekly-emissions.png)
 
