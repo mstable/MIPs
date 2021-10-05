@@ -1,6 +1,6 @@
 ---
 mccp: 10
-title: MTA emission and distribution pre gauges launch
+title: MTA emission and distribution pre Emission Controller launch
 status: WIP
 author: Dimitri Golecko (@dimsome)
 discussions-to:
@@ -9,7 +9,7 @@ created: 2021-10-04
 
 ## Simple Summary
 
-It is proposed to adjust the MTA topline emission and distribution scheme after [MCCP 9](./mccp-9) is approaching expiration. This adjustment is pre-gauges launch and will be replaced by the gauges launch or before that by another proposal. This proposal outlines the reduction of the topline MTA emission by 20% compared to [MCCP 9](./mccp-9) and adjustments to the distribution to different products.
+It is proposed to adjust the MTA topline emission and distribution scheme after [MCCP 9](./mccp-9) is approaching expiration. This adjustment is pre Emission Controller launch and will be replaced by the Emission Controller or before that by another proposal. This proposal outlines the reduction of the topline MTA emission by 20% compared to [MCCP 9](./mccp-9) and adjustments to the distribution to different products.
 
 ## Abstract
 
