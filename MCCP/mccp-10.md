@@ -1,9 +1,9 @@
 ---
 mccp: 10
 title: MTA emission and distribution pre Emission Controller launch
-status: WIP
+status: Proposed
 author: Dimitri Golecko (@dimsome)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/pdp-31-mta-emission-and-distribution-pre-emission-controller-launch/660/1
 created: 2021-10-04
 ---
 
