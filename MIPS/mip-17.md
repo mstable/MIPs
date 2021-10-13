@@ -1,5 +1,5 @@
 ---
-MIP: 17
+mip: 17
 title: Add mUSD/RAI Feeder Pool
 status: Proposed
 author: Stefan Ionescu (@stefanionescu)
