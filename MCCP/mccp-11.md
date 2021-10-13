@@ -1,6 +1,6 @@
 ---
 mccp: 11
-title: Operation Flywheel
+title: Bribe centric config set
 status: WIP
 author: Alex Scott (@alsco77)
 discussions-to:
@@ -9,7 +9,7 @@ created: 2021-10-12
 
 ## Simple Summary
 
-It is proposed to modify system configuration for a 6 week period, specifically the `govFee` and `RevenueRecipient` for `mUSD`, to redirect a large portion of system revenue to [Votium](https://votium.app/) in order to capitalise on the under-utilised vote bribing market and generate circular effects for `mUSD`.
+It is proposed to modify system configuration for a 6 week period, specifically the `govFee` and `RevenueRecipient` for `mUSD`, to redirect a predefined percentage of system revenue to [Votium](https://votium.app/) in order to capitalise on the under-utilised vote bribing market and generate circular effects for `mUSD`.
 
 ## Abstract
 
@@ -54,6 +54,8 @@ The following settings will be changed:
 - Caps will be removed on the `Liquidator` for the `mUSD` integrations (note: there is currently less than the existing cap available, so this in effect has no change)
 
 During this period, `mUSD` system revenue from Feeder Pools and Polygon will also flow to the new `IRevenueRecipient` by default.
+
+Should the parameter set seem to be operating poorly during this period, resulting in a net negative revenue for SAVE (i.e. mUSD TVL goes below $60m), the `savingsRate` will be updated with a relative amount, between 10% (existing) and 40% (proposed).
 
 Start date will be immediately following successful resolution of this proposal, and **last for 6 weeks**, after which time the settings will be reverted.
 
