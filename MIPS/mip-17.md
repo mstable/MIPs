@@ -9,7 +9,7 @@ created: 2021-10-11
 
 ## Simple Summary
 
-It is proposed to add an mUSD/RAI Feeder Pool as specified in [MIP 9](./mip-9). RAI is a non-USD pegged stablecoin. This Feeder Pool would be the first of its kind since it allows to swap two stable assets that are not same-priced and offer efficient swaps with a Feeder Pool.
+It is proposed to add an mUSD/RAI Feeder Pool as specified in [MIP 9](./mip-9) on Ethereum mainnet. RAI is a non-USD pegged stablecoin. This Feeder Pool would be the first of its kind since it allows to swap two stable assets that are not same-priced and offer efficient swaps with a Feeder Pool.
 
 ## Abstract
 
