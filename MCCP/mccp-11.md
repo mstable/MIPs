@@ -1,6 +1,6 @@
 ---
 mccp: 11
-title: Operation Flywheel
+title: Bribe centric config set
 status: WIP
 author: Alex Scott (@alsco77)
 discussions-to:
@@ -9,7 +9,7 @@ created: 2021-10-12
 
 ## Simple Summary
 
-It is proposed to modify system configuration for a 6 week period, specifically the `govFee` and `RevenueRecipient` for `mUSD`, to redirect a large portion of system revenue to [Votium](https://votium.app/) in order to capitalise on the under-utilised vote bribing market and generate circular effects for `mUSD`.
+It is proposed to modify system configuration for a 6 week period, specifically the `govFee` and `RevenueRecipient` for `mUSD`, to redirect a predefined percentage of system revenue to [Votium](https://votium.app/) in order to capitalise on the under-utilised vote bribing market and generate circular effects for `mUSD`.
 
 ## Abstract
 
@@ -48,12 +48,14 @@ A new `IRevenueRecipient` will be deployed, with the following features:
 
 The following settings will be changed:
 
-- `setSavingsRate` will be called with `6e17` on [SavingsManager](https://etherscan.io/address/0x9781c4e9b9cc6ac18405891df20ad3566fb6b301), setting the percentage of system revenue set aside to be 40%
+- `setSavingsRate` will be called with `5e17` on SavingsManager, setting the percentage of system revenue set aside to be 50% (note: this requires an upgrade to SavingsManager)
 - `setRevenueRecipient` will be called, setting the `mUSD` Revenue Recipient to be the above
 - Swap and Redemption fee on `mUSD` will be changed to `4e14` and `20e14` respectively
 - Caps will be removed on the `Liquidator` for the `mUSD` integrations (note: there is currently less than the existing cap available, so this in effect has no change)
 
 During this period, `mUSD` system revenue from Feeder Pools and Polygon will also flow to the new `IRevenueRecipient` by default.
+
+Should the parameter set seem to be operating poorly during this period, resulting in a net negative revenue for SAVE (i.e. mUSD TVL goes below $60m), the `savingsRate` will be updated with a relative amount, between 10% (existing) and 40% (proposed).
 
 Start date will be immediately following successful resolution of this proposal, and **last for 6 weeks**, after which time the settings will be reverted.
 
