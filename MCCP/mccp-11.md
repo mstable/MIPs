@@ -31,7 +31,7 @@ This proposal seeks to provide a set of experimental configurations that allow m
 
 As defined in the abstract, current mStable yield farming methods are inefficient. This proposal seeks to generate circular effects for mUSD without the use of the existing `$MTA` emission.
 
-mStable is in a unique position, because when the mUSD supply rises, so does the system revenue. **The system can then use this revenue (collected in `$mUSD`) to fund the next batch of bribes.** This causes a **positive feedback loop** that can grow `$mUSD` supply (until the market becomes 3-4x more saturated, however even after this point, the bribes should still cause the TVL to float high).
+mStable is in a unique position, because when the mUSD supply rises, so does the system revenue. **The system can then use this revenue (collected in `$mUSD`) to buy $MTA and to fund the next batch of bribes.** This causes a **positive feedback loop** that can grow `$mUSD` supply (until the market becomes 3-4x more saturated, however even after this point, the bribes should still cause the TVL to float high).
 
 - Having higher system revenue will have knock on effects to SAVE, increasing the TVL and user base there independently
 - This should have positive effects on the `$MTA` price as our overall network effects will dramatically increase
@@ -42,7 +42,7 @@ The bribe market is still unsaturated/inefficient. This [is changing](https://tw
 
 A new `IRevenueRecipient` will be deployed, with the following features:
 
-- ability to deposit `$mUSD` into Votium, once per two weeks
+- ability to deposit `$MTA` into Votium, once per two weeks
 - configurable `bribePct` variable, that determines the % of `$mUSD` held to be deposited into a child `IRevenueRecipient` (could be used for sending surplus bribe $ to for example buy CVX for longer term farming)
 - configurable `IRevenueRecipient`, initially set to be the existing [Buy & Make pool depositor](https://etherscan.io/address/0xa7824292efdee1177a1c1bed0649cfdd6114fed5)
 
@@ -55,7 +55,7 @@ The following settings will be changed:
 
 During this period, `mUSD` system revenue from Feeder Pools and Polygon will also flow to the new `IRevenueRecipient` by default.
 
-Should the parameter set seem to be operating poorly during this period, resulting in a net negative revenue for SAVE (i.e. mUSD TVL goes below $60m), the `savingsRate` will be updated with a relative amount, between 10% (existing) and 40% (proposed).
+Should the parameter set seem to be operating poorly during this period, resulting in a net negative revenue for SAVE (i.e. mUSD TVL goes below $60m), the `savingsRate` will be updated with a relative amount, between 10% (existing) and 50% (proposed).
 
 Start date will be immediately following successful resolution of this proposal, and **last for 6 weeks**, after which time the settings will be reverted.
 
