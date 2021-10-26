@@ -1,8 +1,6 @@
-{% assign mccp=include.mccp|split:"," %}
-{% for mccpnum in mccp %}
-  {% if mccpnum contains 'MIP' %}
-  <a href="../MIPS/{{mccpnum|strip|downcase}}">{{mccpnum|strip}}</a>{% if forloop.last == false %}, {% endif %}
-  {% else %}
-  <a href="{{mccpnum|strip|downcase}}">{{mccpnum|strip}}</a>{% if forloop.last == false %}, {% endif %}
-  {% endif %}
-{% endfor %}
+{% assign mccp=include.mccp|split:"," %} {% for mccpnum in mccp %} {% if mccpnum
+contains 'MCCP' %}
+<a href="../MCCP/{{mccpnum|strip|downcase}}">{{mccpnum|strip}}</a>{% if
+forloop.last == false %}, {% endif %} {% else %}
+<a href="{{mccpnum|strip|downcase}}">{{mccpnum|strip}}</a>{% if forloop.last ==
+false %}, {% endif %} {% endif %} {% endfor %}
