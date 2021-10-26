@@ -1,7 +1,7 @@
 ---
 mip: 16
 title: Add mBTC/tBTC v2 Feeder Pool
-status: Proposed
+status: Approved
 author: Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/pdp-30-add-mbtc-tbtc-v2-feeder-pool/654
 created: 2021-09-30
