@@ -4,8 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
     {% if page.mip %}MIP-{{page.mip}}: {% elsif page.mccp %}MCCP-{{page.mccp}}:
-    {% endif %}{% if page.title %}{{page.title }}{% else %}{{ site.homeMetaTitle
-    }}{% endif %}
+    {% elsif page.tdp %}TDP-{{page.tdp}}: {% endif %}{% if page.title
+    %}{{page.title }}{% else %}{{ site.homeMetaTitle }}{% endif %}
   </title>
   {%- seo -%} <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url
   }}">

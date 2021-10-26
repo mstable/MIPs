@@ -1,0 +1,33 @@
+<style type="text/css">
+  .tdptable .title {
+    width: 67%;
+  }
+
+  .tdptable .author {
+    width: 33%;
+  }
+</style>
+{% for status in site.data.statuses %} {% assign tdp =
+include.tdp|where:"status",status|sort:"tdp" %} {% assign count = tdp|size %} {%
+if count > 0 %}
+<h2>{{status}}</h2>
+<table class="tdptable">
+  <thead>
+    <tr>
+      <th class="mccpnum">Number</th>
+      <th class="title">Title</th>
+      <th class="author">Author</th>
+    </tr>
+  </thead>
+  {% for page in tdp %}
+  <tr>
+    <td class="tdpnum">
+      <a href="{{page.url|relative_url}}.html">{{page.tdp|xml_escape}}</a>
+    </td>
+    <td class="title">{{page.title|xml_escape}}</td>
+    <td class="author">{% include authorlist.html authors=page.author %}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endif %} {% endfor %}
