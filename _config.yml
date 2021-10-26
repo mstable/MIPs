@@ -24,6 +24,7 @@ github_username: mstable
 header_pages:
   - all-mip.html
   - all-mccp.html
+  - all-tdp.html
 twitter:
   card: summary
   username: "mstable_"
@@ -45,6 +46,10 @@ defaults:
       path: "MCCP"
     values:
       layout: "mccp"
+  - scope:
+      path: "TDP"
+    values:
+      layout: "tdp"
 
 exclude:
   - Gemfile
@@ -56,3 +61,4 @@ exclude:
   - vendor/ruby/
   - mccp-x.md
   - mip-X.md
+  - tdp-X.md
