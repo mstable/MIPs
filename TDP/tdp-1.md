@@ -1,8 +1,8 @@
 ---
 tdp: 1
-title: MIP Purpose and Guidelines
-status: Implemented
-author: Tom Nash (@morelazers)
+title: Draft
+status: WIP
+author:
 discussions-to: https://forum.mstable.org/
 created: 2020-09-12
 updated: N/A
