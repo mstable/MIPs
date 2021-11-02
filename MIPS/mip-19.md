@@ -1,7 +1,7 @@
 ---
 mip: 19
-title: Move idle mAssets in Feeder Pool to Rari Fuse Lending Markets 
-status: WIP
+title: Move idle mAssets in Feeder Pool to Rari Fuse Lending Markets
+status: Proposed
 author: derc
 discussions-to: https://forum.mstable.org/t/discussion-incentivise-rari-fuse-lending-markets/665/11
 created: 2021-10-26
@@ -34,7 +34,6 @@ Subsequent mint, swap or redeem transactions to the Feeder Pool will deposit the
 ## Permissions
 
 After the initial implementation of the mUSD/alUSD Feeder Pools outlined in this proposal, more Feeder Pools can be migrated to Rari Fuse. Additionally, the mUSD in Feeder Pools that are currently using the Iron Bank, could also be migrated based on utilization metrics.
-
 
 ## Copyright
 
