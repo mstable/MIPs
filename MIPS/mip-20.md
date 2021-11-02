@@ -1,9 +1,9 @@
 ---
 mip: 20
-title: Updated Proposal Workflow
+title: Updated proposal workflow
 status: Proposed
-author: derc
-discussions-to: Dimitri Golecko (@dimsome)
+author: Dimitri Golecko (@dimsome)
+discussions-to:
 created: 2021-11-1
 ---
 
