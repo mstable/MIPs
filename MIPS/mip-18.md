@@ -1,7 +1,7 @@
 ---
 mip: 18
 title: Add mUSD/FEI Feeder Pool
-status: Proposed
+status: Approved
 author: Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/pdp-34-add-musd-fei-feeder-pool/670
 created: 2021-10-13
