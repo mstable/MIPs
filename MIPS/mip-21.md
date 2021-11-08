@@ -3,7 +3,7 @@ mip: 21
 title: Community signer election
 status: Proposed
 author: Dimitri Golecko (@dimsome)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/pdp-37-community-signer-election/696
 created: 2021-11-1
 ---
 
@@ -80,6 +80,7 @@ Being a signer is an active role, and it does require regular activity and knowl
 
 Additional requirements are the following:
 
+- Highest security practices for secure signing (e.g. Hardware Wallet)
 - Availability for signing on a regular basis (ad-hoc signing might be required)
 - Monthly signer calls
 - Prior experience with Gnosis Safe multi-sig is helpful
