@@ -1,7 +1,7 @@
 ---
 mip: 17
 title: Add mUSD/RAI Feeder Pool
-status: Proposed
+status: Approved
 author: Stefan Ionescu (@stefanionescu)
 discussions-to:
 created: 2021-10-11
