@@ -13,7 +13,7 @@ It is proposed to allocate seats in the ProtocolDAO and the TreasuryDAO to commu
 
 ## Abstract
 
-As the mStable ecosystem grows, so does the need to decentralise it further. The previous proposal, MIP XX outlined a new and improved structure to put governance into the hand of the community. A second step to add further to this decentralisation model in a gradual matter is to allow prominent core community members (Metanauts) to participate in the governing bodies of mStable, namely the ProtocolDAO and TreasuryDAO.
+As the mStable ecosystem grows, so does the need to decentralise it further. The previous proposal, [MIP 20](./mip-20) outlined a new and improved structure to put governance into the hand of the community. A second step to add further to this decentralisation model in a gradual matter is to allow prominent core community members (Metanauts) to participate in the governing bodies of mStable, namely the ProtocolDAO and TreasuryDAO.
 
 Since mStable’s inception, the roles of the signers in both DAOs have been filled with either core contributors or known members of the industry. This was done to mitigate the concentration of risk while still distributing power. Now that the ecosystem can boast an established base of Metanauts around mStable, we should revisit these positions and allow more community participation and transparency.
 
