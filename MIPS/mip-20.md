@@ -1,7 +1,7 @@
 ---
 mip: 20
 title: Updated proposal workflow
-status: Proposed
+status: Implemented
 author: Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/pdp-36-updated-proposal-workflow/695
 created: 2021-11-1

@@ -1,7 +1,7 @@
 ---
 mip: 21
 title: Community signer election
-status: Proposed
+status: Implemented
 author: Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/pdp-37-community-signer-election/696
 created: 2021-11-1
