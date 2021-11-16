@@ -49,8 +49,9 @@ Once per month, payments will be processed towards the referrer's address. Partn
 
 Partners will be divided into _tiers_ which will determine the percentage of profit shared with them. Tiers would be determined by the Partner Deposited Assets into Save (PDAS) relative to the current total mUSD supply of $120m. The tiers would therefore be expressed in % through their PADS ratio (PADSr)
 
-```
 **Tier repartition**
+
+```
 * Tier 1 🥉 – PDASr < $ 1%: 20% of the fees generated
 * Tier 2 🥈 1% < PDASr < 2.5%: 30% of the fees generated
 * Tier 3 🥇 2.5% < PDASr < 5%: 40% of the fees generated
