@@ -62,8 +62,9 @@ Partners will be divided into _tiers_ which will determine the percentage of pro
 
 Each deposit will generate an event easily traceable. Based on each referrer address, mStable will know when someone deposits and compute a 7 days average PDASr at the end of each month. There will be a minimum threshold for executing the fee-sharing transaction of $500.
 
-```
 **Monthly reward formula**
+
+```
 $PDAS * (30days Save APY)/12 * % of revenues allocated to B2B * tiers associated sharing fees = X$
 ```
 
@@ -71,9 +72,9 @@ $PDAS * (30days Save APY)/12 * % of revenues allocated to B2B * tiers associated
 
 The tier categories aforementioned will be further explored with additional rewards given as partnership depth increases and funded
 
-```
 **mStable Alliance tiers**
 
+```
 Tier 1 = 🥉  Standard partner
 Tier 2 = 🥈 Plus partner
 Tier 3 = 🥇 Premium partner
