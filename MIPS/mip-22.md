@@ -57,7 +57,7 @@ Partners will be divided into _tiers_ which will determine the percentage of pro
 * Tier 4 🎖 PDASr > 5%: 50% of the fees generated
 ```
 
-**) Deposit tracking & reward calculation**
+**e) Deposit tracking & reward calculation**
 
 Each deposit will generate an event easily traceable. Based on each referrer address, mStable will know when someone deposits and compute a 7 days average PDASr at the end of each month. There will be a minimum threshold for executing the fee-sharing transaction of $500.
 
