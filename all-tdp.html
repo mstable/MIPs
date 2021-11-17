@@ -1,0 +1,7 @@
+---
+layout: page
+title: All TDPs
+---
+
+{% assign tdp=site.pages|where_exp:"page","page.tdp > 0" %} {% include
+tdptable.html tdp=tdp %}

@@ -1,0 +1,6 @@
+{% assign tdp=include.tdp|split:"," %} {% for tdpnum in tdp %} {% if tdpnum
+contains 'TDP' %}
+<a href="../TDP/{{tdpnum|strip|downcase}}">{{tdpnum|strip}}</a>{% if
+forloop.last == false %}, {% endif %} {% else %}
+<a href="{{tdpnum|strip|downcase}}">{{tdpnum|strip}}</a>{% if forloop.last ==
+false %}, {% endif %} {% endif %} {% endfor %}

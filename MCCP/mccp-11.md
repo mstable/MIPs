@@ -1,7 +1,7 @@
 ---
 mccp: 11
 title: Bribe centric config set
-status: Proposed
+status: Implemented
 author: Alex Scott (@alsco77)
 discussions-to: https://forum.mstable.org/t/pdp-33-bribe-centric-config-set/669
 created: 2021-10-12
