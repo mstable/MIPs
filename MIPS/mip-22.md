@@ -1,7 +1,7 @@
 ---
 mip: 22
 title: Alliance Referral program
-status: WIP
+status: Proposed
 author: Théo Clochard
 discussions-to:
 created: 2021-11-16
