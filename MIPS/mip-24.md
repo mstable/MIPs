@@ -15,7 +15,7 @@ It is proposed to move the manual weekly distribution of MTA emission based on t
 
 To further progress mStable’s decentralisation and to add more value to the MTA token, it is proposed that the weekly MTA rewards will be moved to an on-chain governance platform that allows MTA stakers, or their delegated account, to decide where MTA rewards are directed each week. This builds on the Staking V2 contract introduced with [MIP 15](./mip-15) and uses its voting power and voter delegation system. Governance votes can direct the ProtocolDAO to add new pools and products or to disable any dial that is chosen not to continue to receive any rewards.
 
-The MTA Emissions Controller will distribute weekly MTA rewards in accordance with the votes of the MTA stakers. This is similar to [Curve’s GaugeController](https://dao.curve.fi/gaugeweight). This will also lock in a topline and a long-term emission schedule of MTA: 30 Million MTA will be distributed over the next 6 years starting from the first distribution on the 16th \***\*December 2021**.\** Before the first distribution, more than a week will be given to allocating the first votes. This would leave over 5.1 Million MTA in the Treasury. The emission schedule follows a polynomial curve and is further detailed in section: *Specification - MTA emission schedule\*.
+The MTA Emissions Controller will distribute weekly MTA rewards in accordance with the votes of the MTA stakers. This is similar to [Curve’s GaugeController](https://dao.curve.fi/gaugeweight). This will also lock in a topline and a long-term emission schedule of MTA: 30 Million MTA will be distributed over the next 6 years starting from the first distribution on the 16th **December 2021**. Before the first distribution, more than a week will be given to allocating the first votes. This would leave over 5.1 Million MTA in the Treasury. The emission schedule follows a polynomial curve and is further detailed in section: _Specification - MTA emission schedule_.
 
 This would also change the reward allocation of protocol revenue. Whereas previously the protocol revenue was diverted to the Buyback&Make pool as specified in [MIP 8](./mip-8), the protocol revenue now gets directed to the two staking contracts proportionally. This would have the effect that stakers are incentivised to allocate MTA rewards towards dials that generate the highest protocol revenue. As part of this update, the Buyback&Make Pool gets sunsetted. The accrued amount will be transferred to the TreasuryDAO and is therefore in the hands of all MTA holders to either continue to provide liquidity or to allocate differently with a future TDP (Treasury DAO Proposal).
 
@@ -37,7 +37,7 @@ The automation of this process would also allow for a more streamlined process a
 
 ### MTA emission schedule
 
-It is proposed to distribute 30 Million MTA over 6 years starting from 16th \***\*December 2021. The existing MTA emissions will continue until the 16th \*\***December 2021 and then be replaced by the Emissions Controller. The 30 Million MTA leaves over 5.1 Million MTA in the TreasuryDAO that is available for usage with future TDPs.
+It is proposed to distribute 30 Million MTA over 6 years starting from 16th December 2021. The existing MTA emissions will continue until the 16th December 2021 and then be replaced by the Emissions Controller. The 30 Million MTA leaves over 5.1 Million MTA in the TreasuryDAO that is available for usage with future TDPs.
 
 The weekly distribution schedule of the 30 Million MTA is defined by a polynomial equation. This will quickly reduce the amount of MTA being distributed each week, slow down the reduction in the middle and then accelerate the reduction of distributed rewards at the end in order to end at 0 by the last epoch.
 
@@ -94,7 +94,7 @@ Voting power can be acquired by staking MTA, mBPT or by another staker delegatin
 
 Initially, all the existing contracts that receive MTA rewards will be open up for voting. After a two week voting period, the old MTA reward distribution will be stopped and the new MTA distribution based on staker votes will commence.
 
-### **Weighting votes across dials**
+### Weighting votes across dials
 
 Accounts with voting power can proportion their voting power across the configured dials. This can be 100% on just one dial. Or could be a little to each dial. The more dials that are voted on the more gas is required when changing voting power in the staking contracts. eg staking, withdrawing or changing delegation.
 
@@ -108,11 +108,11 @@ To generate more value for the MTA holders, the Protocol revenue will be used to
 
 There is no cap on the amount of MTA a dial that is not a staking contract can receive. So all the voting power could be put on just one dial. This is unlikely to happen as it would require over 200 stakers to collude.
 
-### **Donations**
+### Donations
 
 The emissions controller will allow anyone to donate MTA rewards to a dial that is in addition to the weekly emissions schedule. These additional MTA rewards will be included in the weekly distribution. This can be used by mStable or third parties to incentivize dials.
 
-### **Polygon Integration**
+### Polygon Integration
 
 Polygon’s [Proof of Stake (PoS) Bridge](https://docs.polygon.technology/docs/develop/ethereum-polygon/pos/getting-started) will be used by the Emissions Controller to send MTA to the existing [child MTA](https://polygonscan.com/token/0xF501dd45a1198C2E1b5aEF5314A68B9006D842E0) token on Polygon. This will be done indirectly using a dial recipient contract that interfaces with the PoS Bridge.
 
@@ -120,7 +120,7 @@ MTA rewards can be sent directly to the dial contract on Polygon. eg FRAX. Or MT
 
 Voting can not be done on Polygon. All voting of dials is done on Ethereum mainnet.
 
-### **Weekly Distribution**
+### Weekly Distribution
 
 The weekly distribution of the MTA rewards will be done in two transactions
 
@@ -162,7 +162,7 @@ Each dial that is on polygon will receive its representation on Ethereum mainnet
 
 The `BridgeForwarder.sol` will be called by the Emissions Controller via `function notifyRewardAmount()`. This will trigger the `depositFor()` on the [Root Chain Manager](https://etherscan.io/address/0xA0c68C638235ee32657e8f720a23ceC1bFc77C77), which is an existing Polygon contract that is used to bridge tokens between Mainnet and Polygon. The result is that MTA will be bridged over to Polygon and deposited into the contract `L2BridgeRecipient.sol`. For each dial on Polygon a separate instance will be deployed. A second contract `L2EmissionController.sol` has permission to transfer the MTA tokens and distribute them to the designated vaults via `function distributeRewards()`. Governance can add additional dials to the Polygon implementation.
 
-![MTA Emission](../assets/MIP-24/emission.png)
+![Polygon Integration](../assets/MIP-24/polygonContractDependencies.png)
 
 ### Emissions Controller
 
