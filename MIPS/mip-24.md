@@ -7,18 +7,6 @@ discussions-to:
 created: 2021-11-24
 ---
 
-```
----
-mip: 24
-title: Emissions Controller
-status: WIP
-author: Dimitri Golecko (@dimsome), Nick Addison (@naddison36)
-discussions-to:
-created:
----
-
-```
-
 ## Simple Summary
 
 It is proposed to move the manual weekly distribution of MTA emission based on the calculation specified in [MCCP 4](../MCCP/mccp-4) and consequently updated by [MCCP 7](../MCCP/mccp-7), [MCCP 8](../MCCP/mccp-8), [MCCP 9](../MCCP/mccp-9) and [MCCP 10](../MCCP/mccp-10) to an on-chain Emissions Controller that determines the distribution of MTA to vaults and other recipient contracts via votes on dials by MTA stakers. Dials are representations of votes towards a destination within the Emissions Controller contract. Additionally, the topline MTA emission schedule is proposed here and fully controlled by the Emissions Controller smart contracts going forward. MTA stakers are incentivised to allocate the rewards towards the dials that yields the highest return in order to maximise protocol revenue.
@@ -79,7 +67,6 @@ Dials determine the amount of the MTA rewards that are sent to a dial’s recipi
 
 A dial recipient can be any contract that can either receive MTA tokens or can be notified of the amount of received rewards so the contract can account for it. Dials can be added and removed via governance votes. The set of the initial dials are the following:
 
-```markdown
 | Dial                            | Description                               |
 | ------------------------------- | ----------------------------------------- | --- | ------------- | -------------------------------- |
 | Staking MTA                     | Staking Contract for MTA                  |
@@ -98,7 +85,6 @@ A dial recipient can be any contract that can either receive MTA tokens or can b
 | p-Balancer WMATIC/MTA/WETH pool | Balancer 40/40/20 WMATIC/MTA/WETH Pool    |     | Visor finance | Visor finance Uniswap v3 MTA/ETH |
 | OlympusPro bonds                | OlympusPro Custom Treasury Contract       |
 | mStable DAO Treasury            | mStable Treasury donate Dials             |
-```
 
 ### Voting Power
 
@@ -187,7 +173,6 @@ An Instance of the `EmissionsController.sol` will be deployed with the following
 
 The contract will be initialised with the following parameters (for `address[] memory _recipients, uint8[] memory _caps, bool[] memory _notifies`). These are the initial dials that are proposed here:
 
-```markdown
 | recipients                                 | caps | notifies |
 | ------------------------------------------ | ---- | -------- |
 | 0x8f2326316eC696F6d023E37A9931c2b2C177a3D7 | 10   | true     |
@@ -200,11 +185,9 @@ The contract will be initialised with the following parameters (for `address[] m
 | 0x97E2a2F97A2E9a4cFB462a49Ab7c8D205aBB9ed9 | 0    | true     |
 | 0xF65D53AA6e2E4A5f4F026e73cb3e22C22D75E35C | 0    | true     |
 | 0xF3f4F4e17cC65BDC36A36fDa5283F8D8020Ad0a4 | 0    | false    |
-```
 
 In addition, the following recipients will be deployed and added after the respective bridges/vaults are deployed:
 
-```markdown
 | recipients                                           | caps | notifies |
 | ---------------------------------------------------- | ---- | -------- |
 | BasicRewardsForwarder.sol: mStable DAO Treasury      | 0    | true     |
@@ -214,7 +197,6 @@ In addition, the following recipients will be deployed and added after the respe
 | BridgeForwarder.sol: p-imUSD Vault                   | 0    | true     |
 | BridgeForwarder.sol: p-FRAX fPool                    | 0    | true     |
 | BridgeForwarder.sol: p-Balancer WMATIC/MTA/WETH pool | 0    | true     |
-```
 
 For the staking contract `BridgeForwarder.sol` the corresponding `L2BridgeRecipient.sol` will be deployed on Polygon along with adding these to the `L2EmissionsController.sol` via `function addRecipient()`.
 
