@@ -68,7 +68,7 @@ Dials determine the amount of the MTA rewards that are sent to a dial’s recipi
 A dial recipient can be any contract that can either receive MTA tokens or can be notified of the amount of received rewards so the contract can account for it. Dials can be added and removed via governance votes. The set of the initial dials are the following:
 
 | Dial                            | Description                               |
-| ------------------------------- | ----------------------------------------- | --- | ------------- | -------------------------------- |
+| ------------------------------- | ----------------------------------------- |
 | Staking MTA                     | Staking Contract for MTA                  |
 | Staking mBPT                    | Staking Contract for Balancer Pool Tokens |
 | imUSD Vault                     | SAVE Vault for mUSD                       |
@@ -82,7 +82,8 @@ A dial recipient can be any contract that can either receive MTA tokens or can b
 | TBTC fPool (v2)                 | mBTC/TBTCv2 Feeder Pool                   |
 | p-imUSD Vault                   | SAVE Vault for mUSD on Polygon            |
 | p-FRAX fPool                    | mUSD/FRAX Feeder Pool on Polygon          |
-| p-Balancer WMATIC/MTA/WETH pool | Balancer 40/40/20 WMATIC/MTA/WETH Pool    |     | Visor finance | Visor finance Uniswap v3 MTA/ETH |
+| p-Balancer WMATIC/MTA/WETH pool | Balancer 40/40/20 WMATIC/MTA/WETH Pool    |
+| Visor finance                   | Visor finance Uniswap v3 MTA/ETH          |
 | OlympusPro bonds                | OlympusPro Custom Treasury Contract       |
 | mStable DAO Treasury            | mStable Treasury donate Dials             |
 
