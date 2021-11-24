@@ -21,7 +21,7 @@ created:
 
 ## Simple Summary
 
-It is proposed to move the manual weekly distribution of MTA emission based on the calculation specified in [MCCP 4](../mccp/mccp-4) and consequently updated by [MCCP 7](../mccp/mccp-7), [MCCP 8](../mccp/mccp-8), [MCCP 9](../mccp/mccp-9) and [MCCP 10](../mccp/mccp-10) to an on-chain Emissions Controller that determines the distribution of MTA to vaults and other recipient contracts via votes on dials by MTA stakers. Dials are representations of votes towards a destination within the Emissions Controller contract. Additionally, the topline MTA emission schedule is proposed here and fully controlled by the Emissions Controller smart contracts going forward. MTA stakers are incentivised to allocate the rewards towards the dials that yields the highest return in order to maximise protocol revenue.
+It is proposed to move the manual weekly distribution of MTA emission based on the calculation specified in [MCCP 4](../MCCP/mccp-4) and consequently updated by [MCCP 7](../MCCP/mccp-7), [MCCP 8](../MCCP/mccp-8), [MCCP 9](../MCCP/mccp-9) and [MCCP 10](../MCCP/mccp-10) to an on-chain Emissions Controller that determines the distribution of MTA to vaults and other recipient contracts via votes on dials by MTA stakers. Dials are representations of votes towards a destination within the Emissions Controller contract. Additionally, the topline MTA emission schedule is proposed here and fully controlled by the Emissions Controller smart contracts going forward. MTA stakers are incentivised to allocate the rewards towards the dials that yields the highest return in order to maximise protocol revenue.
 
 ## Abstract
 
@@ -33,7 +33,7 @@ This would also change the reward allocation of protocol revenue. Whereas previo
 
 ## Motivation
 
-Previously, MTA rewards allocation was determined by Governance processes and by proposals to establish a distribution scheme. Such was the [MCCP 4](../mccp/mccp-4) that attempted to algorithmically allocate rewards to Feeder Pools based on TVL and Volume. This resulted in a suboptimal allocation in which pools that contributed not much to the protocols revenue still received a substantial share of MTA emissions. Consequently, this approach would also mean that any pools that are not included in this proposal would have needed their own proposal to carve out a certain amount for a different use case. This resulted in a high amount of proposals which all had ample time to pass through the governance instances. Additionally, the emission of MTA needed a further and constant reduction. This was dealt with mainly new proposals to adjust topline emissions. However, this is not a good long-term solution, since it requires continuous adjustments and does not provide a way to anticipate emission for a given future point in time.
+Previously, MTA rewards allocation was determined by Governance processes and by proposals to establish a distribution scheme. Such was the [MCCP 4](../MCCP/mccp-4) that attempted to algorithmically allocate rewards to Feeder Pools based on TVL and Volume. This resulted in a suboptimal allocation in which pools that contributed not much to the protocols revenue still received a substantial share of MTA emissions. Consequently, this approach would also mean that any pools that are not included in this proposal would have needed their own proposal to carve out a certain amount for a different use case. This resulted in a high amount of proposals which all had ample time to pass through the governance instances. Additionally, the emission of MTA needed a further and constant reduction. This was dealt with mainly new proposals to adjust topline emissions. However, this is not a good long-term solution, since it requires continuous adjustments and does not provide a way to anticipate emission for a given future point in time.
 
 This new Emissions Controller solves these problems:
 
@@ -71,7 +71,7 @@ with the parameter:
 
 The length of an epoch is defined as one week and is equal to the distribution frequency. This distribution schedule is for a total of 312 epochs or roughly 6 years.
 
-![Screen Shot 2021-11-23 at 23.32.37.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/15d563b5-ef57-4d9a-afde-565bf2bb9bce/Screen_Shot_2021-11-23_at_23.32.37.png)
+![MTA Emission Schedule](../assets/MIP-24/emission.png)
 
 ### Dials
 
