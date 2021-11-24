@@ -102,7 +102,7 @@ Once the voting weights across the dials are set, this will be used for each wee
 
 The emissions controller will maintain the weighted votes for each dial. If a voter’s voting power changes, then the dial weight will be updated. This can be from staking, withdrawing or changes to delegation. Further, a change in multipliers as specified in [MIP 15: Staking V2](./mip-15) will also automatically increase the weighted voting power to dials according to the chosen allocation proportion.
 
-To prevent voters from just giving all the MTA to themselves, each staking contract will up to 10% of the MTA distributions each week. There are currently two staking contracts so a maximum of 20% of the MTA rewards goes to the stakers.
+To prevent voters from just giving all the MTA to themselves, each staking contract will receive up to 10% of the MTA distributions each week. There are currently two staking contracts so a maximum of 20% of the MTA rewards goes to the stakers.
 
 To generate more value for the MTA holders, the Protocol revenue will be used to buy MTA and distribute to stakers. This incentivises the voters to maximise the protocols revenues.
 
@@ -208,7 +208,7 @@ The initial `_stakingContracts` are the two staking contracts proposed in [MIP 1
 
 These two staking contracts are set to determine the distribution.
 
-**Function:**
+Function:
 
 - `function topLineEmission()` Calculates top line distribution amount for the current epoch (see section Specifications - MTA emission schedule).
 - `function addDial()` adds a new dial that can be voted on to receive weekly rewards. Callable by ProtocolDAO multisig after governance approval.
