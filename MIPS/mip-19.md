@@ -1,7 +1,7 @@
 ---
 mip: 19
 title: Move idle mAssets in Feeder Pool to Rari Fuse Lending Markets
-status: Proposed
+status: Rejected
 author: derc
 discussions-to: https://forum.mstable.org/t/discussion-incentivise-rari-fuse-lending-markets/665/11
 created: 2021-10-26
