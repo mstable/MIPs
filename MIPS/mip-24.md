@@ -17,7 +17,7 @@ To further progress mStable’s decentralisation and to add more value to the MT
 
 The MTA Emissions Controller will distribute weekly MTA rewards in accordance with the votes of the MTA stakers. This is similar to [Curve’s GaugeController](https://dao.curve.fi/gaugeweight). This will also lock in a topline and a long-term emission schedule of MTA: 30 Million MTA will be distributed over the next 6 years starting from the first distribution on the 16th **December 2021**. Before the first distribution, more than a week will be given to allocating the first votes. This would leave over 5.1 Million MTA in the Treasury. The emission schedule follows a polynomial curve and is further detailed in section: _Specification - MTA emission schedule_.
 
-This would also change the reward allocation of protocol revenue. Whereas previously the protocol revenue was diverted to the Buyback&Make pool as specified in [MIP 8](./mip-8), the protocol revenue now gets directed to the two staking contracts proportionally. This would have the effect that stakers are incentivised to allocate MTA rewards towards dials that generate the highest protocol revenue. As part of this update, the Buyback&Make Pool gets sunsetted. The accrued amount will be transferred to the TreasuryDAO and is therefore in the hands of all MTA holders to either continue to provide liquidity or to allocate differently with a future TDP (Treasury DAO Proposal).
+This would also change the reward allocation of governance fees. Whereas previously the governance fees was diverted to the Buyback&Make pool as specified in [MIP 8](./mip-8), the governance fees now gets directed to the two staking contracts proportionally. This would have the effect that stakers are incentivised to allocate MTA rewards towards dials that generate the highest protocol revenue. As part of this update, the Buyback&Make Pool gets sunsetted. The accrued amount will be transferred to the TreasuryDAO and is therefore in the hands of all MTA holders to either continue to provide liquidity or to allocate differently with a future TDP (Treasury DAO Proposal).
 
 ## Motivation
 
@@ -104,7 +104,7 @@ The emissions controller will maintain the weighted votes for each dial. If a vo
 
 To prevent voters from just giving all the MTA to themselves, each staking contract will receive up to 10% of the MTA distributions each week. There are currently two staking contracts so a maximum of 20% of the MTA rewards goes to the stakers.
 
-To generate more value for the MTA holders, the Protocol revenue will be used to buy MTA and distribute to stakers. This incentivises the voters to maximise the protocols revenues.
+To generate more value for the MTA holders, the governance fees will be used to buy MTA and distribute to stakers. This incentivises the voters to maximise the protocol's revenue.
 
 There is no cap on the amount of MTA a dial that is not a staking contract can receive. So all the voting power could be put on just one dial. This is unlikely to happen as it would require over 200 stakers to collude.
 
