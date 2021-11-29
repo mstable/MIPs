@@ -170,7 +170,7 @@ An Instance of the `EmissionsController.sol` will be deployed with the following
 
 - `nexus = 0xAFcE80b19A8cE13DEc0739a1aaB7A028d6845Eb3` (Nexus Contract)
 - `rewardToken = 0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2` (MTA Token)
-- `TopLevelConfig = {A: -166000, B: 180000, C: -180000, D: 166000, EPOCHS: 312 }` (Polynomial Distribution)
+- `TopLevelConfig = { A: -166000000000000, B: 168479942061125, C: -168479942061125, D: 166000000000000, EPOCHS: 312 }` (Polynomial Distribution)
 
 The contract will be initialised with the following parameters (for `address[] memory _recipients, uint8[] memory _caps, bool[] memory _notifies`). These are the initial dials that are proposed here:
 
