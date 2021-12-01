@@ -1,9 +1,9 @@
 ---
 tdp: 27
 title: Immunefi Bug Bounty Program
-status: WIP
-author: mZeroNine
-discussions-to: https://forum.mstable.org/
+status: Proposed
+author: mZeroNine (@mzero2nine)
+discussions-to: https://forum.mstable.org/t/tdp-27-immunefi-bug-bounty-program/721
 created: 2020-11-25
 ---
 
