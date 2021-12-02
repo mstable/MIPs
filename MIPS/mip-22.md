@@ -85,6 +85,10 @@ Tier 4* = 🎖 Metal partner
 
 ![alliance-tiers](../assets/MIP-22/alliance-tiers.png)
 
+## Link from forum discussion
+
+https://forum.mstable.org/t/mip-22-mstable-alliance-referral-program/714
+
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
