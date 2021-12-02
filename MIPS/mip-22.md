@@ -3,7 +3,7 @@ mip: 22
 title: Alliance Referral program
 status: Proposed
 author: Théo Clochard
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mip-22-mstable-alliance-referral-program/714
 created: 2021-11-16
 ---
 
@@ -85,9 +85,6 @@ Tier 4* = 🎖 Metal partner
 
 ![alliance-tiers](../assets/MIP-22/alliance-tiers.png)
 
-## Link from forum discussion
-
-https://forum.mstable.org/t/mip-22-mstable-alliance-referral-program/714
 
 ## Copyright
 
