@@ -52,10 +52,10 @@ Partners will be divided into _tiers_ which will determine the percentage of pro
 **Tier repartition**
 
 ```
-* Tier 1 🥉 – PDASr < $ 1%: 20% of the fees generated
-* Tier 2 🥈 1% < PDASr < 2.5%: 30% of the fees generated
-* Tier 3 🥇 2.5% < PDASr < 5%: 40% of the fees generated
-* Tier 4 🎖 PDASr > 5%: 50% of the fees generated
+* Tier 1 🥉 – PDAS < $ 500k: 20% of the fees generated
+* Tier 2 🥈 $ 500k < PDAS < $ 1m: 30% of the fees generated
+* Tier 3 🥇 $ 1m < PDAS < 5m: 40% of the fees generated
+* Tier 4 🎖 PDAS > 5m: 50% of the fees generated
 ```
 
 **e) Deposit tracking & reward calculation**
@@ -80,7 +80,7 @@ Tier 2 = 🥈 Plus partner
 Tier 3 = 🥇 Premium partner
 Tier 4* = 🎖 Metal partner
 
-*All current partners get automatically promoted to Tier 4 at the inception of the program
+*All current partners get automatically promoted to Tier 3 at the inception of the program, regardless of their PDAS to reward their early Save adoption. This preferential ranking will be revised 6 months after the official launch of the program considering current partners PDAS
 ```
 
 ![alliance-tiers](../assets/MIP-22/alliance-tiers.png)
