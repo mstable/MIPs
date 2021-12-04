@@ -1,7 +1,7 @@
 ---
 tdp: 28
 title: Fei Protocol & Ondo Finance LaaS Opportunity
-status: WIP
+status: Proposed
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/
 created: 2020-12-01
