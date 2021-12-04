@@ -1,10 +1,10 @@
 ---
 tdp: 29
-title: DAO<>DAO Swap - Balancer
+title: DAO 2 DAO Swap - Balancer
 status: WIP
-author: Théo Clochard (@LDeroccha) / mZeroNine (@mzero2nine)
+author: Théo Clochard (@LDeroccha), mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/
-created: 2020-12-04
+created: 2020-12-01
 ---
 
 ## Simple Summary
