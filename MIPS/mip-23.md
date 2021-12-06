@@ -1,7 +1,7 @@
 ---
 mip: 23
 title: Remove mUSD from Iron Bank
-status: Proposed
+status: Approved
 author: Dimitri Golecko (@dimsome)
 discussions-to:
 created: 2021-11-24

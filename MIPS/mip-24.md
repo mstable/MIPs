@@ -1,7 +1,7 @@
 ---
 mip: 24
 title: Emission Controller
-status: Proposed
+status: Approved
 author: Dimitri Golecko (@dimsome), Nick Addison (@naddison36)
 discussions-to:
 created: 2021-11-24
