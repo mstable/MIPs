@@ -13,7 +13,7 @@ It is proposed that the mStableDAO allocate some of its mUSD treasury funds to d
 
 ## Specification
 
-This mUSD would be deployed on dHEDGE under one of the strategies being voted on in [TDP 21.2](https://mips.mstable.org/TDP/tdp-21.2.html) to earn a passive return.
+This mUSD would be deployed on dHEDGE under one of the strategies being voted on in [TDP 21.2](tdp-21.2.md) to earn a passive return.
 
 ## Copyright
 
