@@ -13,13 +13,13 @@ The mStableDAO is seeking to open a discussion around the potential reduction of
 
 ## Abstract
 
-As set out in [MCCP 4](https://mips.mstable.org/MCCP/mccp-4), it has been proposed previously that MTA’s token emission can be optimised. However, whilst MCCP-4 detailed changes to mAssets (mUSD and mBTC) it did not address the rewards going to incentivising the MTA/WETH Uniswap Pool’s 2 liquidity, or Staking V1 rewards. Emissions to these two destinations account for c52% of total outgoing rewards (68,750 of 133,250 MTA each week).
+As set out in [MCCP 4](../MCCP/mccp-4.md), it has been proposed previously that MTA’s token emission can be optimised. However, whilst MCCP-4 detailed changes to mAssets (mUSD and mBTC) it did not address the rewards going to incentivising the MTA/WETH Uniswap Pool’s 2 liquidity, or Staking V1 rewards. Emissions to these two destinations account for c52% of total outgoing rewards (68,750 of 133,250 MTA each week).
 
 ## Motivation
 
 This is being proposed as part of the broader overhaul that was started with MCCP-4, with the intention of comprehensively restructuring MTA reward incentives. This echoes the communicated desire from the Genesis team to lower MTA emission toward liquidity pools outside of the mStable ecosystem, and to refocus rewards where they produce the most utility.
 
-It should be noted too that any loss of liquidity can be partially or fully offset by MTA/DAI liquidity bolstering from the mStableDAO treasury as outlined in [TDP 20.1](https://mips.mstable.org/TDP/tdp-20.1.html) should it be successful.
+It should be noted too that any loss of liquidity can be partially or fully offset by MTA/DAI liquidity bolstering from the mStableDAO treasury as outlined in [TDP 20.1](tdp-20.1.md) should it be successful.
 
 ## Specification
 
