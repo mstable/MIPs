@@ -11,7 +11,7 @@ created: 2021-03-31
 
 It is proposed that the mStableDAO allocate some of its mUSD treasury funds to dHEDGE as was proposed by @phenrikand in this forum post.
 
-The amount of mUSD to be deployed on dHEDGE is being voted on in [TDP 21.1](https://mips.mstable.org/TDP/tdp-21.1.html). These mUSD are being deployed with the intent of earning a return.
+The amount of mUSD to be deployed on dHEDGE is being voted on in [TDP 21.1](tdp-21.1.md). These mUSD are being deployed with the intent of earning a return.
 
 ## Specification
 
