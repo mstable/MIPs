@@ -29,13 +29,13 @@ This endeavor will also allow us to take advantage of TRIBE incentives that Fei 
 
 ## Specification
 
-### **Proposed workflow**
+### Proposed workflow
 
 The Fei DAO will provide FEI, then invest these into an Ondo fixed tranche pool. mStable will invest MTA in the variable tranche pool from the mstable Asset Management subDAO. The Ondo Vault will then provide this liquidity together to create a FEI-MTA liquidity pool on Uniswap v2. After a fixed duration, Ondo will withdraw this liquidity, then pay back the Fei DAO its FEI plus a predetermined fixed yield. Finally, MTA will receive the remaining assets paid out in MTA.
 
 If the LP yield more than covers the fixed yield for FEI, then MTA earns a positive yield on MTA. Even if trading fees are near zero and the underlying LP is not incentivized, then the Asset Management subDAO is effectively just paying for providing liquidity to the market, without needing to disburse any liquidity mining rewards to the ecosystem.
 
-### **Duration and Fees**
+### Duration and Fees
 
 It is proposed to start with four vaults with the following durations: 90 days, 83 days, 76 days, 69 days.
 
@@ -43,7 +43,7 @@ Fei will accept a fixed yield of 5% APR for each of these vaults (1.23%, 1.14%, 
 
 The purpose of launching with vaults of different durations is to stagger the redemption of these vaults. At redemption, the liquidity from one vault is removed, then the Ondo smart contracts will either buy MTA with FEI or sell MTA for FEI in order to obtain exactly the amount of FEI owed to the fixed tranche investors. To minimize the market impact on the price of MTA at this redemption, we want to ensure that no single vault represents too large a percentage of the total liquidity in the pool.
 
-### **TRIBE Incentives**
+### TRIBE Incentives
 
 Fei has also approved TRIBE incentives for launch group participants for the first three months of the program. These incentives will be on the variable tranches specifically — so the MTA variable tranche in this case. The incentives scale with liquidity provided, at 10 AP per $1mm in liquidity provided by mStable. There are 2500 AP total in the Fei TribalChief rewarder. Based on current prices (as of November 18) this amounts to ~50% APY in boosted yield.
 
