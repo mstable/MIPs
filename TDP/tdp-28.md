@@ -3,21 +3,21 @@ tdp: 28
 title: Fei Protocol & Ondo Finance LaaS Opportunity
 status: Proposed
 author: mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org/
-created: 2020-12-01
+discussions-to: https://forum.mstable.org/t/tdp-28-fei-protocol-ondo-finance-laas-opportunity/727
+created: 2021-12-01
 ---
 
 ## Simple Summary
 
-Fei Protocol recently [teamed up](https://medium.com/fei-protocol/if-you-are-part-of-a-dao-or-protocol-that-wants-to-create-liquidity-for-your-token-without-f49a01f02863) with Ondo Finance in order to introduce a Liquidity-as-a-Service model to the ecosystem, and it is proposed that the mStable Asset Management subDAO use this service in order to increase the liquidity of MTA via a protocol-owned MTA/FEI pool on Uniswap v2.
+Fei Protocol recently [teamed up](https://medium.com/fei-protocol/if-you-are-part-of-a-dao-or-protocol-that-wants-to-create-liquidity-for-your-token-without-f49a01f02863) with Ondo Finance in order to introduce a Liquidity-as-a-Service model to the ecosystem, and it is proposed that the mStable Asset Management subDAO use this service in order to increase the liquidity of MTA via a protocol-owned MTA/FEI pool on Uniswap v2.
 
 ## Abstract
 
-With the recent liquidation of the [MTA/DAI position](https://snapshot.org/#/mstablegovernance.eth/proposal/0xe836d35eb889e039a7d5f616d290339d874a129c3de24fb49d38b64068b578e0) on Uniswap v3, there is now a lack of a stablecoin pairing for MTA to allow for easy access and exit on Ethereum Mainnet, and it is suggested to take advantage of the offering from Fei Protocol & Ondo to create a new MTA/FEI pair on Uniswap v2 for this purpose.
+With the recent liquidation of the [MTA/DAI position](https://snapshot.org/#/mstablegovernance.eth/proposal/0xe836d35eb889e039a7d5f616d290339d874a129c3de24fb49d38b64068b578e0) on Uniswap v3, there is now a lack of a stablecoin pairing for MTA to allow for easy access and exit on Ethereum Mainnet, and it is suggested to take advantage of the offering from Fei Protocol & Ondo to create a new MTA/FEI pair on Uniswap v2 for this purpose.
 
 A choice between 850,000, 1,000,000 and 1,250,000 MTA is proposed, which would be equally matched with FEI from Fei Protocol. It is proposed to source this liquidity by removing MTA from the existing MTA/BNT pair on Bancor ([410k MTA](https://zapper.fi/account/0x3dd46846eed8d147841ae162c8425c08bd8e1b41/protocols/ethereum/bancor)), as well as utilize the BadgerDAO loan from the Funding subDAO that is due ([400k MTA](https://snapshot.org/#/mstablegovernance.eth/proposal/QmfCWb6RxmLrLyfR4ZGzKCP6ehzafrdr3BVKJDxEnh36Np)), and source any remaining MTA directly from the mStable Treasury if required, which will depend on the MTA price at the time of deployment.
 
-This amount will also qualify mStable to receive [additional TRIBE incentives](https://snapshot.org/#/fei.eth/proposal/0x6cb44737ef462019d65d33b4164684a6786e6c8d0222d4caa55952d067789846) from Fei Protocol, which would subsequently be deposited on [their Rari Fuse Pool](https://app.rari.capital/fuse/pool/8) to then engage in further opportunities for the Asset Management subDAO, while diversifying the treasury and building rapport with Fei Protocol for further mutually beneficial endeavours down the line.
+This amount will also qualify mStable to receive [additional TRIBE incentives](https://snapshot.org/#/fei.eth/proposal/0x6cb44737ef462019d65d33b4164684a6786e6c8d0222d4caa55952d067789846) from Fei Protocol, which would subsequently be deposited on [their Rari Fuse Pool](https://app.rari.capital/fuse/pool/8) to then engage in further opportunities for the Asset Management subDAO, while diversifying the treasury and building rapport with Fei Protocol for further mutually beneficial endeavours down the line.
 
 ## Motivation
 
@@ -51,4 +51,4 @@ This AP is set based on the contribution from mStable, and does not scale based 
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

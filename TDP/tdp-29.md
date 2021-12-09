@@ -1,10 +1,10 @@
 ---
 tdp: 29
 title: DAO 2 DAO Swap - Balancer
-status: WIP
+status: Proposed
 author: Théo Clochard (@LDeroccha), mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/
-created: 2020-12-01
+created: 2021-12-01
 ---
 
 ## Simple Summary
@@ -26,7 +26,7 @@ As we speak, two Balancer pools are receiving MTA rewards:
 
 Balancer & mStable have been maintaining a long-standing relationship: mStable was one of the first user of Balancer in August 2020 and had the biggest pool at some point there.
 
-It is thought that it would be highly mutually beneficial for the Balancer and mStable Treasury DAOs to perform a DAO<>DAO token swap: 
+It is thought that it would be highly mutually beneficial for the Balancer and mStable Treasury DAOs to perform a DAO<>DAO token swap:
 
 - mStable would get exposure to a blue-chip DeFi project as well as diversify its treasury. Moreover, BAL has strong utility within the DeFI ecosytem: mStable could opt to leverage them in several ways.
 - Balancer would get a MTA position and could vote for their pools with the Emission Controller. Balancer would then direct higher rewards that will inevitably attract more liquidity (i.e Total Value Locked) to its pools.
@@ -36,7 +36,7 @@ It is thought that it would be highly mutually beneficial for the Balancer and m
 
 DAO<>DAO swaps are very strong market signals and often represent significant amounts of money: Balancer [recently swapped $9m worth of BAL with FEI](https://medium.com/balancer-protocol/balancer-dao-commits-to-dao-agreement-and-token-swap-with-fei-dao-in-unprecedented-move-fbedda688236).
 
-Therefore, we think swapping 20k BAL against the equivalent USD value of MTA is an amount that would reflect both the longstanding relationship mStable has with Balancer and the strong optimism felt towards the BAL token. 
+Therefore, we think swapping 20k BAL against the equivalent USD value of MTA is an amount that would reflect both the longstanding relationship mStable has with Balancer and the strong optimism felt towards the BAL token.
 
 ### Why now?
 
@@ -55,26 +55,26 @@ Furthermore, we will use the swapped tokens in further asset management opportun
 
 ## Specification
 
-*a) Swapped amounts and origination*
+_a) Swapped amounts and origination_
 
 - 20k BAL against the equivalent USD value worth of MTA were agreed upon for this swap
 - MTA tokens would be sent from the mStable Treasury Asset Management subDAO (`0x67905d3e4fec0c85dce68195f66dc8eb32f59179`) to the Balancer Treasury DAO (`0x10A19e7eE7d7F8a52822f6817de8ea18204F2e4f`)
 - BAL tokens would be sent from the Balancer Treasury DAO (`0x10A19e7eE7d7F8a52822f6817de8ea18204F2e4f`) to the mStable Treasury Asset Management subDAO (`0x67905d3e4fec0c85dce68195f66dc8eb32f59179`)
 
-*b) Timeline and swap execution*
+_b) Timeline and swap execution_
 
-This TDP will go to a Snapshot vote on the side of mStable on the 6th of December, and resolve on the 10th of December. Balancer voting will  start at 7am EST Dec 6th, and resolve 7am EST Dec 9th and execution extendend until the 10th of December, so that both protocols have the same voting window.
+This TDP will go to a Snapshot vote on the side of mStable on the 6th of December, and resolve on the 10th of December. Balancer voting will start at 7am EST Dec 6th, and resolve 7am EST Dec 9th and execution extendend until the 10th of December, so that both protocols have the same voting window.
 
 Swap execution: Tokens will be swapped on-chain from the 13th of December onward, and the 1 year holding time will begin at the time the tokens from the transfer enter the wallet of the corresponding DAO.
 
-*c) Pricing method and price feeds*
+_c) Pricing method and price feeds_
 
 It has been agreed to use a 30-days smooth average. The time window for the 30 days average would be from the 10th of November until the 10th of December 2021.
 
-MTA Price feed:  MTA/ USD [(Chainlink)](https://market.link/feeds/1ce7ead3-6466-4bdc-8f0c-0d5509820a0f)
+MTA Price feed: MTA/ USD [(Chainlink)](https://market.link/feeds/1ce7ead3-6466-4bdc-8f0c-0d5509820a0f)
 
 BAL Price feeds: BAL/USDT ([Binance](https://www.binance.com/en/trade/BAL_USDT))
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

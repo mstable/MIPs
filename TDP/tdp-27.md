@@ -4,7 +4,7 @@ title: Immunefi Bug Bounty Program
 status: Proposed
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/tdp-27-immunefi-bug-bounty-program/721
-created: 2020-11-25
+created: 2021-11-25
 ---
 
 ## Simple Summary
@@ -13,11 +13,11 @@ It is proposed to participate in Immunefi's upcoming bug bounty protocol launch,
 
 ## Abstract
 
-Immunefi has been supporting mStable’s bug bounty program for more than 6 months and is now upgrading their core product offering to include tokenized protocol governance, and a more capital efficient way to use these bounties. 
+Immunefi has been supporting mStable’s bug bounty program for more than 6 months and is now upgrading their core product offering to include tokenized protocol governance, and a more capital efficient way to use these bounties.
 
 mStable would therefore like to participate in this new bug bounty product offering and allocate 100,000 DAI to be put in escrow and have custodied by Immunefi.
 
-The underlying collateral will then be used to generate yield, and in case of a found vulnerability, be used to reimburse the bug reporter. 
+The underlying collateral will then be used to generate yield, and in case of a found vulnerability, be used to reimburse the bug reporter.
 
 ## Motivation
 
@@ -33,12 +33,12 @@ To provide these trust assurances, Immunefi has built an onchain protocol for pa
 
 ## Specification
 
-*What Immunefi will require from mStable*
+_What Immunefi will require from mStable_
 
 - Agreement to earmark and deposit funds equal to the maximum critical bug bounty ($100,000 in DAI today) in Immunefi’s onchain protocol.
 - No further action is then required; the program will be run and managed according to mStable’s existing program rules, policies, and bug disclosure specifications.
 
-*What Immunefi will provide to mStable*
+_What Immunefi will provide to mStable_
 
 - Immunefi will inform the mStable core team when the protocol is fully ready for launch, and provide deposit instructions to the team. The ETA for this is during Q1 2022.
 - mStable will receive hands-on support from Immunefi team members for launching its onchain integration to ensure smooth onboarding.
@@ -46,4 +46,4 @@ To provide these trust assurances, Immunefi has built an onchain protocol for pa
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

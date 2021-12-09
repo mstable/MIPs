@@ -1,6 +1,6 @@
 ---
 mip: 24
-title: Emission Controller
+title: Emissions Controller
 status: Approved
 author: Dimitri Golecko (@dimsome), Nick Addison (@naddison36)
 discussions-to:
