@@ -9,7 +9,7 @@ created: 2021-04-07
 
 ## Simple Summary
 
-As successfully voted on in [TDP 20.2](tdp-20.2.md), it was decided that the MTA rewards for the Uniswap MTA/WETH Earn pool would be gradually wound down over the next 4 weeks.
+As successfully voted on in [TDP 20.2](./tdp-20.2), it was decided that the MTA rewards for the Uniswap MTA/WETH Earn pool would be gradually wound down over the next 4 weeks.
 
 Due to continuous feedback voiced in this forum post and signers of the mStableDAO that the initial timeframe outlined in the proposal was being too quick and drastic of a change for the ecosystem, the mStableDAO proposes that the initial transition period set out in TDP 20.2 be re-evaluated and extended.
 
@@ -29,4 +29,4 @@ This proposal suggests that we increase the winding down period of current MTA e
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

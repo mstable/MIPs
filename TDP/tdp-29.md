@@ -77,4 +77,4 @@ BAL Price feeds: BAL/USDT ([Binance](https://www.binance.com/en/trade/BAL_USDT))
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

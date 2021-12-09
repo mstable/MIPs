@@ -19,16 +19,16 @@ By providing liquidity on the Convex Finance platform and compounding the accumu
 
 This proposal aims to:
 
-1) Provide maximum capital efficiency for our idle tokens in the treasury
-2) Increase TVL of the treasury over time & diversify token allocations held
-3) Generate a future revenue stream with the accrued rewards by participating in fee sharing from Convex Finance by compounding both CRV and CVX rewards (on top of any other rewarded tokens)
-4) Potentially use accumulated rewards to direct CRV emissions toward the mUSD pool, allowing mStable to simultaneously bootstrap its product while accruing value for the treasury.
+1. Provide maximum capital efficiency for our idle tokens in the treasury
+2. Increase TVL of the treasury over time & diversify token allocations held
+3. Generate a future revenue stream with the accrued rewards by participating in fee sharing from Convex Finance by compounding both CRV and CVX rewards (on top of any other rewarded tokens)
+4. Potentially use accumulated rewards to direct CRV emissions toward the mUSD pool, allowing mStable to simultaneously bootstrap its product while accruing value for the treasury.
 
 ## Specification
 
 This proposal suggests that the 422,647 DAI currently held in the Asset Management subDAO be put into a Convex Finance liquidity position in order to begin accruing CRV & CVX (and potentially other protocol tokens from one of their liquidity pools).
 
-In the process of commencing with this opportunity on Convex Finance, the 422,647 DAI would be provided via single-sided entry on Curve Finance, and consequently split up into the pool allocation chosen in [TDP 24.2](tdp-24.2.md).
+In the process of commencing with this opportunity on Convex Finance, the 422,647 DAI would be provided via single-sided entry on Curve Finance, and consequently split up into the pool allocation chosen in [TDP 24.2](./tdp-24.2).
 
 Liquidity rewards will be claimed and compounded back into the Convex Finance platform on a regular basis at the discretion of the Asset Management subDAO, which will consider and weight operational costs against accumulated rewards in the contract to make an informed and economically sound decision on the correct timing of these operations.
 
@@ -36,4 +36,4 @@ Successful passing of this proposal will allow the Asset Management subDAO to co
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

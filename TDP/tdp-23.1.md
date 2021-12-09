@@ -17,10 +17,10 @@ The mStableDAO is proposing to use these BAL tokens now held in the Asset Manage
 
 This proposal aims to:
 
-1) Provide maximum capital efficiency for our idle tokens in the treasury
-2) Increase TVL of the treasury over time & diversify token allocations held
-3) Generate a future revenue stream with the accrued rewards by participating in fee sharing once this gets activated from the protocol of the governance token in question
-4) Have a potential say on proposals & the decision-making processes in the suggested protocol by holding their native governance token custodied in the mStableDAO treasury
+1. Provide maximum capital efficiency for our idle tokens in the treasury
+2. Increase TVL of the treasury over time & diversify token allocations held
+3. Generate a future revenue stream with the accrued rewards by participating in fee sharing once this gets activated from the protocol of the governance token in question
+4. Have a potential say on proposals & the decision-making processes in the suggested protocol by holding their native governance token custodied in the mStableDAO treasury
 
 ## Specification
 
@@ -34,4 +34,4 @@ Successful passing of this proposal will allow the Asset Management subDAO to co
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

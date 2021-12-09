@@ -9,7 +9,7 @@ created: 2021-03-29
 
 ## Simple Summary
 
-The mStableDAO is proposing that it uses some of its treasury balance to create a DAI/MTA pool on Uniswap, which would bolster MTA liquidity, and offset any reductions to rewards for the MTA/WETH pool being proposed as [TDP 20.2](tdp-20.2.md).
+The mStableDAO is proposing that it uses some of its treasury balance to create a DAI/MTA pool on Uniswap, which would bolster MTA liquidity, and offset any reductions to rewards for the MTA/WETH pool being proposed as [TDP 20.2](./tdp-20.2).
 
 ## Abstract & Motivation
 
@@ -21,7 +21,7 @@ Increase the capital efficiency of the mStableDAO’s treasury by using it to im
 
 Generate some fee revenue for the mStableDAO in a market neutral fashion (given existing exposure to MTA)
 
-Help offset any MTA liquidity loss from any reductions in MTA/WETH rewards as detailed in [TDP 20.2](tdp-20.2.md).
+Help offset any MTA liquidity loss from any reductions in MTA/WETH rewards as detailed in [TDP 20.2](./tdp-20.2).
 
 It should be noted that if this proposal is successful, the MTA and DAI contributed would be subject to impermanent loss.
 
@@ -29,7 +29,7 @@ DAI has been chosen here as the USD pair due to its decentralisation, and the fa
 
 With the announcement of Uniswap V3, this proposal should be revisited in future to optimise for the new flexibility and design parameters offered by the upgrade.
 
-This proposal should be considered alongside [TDP 20.2](tdp-20.2.md), however can be implemented independent of any changes to EARN rewards. We look forward to feedback from Meta Governors.
+This proposal should be considered alongside [TDP 20.2](./tdp-20.2), however can be implemented independent of any changes to EARN rewards. We look forward to feedback from Meta Governors.
 
 ## Specification
 
@@ -37,4 +37,4 @@ This proposal suggests that the c.2.34m DAI currently held in DAO reserves is pu
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

@@ -19,7 +19,7 @@ As set out in [MCCP 4](../MCCP/mccp-4.md), it has been proposed previously that 
 
 This is being proposed as part of the broader overhaul that was started with MCCP-4, with the intention of comprehensively restructuring MTA reward incentives. This echoes the communicated desire from the Genesis team to lower MTA emission toward liquidity pools outside of the mStable ecosystem, and to refocus rewards where they produce the most utility.
 
-It should be noted too that any loss of liquidity can be partially or fully offset by MTA/DAI liquidity bolstering from the mStableDAO treasury as outlined in [TDP 20.1](tdp-20.1.md) should it be successful.
+It should be noted too that any loss of liquidity can be partially or fully offset by MTA/DAI liquidity bolstering from the mStableDAO treasury as outlined in [TDP 20.1](./tdp-20.1) should it be successful.
 
 ## Specification
 
@@ -35,4 +35,4 @@ A reduction to no rewards over an 8 week transition period
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
