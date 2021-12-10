@@ -13,7 +13,7 @@ It is proposed to purchase between 3 and 5 [$SACKS](https://store.gitcoin.co/pro
 
 ## Abstract
 
-The mStable community mentioned that we ought to do more for the public goods space on Ethereum with our treasury, so after [this successful temperature check](./assets/TDP-30/sacks-temperature-check.png), it is proposed to allocate a small portion of our treasury towards buying 3 to 5 $SACKS from the open market. 
+The mStable community mentioned that we ought to do more for the public goods space on Ethereum with our treasury, so after [this successful temperature check](../assets/TDP-30/sacks-temperature-check.png), it is proposed to allocate a small portion of our treasury towards buying 3 to 5 $SACKS from the open market. 
 
 After the purchase, 1 or 2 $SACKS will get kicked back to [GitcoinDAO](https://gitcoindao.com/) to use freely as they see fit to further the Gitcoin project, while a further $SACKS will be handed to [Atlantis World](https://atlantis.world/) to use for a tighter integration in the Atlantiverse, while the mStable TreasuryDAO will retain the remaining $SACKS in perpetuity as a provable scarce asset on the blockchain.
 
