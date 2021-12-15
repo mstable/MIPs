@@ -1,7 +1,7 @@
 ---
 tdp: 29
 title: DAO 2 DAO Swap - Balancer
-status: Proposed
+status: Approved
 author: Théo Clochard (@LDeroccha), mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/
 created: 2021-12-01
