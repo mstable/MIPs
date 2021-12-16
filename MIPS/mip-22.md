@@ -2,7 +2,7 @@
 mip: 22
 title: Community signer election
 status: Implemented
-author: Cam
+author: Cam, Dimitri
 discussions-to: https://forum.mstable.org/t/pdp-37-community-signer-election/696
 created: 2021-11-1
 ---
