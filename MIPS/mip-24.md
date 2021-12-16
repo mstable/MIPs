@@ -43,11 +43,9 @@ The weekly distribution schedule of the 30 Million MTA is defined by a polynomia
 
 The following formula is used to determine the distribution for a given epoch `x`.
 
-$$
+\\[
 f(x)=A*(x/div)^3+B*(x/div)^2+C*(x/div)+D
-
-
-$$
+\\]
 
 with the parameter:
 
