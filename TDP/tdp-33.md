@@ -30,14 +30,7 @@ In order to continue these successful initiatives, this group is proposing the c
 
 ## Motivation
 
-Pros
-
-- This funding would provide a sustainable way to incentivize and reward community contribution to the mStable ecosystem.
-- Approved ongoing community funding reduces the governance overhead of small individual funding requests.
-
-Cons
-
-- As with any distribution of MTA there is cost to the treasury but we believe that rewarding engaged community members for contribution is a cost effective use.
+This funding would provide a sustainable way to incentivize and reward community contribution to the mStable ecosystem, while reducing the governance overhead of small individual funding requests.
 
 ## Specification
 
@@ -61,12 +54,12 @@ The amounts specified above for each activity should be considered a rough guide
 
 - Proposed initial structure is a 2/3 Gnosis Safe with the following signers:
     - Penguin (mStable "Lord of the Discord")
-    0xA5DfE92D76590d169d6A622E35E223a07627A2b3
+    `0xA5DfE92D76590d169d6A622E35E223a07627A2b3`
     - Derrick (mStable Growth & Partnerships)
-    0x9E0F8D06E68Af898E584C4054474124B092277Dc
+    `0x9E0F8D06E68Af898E584C4054474124B092277Dc`
     - Cam Soulsby (mStable Operations Lead) 
-    0x524269E900ca6ebe2FC57d719995c8D167F8b260
-    
+    `0x524269E900ca6ebe2FC57d719995c8D167F8b260`
+
 - Given the smaller amounts of MTA that will be disbursed by this subDAO, Gnosis Safes will be created on both Ethereum L1 and Polygon PoS. Funds will be bridged and distributed on Polygon unless L1 payments are specifically required.
 
 ## Copyright
