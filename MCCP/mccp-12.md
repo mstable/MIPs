@@ -9,7 +9,7 @@ created: 2021-12-120
 
 ## Simple Summary
 
-We recently conducted a token swap with Balancer DAO([TDP 29](../TDP/tdp-29)). This swap was executed and Balance DAO is now wanting to stake the acquired MTA. This can be only done when we whitelist the multisig address in the Staking V2 ([MIP 15](../MIPS/mip-15)) contract. It is therefore proposed to whitelist the Balancer DAO Gnosis Safe in Staking V2
+We recently conducted a token swap with Balancer DAO ([TDP 29](../TDP/tdp-29)). This swap was executed and Balance DAO is now wanting to stake the acquired MTA. This can be only done when we whitelist the multisig address in the Staking V2 ([MIP 15](../MIPS/mip-15)) contract. It is therefore proposed to whitelist the Balancer DAO Gnosis Safe in Staking V2
 
 ## Abstract
 
