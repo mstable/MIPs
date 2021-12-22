@@ -48,6 +48,7 @@ We would not expect all of the funds to be used every quarter. To allow only a s
 
 The amounts specified above for each activity should be considered a rough guideline and actual spending may vary slightly quarter to quarter based on requirements. 
 
+
 ### Community subDAO structure and responsibilities
 
 - The Community subDAO would be led by the mStable "Lord of the Discord", Penguin, who would have the responsibility of initiating transactions to disburse funds, keeping accurate records of transactions and communicating with other signers.
