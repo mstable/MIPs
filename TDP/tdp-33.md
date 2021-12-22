@@ -9,7 +9,7 @@ created: 2021-12-17
 
 ## Simple Summary
 
-This request is to propose the creation of an mStable Community subDAO and seek ongoing funding for mStable community initiatives including the Metanaut Coordinape circle, payment of Community DAO Signers, payment of Discord Moderators, providing MTA for tipping in Discord, and running events and giveaways for the broader mStable community.
+This request is to propose the creation of an mStable Community subDAO and seek ongoing funding for mStable community initiatives including the Metanaut Coordinape circle, payment of DAO Signers from the community, payment of Discord Moderators, providing MTA for tipping in Discord, and running events and giveaways for the broader mStable community.
 
 ## Abstract
 
@@ -38,7 +38,7 @@ This funding would provide a sustainable way to incentivize and reward community
 
 Requesting funding of a maximum 27,500 MTA per quarter at the beginning of each quarter, starting in Q1 2022. This amount has been calculated based on the following estimated spending:
 
-- Compensating 3 Community DAO Signers: 12,000 MTA (1,000 USD worth of MTA per signer per month, based on current MTA price of 0.75 USD as minimum)
+- Compensating 3 community signers across the ProtocolDAO & TreasuryDAO: 12,000 MTA (1,000 USD worth of MTA per signer per month, based on current MTA price of 0.75 USD as minimum)
 - Coordinape: 7,500 MTA (Max 2,500 MTA per epoch with 3 epochs per quarter)
 - Moderator Payments: 6,000 MTA (500 USD worth of MTA per moderator per month, based on current MTA price of 0.75 USD as minimum)
 - Contests and giveaways: 1,500 MTA per quarter
