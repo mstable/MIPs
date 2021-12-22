@@ -9,7 +9,7 @@ created: 2021-12-17
 
 ## Simple Summary
 
-This request is to propose the creation of an mStable Community subDAO and seek ongoing funding for mStable community initiatives including the Metanaut Coordinape circle, payment of Discord Moderators, providing MTA for tipping in Discord, and running events and giveaways for the broader mStable community.
+This request is to propose the creation of an mStable Community subDAO and seek ongoing funding for mStable community initiatives including the Metanaut Coordinape circle, payment of DAO Signers from the community, payment of Discord Moderators, providing MTA for tipping in Discord, and running events and giveaways for the broader mStable community.
 
 ## Abstract
 
@@ -36,16 +36,18 @@ This funding would provide a sustainable way to incentivize and reward community
 
 ### Use of Funds
 
-Requesting funding of a maximum 14,000 MTA per quarter at the beginning of each quarter, starting in Q1 2022. This amount has been calculated based on the following estimated spending:
+Requesting funding of a maximum 27,500 MTA per quarter at the beginning of each quarter, starting in Q1 2022. This amount has been calculated based on the following estimated spending:
 
-- Coordinape: 7500 MTA (Max 2500 MTA per epoch with 3 epochs per quarter)
-- Moderator Payments: 4500 MTA (based on estimated MTA price of 1.00 USD)
-- Contests and giveaways: 1500 MTA per quarter
+- Compensating 3 community signers across the ProtocolDAO & TreasuryDAO: 12,000 MTA (1,000 USD worth of MTA per signer per month, based on current MTA price of 0.75 USD as minimum)
+- Coordinape: 7,500 MTA (Max 2,500 MTA per epoch with 3 epochs per quarter)
+- Moderator Payments: 6,000 MTA (500 USD worth of MTA per moderator per month, based on current MTA price of 0.75 USD as minimum)
+- Contests and giveaways: 1,500 MTA per quarter
 - Tipbot: 500 MTA per quarter
 
-We would not expect all of the funds to be used every quarter. To allow only a small buffer to accumulate, the account will be topped up to a maximum of 15,000 MTA each quarter (plus an allowance for any outstanding accounts payable from the previous quarter).
+We would not expect all of the funds to be used every quarter. To allow only a small buffer to accumulate, the account will be topped up to a maximum of 30,000 MTA each quarter (plus an allowance for any outstanding accounts payable from the previous quarter).
 
-The amounts specified above for each activity should be considered a rough guideline and actual spending may vary quarter to quarter based on requirements. 
+The amounts specified above for each activity should be considered a rough guideline and actual spending may vary slightly quarter to quarter based on requirements. 
+
 
 ### Community subDAO structure and responsibilities
 
@@ -53,11 +55,11 @@ The amounts specified above for each activity should be considered a rough guide
 - New Gnosis safes will be deployed on Ethereum mainnet and the Polygon PoS network and remaining funds from existing multisig will be transferred to these safes. Safe address will be shared upon approval of this TDP.
 
 - Proposed initial structure is a 2/3 Gnosis Safe with the following signers:
-    - Penguin (mStable "Lord of the Discord")
+    - Penguin (mStable Lord of the Discord)
     `0xA5DfE92D76590d169d6A622E35E223a07627A2b3`
     - Derrick (mStable Growth & Partnerships)
     `0x9E0F8D06E68Af898E584C4054474124B092277Dc`
-    - Cam Soulsby (mStable Operations Lead) 
+    - Cam Soulsby (mStable Operations) 
     `0x524269E900ca6ebe2FC57d719995c8D167F8b260`
 
 - Given the smaller amounts of MTA that will be disbursed by this subDAO, Gnosis Safes will be created on both Ethereum L1 and Polygon PoS. Funds will be bridged and distributed on Polygon unless L1 payments are specifically required.
