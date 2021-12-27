@@ -4,7 +4,7 @@ title: Whitelist Balancer DAO Gnosis Safe in Staking V2
 status: Proposed
 author: Dimitri Golecko (@dimsome)
 discussions-to:
-created: 2021-12-120
+created: 2021-12-20
 ---
 
 ## Simple Summary
@@ -25,7 +25,7 @@ Since we conducted the token swap with Balancer DAO, the MTA should be able to b
 
 To whitelist the Balancer DAO multisig the following transactions will be executed by the ProtocolDAO multisig:
 
-- [Staked MTA (stkMT](https://etherscan.io/token/0x8f2326316ec696f6d023e37a9931c2b2c177a3d7))
+- [Staked MTA (stkMT)](https://etherscan.io/token/0x8f2326316ec696f6d023e37a9931c2b2c177a3d7))
   - `0x8f2326316eC696F6d023E37A9931c2b2C177a3D7`:
   - `whitelistWrapper(0x10A19e7eE7d7F8a52822f6817de8ea18204F2e4f)`
 - [Staked Token BPT (stkBPT)](https://etherscan.io/token/0xefbe22085d9f29863cfb77eed16d3cc0d927b011)
