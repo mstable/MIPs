@@ -248,11 +248,8 @@ interface IBoostedVaultWithLockup {
 
 #### Migration
 
-Funds in SAVE will require a migration from v2 to v3 in order to continue to accrue interest.
-This will be primarily supported on the [mStable-app][5] with changes on the UI that will make it easy for users to 
-redeem their imAssets/mAssets into a bAsset/fAsset in one transaction. 
+The following contracts need to be updated via proxy:
 
-Contracts to upgrade:
 - mUSD Savings Vault  `0x78BefCa7de27d07DC6e71da295Cc2946681A6c7B`
 - imBTC Savings Vault `0xF38522f63f40f9Dd81aBAfD2B8EFc2EC958a3016`
 - Mainnet imUSD (SavingsContractV2 → SavingsContractV3) `0x30647a72Dc82d7Fbb1123EA74716aB8A317Eac19`
