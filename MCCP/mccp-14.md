@@ -13,7 +13,7 @@ created: 2022-01-14
 
 ## Abstract
 
-With the introduction of [Staking V2](https://mips.mstable.org/MIPS/mip-15.html), we introduced a limitation that only Externally Owned Accounts (EOA) can stake. Additionally, the functionality to whitelist certain contract addresses was added.
+With the introduction of [Staking V2](../MIPS/mip-15), we introduced a limitation that only Externally Owned Accounts (EOA) can stake. Additionally, the functionality to whitelist certain contract addresses was added.
 
 This Proposal requests to whitelist the following address in Staking V2: `0x6FcE4c6CDd8C4e6C7486553D09BdD9aEE61cF095`
 
