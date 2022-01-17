@@ -113,7 +113,7 @@ interface ISavingsContractV3 {
 }
 ```
 
-### Redeem from vault to bAsset/fAsset
+### Redeem from vault to bAsset/fAsset (Mainnet)
 
 **Ensures backwards compatibility** by maintaining all functions from the [previous IBoostedVaultWithLockup interface](https://github.com/mstable/mStable-contracts/blob/master/contracts/interfaces/IBoostedVaultWithLockup.sol).
 
@@ -238,15 +238,100 @@ interface IBoostedVaultWithLockup {
 }
 ```
 
+### Redeem from vault to bAsset/fAsset (Polygon)
+
+Add additional external function `withdrawAndUnwrap` to the Interface `IStakingRewardsWithPlatformToken`:
+
+```typescript
+interface IStakingRewardsWithPlatformToken {
+    /**
+     * @dev Stakes a given amount of the StakingToken for the sender
+     * @param _amount Units of StakingToken
+     */
+    function stake(uint256 _amount) external;
+
+    /**
+     * @dev Stakes a given amount of the StakingToken for a given beneficiary
+     * @param _beneficiary Staked tokens are credited to this address
+     * @param _amount      Units of StakingToken
+     */
+    function stake(address _beneficiary, uint256 _amount) external;
+
+    /**
+     * @dev Withdraws stake from pool and claims any unlocked rewards.
+     */
+    function exit() external;
+
+    /**
+     * @dev Withdraws given stake amount from the pool
+     * @param _amount Units of the staked token to withdraw
+     */
+    function withdraw(uint256 _amount) external;
+
+    /**
+     * @dev Withdraws given stake amount from the pool and
+     * redeems the staking token into a given asset.
+     * @param _amount        Units of the staked token to withdraw
+     * @param _minAmountOut  Minimum amount of `_output` to receive
+     * @param _output        Address of desired output b/f-Asset
+     * @param _beneficiary   Address to send output and any claimed reward to
+     * @param _router        Router address to redeem/swap
+     * @param _isBassetOut   Route action of redeem/swap
+     */
+    function withdrawAndUnwrap(
+        uint256 _amount,
+        uint256 _minAmountOut,
+        address _output,
+        address _beneficiary,
+        address _router,
+        bool _isBassetOut
+    ) external;
+
+    /**
+     * @dev Claims outstanding rewards (both platform and native) for the sender.
+     * First updates outstanding reward allocation and then transfers.
+     */
+    function claimReward() external;
+
+    /**
+     * @dev Claims outstanding rewards for the sender. Only the native
+     * rewards token, and not the platform rewards
+     */
+    function claimRewardOnly() external;
+
+    /**
+     * @dev Gets the last applicable timestamp for this reward period
+     */
+    function lastTimeRewardApplicable() external view returns (uint256);
+
+    /**
+     * @dev Calculates the amount of unclaimed rewards a user has earned
+     * @return 'Reward' per staked token
+     */
+    function rewardPerToken() external view returns (uint256, uint256);
+
+    /**
+     * @dev Calculates the amount of unclaimed rewards a user has earned
+     * @param _account User address
+     * @return Total reward amount earned
+     */
+    function earned(address _account) external view returns (uint256, uint256);
+}
+
+```
+
 #### Migration
 
 The following contracts need to be updated via proxy:
 
-- mUSD Savings Vault `0x78BefCa7de27d07DC6e71da295Cc2946681A6c7B`
-- imBTC Savings Vault `0xF38522f63f40f9Dd81aBAfD2B8EFc2EC958a3016`
+- Mainnet imUSD Savings Vault `0x78BefCa7de27d07DC6e71da295Cc2946681A6c7B`
+- Mainnet imBTC Savings Vault `0xF38522f63f40f9Dd81aBAfD2B8EFc2EC958a3016`
 - Mainnet imUSD (SavingsContractV2 → SavingsContractV3) `0x30647a72Dc82d7Fbb1123EA74716aB8A317Eac19`
 - Mainnet imBTC (SavingsContractV2 → SavingsContractV3) `0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24`
+
+- Polygon imUSD Savings Vault `0x32aBa856Dc5fFd5A56Bcd182b13380e5C855aa29`
 - Polygon imUSD (SavingsContractV2 → SavingsContractV3) `0x5290Ad3d83476CA6A2b178Cd9727eE1EF72432af`
+
 
 ## Copyright
 
