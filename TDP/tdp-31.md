@@ -1,7 +1,7 @@
 ---
 tdp: 31
 title: Pre-Approve MTA for Market Making
-status: WIP
+status: Implemented
 author: James Eddington (@jameseddington), mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/
 created: 2021-12-10

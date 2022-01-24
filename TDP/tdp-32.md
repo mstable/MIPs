@@ -1,7 +1,7 @@
 ---
 tdp: 32
 title: Olympus Pro Bond Adjustments
-status: WIP
+status: Approved
 author: James Eddington (@jameseddington), mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/
 created: 2021-12-10
@@ -9,7 +9,7 @@ created: 2021-12-10
 
 ## Simple Summary
 
-It is proposed to amend [TDP 25](./tdp-25)) to change the token used to purchase MTA bonds from [cvxmusd3crv](https://etherscan.io/token/0xd34d466233c5195193df712936049729140dbbd7) to [mUSD](https://etherscan.io/token/0xe2f2a5c287993345a840db3b0845fbc70f5935a5) for the 2nd round of Olympus Pro bond issuance and beyond if required.
+It is proposed to amend [TDP 25](./tdp-25) to change the token used to purchase MTA bonds from [cvxmusd3crv](https://etherscan.io/token/0xd34d466233c5195193df712936049729140dbbd7) to [mUSD](https://etherscan.io/token/0xe2f2a5c287993345a840db3b0845fbc70f5935a5) for the 2nd round of Olympus Pro bond issuance and beyond if required.
 
 ## Abstract
 

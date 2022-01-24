@@ -1,7 +1,7 @@
 ---
 tdp: 33
 title: Community subDAO Creation and Funding
-status: WIP
+status: Implemented
 author: Cam Soulsby (@camsoulsby)
 discussions-to: https://forum.mstable.org
 created: 2021-12-17
