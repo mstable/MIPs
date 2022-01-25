@@ -3,7 +3,7 @@ mccp: 12
 title: Whitelist Balancer DAO Gnosis Safe in Staking V2
 status: Implemented
 author: Dimitri Golecko (@dimsome)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-12-whitelist-balancer-dao-gnosis-safe-in-staking-v2/744
 created: 2021-12-20
 ---
 
