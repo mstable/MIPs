@@ -23,11 +23,11 @@ Proper transparency will be still preserved and all transactions to whitelist a 
 
 Recently, this limitation meant that each Multisig would also need to be whitelisted with an accompanying proposal. This adds a lot of overhead and delays the process. We should allow the ProtocolDAO to whitelist all Multisigs upon request from the Multisig owners immediately without the need to go via governance.
 
-In general, following the ethos of permissionless and decentralisation, all Multisigs should be able to stake MTA if they wish so, without the community involved to allow this to proceed. The initial intention of the limitation around smart contracts interactions with Staking V2 was not to slow down the process of Multisigs staking, but rather to mitigate certain functionalities within wrapper contracts for Staking V2.
+In general, following the ethos of permissionless and decentralisation, all Multisigs should be able to stake MTA if they wish so, without the need for permission via governance. The initial intention of the limitation around smart contracts interactions with Staking V2 was not to slow down the process of Multisigs staking, but rather to mitigate certain functionalities within wrapper contracts for Staking V2.
 
 ## Specification
 
-A Multisig can be requested to be whitelisted by either contacting a member of the team, the cat herder or directly in the forum. Upon request, a signer of the Multisig or the cat herder will check and verify via Etherscan that the requested address is indeed a Multisig. After which a transaction in the ProtocolDAO Multisig can be queued to whitelist the requested address:
+A Multisig can be requested to be whitelisted by either contacting a member of the team, the Cat Herder or directly in the forum. Upon request, a signer of the Multisig or the Cat Herder will check and verify via Etherscan that the requested address is indeed a Multisig. After which a transaction in the ProtocolDAO Multisig can be queued to whitelist the requested address:
 
 - [Staked MTA (stkMT)](https://etherscan.io/token/0x8f2326316ec696f6d023e37a9931c2b2c177a3d7)
   - `0x8f2326316eC696F6d023E37A9931c2b2C177a3D7`:
