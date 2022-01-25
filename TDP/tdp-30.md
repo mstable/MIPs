@@ -1,7 +1,7 @@
 ---
 tdp: 30
 title: Gitcoin Quadratic Lands Hackey Sack Purchase
-status: WIP
+status: Implemented
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/
 created: 2021-12-10
