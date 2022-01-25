@@ -1,9 +1,9 @@
 ---
 mccp: 14
 title: Whitelist Abachi Multisig in Staking V2
-status: Proposed
+status: Implemented
 author: 3L3C70 (@FaysalM)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-14-whitelist-abachi-multisig-in-staking-v2/772
 created: 2022-01-14
 ---
 
