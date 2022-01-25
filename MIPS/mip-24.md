@@ -3,7 +3,7 @@ mip: 24
 title: Emissions Controller
 status: Implemented
 author: Dimitri Golecko (@dimsome), Nick Addison (@naddison36)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mip-24-emissions-controller/718
 created: 2021-11-24
 ---
 
