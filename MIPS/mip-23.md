@@ -3,7 +3,7 @@ mip: 23
 title: Remove mUSD from Iron Bank
 status: Approved
 author: Dimitri Golecko (@dimsome)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mip-23-remove-musd-from-iron-bank/717
 created: 2021-11-24
 ---
 

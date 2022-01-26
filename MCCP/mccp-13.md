@@ -1,9 +1,9 @@
 ---
 mccp: 13
 title: Increase cache for BUSD and GUSD Feeder Pools
-status: Proposed
+status: Implemented
 author: Dimitri Golecko (@dimsome)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-13-increase-cache-for-busd-and-gusd-feeder-pools/747
 created: 2021-12-27
 ---
 
