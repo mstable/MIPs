@@ -1,9 +1,9 @@
 ---
 mccp: 15
 title: Whitelist Multisigs in Staking V2
-status: WIP
+status: Proposed
 author: Dimitri Golecko (@dimsome)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-15-whitelist-multisigs-in-staking-v2/784
 created: 2022-01-25
 ---
 
