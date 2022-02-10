@@ -3,7 +3,7 @@ mccp: 17
 title: Add Vesper vaMUSD dial
 status: WIP
 author: Green Jeff | Vesper Finance (@jeffthedunker)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-17-add-vesper-vamusd-dial/802
 created: 2022-02-10
 ---
 
