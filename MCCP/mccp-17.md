@@ -36,7 +36,7 @@ A new instance of the contract `BasicRewardsForwarder` will be deployed on Ether
 And initialized with:
 
 - `emissionsController = 0xBa69e6FC7Df49a3b75b565068Fb91ff2d9d91780` (Emissions Controller deployed address)
-- `endRecipient = 0x963a9593C9fb4dE39C94452d3De437E8Ab1F7074` (Vesper vaMUSD Rewards Contract)
+- `endRecipient = 0x968d6024e32d30a7334Ffc5373CcD97a3d199E94` (Vesper vaMUSD Rewards Contract)
 
 This contract receives the MTA from the Emissions Controller and forwards it to the staking contract controlled by Vesper.
 
