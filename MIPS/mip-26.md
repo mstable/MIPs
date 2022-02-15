@@ -54,8 +54,6 @@ This step will increase the value of the protocol and consequently for MTA holde
 - [RAI Aave V2 Integration](https://etherscan.io/address/0x8cc6a1ae38743d453f2522c5228b775d145f43b7): `0x8cc6a1ae38743d453f2522c5228b775d145f43b7`
 - [FEI Aave V2 Integration](https://etherscan.io/address/0x4094aec22f40f11c29941d144c3dc887b33f5504): `0x4094AeC22f40F11c29941d144C3DC887B33f5504`
 
-###
-
 ## Technical Specification
 
 The contract `Unliquidator` has the following functions:
