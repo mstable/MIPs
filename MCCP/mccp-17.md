@@ -1,7 +1,7 @@
 ---
 mccp: 17
 title: Add Vesper vaMUSD dial
-status: WIP
+status: Proposed
 author: Green Jeff | Vesper Finance (@jeffthedunker)
 discussions-to: https://forum.mstable.org/t/mccp-17-add-vesper-vamusd-dial/802
 created: 2022-02-10
@@ -9,7 +9,8 @@ created: 2022-02-10
 
 ## Simple Summary
 
-It is proposed to add a dial in the [Emissions Controller](https://mips.mstable.org/MIPS/mip-24.html) for [Vesper Finance](https://vesper.finance/)’s vaMUSD Pool.
+It is proposed to add a dial in the [Emissions Controller](../MIPS/mip-24) for [Vesper Finance](https://vesper.finance/)’s vaMUSD Pool.
+
 ## Abstract
 
 [Vesper Finance](https://vesper.finance/) is a DeFi super app that makes DeFi more accessible and easier to use. It offers well-audited products that simplify digital asset growth and deliver new opportunities for exposure to emerging DeFi projects and communities. The platform’s native token, [VSP](https://www.coingecko.com/en/coins/vesper-finance), incentivizes participation, facilitates governance and catalyzes user contribution.
@@ -43,10 +44,10 @@ This contract receives the MTA from the Emissions Controller and forwards it to 
 This contract will then be added to the Emissions Controller as a dial:
 
 - `Emissions Controller (0xBa69e6FC7Df49a3b75b565068Fb91ff2d9d91780)`
-    - `addDial (address recipient, uint8 cap, bool notify)`
-    - `recipient` = New deployed instance of `BasicRewardsForwarder` as specified above
-    - `uint8 cap = 0` uncapped (only used for MTA staking contracts to cap)
-    - `notify = true` will call the function to notify and process the MTA rewards upon disperse
+  - `addDial (address recipient, uint8 cap, bool notify)`
+  - `recipient` = New deployed instance of `BasicRewardsForwarder` as specified above
+  - `uint8 cap = 0` uncapped (only used for MTA staking contracts to cap)
+  - `notify = true` will call the function to notify and process the MTA rewards upon disperse
 
 ## Copyright
 

@@ -1,7 +1,7 @@
 ---
 mccp: 16
 title: Fee restructuring for swaps and redemptions
-status: WIP
+status: Implemented
 author: Dimitri Golecko (@dimsome)
 discussions-to:
 created: 2022-02-03
