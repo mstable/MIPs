@@ -25,8 +25,6 @@ Staying up to date in DeFi is no easy task, and much less so if users are part o
 
 ## Specification
 
-### Proposed Workflow
-
 1.) Alter the IPFS-hosted Snapshot file document referenced on the [mstablegovernance.eth domain page](https://app.ens.domains/name/mstablegovernance.eth/details) by adding the `hal: {}` argument.
 
 2.) Upload the updated file to IPFS and change the link on the ENS domain page in the `snapshot` text record to the newly uploaded location.
