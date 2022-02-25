@@ -1,7 +1,7 @@
 ---
 tdp: 32
 title: Olympus Pro Bond Adjustments
-status: Approved
+status: Implemented
 author: James Eddington (@jameseddington), mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/
 created: 2021-12-10
