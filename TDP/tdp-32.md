@@ -1,9 +1,9 @@
 ---
 tdp: 32
 title: Olympus Pro Bond Adjustments
-status: Approved
+status: Implemented
 author: James Eddington (@jameseddington), mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org/
+discussions-to: https://forum.mstable.org/t/tdp-32-olympus-pro-bond-adjustments/737
 created: 2021-12-10
 ---
 
@@ -22,8 +22,6 @@ The first round of bonds have shown us that much more people were interested in 
 A lot of feedback was received regarding the LP token used for Olympus Pro, and [following the deposits made into the contract](https://etherscan.io/address/0xa8e5fa0072d292646d49999ef0d7f9354ec8e7a5) confirms that a simpler token for bonding is required to satisfy the usability of these bond purchases.
 
 ## Specification
-
-### Proposed workflow
 
 1.) The core contributor team will reach out to Olympus Pro and propose an amendment to change the token used for purchasing MTA bonds from [cvxmusd3crv](https://etherscan.io/token/0xd34d466233c5195193df712936049729140dbbd7) to [mUSD](https://etherscan.io/token/0xe2f2a5c287993345a840db3b0845fbc70f5935a5) for the 2nd round of bond issuance.
 
