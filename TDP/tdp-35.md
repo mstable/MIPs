@@ -7,7 +7,7 @@ discussions-to: https://forum.mstable.org
 created: 2021-03-04
 ---
 
-## Simple **Summary**
+## Simple Summary
 
 It is proposed to rotate a signer in both the TreasuryDAO and the ProtocolDAO. 
 
