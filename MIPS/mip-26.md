@@ -33,6 +33,8 @@ Once the treasury starts accumulating these tokens, it can use the additional yi
 
 This step will increase the value of the protocol and consequently for MTA holders. We are in a sense exchanging platform rewards for MTA. Savers get MTA and we get COMP and stkAAVE. Both win, since savers receive a portion of these earned rewards as a share of the MTA supply, while the treasury is left with nothing.
 
+## Specification
+
 1.) A new smart contract `Unliquidator` will be deployed to replace the [currently deployed `Liquidator`](https://github.com/mstable/mStable-contracts/blob/master/contracts/masset/liquidator/Liquidator.sol). As the previous smart contract was conceptualized to claim rewards (mainly stkAave and COMP), and liquidate those, the new smart contract will be used for claiming and transferring the rewards the [Asset Management subDAO](https://etherscan.io/address/0x67905d3e4fec0c85dce68195f66dc8eb32f59179). The contract will be deployed with the following parameters:
 
 - `address nexus = 0xAFcE80b19A8cE13DEc0739a1aaB7A028d6845Eb3`
