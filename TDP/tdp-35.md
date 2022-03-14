@@ -1,9 +1,9 @@
 ---
 tdp: 35
 title: Q1 Signer Rotation & Offboarding Clause
-status: WIP
+status: Proposed
 author: mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org
+discussions-to: https://forum.mstable.org/t/tdp-35-q1-signer-rotation-offboarding-clause/827
 created: 2021-03-04
 ---
 
