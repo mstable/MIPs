@@ -7,7 +7,7 @@ discussions-to: https://forum.mstable.org
 created: 2021-03-14
 ---
 
-## Simple **Summary**
+## Simple Summary
 
 It is proposed to liquidate the position the Asset Management subDAO [holds in DTOP](https://zapper.fi/account/0x67905d3e4fec0c85dce68195f66dc8eb32f59179) and swap this token for CVX, as with the recent unlock of all staked CVX there exists now a very opportune time to enter this particular ecosystem and benefit from having voting power on the platform towards perpetually incentivizing the mUSD/3crv pool to benefit liquidity providers and Save users alike.
 
