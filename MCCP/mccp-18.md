@@ -1,7 +1,7 @@
 ---
 mccp: 18
 title: Add Idle Finance dial for 3pool PYT
-status: WIP
+status: Proposed
 author: Davide_IdleDAO
 discussions-to:
 created: 2022-03-09
