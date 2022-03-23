@@ -1,7 +1,7 @@
 ---
 mip: 26
 title: Stop COMP & stkAAVE Liquidations
-status: WIP
+status: Implemented
 author: mZero2Nine (@mzero2nine), Dimitri Golecko (@dimsome)
 discussions-to:
 created: 2022-02-15

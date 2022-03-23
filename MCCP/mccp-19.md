@@ -3,7 +3,7 @@ mccp: 19
 title: Disable automated collection of fees for Mainnet Save redemptions
 status: WIP
 author: Nick Addison (@naddison36)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-19-disable-automated-collection-of-fees-for-mainnet-save-redemptions/833
 created: 2022-03-15
 ---
 
