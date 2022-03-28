@@ -1,9 +1,9 @@
 ---
 tdp: 36
 title: DTOP Liquidation
-status: WIP
+status: Proposed
 author: mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org
+discussions-to: https://forum.mstable.org/t/tdp-36-dtop-liquidation/831
 created: 2021-03-14
 ---
 
@@ -29,13 +29,13 @@ It is therefore suggested to liquidate this position, and use the resulting liqu
 
 1.) Exit the DTOP position [via dHEDGE](https://app.dhedge.org/pool/0x0f4c00139602ab502bc7c1c0e71d6cb72a9fb0e7)
 
-1.) Swap sUSD for CVX via [CowSwap](https://cowswap.exchange/#/swap)
+2.) Swap sUSD for CVX via [CowSwap](https://cowswap.exchange/#/swap)
 
-2.) [Lock resulting CVX on Convex](https://www.convexfinance.com/lock-cvx)
+3.) [Lock resulting CVX on Convex](https://www.convexfinance.com/lock-cvx)
 
-3.) Delegate voting power to the [Governance Coordinator address](https://etherscan.io/address/0x908db31ce01dc42c8b712f9156e969bc65023119) to be able to participate in Snapshot voting
+4.) Delegate voting power to the [Governance Coordinator address](https://etherscan.io/address/0x908db31ce01dc42c8b712f9156e969bc65023119) to be able to participate in Snapshot voting
 
-4.) Vote for the mUSD/3crv gauge in perpetuity to delegate ecosystem rewards to this pool
+5.) Vote for the mUSD/3crv gauge in perpetuity to delegate ecosystem rewards to this pool
 
 ## Copyright
 
