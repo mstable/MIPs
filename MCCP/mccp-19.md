@@ -44,7 +44,7 @@ Give gas is still cheap on Polygon, the automated collection of swap and redeem 
 
 ## Specification
 
-Call the function `automateInterestCollectionFlag(bool _enabled)` with `_enabled = true` from the ProtocolDAO multisig on the following contracts:
+Call the function `automateInterestCollectionFlag(bool _enabled)` with `_enabled = false` from the ProtocolDAO multisig on the following contracts:
 
 - [0x30647a72Dc82d7Fbb1123EA74716aB8A317Eac19](https://etherscan.io/address/0x30647a72dc82d7fbb1123ea74716ab8a317eac19) (imUSD / mUSD Savings Contract)
 - [0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24](https://etherscan.io/address/0x17d8cbb6bce8cee970a4027d1198f6700a7a6c24) (imBTC / mBTC Savings Contract)
