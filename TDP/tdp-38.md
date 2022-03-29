@@ -9,7 +9,7 @@ created: 2021-03-29
 
 ## Simple Summary
 
-[TDP 37 (Pre-approve BPT Locking & Voting for veBAL](https://forum.mstable.org/t/tdp-37-pre-approve-bpt-locking-voting-for-vebal/837)) proposed to use staked BPT (obtained from the 80/20 BAL/WETH pool) to reward BAL rewards to our own 80/20 MTA/WETH pool.
+[TDP 37 (Pre-approve BPT Locking & Voting for veBAL)](https://forum.mstable.org/t/tdp-37-pre-approve-bpt-locking-voting-for-vebal/837) proposes to use staked BPT (obtained from the 80/20 BAL/WETH pool) to reward BAL rewards to our own 80/20 MTA/WETH pool.
 This TDP38 proposes to extend the BPT staking approval to a wider array of protocols that could be built on top of the veBAL framework (i.e protocols using BPT to redirect BAL inflation rewards).
 
 Such protocols could be liquidity rewards redirection protocols & others exotic players using the BPT/veBAL primitive.
@@ -27,11 +27,13 @@ Rewards are spread over a fixed number of epochs, very high at the beginning and
 
 As an example, [Votium’s first round](https://llama.airforce/#/votium/rounds) was 58.82x less subscribed than the 14th one. 
 This under subscription had a direct effect on the ROI early participants had on their bribes: a $ bribed on Votium was earning 6.58x higher CVX rewards during the first round compared to the 14th one
-assets/TDP-37.1/votium1.png
-assets/TDP-37.1/votium2.png
+
+![Votium 1](../assets/TDP-38/votium1.png)
+![Votium 2](../assets/TDP-38/votium2.png)
+
 
 mStable was an early participant in Votium bribes and saw a huge spike of TVL thanks to this in November 2021:
-assets/TDP-37.1/tvl1.png
+![TVL](../assets/TDP-38/tvl1.png)
 
 ## Specification
 
