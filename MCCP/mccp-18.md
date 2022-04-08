@@ -1,9 +1,9 @@
 ---
 mccp: 18
 title: Add Idle Finance dial for 3pool PYT
-status: Proposed
+status: Approved
 author: Davide_IdleDAO
-discussions-to: https://forum.mstable.org/t/mccp-18-add-idle-finance-dial-for-3pool-pyt/830
+discussions-to:
 created: 2022-03-09
 ---
 
@@ -64,9 +64,9 @@ A new instance of the contract `BasicRewardsForwarder` will be deployed on Ether
 And initialized with:
 
 - `emissionsController = 0xBa69e6FC7Df49a3b75b565068Fb91ff2d9d91780` (Emissions Controller deployed address)
-- `endRecipient = 0x4a07723bb06bf9307e4e1998834832728e6cdb49`
+- `endRecipient = TODO: To be deployed staking contract address``
 
-This contract receives the MTA from the Emissions Controller and forwards it to the staking contract controlled by Idle Finance (`endRecipient`). The Idle DAO controlled multisig calls then the `depositReward` function each week, so the contract is aware of the new rewards added and starts distributing those.
+This contract receives the MTA from the Emissions Controller and forwards it to the staking contract controlled by Idle Finance.
 
 This contract will then be added to the Emissions Controller as a dial:
 
