@@ -1,9 +1,9 @@
 ---
 tdp: 37
 title: Pre-approve BPT Locking & Voting for veBAL
-status: WIP
+status: Approved
 author: mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org
+discussions-to: https://forum.mstable.org/t/tdp-37-pre-approve-bpt-locking-voting-for-vebal/837
 created: 2021-03-23
 ---
 

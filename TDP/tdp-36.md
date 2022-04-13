@@ -1,7 +1,7 @@
 ---
 tdp: 36
 title: DTOP Liquidation
-status: Proposed
+status: Approved
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/tdp-36-dtop-liquidation/831
 created: 2021-03-14

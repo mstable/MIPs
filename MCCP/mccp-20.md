@@ -2,7 +2,7 @@
 mccp: 20
 title: Overhaul the Governance Fee Flow
 status: Proposed
-author: Nick Addison (@naddison36)
+author: Nick Addison (@naddison36), mZeroNine (@mzero2nine)
 discussions-to:
 created: 2022-04-05
 ---
