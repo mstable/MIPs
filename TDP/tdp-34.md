@@ -1,7 +1,7 @@
 ---
 tdp: 34
 title: Add HAL Plugin to Snapshot
-status: Approved
+status: Implemented
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/tdp-34-add-hal-plugin-to-snapshot/817
 created: 2021-02-25
