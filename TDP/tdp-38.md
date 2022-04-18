@@ -2,7 +2,7 @@
 tdp: 38
 title: Addendum to Pre-approve BPT Locking & Voting for veBAL
 status: Approved
-author: 0xloth
+author: 0xloth (@LDeroccha)
 discussions-to: https://forum.mstable.org/t/tdp-38-addendum-to-pre-approve-bpt-locking-voting-for-vebal/838
 created: 2021-03-29
 ---

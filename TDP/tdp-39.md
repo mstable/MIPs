@@ -1,9 +1,9 @@
 ---
 tdp: 39
 title: Addendum to DTOP Liquidation
-status: WIP
-author: 0xloth, mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org
+status: Proposed
+author: 0xloth (@LDeroccha), mZeroNine (@mzero2nine)
+discussions-to: https://forum.mstable.org/t/tdp-39-addendum-to-dtop-liquidation/851
 created: 2021-04-13
 ---
 
