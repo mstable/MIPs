@@ -3,7 +3,7 @@ tdp: 40
 title: Uniswap v3 Liquidity Deployment
 status: WIP
 author: mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org
+discussions-to: https://forum.mstable.org/t/tdp-40-uniswap-v3-liquidity-deployment/854
 created: 2021-04-18
 ---
 
