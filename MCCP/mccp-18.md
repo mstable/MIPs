@@ -64,7 +64,7 @@ A new instance of the contract `BasicRewardsForwarder` will be deployed on Ether
 And initialized with:
 
 - `emissionsController = 0xBa69e6FC7Df49a3b75b565068Fb91ff2d9d91780` (Emissions Controller deployed address)
-- `endRecipient = TODO: To be deployed staking contract address``
+- `endRecipient = 0x7f366a2b4c4380fd9746cf10b4ded562c890b0b1`
 
 This contract receives the MTA from the Emissions Controller and forwards it to the staking contract controlled by Idle Finance.
 
