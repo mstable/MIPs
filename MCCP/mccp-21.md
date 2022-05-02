@@ -1,7 +1,7 @@
 ---
 mccp: 21
 title: Stake BPT staked in mStable into Balancer Staking contracts
-status: WIP
+status: Approved
 author: derc (@derc), Nick Addison (@naddison36)
 discussions-to: https://forum.mstable.org/t/rfc-stake-bpt-staked-in-mstable-into-balancer-staking-contracts/
 created: 2022-04-12
