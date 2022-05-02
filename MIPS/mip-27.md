@@ -1,7 +1,7 @@
 ---
 mip: 27
 title: Upgrade Save Contract to comply with ERC-4626
-status: Proposed
+status: Approved
 author: Dimitri Golecko (@dimsome), Cesar Chavez (@doncesarts)
 discussions-to: https://forum.mstable.org/
 created: 2022-04-21
