@@ -1,9 +1,9 @@
 ---
 tdp: 41
 title: Discretionary Management of Funds in the AM subDAO
-status: WIP
+status: Implemented
 author: mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org
+discussions-to: https://forum.mstable.org/t/tdp-41-discretionary-management-of-funds-in-the-am-subdao/859
 created: 2021-04-20
 ---
 
