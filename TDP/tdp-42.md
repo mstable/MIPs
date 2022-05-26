@@ -47,12 +47,6 @@ The 1,000,000 mUSD loan to KBIT can be recalled within 48 hours notice if the fu
 
 As part of this proposal, it is also suggested that the TreasuryDAO be given discretionary power to recall the loan and delist mUSD if the benefits are no longer seen to outweigh the opportunity cost and risk. This will avoid the need for another full governance proposal in the case that this is deemed appropriate, and therefore may reduce operational workload in the future.
 
-## Next Steps
-
-Pending no significant changes to its content, this proposal will be taken to a Snapshot vote on **Monday, the 6th of June 2022** .
-
-Voting will be open for a 5 days window to give adequate time for a concurrent discussion. Governors can change their vote at any time should the discussion sway their decision. We look forward to hearing what MTA token holders have to say and seeing how they cast their votes.
-
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
