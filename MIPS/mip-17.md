@@ -3,7 +3,7 @@ mip: 17
 title: Add mUSD/RAI Feeder Pool
 status: Implemented
 author: Stefan Ionescu (@stefanionescu)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/pdp-32-add-musd-rai-feeder-pool/668/5
 created: 2021-10-11
 ---
 

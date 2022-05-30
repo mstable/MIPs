@@ -3,7 +3,7 @@ mccp: 20
 title: Overhaul the Governance Fee Flow
 status: Implemented
 author: Nick Addison (@naddison36), mZeroNine (@mzero2nine)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-16-fee-restructuring-for-swaps-and-redemptions/796/6
 created: 2022-04-05
 ---
 

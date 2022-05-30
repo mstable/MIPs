@@ -3,7 +3,7 @@ mip: 26
 title: Stop COMP & stkAAVE Liquidations
 status: Implemented
 author: mZero2Nine (@mzero2nine), Dimitri Golecko (@dimsome)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mip-26-stop-comp-stkaave-liquidations/809/6
 created: 2022-02-15
 ---
 

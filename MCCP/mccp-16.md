@@ -3,7 +3,7 @@ mccp: 16
 title: Fee restructuring for swaps and redemptions
 status: Implemented
 author: Dimitri Golecko (@dimsome)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-16-fee-restructuring-for-swaps-and-redemptions/796/6
 created: 2022-02-03
 ---
 
