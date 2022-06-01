@@ -3,7 +3,7 @@ tdp: 42
 title: Continue Loan to Market Maker Supporting Coinbase mUSD Listing
 status: WIP
 author: Cam Soulsby (@camsoulsby)
-discussions-to: https://forum.mstable.org
+discussions-to: https://forum.mstable.org/t/tdp-42-continue-loan-to-market-maker-supporting-coinbase-musd-listing/874
 created: 2022-05-26
 ---
 
