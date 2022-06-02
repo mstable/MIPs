@@ -3,7 +3,7 @@ mccp: 18
 title: Add Idle Finance dial for 3pool PYT
 status: Implemented
 author: Davide_IdleDAO
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-16-fee-restructuring-for-swaps-and-redemptions/796/6
 created: 2022-03-09
 ---
 
