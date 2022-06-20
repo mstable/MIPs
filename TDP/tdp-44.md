@@ -11,7 +11,7 @@ created: 2022-06-20
 
 It is proposed to restructure the mStableDAO in order to increase its efficiency as well as overall ability to scale in the future without further re-adjustments down the line in order to prepare for the release of mStable v2. 
 
-Since the restructuring process as a whole is extensive, it is also proposed to split the mStableDAO restructuring into multiple TDPs in order to maintain explicitness in the voting outcome as well as ensuring a digestible format for Meta Governors. The entire process will contain 4 TDPs in total and is planned to conclude by the 3rd week of August 2022 the latest.
+Since the restructuring process as a whole is extensive, it is also proposed to split the mStableDAO restructuring into multiple TDPs in order to maintain explicitness in the voting outcome as well as ensuring a digestible format for Meta Governors. The entire process will contain 4 TDPs in total.
 
 TDP 44: mStableDAO Restructure is concerned with the overall consensus on
 
@@ -52,7 +52,7 @@ Aside from aligning with a new vision and focus for mStable, the timing of this 
 
 ## Specification
 
-1.) Begin parallel rollout of TDP 44 for the election process, TDP 44 for the GrantsDAO and Community subDAO consolidation & review of the GrantsDAOs success after it’s first year of operation, as well as TDP 44 for the proposed compensation model under which the mStableDAO will fund its workforce.
+1.) Begin parallel rollout of TDP 45 for the election process, TDP 46 for the GrantsDAO and Community subDAO consolidation & review of the GrantsDAOs success after it’s first year of operation, as well as TDP 47 for the proposed compensation model under which the mStableDAO will fund its workforce.
 
 2.) Resolve the voting outcome of TDP 44: mStableDAO Restructure in order to begin the creation of subsequent key proposals in the following epochs. In case of an unfavourable voting outcome, the mStableDAO will not be restructured and votes on subsequent TDPs and further resolutions listed in the specification not take place. 
 
