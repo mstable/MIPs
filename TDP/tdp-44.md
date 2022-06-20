@@ -52,9 +52,9 @@ Aside from aligning with a new vision and focus for mStable, the timing of this 
 
 ## Specification
 
-1.) Begin parallel rollout of TDP 44.2 for the election process, TDP 44.3 for the GrantsDAO and Community subDAO consolidation & review of the GrantsDAOs success after it’s first year of operation, as well as TDP 44.4 for the proposed compensation model under which the mStableDAO will fund its workforce.
+1.) Begin parallel rollout of TDP 44 for the election process, TDP 44 for the GrantsDAO and Community subDAO consolidation & review of the GrantsDAOs success after it’s first year of operation, as well as TDP 44 for the proposed compensation model under which the mStableDAO will fund its workforce.
 
-2.) Resolve the voting outcome of TDP 44.1 in order to begin the creation of subsequent key proposals in the following epochs. In case of an unfavourable voting outcome, the mStableDAO will not be restructured and votes on subsequent TDPs and further resolutions listed in the specification not take place. 
+2.) Resolve the voting outcome of TDP 44: mStableDAO Restructure in order to begin the creation of subsequent key proposals in the following epochs. In case of an unfavourable voting outcome, the mStableDAO will not be restructured and votes on subsequent TDPs and further resolutions listed in the specification not take place. 
 
 3.) As each of the TDPs resolves, begin implementing the changes as ratified via Meta Governors in parallel as to reduce overhead and increase efficiency of the rollout.
 
