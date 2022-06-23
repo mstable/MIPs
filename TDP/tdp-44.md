@@ -3,7 +3,7 @@ tdp: 44
 title: mStableDAO Restructure
 status: WIP
 author: mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org
+discussions-to: https://forum.mstable.org/t/tdp-44-mstabledao-restructure/887
 created: 2022-06-20
 ---
 
@@ -26,7 +26,7 @@ The key actions proposed include:
 
 - Introducing a general universal contributor title which would involve removing current individual rules and holding a full election process (part of the next TDP) for each of the available seats inside of the respective DAO. Both DAOs will operate under a 4/6 multisig.
 - Merging the Asset Management subDAO with the TreasuryDAO and absorb primary funding functions of the Funding subDAO back into the TreasuryDAO.
-- Creation of a new “Product/Builder subDAO” to separate the ProtocolDAO from the full-time contributor's group that is responsible for the continuous roll-out and operations of the mStable product line. The creation of this subDAO will ensure the long-term success of the protocol while preventing any centralized points of failure or sensitivity to external threats
+- Creation of a new “Builder subDAO” to separate the ProtocolDAO from the full-time contributor's group that is responsible for the continuous roll-out and operations of the mStable product line. The creation of this subDAO will ensure the long-term success of the protocol while preventing any centralized points of failure or sensitivity to external threats
 
 ## Motivation
 
