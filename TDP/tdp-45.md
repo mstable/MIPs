@@ -3,7 +3,7 @@ tdp: 45
 title: mStableDAO Restructure - Election Process
 status: WIP
 author: mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org
+discussions-to: https://forum.mstable.org/t/tdp-45-mstabledao-restructure-election-process/888
 created: 2022-06-24
 ---
 
@@ -80,7 +80,7 @@ Being a core contributor for the TreasuryDAO and ProtocolDAO is an active role, 
 
 ### Core Contributor Compensation
 
-As previously outlined, the core contributor position will come with responsibilities and duties. Therefore a universal core contributor compensation of 1000 mUSD in MTA (calculated once as the 30 day WVAP at the beginning of the term and once again during the second quarter of the term) per month is transferred to each community signer to reward them for their time and efforts given to the DAO to their dedicated wallet.
+As previously outlined, the core contributor position will come with responsibilities and duties. Therefore a universal core contributor compensation of 1000 mUSD in MTA (calculated once as the 30 day VWAP at the beginning of the term and once again during the second quarter of the term) per month is transferred to each community signer to reward them for their time and efforts given to the DAO to their dedicated wallet.
 
 Additional compensation models that are available for core contributors that wish to engage in additional work for the DAO beyond the core tasks above will be outlined separately in TDP 47 together with the process and tooling used to facilitate these.
 
