@@ -1,9 +1,9 @@
 ---
 mccp: 22
 title: Disable underutilized dials
-status: Proposed
+status: Implemented
 author: Dimitri Golecko (@dimsome)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mccp-22-disable-underutilized-dials/875/5
 created: 2022-05-30
 ---
 
