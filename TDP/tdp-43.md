@@ -1,7 +1,7 @@
 ---
 tdp: 43
 title: Gamma Liquidity Migration
-status: Proposed
+status: Implemented
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/tdp-43-gamma-liquidity-migration/880
 created: 2022-06-01

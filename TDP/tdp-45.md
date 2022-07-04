@@ -45,8 +45,9 @@ In order to facilitate the election, the following steps will be conducted:
     1. A member may be nominated or nominate themselves. A nomination has to be accepted by the person in question by responding to the forum post outlined in 1a with the details requested.
     2. A member may be nominated or nominate themselves for both DAOs.
     3. A member that is already part of one of the two DAOs can be nominated for the other DAO, but can never accept seats on both DAOs at the same time to ensure sufficient decentralization.
+    4. To ensure that the ProtocolDAO can function in an agile and efficient manner moving forward, two out of the six available seats are reserved for Builder subDAO members, which will ensure that smart contract upgrades and changes can be queued without needless delays and overhead.
 3. Election
-    1. 2 Snapshot votes will be created for each DAO election after the nomination process has concluded. Ranked-choice voting will be used preferably but will be explicitly defined in the forum post outlined in 1a.
+    1. 2 Snapshot votes will be created for each DAO election after the nomination process has concluded. Ranked choice voting will be used preferably but will be explicitly defined in the forum post outlined in 1a.
     2. (Optionally) Candidates are given time during a community call to introduce themselves.
     3. The vote will be open from Monday to Friday.
 4. Acceptance
@@ -70,17 +71,15 @@ Being a core contributor for the TreasuryDAO and ProtocolDAO is an active role, 
 
 1.) Be available to confirm multi-sig transactions within a 24 hour time window except in rare circumstances, which should be communicated to the Cat Herder at least 24 hours in advance
 
-2.) Spend at least 10 hours per month on the official mStable governance forums and the official mStable Discord to meaningfully contribute to the ecosystem, whether that be participating in governance-related discussions or just engaging with the community
+2.) Be available and willing to participate actively in monthly TreasuryDAO & Governance Signer Calls (4PM UTC)
 
-3.) Be available and willing to participate actively in monthly TreasuryDAO & Governance Signer Calls (4PM UTC)
+3.) Have a solid understanding of good OpSec practices, including the mandatory usage of a hardware wallet.
 
-4.) Have a solid understanding of good OpSec practices, including the mandatory usage of a hardware wallet.
-
-5.) Additionally, TreasuryDAO core contributors should have a sound understanding of DeFi, keep themselves updated on developments and emerging technologies, and be able to read and understand queued multi-sig transactions and their expected behaviour. ProtocolDAO core contributors should have a sound understanding of Solidity, smart contract interactions, and other relevant skills to perform their duties well.
+4.) Additionally, TreasuryDAO core contributors should have a sound understanding of DeFi, keep themselves updated on developments and emerging technologies, and be able to read and understand queued multi-sig transactions and their expected behaviour. ProtocolDAO core contributors should have a sound understanding of Solidity, smart contract interactions, and other relevant skills to perform their duties well.
 
 ### Core Contributor Compensation
 
-As previously outlined, the core contributor position will come with responsibilities and duties. Therefore a universal core contributor compensation of 1000 mUSD in MTA (calculated once as the 30 day VWAP at the beginning of the term and once again during the second quarter of the term) per month is transferred to each community signer to reward them for their time and efforts given to the DAO to their dedicated wallet.
+As previously outlined, the core contributor position will come with responsibilities and duties. Therefore a universal core contributor compensation of 1000 mUSD per month is transferred to each community signer to reward them for their time and efforts given to the DAO to their dedicated wallet.
 
 Additional compensation models that are available for core contributors that wish to engage in additional work for the DAO beyond the core tasks above will be outlined separately in TDP 47 together with the process and tooling used to facilitate these.
 
