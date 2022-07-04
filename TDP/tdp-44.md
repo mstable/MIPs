@@ -1,7 +1,7 @@
 ---
 tdp: 44
 title: mStableDAO Restructure
-status: WIP
+status: Approved
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/tdp-44-mstabledao-restructure/887
 created: 2022-06-20
