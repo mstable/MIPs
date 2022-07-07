@@ -45,9 +45,9 @@ In order to facilitate the election, the following steps will be conducted:
     1. A member may be nominated or nominate themselves. A nomination has to be accepted by the person in question by responding to the forum post outlined in 1a with the details requested.
     2. A member may be nominated or nominate themselves for both DAOs.
     3. A member that is already part of one of the two DAOs can be nominated for the other DAO, but can never accept seats on both DAOs at the same time to ensure sufficient decentralization.
-    4. To ensure that the ProtocolDAO can function in an agile and efficient manner moving forward, two out of the six available seats are reserved for Builder subDAO members, which will ensure that smart contract upgrades and changes can be queued without needless delays and overhead.
+    4. To ensure that the ProtocolDAO can function in an agile and efficient manner moving forward, two out of the six available seats will be reserved for Builder subDAO members, which will ensure that smart contract upgrades and changes can be queued without needless delays and overhead. These seats will not be up for voting on Snapshot, but nominations for these seats still proceed as outlined in the process here.
 3. Election
-    1. 2 Snapshot votes will be created for each DAO election after the nomination process has concluded. Ranked choice voting will be used preferably but will be explicitly defined in the forum post outlined in 1a.
+    1. 2 Snapshot votes will be created for each DAO election after the nomination process has concluded. Multi-winner Ranked choice voting will be used preferably but will be explicitly defined in the forum post outlined in 1a.
     2. (Optionally) Candidates are given time during a community call to introduce themselves.
     3. The vote will be open from Monday to Friday.
 4. Acceptance
