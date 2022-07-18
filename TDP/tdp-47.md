@@ -1,9 +1,9 @@
 ---
 tdp: 47
 title: mStable Restructure - Compensation Model & subDAO Funding Request Framework
-status: WIP
+status: Proposed
 author: mZeroNine (@mzero2nine)
-discussions-to: https://forum.mstable.org
+discussions-to: https://forum.mstable.org/t/tdp-47-mstable-restructure-compensation-model-subdao-funding-request-framework/897
 created: 2022-07-13
 ---
 
