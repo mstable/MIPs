@@ -1,7 +1,7 @@
 ---
 tdp: 45
 title: mStableDAO Restructure - Election Process
-status: Proposed
+status: Approved
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/tdp-45-mstabledao-restructure-election-process/888
 created: 2022-06-24
@@ -17,7 +17,7 @@ This proposal outlines both the election process, as well as the tasks and respo
 
 With the overall restructuring of the mStableDAO, it is important to create a process for electing the signers for both the TreasuryDAO and ProtocolDAO in a way that is easily verifiable, decentralized, and ensures that an agile election process can take place without hindering day to day operations and other related tasks the DAO needs to perform regularly. 
 
-Previously, both DAOs consisted of a mix of entities from both the mStable core team, industry professionals, as well as community members. This new process proposes to do away with specific titles and reserved seats, and instead create one singular universal core contributor title for each signer across the board. 
+Previously, both DAOs consisted of a mix of entities from both the mStable core team, industry professionals, as well as community members. This new process proposes to do away with specific titles and reserved seats, and instead create one singular universal contributor title for each signer across the board. 
 
 The “Specification” section lists the exact process that is proposed to be followed for the signer elections, and would be enforced in this way upon successful resolution of TDP 45.
 
@@ -27,7 +27,7 @@ The mStableDAO is transitioning towards a more agile and decentralized structure
 
 By doing away with reserving specific seats for specific entities, we are widening the decentralization aspect of the DAO, while at the same time getting active contributors outside of these groups an opportunity to join the seats of the DAO.
 
-By introducing a universal core contributor title and signer compensation, we are also hardening our DAO against malicious actors that would target specific sub-sections of the DAO and instead streamline and simplify the way anyone can contribute to the mStableDAO in a meaningful and flexible way.
+By introducing a universal contributor title and signer compensation, we are also hardening our DAO against malicious actors that would target specific sub-sections of the DAO and instead streamline and simplify the way anyone can contribute to the mStableDAO in a meaningful and flexible way.
 
 Lastly, we are increasing transparency and accountability for each of the signers inside of the DAO by creating a mandatory rotation via a regular election process to ensure that Meta Governors continuously have an opportunity to chose the signers they deem most fit for the task at hand, and for allowing everyone to verify the process was carried out correctly in line with Governance.
 
@@ -61,13 +61,13 @@ In order to facilitate the election, the following steps will be conducted:
 
 ### Term length
 
-A core contributor is elected for 6 months, starting from the day of the resolution of the vote. After the first term ends, all seats in the DAOs will be made available again for election. A signer that has served in the past term may run again. There are no maximum amounts of terms hat a signer can run for.
+A signer is elected for 6 months, starting from the day of the resolution of the vote. After the first term ends, all seats in the DAOs will be made available again for election. A signer that has served in the past term may run again. There are no maximum amounts of terms hat a signer can run for.
 
-### Core Contributor tasks and responsibilities
+### Signer tasks and responsibilities
 
-Being a core contributor for the TreasuryDAO and ProtocolDAO is an active role, and it does require regular activity and knowledge about the mStable ecosystem and the proposals that are up for execution. This new structure does not allow for passivity and simply signing transactions that are queued in the multisig! 
+Being a signer for the TreasuryDAO and ProtocolDAO is an active role, and it does require regular activity and knowledge about the mStable ecosystem and the proposals that are up for execution. This new structure does not allow for passivity and simply signing transactions that are queued in the multisig! 
 
-*The basic tasks and responsibilities of each core contributor are as follows:*
+*The basic tasks and responsibilities of each signer are as follows:*
 
 1.) Be available to confirm multi-sig transactions within a 24 hour time window except in rare circumstances, which should be communicated to the Cat Herder at least 24 hours in advance
 
@@ -75,13 +75,13 @@ Being a core contributor for the TreasuryDAO and ProtocolDAO is an active role, 
 
 3.) Have a solid understanding of good OpSec practices, including the mandatory usage of a hardware wallet.
 
-4.) Additionally, TreasuryDAO core contributors should have a sound understanding of DeFi, keep themselves updated on developments and emerging technologies, and be able to read and understand queued multi-sig transactions and their expected behaviour. ProtocolDAO core contributors should have a sound understanding of Solidity, smart contract interactions, and other relevant skills to perform their duties well.
+4.) Additionally, TreasuryDAO signers should have a sound understanding of DeFi, keep themselves updated on developments and emerging technologies, and be able to read and understand queued multi-sig transactions and their expected behaviour. ProtocolDAO signers should have a sound understanding of Solidity, smart contract interactions, and other relevant skills to perform their duties well.
 
-### Core Contributor Compensation
+### Signer Compensation
 
-As previously outlined, the core contributor position will come with responsibilities and duties. Therefore a universal core contributor compensation of 1000 mUSD per month is transferred to each community signer to reward them for their time and efforts given to the DAO to their dedicated wallet.
+As previously outlined, the signer position will come with responsibilities and duties. Therefore a universal contributor compensation of 1000 mUSD per month is transferred to each community signer to reward them for their time and efforts given to the DAO to their dedicated wallet.
 
-Additional compensation models that are available for core contributors that wish to engage in additional work for the DAO beyond the core tasks above will be outlined separately in TDP 47 together with the process and tooling used to facilitate these.
+Additional compensation models that are available for signers that wish to engage in additional work for the DAO beyond the core tasks above will be outlined separately in TDP 47 together with the process and tooling used to facilitate these.
 
 ## Copyright
 
