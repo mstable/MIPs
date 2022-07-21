@@ -21,7 +21,7 @@ As the last of a series of TDPs concerning the restructuring of the mStableDAO, 
 
 In order to remain credible and neutral in a system that issues funds and disburses payments to other organizations and teams, it is important that contributors that oversee and coordinate these requests have the ability to act rationally and without the induced concern for their own job based on their decision-making process. 
 
-Because of this, several key positions in the ProtocolDAO & TreasuryDAO need to be compensated directly via the mStableDAO, and not through subDAO entities like the Builder or Ecosystem subDAO. 
+Because of this, several key positions in the ProtocolDAO & TreasuryDAO need to be compensated directly via the mStableDAO, and not through subDAO entities like the Builder or Ecosystem subDAO, which rely on approval of separate funding requests.
 
 In the event of any adverse conditions, this will ensure that core operational capacities of the mStableDAO remain intact, and can be rebuilt and restarted with the help of these individuals, or allow for an easy replacement of key personnel outside of any subDAO structure that usually involves legal or otherwise binding entities. 
 
@@ -89,12 +89,12 @@ The mStableDAO Cat Herder is entitled to a compensation, just like other core co
 
 Currently, this compensation is set to 6250 mUSD/month & [a vested MTA stream](https://app.sablier.finance/stream/102745) that is set to conclude in November 2024. 
 
-This compensation is subject to an annual review after the election process has concluded and the Cat Herder employed for an additional year. 
+This compensation is subject to an annual review after the election process has concluded and prior to the Cat Herder accepting employment for an additional year.
 
 It is proposed to base the annual review on the following metrics: 
 
 - Macro-economic situation in the real world (Inflation, taxes, overall risk framework)
-- Performance & Overtime commitment in the role from the previous fiscal year (where applicable)
+- Performance in the role from the previous fiscal year (where applicable)
 - Overall success of the mStable project in the previous fiscal year
 - Any other relevant KPIs helpful for the review process
 
@@ -112,9 +112,7 @@ The following highlights the high level responsibilities of the Operational Sign
 
 2.) Be comfortable in creating batch transactions for the DAO you’re situated in, and be proficient in the Gnosis Safe App, and it’s Transaction Builder.
 
-3.) Be located in a timezone that makes it possible for you to attend the monthly TreasuryDAO & Governance Signer Calls and actively participate in these calls if at all possible.
-
-4.) As before, depending on the signer spot taken inside the respective DAO, slight variations on the foundational duties are to be expected. 
+3.) As before, depending on the signer spot taken inside the respective DAO, slight variations on the foundational duties are to be expected. 
 
 a) TreasuryDAO signers are required to have a sound understanding of DeFi, tokenomics, keep themselves semi-updated on developments and other crucial emerging technologies and are able to read and understand queued multi-sig transactions and their expected and actual behaviour, and also can comfortably queue and understand how to craft transactions inside the Transaction Builder in Gnosis Safe and directly on the smart contract level
 
@@ -122,7 +120,7 @@ b.) ProtocolDAO signers are instead required to have sound understanding of Soli
 
 ***Election***
 
-The Operational Signers get elected on a half-yearly basis in line with the signer term period after the resolution of the [overall signer elections](https://mips.mstable.org/TDP/tdp-45.html). Interested individuals can submit their application internally to the respective DAO after the elections have taken place in order to streamline operations. For the ProtcolDAO, it is assumed that the mandated seats for the Builder subDAO will take on the role as Ops Signers.
+The Operational Signers get elected on a half-yearly basis in line with the signer term period after the resolution of the overall signer elections. Interested individuals can submit their application internally to the respective DAO after the elections have taken place and the ops signer will be selected by a vote within the signer group order to streamline operations.
 
 If no applications other than the applications from the current Operational Signers get submitted, it is assumed that the respective DAO is sufficiently pleased with the performance of the current Ops Signers, and no elections will have to take place and the current Ops Signers will be automatically employed for an additional term of 6 months. 
 
@@ -152,7 +150,7 @@ The following framework is proposed for the application process of a subDAO to a
 
 Once this initial post has been provided, the Cat Herder of the mStableDAO will be following up with a response detailing the next steps for the funding request, and give additional time and opportunity to Meta Governors to comment and feedback the request in greater detail over a period of 1 week.
 
-2.) If no strong objections to the request have been formed during this time, the Cat Herder will be moving the request towards a formal proposal in the following week, where additional feedback and more in-depth details can be provided for another week. 
+2.) Once general consensus to the request has been formed during this time, the Cat Herder will be moving the request towards a formal proposal in the following week, where additional feedback and more in-depth details can be provided for another week. 
 
 3.) Once the feedback and additional input has been provided in the formal proposal, necessary adaptations will be made for the proposal until basic consensus has been formed on the request, after which the proposal will be moved towards a Snapshot vote, as per [usual governance process](https://mips.mstable.org/MIPS/mip-20.html).
 
