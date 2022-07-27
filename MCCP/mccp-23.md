@@ -9,7 +9,7 @@ created:
 
 ## Simple Summary
 
-It is proposed to disable the second batch of underutilized dials in the Emissions Controller as launched with [MIP 24](../MIPS/mip-23) in order to avoid incentivising pools that receive a substantial amount of MTA per epoch but do not contribute effectively to the usage of the mStable protocol and add value by contributing to overall revenue.
+It is proposed to disable the second batch of underutilized dials in the Emissions Controller as launched with [MIP 24](../MIPS/mip-24) in order to avoid incentivising pools that receive a substantial amount of MTA per epoch but do not contribute effectively to the usage of the mStable protocol and add value by contributing to overall revenue.
 
 ## Abstract
 
