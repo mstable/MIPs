@@ -9,13 +9,13 @@ created:
 
 ## Simple Summary
 
-It is proposed to disable the second batch of underutilized dials in the Emissions Controller as launched with [MIP 24](MIPS/mip-23.md) in order to avoid incentivising pools that receive a substantial amount of MTA per epoch but do not contribute effectively to the usage of the mStable protocol and add value by contributing to overall revenue.
+It is proposed to disable the second batch of underutilized dials in the Emissions Controller as launched with [MIP 24](../MIPS/mip-23) in order to avoid incentivising pools that receive a substantial amount of MTA per epoch but do not contribute effectively to the usage of the mStable protocol and add value by contributing to overall revenue.
 
 ## Abstract
 
 Dials receive votes from MTA stakers that decide the allocation of newly emitted MTA. Some participants choose to actively shift their allocation while others allocate once and allow it to be dormant. This creates a dynamic in which some of the dials receive fairly few votes from a few individuals that haven’t adjusted their weights in a long while.
 
-The first set of dials was disabled with [MCCP 22](MCCP/mccp-22.md). This resulted in a much more streamlined emission process by avoiding dust MTA to be sent to illiquid pools.
+The first set of dials was disabled with [MCCP 22](./mccp-22). This resulted in a much more streamlined emission process by avoiding dust MTA to be sent to illiquid pools.
 
 This proposal seeks to further disable more dials and make MTA emissions more capital efficient. 
 
