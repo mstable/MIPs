@@ -1,10 +1,10 @@
 ---
 mccp: 23
-title: 
-status: 
-author: 
+title: Disable underutilized dials II
+status: Proposed
+author: Dimitri Golecko (@dimsome), Julian Kusnetzoff (@jkusne)
 discussions-to: 
-created: 
+created: 2022-07-27
 ---
 
 ## Simple Summary
