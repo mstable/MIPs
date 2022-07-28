@@ -1,8 +1,8 @@
 ---
 mccp: 24
-title: Reduce MTA weekly emissions
+title: Reduce weekly MTA emissions
 status: Proposed
-author: Dimitri Golecko (@dimsome), Julian Kusnetzoff (@jkusne)
+author: Julian Kusnetzoff (@jkusne),  Dimitri Golecko (@dimsome)
 discussions-to: 
 created: 2022-07-28
 ---
@@ -13,7 +13,7 @@ It is proposed to reduce the emissions of the Emissions Controller from the spec
 
 ## Abstract
 
-The Emissions Controller distributes an amount of MTA per week, according to what Stakers vote using dials. The amount of MTA to be distributed per week is a result of a polynomial function (specified in MIP 24), which ends up distributing 30M MTA throughout 6 years.
+The Emissions Controller distributes an amount of MTA per week, according to what Stakers vote using dials. The amount of MTA to be distributed per week is a result of a polynomial function (specified in [MIP 24](../MIPS/mip-24)), which ends up distributing 30M MTA throughout 6 years.
 
 As was discussed in this [forum post](https://forum.mstable.org/t/rfc-disable-all-dials-except-staking-treasury-and-create-a-v2-incentives-one/894),  emissions are currently a problem for MTA holders because they are going to farmers that provide liquidity and sell their rewards to improve their yield, instead of increasing decentralisation. Therefore the emissions are not used in the intended way.
 
@@ -43,7 +43,7 @@ x = epoch.
 
 This will quickly reduce the amount of MTA being distributed each week in order to end at 0 by the last epoch, reducing instantly the emissions by ~45%. If for any reason the implementation of this was delayed one or two weeks, the parameters in the linear function would be adjusted to maintain these two characteristics: (i) the last epoch, the MTA to be distributed shall be 0 and (ii) there shall be 612 epochs of distribution (12 years). This can be seen in the following chart:
 
-![weekly-emissions](/assets/MCCP-24/weekly-emissions.png)
+![weekly-emissions](../assets/MCCP-24/weekly-emissions.png)
 
 ## Technical Specification
 
@@ -67,7 +67,7 @@ The `EmissionsController.sol` will be updated in the following way:
 
 The new implementation contract should remove the `initialize` function as the proxy has already has the storage data. The `EmissionsController` still needs to implement `Initializable` to preserve the storage slots in the proxy contract.
 
-![0xebfd9cD78510c591eDa8735D0F8a87414eF27A83.svg](/assets/MCCP-24/0xebfd9cD78510c591eDa8735D0F8a87414eF27A83.svg)
+![0xebfd9cD78510c591eDa8735D0F8a87414eF27A83.svg](../assets/MCCP-24/0xebfd9cD78510c591eDa8735D0F8a87414eF27A83.svg)
 
 ## Copyright
 
