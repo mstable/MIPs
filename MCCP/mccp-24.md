@@ -3,7 +3,7 @@ mccp: 24
 title: Reduce weekly MTA emissions
 status: Proposed
 author: Julian Kusnetzoff (@jkusne),  Dimitri Golecko (@dimsome)
-discussions-to: 
+discussions-to: https://forum.mstable.org/t/mccp-24-reduce-weekly-mta-emissions/912
 created: 2022-07-28
 ---
 
@@ -35,9 +35,9 @@ f(x) = -Ax + B
 
 with 
 
-A = 141,520,641,762,763
+A = 141,142,065,475,643
 
-B = 88,308,880,459,964,300
+B = 88,072,648,856,801,500
 
 x = epoch.
 
@@ -57,7 +57,7 @@ An Instance of the `EmissionsController.sol` will be deployed with the following
 
 - `nexus = 0xAFcE80b19A8cE13DEc0739a1aaB7A028d6845Eb3` (Nexus Contract)
 - `rewardToken = 0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2` (MTA Token)
-- `TopLevelConfig = { A: 141520641762763, B: 88308880459964300, C: 0, D: 0, EPOCHS: 612 }`
+- `TopLevelConfig = { A: 141142065475643, B: 88072648856801500, C: 0, D: 0, EPOCHS: 612 }`
 
 A and B are used for the new linear distribution schedule. C and D are no longer in use but have to be defined in order to match the storage pattern of the proxy contract.
 
