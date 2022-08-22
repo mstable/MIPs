@@ -1,7 +1,7 @@
 ---
 mccp: 24
 title: Reduce weekly MTA emissions
-status: Proposed
+status: Accepted
 author: Julian Kusnetzoff (@jkusne),  Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/mccp-24-reduce-weekly-mta-emissions/912/6
 created: 2022-07-28
@@ -27,7 +27,7 @@ Liquidity mining programs have proven to be ineffective for achieving long-term,
 
 **MTA emission schedule**
 
-It is proposed to change the distribution of the remaining 24.5 Million MTA over 12 years instead of 6, starting from 25th August 2022 (which is epoch 37) and ending on 24th November 2033 (epoch 612). 
+It is proposed to change the distribution of the remaining 24.5 Million MTA over 12 years instead of 6, starting from 25th August 2022 (which is epoch 37) and ending on 24th November 2033 (epoch 624). 
 
 The weekly distribution schedule of the 24.5 Million MTA is defined by the following linear equation:
 
@@ -41,7 +41,7 @@ B = 88,072,648,856,801,500
 
 x = epoch.
 
-This will quickly reduce the amount of MTA being distributed each week in order to end at 0 by the last epoch, reducing instantly the emissions by ~45%. If for any reason the implementation of this was delayed one or two weeks, the parameters in the linear function would be adjusted to maintain these two characteristics: (i) the last epoch, the MTA to be distributed shall be 0 and (ii) there shall be 612 epochs of distribution (12 years). This can be seen in the following chart:
+This will quickly reduce the amount of MTA being distributed each week in order to end at 0 by the last epoch, reducing instantly the emissions by ~45%. If for any reason the implementation of this was delayed one or two weeks, the parameters in the linear function would be adjusted to maintain these two characteristics: (i) the last epoch, the MTA to be distributed shall be 0 and (ii) there shall be 624 epochs of distribution (12 years). This can be seen in the following chart:
 
 ![weekly-emissions](../assets/MCCP-24/weekly-emissions.png)
 
@@ -57,7 +57,7 @@ An Instance of the `EmissionsController.sol` will be deployed with the following
 
 - `nexus = 0xAFcE80b19A8cE13DEc0739a1aaB7A028d6845Eb3` (Nexus Contract)
 - `rewardToken = 0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2` (MTA Token)
-- `TopLevelConfig = { A: 141142065475643, B: 88072648856801500, C: 0, D: 0, EPOCHS: 612 }`
+- `TopLevelConfig = { A: 141142065475643, B: 88072648856801500, C: 0, D: 0, EPOCHS: 624 }`
 
 A and B are used for the new linear distribution schedule. C and D are no longer in use but have to be defined in order to match the storage pattern of the proxy contract.
 
