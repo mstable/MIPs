@@ -1,7 +1,7 @@
 ---
 mccp: 24
 title: Reduce weekly MTA emissions
-status: Accepted
+status: Approved
 author: Julian Kusnetzoff (@jkusne),  Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/mccp-24-reduce-weekly-mta-emissions/912
 created: 2022-07-28
@@ -15,7 +15,7 @@ It is proposed to reduce the emissions of the Emissions Controller from the spec
 
 The Emissions Controller distributes an amount of MTA per week, according to what Stakers vote using dials. The amount of MTA to be distributed per week is a result of a polynomial function (specified in [MIP 24](../MIPS/mip-24)), which ends up distributing 30M MTA throughout 6 years.
 
-As was discussed in this [forum post](https://forum.mstable.org/t/rfc-disable-all-dials-except-staking-treasury-and-create-a-v2-incentives-one/894),  emissions are currently a problem for MTA holders because they are going to farmers that provide liquidity and sell their rewards to improve their yield, instead of increasing decentralisation. Therefore the emissions are not used in the intended way.
+As was discussed in this [forum post](https://forum.mstable.org/t/rfc-disable-all-dials-except-staking-treasury-and-create-a-v2-incentives-one/894), emissions are currently a problem for MTA holders because they are going to farmers that provide liquidity and sell their rewards to improve their yield, instead of increasing decentralisation. Therefore the emissions are not used in the intended way.
 
 This proposal suggests updating the emissions controller and reducing overall weekly emissions by 45%, changing the emissions curve to a linear function and extending emissions of the same amount over 6 more years.
 
@@ -27,13 +27,13 @@ Liquidity mining programs have proven to be ineffective for achieving long-term,
 
 **MTA emission schedule**
 
-It is proposed to change the distribution of the remaining 24.5 Million MTA over 12 years instead of 6, starting from 25th August 2022 (which is epoch 37) and ending on 24th November 2033 (epoch 624). 
+It is proposed to change the distribution of the remaining 24.5 Million MTA over 12 years instead of 6, starting from 25th August 2022 (which is epoch 37) and ending on 24th November 2033 (epoch 624).
 
 The weekly distribution schedule of the 24.5 Million MTA is defined by the following linear equation:
 
 f(x) = -Ax + B
 
-with 
+with
 
 A = 141,142,065,475,643
 
@@ -58,7 +58,6 @@ An Instance of the `EmissionsController.sol` will be deployed with the following
 - `nexus = 0xAFcE80b19A8cE13DEc0739a1aaB7A028d6845Eb3` (Nexus Contract)
 - `rewardToken = 0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2` (MTA Token)
 - `TopLevelConfig = { A: 141142065475643, B: 88072648856801500, C: 0, D: 0, EPOCHS: 624 }`
-
 
 A and B are used for the new linear distribution schedule. C and D are no longer in use but have to be defined in order to match the storage pattern of the proxy contract.
 
