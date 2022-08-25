@@ -1,7 +1,7 @@
 ---
 tdp: 45
 title: mStableDAO Restructure - Election Process
-status: Approved
+status: Implemented
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/tdp-45-mstabledao-restructure-election-process/888
 created: 2022-06-24
