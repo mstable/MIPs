@@ -1,7 +1,7 @@
 ---
 mccp: 24
 title: Reduce weekly MTA emissions
-status: Approved
+status: Implemented
 author: Julian Kusnetzoff (@jkusne),  Dimitri Golecko (@dimsome)
 discussions-to: https://forum.mstable.org/t/mccp-24-reduce-weekly-mta-emissions/912
 created: 2022-07-28
