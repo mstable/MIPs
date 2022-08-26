@@ -1,7 +1,7 @@
 ---
 tdp: 46
 title: mStableDAO Restructure - Ecosystem subDAO
-status: Approved
+status: Implemented
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/tdp-46-mstabledao-restructure-community-subdao/895
 created: 2022-07-01
