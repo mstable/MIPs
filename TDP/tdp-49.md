@@ -29,7 +29,7 @@ A full itemized list of funding initiatives can be found in the “Amount Reques
 
 ## Motivation
 
-The Ecosystem subDAO Funding Request is created in order to resolve the merger between the Community subDAO and the GrantsDAO ratified in [TDP 46](https://mips.mstable.org/TDP/tdp-46.html)
+The Ecosystem subDAO Funding Request is created in order to resolve the merger between the Community subDAO and the GrantsDAO ratified in [TDP 46](./tdp-46)
 
 ## Specification
 
@@ -45,7 +45,7 @@ To ensure a smooth experience for both the community and mStable’s core contri
 
 In addition to the responsibilities below, the Community Manager will take a leadership role in the Ecosystem subDAO by guiding and directing priorities and providing oversight of the subDAO’s operations. This includes acting as the lead signer of the subDAO and main point of contact for any queries and other liaisons within the wider mStable ecosystem relating to the Ecosystem subDAO.
 
-Further information on lead signer responsibilities are outlined in [TDP-47](https://forum.mstable.org/t/tdp-47-mstable-restructure-compensation-model-subdao-funding-request-framework/897).
+Further information on lead signer responsibilities are outlined in [TDP-47](./tdp-47).
 
 Other responsibilities include but are not limited to:
 
@@ -103,7 +103,7 @@ Any surplus of mUSD or MTA at the end of the funding period, after accounting fo
 * Successful utilization of Dework, defined through the regular successful posting, quality assurance, task completion, and payout of various bounties where previously defined deliverables that add value to the mStable ecosystem are met
 * Hosting of regular community events: Community Calls, AMA’s, Game Nights, Trivia where community members are rewarded through their participation via one or more of the following: POAP’s, NFT’s, MTA rewards, special discord roles, recognition in official announcements, and so on.
 * Miscellaneous community engagement activities such as the music competitions, raffles, and so on
-* Agreed upon report will be posted to the forum on a monthly basis per the requirements of [TDP-47](https://mips.mstable.org/TDP/tdp-47.html)
+* Agreed upon report will be posted to the forum on a monthly basis per the requirements of [TDP-47](./tdp-47)
 
 ### Key Point of Contact/Liaison for the Cat Herder
 The Community Manager will act as the Ecosystem subDAO point of contact for the Cat Herder. Any requests coming directly from the mStableDAO will be handled via this channel in order to ensure speedy resolutions of any topics or other ecosystem related queries.
