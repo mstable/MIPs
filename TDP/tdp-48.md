@@ -9,7 +9,7 @@ created: 2022-08-26
 
 ## Simple Summary
 
-This proposal requests 4 months of operational funding for the proposed mStable Builder subDAO, originally defined in [TDP 44](./tdp-44.html). The proposal will:
+This proposal requests 4 months of operational funding for the proposed mStable Builder subDAO, originally defined in [TDP 44](./tdp-44). The proposal will:
 
 * Describe the structure and internal decision-making processes of the proposed Builder subDAO entity
 * Outline a budget proposal for the period of September - December 2022
