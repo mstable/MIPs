@@ -9,7 +9,7 @@ created: 2022-08-26
 
 ## Simple Summary
 
-This proposal requests 4 months of operational funding for the proposed mStable Builder subDAO, originally defined in [TDP 44](https://mips.mstable.org/TDP/tdp-44.html). The proposal will:
+This proposal requests 4 months of operational funding for the proposed mStable Builder subDAO, originally defined in [TDP 44](./tdp-44.html). The proposal will:
 
 * Describe the structure and internal decision-making processes of the proposed Builder subDAO entity
 * Outline a budget proposal for the period of September - December 2022
@@ -44,9 +44,9 @@ The purpose of the Builder subDAO is to fund a team of core contributors whose m
 ### SubDAO Structure
 It is proposed that a new Gnosis Safe be created on Ethereum Mainnet, with the option to deploy additional safes with the same signer structure on Polygon or any other chains in the future to meet the operational needs of the subDAO. The proposed signer structure is a 2/3 multisig, with the signer group consisting of 3 current mStable core team members who will contribute to the Builder subDAO. The proposed signer addresses are as follows:
 
-* 0x89901e7d025df331e9eC84120D3f81603e50364e (Core Team Member)
-* 0xE76Be9C1e10910d6Bc6b63D8031729747910c2f6 (Core Team Member)
-* 0xB27a7bD98421EB9eAEE522335F45A6F5B65C5C8d (Core Team Member)
+`0x89901e7d025df331e9eC84120D3f81603e50364e (Core Team Member)
+0xE76Be9C1e10910d6Bc6b63D8031729747910c2f6 (Core Team Member)
+0xB27a7bD98421EB9eAEE522335F45A6F5B65C5C8d (Core Team Member)`
 
 The Builder subDAO will be authorized to make changes to the signer structure through consensus within the subDAO signer group.
 
@@ -59,7 +59,7 @@ The subDAO signer group will have discretionary power to disburse subDAO funds, 
 Any spending for uses outside the proposed categories would require an additional governance process.
 
 ### Proposed budget
-### mUSD
+***mUSD***
 The total amount of mUSD requested under this funding request is $196,614 per month or $786,456 for 4 months.
 
 The current value of non-MTA assets held by the TreasuryDAO & subDAOs is around $3.4 millon. When considering likely costs across other areas such as the Ecosystem subDAO, protocol costs and signer costs, and considering current protocol revenue, this gives the project a runway of around 13 months based on non-MTA assets. This runway length assumes maximum spend by the Builder subDAO, including the buffer amount described below, and therefore reflects the ‘worst case’ rather than intended spend.
@@ -72,7 +72,14 @@ The mStableDAO is expected to hold the subDAO accountable for using the funds as
 
 The breakdown of this proposed budget is below. Note that these are estimates and it is expected that there will be variance in the exact distribution of funds across each month and across each category.
 
-![mUSD Breakdown](../assets/TDP-48/musd-breakdown.png)
+| Funding Use | Monthly Budget |
+| --- | --- |
+| Salaries (Product & Engineering) | $102,137 |
+| Salaries (Operations & Growth) | $30,903 |
+| Security Audits | $25,000 |
+| Operational Expenditure | $20,700 |
+| Buffer (10%) | $17,874 |
+| Total | $196,614 |
 
 A 10% buffer has been added to allow flexibility and ensure that smaller unexpected costs can be met.
 
@@ -82,10 +89,14 @@ All unallocated budget after 4 months will be returned to the TreasuryDAO or, at
 
 To ensure that the subDAO is not incentivized to overspend and use the buffer amount, the TreasuryDAO should hold the Builder subDAO accountable to the original budget and consider use of the buffer as a negative indicator of performance.
 
-### MTA
+***MTA***
 In addition to the proposed funding in USD stablecoins, a total amount of 1,175,000 MTA is requested to allow the Builder subDAO to handle the MTA allocations for current team members as per their current agreements with the mStableDAO.
 
-![MTA Breakdown](../assets/TDP-48/mta-breakdown.png)
+| Funding Use | Amount |
+| --- | --- |
+| Team bonuses (as specified in current contracts) | 50,000 MTA |
+| MTA streams to be initialized for 5 recent hires as specified in current contracts. | 1,000,000 MTA |
+| Other uses | 125,000 MTA |
 
 Note that the amount of MTA requested for team allocations cover full entitlements over 3 years, rather than just 4 months of funding. The MTA requested in this proposal will need to be delivered up front to allow the establishment of streams for current contributors. This is considered an appropriate way to fund contributor MTA streams as it allows for simple accounting of MTA treasury and ensures that the Builder subDAO can make a commitment to new contributors around their long term MTA allocation.
 
