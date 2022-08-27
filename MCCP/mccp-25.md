@@ -1,9 +1,9 @@
 ---
 mccp: 25
 title: Increase Governance Fee Flow to Treasury
-status: WIP
+status: Proposed
 author: mZeroNine (@mzero2nine),  Dimitri Golecko (@dimsome),  Cam Soulsby (@camsoulsby)
-discussions-to: 
+discussions-to: https://forum.mstable.org/t/mccp-25-increase-governance-fee-flow-to-treasury/929
 created: 2022-08-25
 ---
 
