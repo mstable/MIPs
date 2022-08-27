@@ -45,7 +45,9 @@ The purpose of the Builder subDAO is to fund a team of core contributors whose m
 It is proposed that a new Gnosis Safe be created on Ethereum Mainnet, with the option to deploy additional safes with the same signer structure on Polygon or any other chains in the future to meet the operational needs of the subDAO. The proposed signer structure is a 2/3 multisig, with the signer group consisting of 3 current mStable core team members who will contribute to the Builder subDAO. The proposed signer addresses are as follows:
 
 `0x89901e7d025df331e9eC84120D3f81603e50364e (Core Team Member)`
+
 `0xE76Be9C1e10910d6Bc6b63D8031729747910c2f6 (Core Team Member)`
+
 `0xB27a7bD98421EB9eAEE522335F45A6F5B65C5C8d (Core Team Member)`
 
 The Builder subDAO will be authorized to make changes to the signer structure through consensus within the subDAO signer group.
@@ -61,6 +63,7 @@ Any spending for uses outside the proposed categories would require an additiona
 ### Proposed budget
 
 ***mUSD***
+
 The total amount of mUSD requested under this funding request is $196,614 per month or $786,456 for 4 months.
 
 The current value of non-MTA assets held by the TreasuryDAO & subDAOs is around $3.4 millon. When considering likely costs across other areas such as the Ecosystem subDAO, protocol costs and signer costs, and considering current protocol revenue, this gives the project a runway of around 13 months based on non-MTA assets. This runway length assumes maximum spend by the Builder subDAO, including the buffer amount described below, and therefore reflects the ‘worst case’ rather than intended spend.
@@ -91,6 +94,7 @@ All unallocated budget after 4 months will be returned to the TreasuryDAO or, at
 To ensure that the subDAO is not incentivized to overspend and use the buffer amount, the TreasuryDAO should hold the Builder subDAO accountable to the original budget and consider use of the buffer as a negative indicator of performance.
 
 ***MTA***
+
 In addition to the proposed funding in USD stablecoins, a total amount of 1,175,000 MTA is requested to allow the Builder subDAO to handle the MTA allocations for current team members as per their current agreements with the mStableDAO.
 
 | Funding Use | Amount |
