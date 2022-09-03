@@ -2,7 +2,7 @@
 tdp: 50
 title: mStableDAO x WorkDAO Partnership
 status: WIP
-author: Cam Soulsby (@camsoulsby), 
+author: Cam Soulsby (@camsoulsby)
 discussions-to: 
 created: 2022-09-02
 ---
@@ -12,14 +12,14 @@ created: 2022-09-02
 It is proposed to engage WorkDAO as a service provider to mStable for the purposes of:
 
 - enabling current and future contributors to mStableDAO and all its subDAOs to work and get paid in fiat and tokens in compliance with local labor and tax laws, and to receive access to statutory benefits in their jurisdictions;
-- supporting mStableDAO restructuring (as outlined in TDP 47) by enabling mStableDAO and its subDAOs to continue operating as a entity-less DAO while still retaining the flexibility to hire and compensate contributors anywhere in the world without compliance and regulatory risk;
+- supporting mStableDAO restructuring (as outlined in [TDP 47](./tdp-47) by enabling mStableDAO and its subDAOs to continue operating as a entity-less DAO while still retaining the flexibility to hire and compensate contributors anywhere in the world without compliance and regulatory risk;
 - allowing contributors the flexibility of choosing the optimal mode of contributing to the DAO, including documented, locally compliant full-time employment with potential visa support.
 
 Additionally, it is proposed to confer the authority on Implementation Facilitator(s) to execute on the provisions of the engagement between WorkDAO and mStableDAO as per guidelines outlined in this document.
 
 ## Abstract
 
-As part of the restructuring process outlined in [TDP 47: mStable Restructure - Compensation Model & subDAO Funding Request Framework](https://forum.mstable.org/t/tdp-47-mstable-restructure-compensation-model-subdao-funding-request-framework/897), and with the completion of signer elections for the TreasuryDAO and Protocol DAO, mStable looks to find ways for current and future contributors to work and be compensated by the DAO directly or via a subDAO entity in a way that is compliant with their local regulations.
+As part of the restructuring process outlined in [TDP 47](./tdp-47), and with the completion of signer elections for the TreasuryDAO and Protocol DAO, mStable looks to find ways for current and future contributors to work and be compensated by the DAO directly or via a subDAO entity in a way that is compliant with their local regulations.
 
 It is suggested that mStable engage a third-party service provider to ensure compliance and limit liability for the DAO, streamline all people operations into a full stack solution, as well as provide documented employment and tax-compliant compensation for mStable contributors in their local jurisdictions.
 
@@ -40,7 +40,7 @@ More information on WorkDAO can be found in WorkDAO’s [Whitepaper](https://www
 
 ## Motivation
 
-mStableDAO is an entity-less DAO with no wrapping legal entity and many mStable contributors are currently being compensated directly from the DAO in cryptocurrency. As part of the restructuring process outlined in [TDP 47: mStable Restructure - Compensation Model & subDAO Funding Request Framework](https://forum.mstable.org/t/tdp-47-mstable-restructure-compensation-model-subdao-funding-request-framework/897), mStable looks to find alternate ways for current and future contributors to work and be compensated by the DAO directly or via a subDAO entity in a way that is compliant with their local regulations
+mStableDAO is an entity-less DAO with no wrapping legal entity and many mStable contributors are currently being compensated directly from the DAO in cryptocurrency. As part of the restructuring process outlined in [TDP 47](./tdp-47), mStable looks to find alternate ways for current and future contributors to work and be compensated by the DAO directly or via a subDAO entity in a way that is compliant with their local regulations
 
 To form legal agreements with contributors while staying entity-less, mStableDAO needs to rely on a third-party service provider that acts as a blockchain-to-real-world bridge between mStable to every country/state/jurisdiction on the planet, allowing for all types of work arrangements with contributors while keeping the DAO entity-less.
 
