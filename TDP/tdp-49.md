@@ -2,7 +2,7 @@
 tdp: 49
 title: Funding Request - mStable Ecosystem subDAO (Sep-Dec 2022)
 status: Proposed
-author: Fungus,  Cam Soulsby (@camsoulsby),  mZeroNine (@mzero2nine)
+author: Fungus (@fungalarmy),  Cam Soulsby (@camsoulsby),  mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/funding-request-mstable-ecosystem-subdao-sep-dec-2022/927
 created: 2022-08-26
 ---
