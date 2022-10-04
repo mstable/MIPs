@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.5"
+          bundler-cache: true
+
+      - run: bundle exec jekyll build
+        name: Jekyll build
+
+      - name: HTMLProofer tests
+        run: |
+          bundle exec htmlproofer ./_site \
+            --allow-hash-href \
+            --check-favicon  \
+            --check-html \
+            --disable-external \
+            --assume_extension
+
+      - name: GCP auth
+        uses: "google-github-actions/auth@v0"
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          credentials_json: "${{ secrets.GCP_KEY }}"
+
+      - name: Deploy to App Engine
+        id: deploy
+        uses: "google-github-actions/deploy-appengine@v0"
+        with:
+          deliverables: "app.yaml"
+
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@0.3.2
+        with:
+          args: "✅ mStable-MIPs: new version 🚀 Deploy url: https://mips.mstable.org/"
