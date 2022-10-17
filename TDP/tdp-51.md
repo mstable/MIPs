@@ -84,4 +84,4 @@ The TreasuryDAO is committed to schedule a meeting once every fortnight for an o
 It is therefore proposed to have one team lead for each committee (Investing / Reporting / Strategizing) elected internally, that will serve as a main Point of Contact for any related queries or issues during these meetings.
 
 ## Copyright
-Copyright and related rights waived via CC0.
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
