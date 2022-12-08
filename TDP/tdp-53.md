@@ -11,9 +11,9 @@ created: 2022-12-08
 
 This proposal requests four (4) months of operational funding for the mStable Ecosystem subDAO. The proposal will:
 
-⦁	Outline a budget proposal for the period of 1st January 2023 to 30th April 2023
-⦁	Define deliverables and methods of transparently reporting activity and performance during the funding period
-⦁	For more background on the mStable Ecosystem subDAO's purpose, mandate, structure, and internal processes; please see the initial funding request here [TDP 46](https://forum.mstable.org/t/tdp-46-mstabledao-restructure-ecosystem-subdao/895)
+* Outline a budget proposal for the period of 1st January 2023 to 30th April 2023
+* Define deliverables and methods of transparently reporting activity and performance during the funding period
+* For more background on the mStable Ecosystem subDAO's purpose, mandate, structure, and internal processes; please see the initial funding request here [TDP 46](./tdp-46)
 
 ## Abstract
 
@@ -37,7 +37,7 @@ The Ecosystem subDAO Funding Request is created in order to resolve the merger b
 
 ## Specification
 
-**mUSD**
+### mUSD
 
 The total amount of mUSD requested under this funding request is $30,741.68 per month or $7,158.42 per month over four (4) months.
 It is proposed that $30,741.68 is transferred in full prior to the start of the funding round (January 1st, 2023).
@@ -49,11 +49,11 @@ Below is an itemized list of expected costs. Although not anticipated, the buffe
 
 **Itemized Budget**
 
-- Salaries (Total)	- $25,066.68
-- mStable Merchandise - $2,000
-- Discord Server Costs - $175
-- Signer Gas Costs - $500
-- Buffer Amount - $3,000
+* Salaries (Total)	- $25,066.68
+* mStable Merchandise - $2,000
+* Discord Server Costs - $175
+* Signer Gas Costs - $500
+* Buffer Amount - $3,000
 
 **Total mUSD Requested:	$30,741.68**
 
@@ -86,20 +86,20 @@ Summary:  83,125 MTA amount with **17,351** requested for this funding round
 
 **Total MTA Requested: 17,351**
 
-# Deliverables
+## Deliverables
 
 Timeline: 1/23 - 4/23. This funding request will carry the Ecosystem subDAO through the first four (4) months of 2023. Monthly report comprising of highlights, lowlights, and ecosystem subDAO performance will be provided monthly to the treasury subDAO.
 
-⦁ Successful utilization of Dework, defined through the regular successful posting, quality assurance, task completion, and payout of various bounties where previously defined deliverables that add value to the mStable ecosystem are met. The ecosystem subDAO will more deeply collaborate with the builder subDAO to increase the value accrual for the mStable community via the use of Dework.
+* Successful utilization of Dework, defined through the regular successful posting, quality assurance, task completion, and payout of various bounties where previously defined deliverables that add value to the mStable ecosystem are met. The ecosystem subDAO will more deeply collaborate with the builder subDAO to increase the value accrual for the mStable community via the use of Dework.
 
-⦁ Hosting of community events: Community Calls, AMA’s, Game Nights, Trivia where community members are rewarded through their participation via one or more of the following: POAP’s, NFT’s, MTA rewards, special discord roles, recognition in official announcements, and so on. Determination of the number and timing of community-based events will be coordinated with the Builder subDAO.
+* Hosting of community events: Community Calls, AMA’s, Game Nights, Trivia where community members are rewarded through their participation via one or more of the following: POAP’s, NFT’s, MTA rewards, special discord roles, recognition in official announcements, and so on. Determination of the number and timing of community-based events will be coordinated with the Builder subDAO.
 Accountability & Transparency
 
 It is suggested that the mStable TreasuryDAO continues to conduct a monthly review to hold the Ecosystem subDAO accountable to the deliverables defined herein.
 
 The Ecosystem subDAO commits to providing the TreasuryDAO access to information on all expenditure for each month prior to the 10th of the following month, including the category of expenditure. This will either be provided via a report/presentation.
 
-# Additional and Future Funding Requests
+## Additional and Future Funding Requests
 
 The Ecosystem subDAO does not anticipate requiring additional funding during the funding period to meet its goals.
 
