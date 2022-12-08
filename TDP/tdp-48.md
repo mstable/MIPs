@@ -1,7 +1,7 @@
 ---
 tdp: 48
 title: Funding Request - mStable Builder subDAO (Sep-Dec 2022)
-status: Proposed
+status: Implemented
 author: Cam Soulsby (@camsoulsby),  mZeroNine (@mzero2nine),  0xloth (@LDeroccha),  
 discussions-to: https://forum.mstable.org/t/funding-request-mstable-builder-subdao-sep-dec-2022/924
 created: 2022-08-26

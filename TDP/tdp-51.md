@@ -1,7 +1,7 @@
 ---
 tdp: 51
 title: TreasuryDAO Charter
-status: Proposed
+status: Implemented
 author: Jeshli (@jeshli)
 discussions-to: https://forum.mstable.org/t/rfc-treasury-dao-charter/914
 created: 2021-10-15
