@@ -1,7 +1,7 @@
 ---
 tdp: 50
 title: mStableDAO x WorkDAO Partnership
-status: WIP
+status: Implemented
 author: Cam Soulsby (@camsoulsby)
 discussions-to: 
 created: 2022-09-02
