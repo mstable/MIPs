@@ -86,7 +86,7 @@ Summary:  83,125 MTA amount with **17,351** requested for this funding round
 
 **Total MTA Requested: 17,351**
 
-## Deliverables
+### Deliverables
 
 Timeline: 1/23 - 4/23. This funding request will carry the Ecosystem subDAO through the first four (4) months of 2023. Monthly report comprising of highlights, lowlights, and ecosystem subDAO performance will be provided monthly to the treasury subDAO.
 
@@ -99,7 +99,7 @@ It is suggested that the mStable TreasuryDAO continues to conduct a monthly revi
 
 The Ecosystem subDAO commits to providing the TreasuryDAO access to information on all expenditure for each month prior to the 10th of the following month, including the category of expenditure. This will either be provided via a report/presentation.
 
-## Additional and Future Funding Requests
+### Additional and Future Funding Requests
 
 The Ecosystem subDAO does not anticipate requiring additional funding during the funding period to meet its goals.
 
