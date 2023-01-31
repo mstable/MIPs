@@ -1,7 +1,7 @@
 ---
 tdp: 54
 title: Cat Herder Rollover Request (Jan - April 2023)
-status: Proposed
+status: Implemented
 author: mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org/t/cat-herder-rollover-request-jan-april-2023/962/1
 created: 2022-12-08
