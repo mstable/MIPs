@@ -1,7 +1,7 @@
 ---
 tdp: 53
 title: Funding Request - mStable Ecosystem subDAO (Jan-Apr 2023)
-status: Proposed
+status: Implemented
 author: Fungus (@fungalarmy)
 discussions-to: https://forum.mstable.org/t/funding-request-mstable-ecosystem-subdao-9-jan-apr-2023/966
 created: 2022-12-08
