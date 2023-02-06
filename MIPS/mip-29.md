@@ -4,7 +4,7 @@ title: Adjustment of Builder SubDAO Mandate
 status: Proposed
 author: Cam Soulsby (@camsoulsby), James Simpson, 0xloth (@LDeroccha), mZeroNine (@mzero2nine) 
 discussions-to: https://forum.mstable.org/t/mip-29-adjustment-of-builder-subdao-mandate/982
-created: 2023-02-06
+created: 2023-01-31
 ---
 
 ## Simple Summary
