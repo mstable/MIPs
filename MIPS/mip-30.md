@@ -22,7 +22,7 @@ It is important to note that this proposal is not indented to propose or discuss
 - **_The actual decision to execute this will be done in a future proposal._** A future proposal will be made that is referenced in MIP 29 that will offer options for proposed continuation as well as to pursue the shutdown.
 - In the case that a proposal for Merge/Acquisition/Continuation is successful, this Proposal and the formal proposal resulting from it will be superseded by the winning proposal
 
-This document serves to discuss the guiding principles and methodology for sunsetting the products and smart contracts in accordance with [MIP 29](https://mips.mstable.org/MIPS/mip-29.html).
+This document serves to discuss the guiding principles and methodology for sunsetting the products and their smart contracts in accordance with [MIP 29](https://mips.mstable.org/MIPS/mip-29.html).
 
 The first guiding principle for sunsetting the products and smart contracts is to allow user withdrawals at any time in the future and to never lock user funds. This means that any user will be able to access their funds at any point in the future, with no restrictions. It also means that users can be sure that their funds are safe, as they are not kept locked away in the contract.
 
