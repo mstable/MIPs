@@ -1,7 +1,7 @@
 ---
 mip: 28
 title: Deployment of USDC 3Pool Convex Meta Vault
-status: Proposed
+status: Implemented
 author: Dimitri Golecko (@dimsome), Nick Addison (@naddison36), Nesk (@0xNesk)
 discussions-to:
 created: 2022-10-31
