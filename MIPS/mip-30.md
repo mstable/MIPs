@@ -24,7 +24,7 @@ It is important to note that this proposal is not indented to propose or discuss
 
 This document serves to discuss the guiding principles and methodology for sunsetting the products and their smart contracts in accordance with [MIP 29](https://mips.mstable.org/MIPS/mip-29.html).
 
-The first guiding principle for sunsetting the products and smart contracts is to allow user withdrawals at any time in the future and to never lock user funds. This means that any user will be able to access their funds at any point in the future, with no restrictions. It also means that users can be sure that their funds are safe, as they are not kept locked away in the contract.
+The first guiding principle for sunsetting the products and their smart contracts is to allow user withdrawals at any time in the future and to never lock user funds. This means that any user will be able to access their funds at any point in the future, with no restrictions. It also means that users can be sure that their funds are safe, as they are not kept locked away in the contract.
 
 The second principle is to remove all integration contracts such as Aave and Compound, meaning that all of the benefits associated with keeping funds within the contracts will be eliminated. This includes the ability to earn interest on deposits and any rewards. Furthermore, all fees will be set to zero to allow natural arbitrage to flow freely, without the user being able to earn, while also allowing for easier withdrawals with fewer fees in any basket asset.
 
