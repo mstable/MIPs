@@ -1,9 +1,9 @@
 ---
-mip: 30
+mip: 31
 title: Product Sunset Approach
 status: Proposed
 author: Dimitri Golecko (@dimsome), Nick Addison (@naddison36), Cesar Chavez (@doncesarts)
-discussions-to:
+discussions-to: https://forum.mstable.org/t/mip-31-product-sunset-approach/992
 created: 2023-02-27
 ---
 
