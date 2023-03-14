@@ -9,7 +9,7 @@ created: 2023-03-14
 
 ## Simple Summary
 
-It is proposed to summarize the different MIPs resulting from MIP 29, put them to a vote, and define the exact procedure and next steps of governance moving forward for each potential case.
+It is proposed to summarize the different MIPs resulting from [MIP 29](./mip-29), put them to a vote, and define the exact procedure and next steps of governance moving forward for each potential case.
 
 ## Abstract
 
@@ -26,7 +26,7 @@ Each of these options will be briefly overviewed, and steps unique to each highl
 
 ## Motivation
 
-As per MIP 29, a vote needs to take place to determine which path Meta Governors would like to see the mStable project take, and this MIP will serve as a final voting destination to decide which path the DAO and project should pursue moving forward.
+As per [MIP 29](./mip-29), a vote needs to take place to determine which path Meta Governors would like to see the mStable project take, and this MIP will serve as a final voting destination to decide which path the DAO and project should pursue moving forward.
 
 ## Specification
 
@@ -62,7 +62,7 @@ If MTA Governors decide on a shutdown of mStable products, the Builder subDAO wi
 
 Assuming that a vote is finalized before April 1st, hosted frontend apps and customer support will be available until the 30th of September, 2023.
 
-**Shutdown costs**
+###Shutdown costs###
 To allow MTA Governors to make the best decision on the path forward, the Builder subDAO has tried to accurately estimate the costs of executing a product shutdown and potential MTA sunset & DAO shutdown. 
 
 The main cost will be in compensating all team members through to the end of their full-time agreements in mid-April, and in compensating 8 critical teams members after that date to ensure that they are incentivised to see the shutdown through until the end and paid for part-time work over a 6-month support period, during which time they will be involved in:
