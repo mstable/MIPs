@@ -9,7 +9,7 @@ created: 2022-03-14
 
 ## Simple Summary
 
-Following the outcome of MIP 29, MTA Governors will soon be asked to vote on the future direction of the mStable project, which may include an acquisition or full shutdown of the mStable products and subsequent shutdown of the the mStableDAO.
+Following the outcome of [MIP 29](./mip-29), MTA Governors will soon be asked to vote on the future direction of the mStable project, which may include an acquisition or full shutdown of the mStable products and subsequent shutdown of the the mStableDAO.
 
 As part of MIP 29, normal governance processes, including scheduled sign elections, were temporarily put on hold.
 
