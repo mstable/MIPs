@@ -13,7 +13,7 @@ Following the outcome of [MIP 29](../MIPS/mip-29), MTA Governors will soon be as
 
 As part of [MIP 29](../MIPS/mip-29), normal governance processes, including scheduled sign elections, were temporarily put on hold.
 
-It is therefore proposed to decide on a path forward to ensure a secure and well-functioning signer group to enact the will of MTA Governors for as long as is required based on the outcome of the upcoming [MIP 30](../MIPS/mip-30).
+It is therefore proposed to decide on a path forward to ensure a secure and well-functioning signer group to enact the will of MTA Governors for as long as is required based on the outcome of the upcoming [MIP 30](../MIPS/mip-30.md).
 
 ## Abstract
 
@@ -37,9 +37,9 @@ For the ProtocolDAO, compensation of signers would be stopped when the ProtocolD
 
 ### Signer Structure and Replacement Process
 
-Both the TreasuryDAO and ProtocolDAO must maintain a 4/6 signer structure at all times to ensure security as outlined in [TDP 44](https://forum.mstable.org/t/tdp-44-mstabledao-restructure/887/16?u=tclochard).
+Both the TreasuryDAO and ProtocolDAO must maintain a 4/6 signer structure at all times to ensure security as outlined in [TDP 44](./tdp-44.md).
 
-If a signer expresses a desire to leave their position outside of a regular election process (which may not be required in the future depending on the outcome of MIP 30) , the signer group should work together to find and suggest a new trusted signer and the change should be ratified through a governance vote.
+If a signer expresses a desire to leave their position outside of a regular election process (which may not be required in the future depending on the outcome of [MIP 30](../MIPS/mip-30.md), the signer group should work together to find and suggest a new trusted signer and the change should be ratified through a governance vote.
 
 If signer compensation is stopped due to the conditions described in the previous section being met, signer structure could be reduced to a 3/5, 2/3 or 2/4 multisig by agreement within the signer group to allow for easier execution of any required transactions and to allow for any signers who may not wish to be available without compensation.
 
@@ -49,11 +49,11 @@ The current signer group have been asked if they are willing to continue on as s
 
 **ProtocolDAO**
 
-- James (0xC5ee70CDBa695F864FA07A378aF6711f45D1339A) replaced by core contributor (0xA31DD58278Ef3777718AD6faFB8b0cebbB23b975)
+- James (0xC5ee70CDBa695F864FA07A378aF6711f45D1339A) replaced by core contributor (0x507E0c1F8893611534760Ab5F95EfE48B46CD932)
 
 **TreasuryDAO**
 
-- Nesk (0xBb330652D70eF1204d39d0880896B017a1BB1774) replaced by core contributor (0x507E0c1F8893611534760Ab5F95EfE48B46CD932) .
+- Nesk (0xBb330652D70eF1204d39d0880896B017a1BB1774) replaced by core contributor (0xA31DD58278Ef3777718AD6faFB8b0cebbB23b975).
 
 ### Reminder of Scope of Treasury DAO Activities
 
@@ -65,7 +65,7 @@ The mandate of TreasuryDAO signers includes:
 - Compensate signers on a monthly basis as per this proposal
 - Compensate mStableDAO Cat Herder for the term of their tenure as decided through governance
 - Fund protocol wallets with ETH to cover protocol fees as requested by the ProtocolDAO
-- Agree internally on who will take on the role of Operational Signer as defined in [TDP 47](https://forum.mstable.org/t/tdp-47-mstable-restructure-compensation-model-subdao-funding-request-framework/897) to facilitate the queuing of transactions in line with governance decisions. Since this role has typically been carried out by full time mStable contributors, and that these roles may no longer exist in the near future, signers should expect they each may be asked to queue transactions from time to time.
+- Agree internally on who will take on the role of Operational Signer as defined in [TDP 47](./tdp-47.md) to facilitate the queuing of transactions in line with governance decisions. Since this role has typically been carried out by full time mStable contributors, and that these roles may no longer exist in the near future, signers should expect they each may be asked to queue transactions from time to time.
 
 ## Copyright
 
