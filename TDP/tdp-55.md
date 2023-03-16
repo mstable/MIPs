@@ -13,7 +13,7 @@ Following the outcome of [MIP 29](../MIPS/mip-29), MTA Governors will soon be as
 
 As part of [MIP 29](../MIPS/mip-29), normal governance processes, including scheduled sign elections, were temporarily put on hold.
 
-It is therefore proposed to decide on a path forward to ensure a secure and well-functioning signer group to enact the will of MTA Governors for as long as is required based on the outcome of the upcoming [MIP 30](../MIPS/mip-30.
+It is therefore proposed to decide on a path forward to ensure a secure and well-functioning signer group to enact the will of MTA Governors for as long as is required based on the outcome of the upcoming [MIP 30](../MIPS/mip-30).
 
 ## Abstract
 
