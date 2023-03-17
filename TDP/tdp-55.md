@@ -1,7 +1,7 @@
 ---
 tdp: 55
 title: TreasuryDAO & ProtocolDAO Signer Compensation and Replacements
-status: WIP
+status: Proposed
 author: Cam Soulsby (@camsoulsby), mZeroNine (@mzero2nine)
 discussions-to: https://forum.mstable.org
 created: 2022-03-14

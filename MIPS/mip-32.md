@@ -3,8 +3,8 @@ mip: 32
 title: Future of mStable Treasury Assets
 status: WIP
 author: 0xloth (@LDeroccha)
-discussions-to: https://forum.mstable.org/t/mip-31-product-sunset-approach/992
-created: 2023-03-7
+discussions-to: https://forum.mstable.org/t/mip-32-future-of-mstable-treasury-assets/1014
+created: 2023-03-17
 ---
 
 ## Simple Summary
@@ -21,12 +21,12 @@ It has currently two major utilities: primarily, it can be staked in order to en
 
 [mStable DAO Treasury Assets](https://zapper.xyz/daos/m-stable) are held across the following 4 addresses:
 
-| Name                    | Address                                                                 |
-| ----------------------- | ----------------------------------------------------------------------- |
-| mStable DAO Gnosis Safe | https://etherscan.io/address/0x3dd46846eed8d147841ae162c8425c08bd8e1b41 |
-| Asset Management subDAO | https://etherscan.io/address/0x67905d3e4fec0c85dce68195f66dc8eb32f59179 |
-| Protocol subDAO         | https://etherscan.io/address/0xf6ff1f7fceb2ce6d26687eaab5988b445d0b94a2 |
-| Funding subDAO          | https://etherscan.io/address/0xfcf455d6eb48b3289a712c0b3bc3c7ee0b0ee4c6 |
+| Name                    | Address                                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| mStable DAO Gnosis Safe | [0x3dd46846eed8d147841ae162c8425c08bd8e1b41](https://etherscan.io/address/0x3dd46846eed8d147841ae162c8425c08bd8e1b41) |
+| Asset Management subDAO | [0x67905d3e4fec0c85dce68195f66dc8eb32f59179](https://etherscan.io/address/0x67905d3e4fec0c85dce68195f66dc8eb32f59179) |
+| Protocol subDAO         | [0xf6ff1f7fceb2ce6d26687eaab5988b445d0b94a2](https://etherscan.io/address/0xf6ff1f7fceb2ce6d26687eaab5988b445d0b94a2) |
+| Funding subDAO          | [0xfcf455d6eb48b3289a712c0b3bc3c7ee0b0ee4c6](https://etherscan.io/address/0xfcf455d6eb48b3289a712c0b3bc3c7ee0b0ee4c6) |
 
 Also, as of now, none of the organisations and sub-organisations composing the mStableDAO (MTA stakers) has in their mandate the ability to take action on what could happen to the assets governed by MTA holders in the event of a shutdown or an acquisition.
 
