@@ -1,15 +1,8 @@
 ---
-mip: <to be assigned>
+mip: 34
 title: Origin acquisition of mStable
-status: WIP
-author: Origin Protocol
-discussions-to: (https://forum.mstable.org/t/mip-34-origin-acquisition-of-mstable/1019)
-
-created: 2023-03-17
-requires (*optional): <MIP number(s)>
+status: Proposed
 ---
-
-<!--You can leave these HTML comments in your merged MIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new MIPs. Note that an MIP number will be assigned by an editor. When opening a pull request to submit your MIP, please use an abbreviated title in the filename, `mip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
 
 # **Summary**
 
