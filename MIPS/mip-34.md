@@ -2,6 +2,9 @@
 mip: 34
 title: Origin acquisition of mStable
 status: Proposed
+author: Origin Protocol
+discussions-to: [https://forum.mstable.org/t/mip-33-dhedge-acquisition-of-mstable/1017](https://forum.mstable.org/t/mip-34-origin-acquisition-of-mstable/1019)
+created: 2023-03-17
 ---
 
 # **Summary**
