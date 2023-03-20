@@ -3,11 +3,11 @@ mip: 34
 title: Origin acquisition of mStable
 status: Proposed
 author: Origin Protocol
-discussions-to: [https://forum.mstable.org/t/mip-33-dhedge-acquisition-of-mstable/1017](https://forum.mstable.org/t/mip-34-origin-acquisition-of-mstable/1019)
+discussions-to: https://forum.mstable.org/t/mip-34-origin-acquisition-of-mstable/1019
 created: 2023-03-17
 ---
 
-# **Summary**
+## Summary
 
 This MIP is following on Origin’s [RFC discussion](https://forum.mstable.org/t/rfc-origin-acquisition-of-mstable/1008)
 
@@ -15,23 +15,23 @@ We propose that Origin Protocol acquires mStable assets and key team members. We
 
 Throughout our discussions with the mStable team, we have been impressed by their professionalism and shared values. The cultures between our two organizations are surprisingly similar. We are excited about the potential to work together to bring decentralized yield-products to the world.
 
-# **Abstract**
+## Abstract
 
 This document outlines a proposal for an acquisition of mStable assets and key team members after mStable has completed an upgrade of the mAsset strategy along with their treasury redemption, and product sunset process.
 
-**Deal terms**
+### Deal terms
 
-$50K in OGV shall be distributed to eligible MTA holders upon mStable’s 1) completion of the upgrade of all mAssets to OUSD, 2) completion of the mStable treasury redemption process as currently proposed in [MIP-32](https://forum.mstable.org/t/mip-32-future-of-mstable-treasury-assets/1014), 3) completion of product sunset as currently proposed in [MIP-31](https://forum.mstable.org/t/mip-31-product-sunset-approach/992/2), and 4) transfer of control of key smart contracts and wallets to Origin.
+$50K in OGV shall be distributed to eligible MTA holders upon mStable’s 1) completion of the upgrade of all mAssets to OUSD, 2) completion of the mStable treasury redemption process as currently proposed in [MIP32](./mip-32), 3) completion of product sunset as currently proposed in [MIP 31](./mip-31), and 4) transfer of control of key smart contracts and wallets to Origin.
 
 This is an asset acquisition, and any and all outstanding liabilities of mStable remain the responsibility of mStable and related parties.
 
-# **Motivation**
+## Motivation
 
 The mStable team has demonstrated a strong understanding of the OUSD product given the similarity between our two products. This understanding creates a high potential for the team to make immediate contributions to our own team. Moreover, the Meta Vault technology that mStable employs has the potential to enhance OUSD’s yield strategies and integrations.
 
-# **Specification**
+## Specification
 
-**Team Migration**
+### Team Migration
 
 We have already started conducting interviews with the team and are scheduling additional meetings and follow-up conversations with the mStable team. We will be evaluating each team member’s skills and fit with our culture and values before extending individual offers.
 
@@ -47,35 +47,39 @@ Origin has multiple years of runway to fund our business lines (headcount, opera
 
 We will be sharing Origin’s product roadmap with the mStable team and look forward to collaborating on how mStable’s products and learnings could help accelerate our plans.
 
-**Product Transition**
+### Product Transition
 
 We will be continuing conversations with the mStable team to evaluate the best way to gracefully transition mStable’s mAssets to OUSD. While there are a lot of details to flesh out, we are aligned that any changes to the protocol should be communicated well in advance and the goal is for mStable’s token holders to end up better off, not worse, as a result of this deal.
 
-The current plan is for mStable to swap mAssets to OUSD on Ethereum and wrapped OUSD on Polygon. mStable would also sunset all products per MIP-31.
+The current plan is for mStable to swap mAssets to OUSD on Ethereum and wrapped OUSD on Polygon. mStable would also sunset all products per [MIP 31](./mip-31).
 
 For the Meta Vault, we plan on incorporating concepts that the team has designed around safely entering and withdrawing from Curve onchain. We also plan on incorporating potential work that was done regarding Aura and Balancer.
 
-**Funding**
+### Funding
 
-$50K in OGV shall be distributed to eligible MTA holders upon mStable’s 1) completion of the upgrade of all mAssets to OUSD, 2) completion of the mStable treasury redemption process as currently proposed in [MIP-32](https://forum.mstable.org/t/mip-32-future-of-mstable-treasury-assets/1014), 3) completion of product sunset as currently proposed in [MIP-31](https://forum.mstable.org/t/mip-31-product-sunset-approach/992/2), and 4) transfer of control of key smart contracts and wallets to Origin.
+$50K in OGV shall be distributed to eligible MTA holders upon mStable’s 1) completion of the upgrade of all mAssets to OUSD, 2) completion of the mStable treasury redemption process as currently proposed in [MIP 32](./mip-32), 3) completion of product sunset as currently proposed in [MIP 31](./mip-31), and 4) transfer of control of key smart contracts and wallets to Origin.
 
-We would price $50K worth of OGV tokens upon completion of deal terms. Eligible MTA holders will have six months to collect consideration. We are open to investors unvested tokens being allowed to participate but we leave this for decision based on outcome of MIP-32.
+We would price $50K worth of OGV tokens upon completion of deal terms. Eligible MTA holders will have six months to collect consideration. We are open to investors unvested tokens being allowed to participate but we leave this for decision based on outcome of [MIP 32](./mip-32).
 
 Origin is well capitalized. Origin’s treasury is approximately $60 million and Origin Dollar has generated over $4 million in fees to date. Origin has multiple years of runway to fund our business lines.
 
-**Governance**
+### Governance
 
 97.54% of participating OGV holders voted in favor of us exploring this acquisition. We recognize that our success is tied to our ability to work quickly and collaboratively. We believe that this acquisition has the potential to create significant value for both of our communities, and we look forward to continuing the discussion with you.
 
-# **About Origin**
+### About Origin
 
 Origin Dollar (OUSD) is the first stablecoin that generates yield right in your wallet. Its price remains pegged at $1, and holders automatically receive additional units of OUSD as yield is generated by the protocol. OUSD is fully collateralized and can be redeemed at any time for USDC, USDT, or DAI. Its circulating supply reached a peak of over $300M. OUSD can be found listed on top exchanges such as KuCoin, Gate, Uniswap, and Curve.
 
 In addition to OUSD, Origin Dollar has a governance token named OGV. This token is listed on several exchanges, including Curve, Uniswap, Huobi, Kucoin, and Gate. Previous investors in Origin Dollar include Pantera Capital, Foundation Capital, 1kx, Kenetic Capital, Spartan Group, Blocktower Capital, FBG, and QCP Capital.
 
-**Appendix: Follow-up Q&A from RFC Proposal**
+## Copyright
 
- **1) Team**
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+## Appendix: Follow-up Q&A from RFC Proposal\*\*
+
+**1) Team**
 
 1. Which team members are being considered part of the acquisition deal?
 
@@ -137,7 +141,7 @@ Yes. We will be sharing the details privately with key mStable team members firs
 
 We would like OUSD to become the sole strategy for mAssets. We intend to work with the mStable team on the specific details on the best way to make this happen.
 
- **3) Deal terms**
+**3) Deal terms**
 
 - What is the proposed exchange ratio / aggregate purchase price for the acquisition?
 
