@@ -45,15 +45,11 @@ If signer compensation is stopped due to the conditions described in the previou
 
 ### Current Signer Changes
 
-The current signer group have been asked if they are willing to continue on as signers to avoid the need for a full election cycle at this time. Two members of the TreasuryDAO and one member of the ProtocolDAO have indicated that they would like to be rotated out of signer positions. As part of this RFC, it is therefore proposed that these two signers, who are both core contributors, are replaced by two other core contributors. The incoming core contributors would prefer to keep their identities private but other team members will be able to vouch for their trustworthiness here.
-
-**ProtocolDAO**
-
-- James (0xC5ee70CDBa695F864FA07A378aF6711f45D1339A) replaced by core contributor (0x507E0c1F8893611534760Ab5F95EfE48B46CD932)
+The current signer group have been asked if they are willing to continue on as signers to avoid the need for a full election cycle at this time. One member of the TreasuryDAO has indicated that they would like to be rotated out of signer positions. As part of this TDP, it is therefore proposed that this signer, who is a core contributor, is replaced by another core contributor. The incoming core contributor would prefer to keep their identities private but other team members will be able to vouch for their trustworthiness here.
 
 **TreasuryDAO**
 
-- Nesk (0xBb330652D70eF1204d39d0880896B017a1BB1774) replaced by core contributor (0xA31DD58278Ef3777718AD6faFB8b0cebbB23b975).
+* Nesk (0xBb330652D70eF1204d39d0880896B017a1BB1774) replaced by core contributor (0xA31DD58278Ef3777718AD6faFB8b0cebbB23b975).
 
 ### Reminder of Scope of Treasury DAO Activities
 
