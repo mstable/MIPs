@@ -50,7 +50,7 @@ It is proposed that Origin Protocol acquires mStable assets and key team members
 
 ### Option 5: mStable Product Shutdown (per MIP 31) and MTA Sunset (per MIP 32)
 
-If MTA Governors decide on a shutdown of mStable products, the Builder subDAO will immediately move to execute a product shutdown as defined in [MIP 31](.mip-31) and any MTA sunset and DAO shutdown as defined in [MIP 32](./mip-32). In this scenario, the product shutdown is expected to be completed by the end of April 2023. Timelines for any MTA and DAO shutdown will be defined in that governance proposal.
+If MTA Governors decide on a shutdown of mStable products, the Builder subDAO will immediately move to execute a product shutdown as defined in [MIP 31](./mip-31) and any MTA sunset and DAO shutdown as defined in [MIP 32](./mip-32). In this scenario, the product shutdown is expected to be completed by the end of April 2023. Timelines for any MTA and DAO shutdown will be defined in that governance proposal.
 
 Assuming that a vote is finalized before April 1st, hosted frontend apps and customer support will be available until the 30th of September, 2023.
 
