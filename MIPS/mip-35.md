@@ -1,12 +1,11 @@
 ---
 mip: 35
-title: Idle  mStable
+title: Idle + mStable Merge
 status: Proposed
 author: Idle Finance (@idle.finance)
-discussions-to: [https://forum.mstable.org/t/mip-35-idle-mstable-merge/1020/1]
+discussions-to: https://forum.mstable.org/t/mip-35-idle-mstable-merge/1020
 created: 2023-03-18
 ---
-# Idle + mStable Merge
 
 ## Summary
 
@@ -62,7 +61,7 @@ After engaging with the mStable team members, we have come to the understanding 
 
 Starting from the structure reported in the RFC, as we expand our team, we are also considering forming a dedicated product team (in addition to the current growth, comms, and development) to bring more focus to high-value team verticals. The Dev team can focus solely on yield strategies integration, development, and maintenance, while the Product team can bring dashboard improvements, analyze strategies performances and expand integration tools. This is intended to ensure that our strategies and platform remain at the forefront of the rapidly evolving DeFi ecosystem.
 
-## Governance Migration
+### Governance Migration
 
 Pending a collective consensus about the future of existing mStable products on Ethereum and Polygon, the mStable team will oversee their maintenance until an eventual user migration is completed.
 
@@ -70,33 +69,33 @@ With the aim of providing continuity to Meta Vaults, a secure transition will re
 
 The existing Meta Vault will be maintained under the control of mStable team, with the goal of finalizing its sunsetting and facilitating user redeems.
 
-The eventual sunset of mUSD and Save products would follow the approach described in [MIP31](https://forum.mstable.org/t/mip-31-product-sunset-approach/992).
+The eventual sunset of mUSD and Save products would follow the approach described in [MIP 31](./mip-31).
 
 [quote="dimsome, post:1, topic:992"]
 
 ### mAssets and Save
 
-* Upgrade the mAssets’s `migrateBassets` to support migrating bAssets from platforms back to the mAsset contract
+- Upgrade the mAssets’s `migrateBassets` to support migrating bAssets from platforms back to the mAsset contract
 
-* Remove platform integration
+- Remove platform integration
 
-* Set swap and redeem fee to 0
+- Set swap and redeem fee to 0
 
-* Set new min-max weights (5% and 95%)
+- Set new min-max weights (5% and 95%)
 
-* This applies to mUSD and mBTC on Ethereum mainnet and to mUSD on Polygon
+- This applies to mUSD and mBTC on Ethereum mainnet and to mUSD on Polygon
 
 ### Feeder Pools
 
-* Upgrade the Feeder Pool’s `migrateBassets` to support migrating bAssets from platforms back to the Feeder Pool contract
+- Upgrade the Feeder Pool’s `migrateBassets` to support migrating bAssets from platforms back to the Feeder Pool contract
 
-* Remove integration contracts if present
+- Remove integration contracts if present
 
-* Set swap and redeem fee to 0
+- Set swap and redeem fee to 0
 
-* This applies to mUSD and mBTC on Ethereum mainnet and to mUSD on Polygon
+- This applies to mUSD and mBTC on Ethereum mainnet and to mUSD on Polygon
 
-* Exception: GUSD is still integrated with Iron Bank, a full withdrawal from the integration contract to cache as specified in [MIP 23](https://mips.mstable.org/MIPS/mip-23.html) was not possible without further changes. The GUSD contract will be adjusted to allow partial migration of assets back to the cache.
+- Exception: GUSD is still integrated with Iron Bank, a full withdrawal from the integration contract to cache as specified in [MIP 23](./mip-23) was not possible without further changes. The GUSD contract will be adjusted to allow partial migration of assets back to the cache.
 
 [/quote]
 
@@ -104,17 +103,17 @@ Specifications have been reported [here](https://forum.mstable.org/t/mip-31-prod
 
 In terms of front-end, the integration of Meta Vault will be progressively phased out on the mStable website, with a focus on prioritizing its integration on the Idle dashboard. To this end, a banner will be displayed on the mStable website highlighting the migration process to new Meta Vaults on Idle UI.
 
-If the decision to sunset mUSD is implemented, the redeemability of mUSD will remain active for a minimum of six months. mStable team will follow the procedures outlined in MIP31 during this period
+If the decision to sunset mUSD is implemented, the redeemability of mUSD will remain active for a minimum of six months. mStable team will follow the procedures outlined in [MIP 31](./mip-31) during this period
 
 [quote="dimsome, post:1, topic:992"]
 
 ### Front-ends
 
-* In all front-ends and the landing page, a banner will be added to notify everyone of the sunsetting of the product and to encourage withdrawals.
+- In all front-ends and the landing page, a banner will be added to notify everyone of the sunsetting of the product and to encourage withdrawals.
 
-* The front-end will be kept alive for at least 6 months after the vote of the sunset in the subsequent proposal has been conducted.
+- The front-end will be kept alive for at least 6 months after the vote of the sunset in the subsequent proposal has been conducted.
 
-* The possibility to access the contracts afterward is still possible via a locally run front-end or directly with the smart contracts (i.e. Etherscan).
+- The possibility to access the contracts afterward is still possible via a locally run front-end or directly with the smart contracts (i.e. Etherscan).
 
 [/quote]
 
@@ -124,25 +123,25 @@ mStable team will manage Phase 1 of the Deal Terms section, resulting in the tra
 
 Idle DAO, together with the new Leagues members, will undertake the following activities:
 
-* Facilitate a seamless transition of knowledge base, material and immaterial assets.
-* Provide assistance to community members, MTA token holders, and liquidity providers.
-* Update documentation with migration and redeem guides.
-* Timely communication of the product timeline and next steps.
-* New OKRs setup with the unified product roadmap.
-* Consolidate communication channels under Idle platforms (Twitter, Discord, Telegram, and LinkedIn) with a migration plan that maximizes follower retention, with the possibility to maintain part of the channels to have different communication styles and amplify the reach (e.g. an “Idle intern” style Twitter account).
-* Maintain the mStable front-end until the product sunset is completed.
+- Facilitate a seamless transition of knowledge base, material and immaterial assets.
+- Provide assistance to community members, MTA token holders, and liquidity providers.
+- Update documentation with migration and redeem guides.
+- Timely communication of the product timeline and next steps.
+- New OKRs setup with the unified product roadmap.
+- Consolidate communication channels under Idle platforms (Twitter, Discord, Telegram, and LinkedIn) with a migration plan that maximizes follower retention, with the possibility to maintain part of the channels to have different communication styles and amplify the reach (e.g. an “Idle intern” style Twitter account).
+- Maintain the mStable front-end until the product sunset is completed.
 
 The estimated cost for these activities is $160k, which will be deducted from the transferred liquid treasury and will be operatively implemented by mStable team in collaboration with Idle Leagues.
 
 ## Deal terms
 
-The mStable treasury addresses and amounts stated in the [MIP32](https://forum.mstable.org/t/mip-32-future-of-mstable-treasury-assets/1014) were used as a base to structure the deal terms reported below.
+The mStable treasury addresses and amounts stated in the [MIP 32](./mip-32) were used as a base to structure the deal terms reported below.
 
 To allow MTA holders to be flexible in their final decision, our merger solution is divided into two phases:
 
 ### Phase 1
 
-Token holders not aligned with the mStable <> Idle merge can exit with no penalties and will receive a pro-rata share of the treasury value. The estimated redemption value per eligible MTA would be $0.03, comparable with [MIP32](https://forum.mstable.org/t/mip-32-future-of-mstable-treasury-assets/1014). This phase will last 1 month, and volatile tokens (excluding AURA/auraBAL, which represents a strategic asset) will be swapped for stablecoins. Redeem value will be denominated in stablecoin.
+Token holders not aligned with the mStable <> Idle merge can exit with no penalties and will receive a pro-rata share of the treasury value. The estimated redemption value per eligible MTA would be $0.03, comparable with [MIP 32](./mip-32). This phase will last 1 month, and volatile tokens (excluding AURA/auraBAL, which represents a strategic asset) will be swapped for stablecoins. Redeem value will be denominated in stablecoin.
 
 ### Phase 2
 
@@ -156,15 +155,15 @@ Up to 1.7M IDLE claimable from a vesting contract with 3 months cliff and 6 mont
 
 Up to additional 1.3M IDLE subject to a [TVL-based KPI option](https://medium.com/uma-project/introducing-milestone-kpi-options-2a8ea4cf480e) with
 
-|Tier (TVL*)|Payout (IDLE)|
-| --- | --- |
-|$100m|260,000|
-|$250m|520,000|
-|$500m|780,000|
-|$750m|1,040,000|
-|$1b|1,300,000|
+| Tier (TVL\*) | Payout (IDLE) |
+| ------------ | ------------- |
+| $100m        | 260,000       |
+| $250m        | 520,000       |
+| $500m        | 780,000       |
+| $750m        | 1,040,000     |
+| $1b          | 1,300,000     |
 
-*TVL will be measured as a 6-month weighted average across all Idle-based products (Best Yield, Yield Tranches, Meta Vaults), starting 1.5 years after the opening of MTA/IDLE swap and ending at the beginning of the second year.
+\*TVL will be measured as a 6-month weighted average across all Idle-based products (Best Yield, Yield Tranches, Meta Vaults), starting 1.5 years after the opening of MTA/IDLE swap and ending at the beginning of the second year.
 
 The allocation of IDLE in the vesting contract and via KPI option are proportional to each $1 of the treasury transferred to Idle DAO, with the total IDLE amount unlocked with the full treasury migration. For example, a $1.5M worth of treasury represents 75% of the par value, thus 2.25M IDLE (1.27M via vesting and 975k via KPI option) will be allocated. Supposing that not all MTA holders execute the swap, unclaimed IDLE funds will be proportionally split at swap expiry between token holders that completed the migration.
 
@@ -184,33 +183,33 @@ With the aim of providing continuity to Meta Vaults, a secure transition will re
 
 The existing Meta Vault will be maintained under the control of mStable team, with the goal of finalizing its sunsetting and facilitating user redeems.
 
-The eventual sunset of mUSD and Save products would follow the approach described in [MIP31](https://forum.mstable.org/t/mip-31-product-sunset-approach/992).
+The eventual sunset of mUSD and Save products would follow the approach described in [MIP 31](./mip-31).
 
 [quote="dimsome, post:1, topic:992"]
 
 ### mAssets and Save
 
-* Upgrade the mAssets’s `migrateBassets` to support migrating bAssets from platforms back to the mAsset contract
+- Upgrade the mAssets’s `migrateBassets` to support migrating bAssets from platforms back to the mAsset contract
 
-* Remove platform integration
+- Remove platform integration
 
-* Set swap and redeem fee to 0
+- Set swap and redeem fee to 0
 
-* Set new min-max weights (5% and 95%)
+- Set new min-max weights (5% and 95%)
 
-* This applies to mUSD and mBTC on Ethereum mainnet and to mUSD on Polygon
+- This applies to mUSD and mBTC on Ethereum mainnet and to mUSD on Polygon
 
 ### Feeder Pools
 
-* Upgrade the Feeder Pool’s `migrateBassets` to support migrating bAssets from platforms back to the Feeder Pool contract
+- Upgrade the Feeder Pool’s `migrateBassets` to support migrating bAssets from platforms back to the Feeder Pool contract
 
-* Remove integration contracts if present
+- Remove integration contracts if present
 
-* Set swap and redeem fee to 0
+- Set swap and redeem fee to 0
 
-* This applies to mUSD and mBTC on Ethereum mainnet and to mUSD on Polygon
+- This applies to mUSD and mBTC on Ethereum mainnet and to mUSD on Polygon
 
-* Exception: GUSD is still integrated with Iron Bank, a full withdrawal from the integration contract to cache as specified in [MIP 23](https://mips.mstable.org/MIPS/mip-23.html) was not possible without further changes. The GUSD contract will be adjusted to allow partial migration of assets back to the cache.
+- Exception: GUSD is still integrated with Iron Bank, a full withdrawal from the integration contract to cache as specified in [MIP 23](./mip-23) was not possible without further changes. The GUSD contract will be adjusted to allow partial migration of assets back to the cache.
 
 [/quote]
 
@@ -218,17 +217,17 @@ Specifications have been reported [here](https://forum.mstable.org/t/mip-31-prod
 
 In terms of front-end, the integration of Meta Vault will be progressively phased out on the mStable website, with a focus on prioritizing its integration on the Idle dashboard. To this end, a banner will be displayed on the mStable website highlighting the migration process to new Meta Vaults on Idle UI.
 
-If the decision to sunset mUSD is implemented, the redeemability of mUSD will remain active for a minimum of six months. mStable team will follow the procedures outlined in MIP31 during this period
+If the decision to sunset mUSD is implemented, the redeemability of mUSD will remain active for a minimum of six months. mStable team will follow the procedures outlined in [MIP 31](./mip-31) during this period
 
 [quote="dimsome, post:1, topic:992"]
 
 ### Front-ends
 
-* In all front-ends and the landing page, a banner will be added to notify everyone of the sunsetting of the product and to encourage withdrawals.
+- In all front-ends and the landing page, a banner will be added to notify everyone of the sunsetting of the product and to encourage withdrawals.
 
-* The front-end will be kept alive for at least 6 months after the vote of the sunset in the subsequent proposal has been conducted.
+- The front-end will be kept alive for at least 6 months after the vote of the sunset in the subsequent proposal has been conducted.
 
-* The possibility to access the contracts afterward is still possible via a locally run front-end or directly with the smart contracts (i.e. Etherscan).
+- The possibility to access the contracts afterward is still possible via a locally run front-end or directly with the smart contracts (i.e. Etherscan).
 
 [/quote]
 
@@ -238,47 +237,47 @@ mStable team will manage Phase 1 of the Deal Terms section, resulting in the tra
 
 Idle DAO, together with the new Leagues members, will undertake the following activities:
 
-* Facilitate a seamless transition of knowledge base, material and immaterial assets.
-* Provide assistance to community members, MTA token holders, and liquidity providers.
-* Update documentation with migration and redeem guides.
-* Timely communication of the product timeline and next steps.
-* New OKRs setup with the unified product roadmap.
-* Consolidate communication channels under Idle platforms (Twitter, Discord, Telegram, and LinkedIn) with a migration plan that maximizes follower retention, with the possibility to maintain part of the channels to have different communication styles and amplify the reach (e.g. an “Idle intern” style Twitter account).
-* Maintain the mStable front-end until the product sunset is completed.
+- Facilitate a seamless transition of knowledge base, material and immaterial assets.
+- Provide assistance to community members, MTA token holders, and liquidity providers.
+- Update documentation with migration and redeem guides.
+- Timely communication of the product timeline and next steps.
+- New OKRs setup with the unified product roadmap.
+- Consolidate communication channels under Idle platforms (Twitter, Discord, Telegram, and LinkedIn) with a migration plan that maximizes follower retention, with the possibility to maintain part of the channels to have different communication styles and amplify the reach (e.g. an “Idle intern” style Twitter account).
+- Maintain the mStable front-end until the product sunset is completed.
 
 The estimated cost for these activities is $160k, which will be deducted from the transferred liquid treasury and will be operatively implemented by mStable team in collaboration with Idle Leagues.
 
-# Deal terms
+## Deal terms
 
-The mStable treasury addresses and amounts stated in the [MIP32](https://forum.mstable.org/t/mip-32-future-of-mstable-treasury-assets/1014) were used as a base to structure the deal terms reported below.
+The mStable treasury addresses and amounts stated in the [MIP 32](./mip-32) were used as a base to structure the deal terms reported below.
 
 To allow MTA holders to be flexible in their final decision, our merger solution is divided into two phases:
 
-## Phase 1
+### Phase 1
 
-Token holders not aligned with the mStable <> Idle merge can exit with no penalties and will receive a pro-rata share of the treasury value. The estimated redemption value per eligible MTA would be $0.03, comparable with [MIP32](https://forum.mstable.org/t/mip-32-future-of-mstable-treasury-assets/1014). This phase will last 1 month, and volatile tokens (excluding AURA/auraBAL, which represents a strategic asset) will be swapped for stablecoins. Redeem value will be denominated in stablecoin.
+Token holders not aligned with the mStable <> Idle merge can exit with no penalties and will receive a pro-rata share of the treasury value. The estimated redemption value per eligible MTA would be $0.03, comparable with [MIP32](./mip-32)). This phase will last 1 month, and volatile tokens (excluding AURA/auraBAL, which represents a strategic asset) will be swapped for stablecoins. Redeem value will be denominated in stablecoin.
 
-## Phase 2
+### Phase 2
 
 After 1 month, token holders aligned with the mStable <> Idle merge and interested in the upside potential will get access to
 
-### Fixed-term IDLE
+**Fixed-term IDLE**
 
 Up to 1.7M IDLE claimable from a vesting contract with 3 months cliff and 6 months linear vesting
 
-### KPI-based IDLE
+**KPI-based IDLE**
 
 Up to additional 1.3M IDLE subject to a [TVL-based KPI option](https://medium.com/uma-project/introducing-milestone-kpi-options-2a8ea4cf480e) with
 
-|Tier (TVL*)|Payout (IDLE)|
-| --- | --- |
-|$100m|260,000|
-|$250m|520,000|
-|$500m|780,000|
-|$750m|1,040,000|
-|$1b|1,300,000|
+| Tier (TVL\*) | Payout (IDLE) |
+| ------------ | ------------- |
+| $100m        | 260,000       |
+| $250m        | 520,000       |
+| $500m        | 780,000       |
+| $750m        | 1,040,000     |
+| $1b          | 1,300,000     |
 
-*TVL will be measured as a 6-month weighted average across all Idle-based products (Best Yield, Yield Tranches, Meta Vaults), starting 1.5 years after the opening of MTA/IDLE swap and ending at the beginning of the second year.
+\*TVL will be measured as a 6-month weighted average across all Idle-based products (Best Yield, Yield Tranches, Meta Vaults), starting 1.5 years after the opening of MTA/IDLE swap and ending at the beginning of the second year.
 
 The allocation of IDLE in the vesting contract and via KPI option are proportional to each $1 of the treasury transferred to Idle DAO, with the total IDLE amount unlocked with the full treasury migration. For example, a $1.5M worth of treasury represents 75% of the par value, thus 2.25M IDLE (1.27M via vesting and 975k via KPI option) will be allocated. Supposing that not all MTA holders execute the swap, unclaimed IDLE funds will be proportionally split at swap expiry between token holders that completed the migration.
 
@@ -302,13 +301,13 @@ https://docs.google.com/spreadsheets/d/1Spm9x1OrVEmIRvaFfV-1uCCC_JtRZRIb4RHUtyMY
 
 The analysis assumptions are:
 
-* Meta Vault base APY: 7.5%
-* Tranches’ coverage: 30%
-* Burn rate: $150k
-* Surplus fees threshold: $200k
-* Fee-sharing: 30%
-* Hypothetical amount covered by fee-sharing: $800k
-* TVL growth rate: 15% the first year and 10% the second year
+- Meta Vault base APY: 7.5%
+- Tranches’ coverage: 30%
+- Burn rate: $150k
+- Surplus fees threshold: $200k
+- Fee-sharing: 30%
+- Hypothetical amount covered by fee-sharing: $800k
+- TVL growth rate: 15% the first year and 10% the second year
 
 As an outcome, a break-even point will be reached on the 14th month. The MTA token holder will entirely fill the hypothetical gap between mStable treasury par value and IDLE market value (MTA holder P&L). Treasury holdings will always be above $1.5m in net value, guaranteeing sustainability and business continuity in the long term.
 
@@ -324,14 +323,18 @@ https://docs.google.com/spreadsheets/d/1Spm9x1OrVEmIRvaFfV-1uCCC_JtRZRIb4RHUtyMY
 
 The analysis assumptions are:
 
-* Meta Vault base APY: 7.5%
-* Tranches’ coverage: 30%
-* Burn rate: $150k
-* Surplus fees threshold: $200k
-* Fee-sharing: 30%
-* Hypothetical amount covered by fee-sharing: $800k
-* TVL growth rate: 15% the first year and 10% the second year
+- Meta Vault base APY: 7.5%
+- Tranches’ coverage: 30%
+- Burn rate: $150k
+- Surplus fees threshold: $200k
+- Fee-sharing: 30%
+- Hypothetical amount covered by fee-sharing: $800k
+- TVL growth rate: 15% the first year and 10% the second year
 
 As an outcome, a break-even point will be reached on the 14th month. The MTA token holder will entirely fill the hypothetical gap between mStable treasury par value and IDLE market value (MTA holder P&L). Treasury holdings will always be above $1.5m in net value, guaranteeing sustainability and business continuity in the long term.
 
 The applied fee structure mirrors the existing [Best Yield and Yield Tranches performance fees](https://docs.idle.finance/products/fees), but it can be revisited with Meta Vault integration.
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
