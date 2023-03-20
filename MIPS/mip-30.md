@@ -34,31 +34,23 @@ Since each proposed voting option carries with it a unique set of parameters and
 
 ### Option 1: Acquisition by dHEDGE
 
-It is proposed that all of mStable’s current products, which are uncompetitive in yield, are migrated to ~20% APY offered by [Toros Finance](https://toros.finance/) stable yield strategies. This would boost the mStable TVL immediately and offer better returns. The Toros Finance yield strategies can then become mStable vault strategies. Further information can be found in [this](https://forum.mstable.org/t/rfc-dhedge-acquisition-of-mstable/1002) forum post.
-
-_The reference to the RFC will later be updated and linked to the respective MIP_
+It is proposed that all of mStable’s current products, which are uncompetitive in yield, are migrated to ~20% APY offered by [Toros Finance](https://toros.finance/) stable yield strategies. This would boost the mStable TVL immediately and offer better returns. The Toros Finance yield strategies can then become mStable vault strategies. Further information can be found in [MIP 33](./mip-33).
 
 ### Option 2: Merger with Spool DAO
 
-It is proposed that mStable is merged into Spool DAO. All MTA holders will be able to swap their MTA tokens to SPOOL tokens and, therewith, become members of a growing and sustainable community/DAO with complementary products to what mStable is currently offering. Further information can be found [here](https://forum.mstable.org/t/rfc-mstable-merge-into-spool-dao/1005).
-
-_The reference to the RFC will later be updated and linked to the respective MIP_
+It is proposed that mStable is merged into Spool DAO. All MTA holders will be able to swap their MTA tokens to SPOOL tokens and, therewith, become members of a growing and sustainable community/DAO with complementary products to what mStable is currently offering. Further information can be found in [MIP 36](./mip-36).
 
 ### Option 3: Merger with Idle Finance
 
-It is proposed to merge the Idle DAO and mStableDAO and ecosystems while preserving stakeholders, partners, and products on both sides. The goal is to leverage existing resources and amplify potential outcomes. The nature of the offer involves a token swap from MTA to IDLE. This will result in the transfer of mStable treasury assets to the Idle DAO, as well as potential transition of product focus, team migration, and consolidation of the respective product suites into a single one. Further information can be found [here](https://forum.mstable.org/t/rfc-idle-mstable-merge/1006).
-
-_The reference to the RFC will later be updated and linked to the respective MIP_
+It is proposed to merge the Idle DAO and mStableDAO and ecosystems while preserving stakeholders, partners, and products on both sides. The goal is to leverage existing resources and amplify potential outcomes. The nature of the offer involves a token swap from MTA to IDLE. This will result in the transfer of mStable treasury assets to the Idle DAO, as well as potential transition of product focus, team migration, and consolidation of the respective product suites into a single one. Further information can be found in [MIP 35](./mip-35).
 
 ### Option 4: Acquisition by Origin Protocol
 
-It is proposed that Origin Protocol acquires mStable assets and key team members. MTA holders will be able to swap their tokens for governance tokens from Origin. The exact exchange rate will be determined later, but will be primarily based on the value of mStable’s treasury. The current strategy is to update the backing strategies of mUSD to use OUSD instead. We will be continuing to investigate the feasibility of this plan and welcome feedback and ideas from the community. Further information can be found [here](https://forum.mstable.org/t/rfc-origin-acquisition-of-mstable/1008).
+It is proposed that Origin Protocol acquires mStable assets and key team members. MTA holders will be able to swap their tokens for governance tokens from Origin. The exact exchange rate will be determined later, but will be primarily based on the value of mStable’s treasury. The current strategy is to update the backing strategies of mUSD to use OUSD instead. We will be continuing to investigate the feasibility of this plan and welcome feedback and ideas from the community. Further information can be found in [MIP 34](./mip-34)..
 
-_The reference to the RFC will later be updated and linked to the respective MIP_
+### Option 5: mStable Product Shutdown (per MIP 31) and MTA Sunset (per MIP 32)
 
-### Option 5: mStable Product Shutdown (per MIP 31) and MTA Sunset (pending resolution of ongoing governance proposal)
-
-If MTA Governors decide on a shutdown of mStable products, the Builder subDAO will immediately move to execute a product shutdown as defined in [MIP 31](https://mips.mstable.org/MIPS/mip-31.html) and any MTA sunset and DAO shutdown that might be decided on through the [ongoing governance proposal on that topic](https://forum.mstable.org/t/rfc-future-of-mstable-treasury-assets/999/9). In this scenario, the product shutdown is expected to be completed by the end of April 2023. Timelines for any MTA and DAO shutdown will be defined in that governance proposal.
+If MTA Governors decide on a shutdown of mStable products, the Builder subDAO will immediately move to execute a product shutdown as defined in [MIP 31](https://mips.mstable.org/MIPS/mip-31.html) and any MTA sunset and DAO shutdown as defined in [MIP 32](./mip-32). In this scenario, the product shutdown is expected to be completed by the end of April 2023. Timelines for any MTA and DAO shutdown will be defined in that governance proposal.
 
 Assuming that a vote is finalized before April 1st, hosted frontend apps and customer support will be available until the 30th of September, 2023.
 
