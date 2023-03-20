@@ -46,11 +46,11 @@ It is proposed to merge the Idle DAO and mStableDAO and ecosystems while preserv
 
 ### Option 4: Acquisition by Origin Protocol
 
-It is proposed that Origin Protocol acquires mStable assets and key team members. MTA holders will be able to swap their tokens for governance tokens from Origin. The exact exchange rate will be determined later, but will be primarily based on the value of mStable’s treasury. The current strategy is to update the backing strategies of mUSD to use OUSD instead. We will be continuing to investigate the feasibility of this plan and welcome feedback and ideas from the community. Further information can be found in [MIP 34](./mip-34)..
+It is proposed that Origin Protocol acquires mStable assets and key team members. MTA holders will be able to swap their tokens for governance tokens from Origin. The exact exchange rate will be determined later, but will be primarily based on the value of mStable’s treasury. The current strategy is to update the backing strategies of mUSD to use OUSD instead. We will be continuing to investigate the feasibility of this plan and welcome feedback and ideas from the community. Further information can be found in [MIP 34](./mip-34).
 
 ### Option 5: mStable Product Shutdown (per MIP 31) and MTA Sunset (per MIP 32)
 
-If MTA Governors decide on a shutdown of mStable products, the Builder subDAO will immediately move to execute a product shutdown as defined in [MIP 31](https://mips.mstable.org/MIPS/mip-31.html) and any MTA sunset and DAO shutdown as defined in [MIP 32](./mip-32). In this scenario, the product shutdown is expected to be completed by the end of April 2023. Timelines for any MTA and DAO shutdown will be defined in that governance proposal.
+If MTA Governors decide on a shutdown of mStable products, the Builder subDAO will immediately move to execute a product shutdown as defined in [MIP 31](.mip-31) and any MTA sunset and DAO shutdown as defined in [MIP 32](./mip-32). In this scenario, the product shutdown is expected to be completed by the end of April 2023. Timelines for any MTA and DAO shutdown will be defined in that governance proposal.
 
 Assuming that a vote is finalized before April 1st, hosted frontend apps and customer support will be available until the 30th of September, 2023.
 
